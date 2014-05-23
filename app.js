@@ -1,5 +1,19 @@
-Todo = Backbone.Model.extend({});
+SearchView = Backbone.View.extend({
+    initialize: function(){
+        this.render();
+    },
+    render: function(){
+        var variables = {search_label: 'My Search'};
+        var template = _.template($('#search_template').html(), variables);
+        this.$el.html(template);
 
-var todo1 = new Todo();
+    },
+    events: {
+        "click input[type=button]" : "doSearch"
+    },
+    doSearch: function(){
+        console.log($('#search_input').val());
+    }
+});
 
-console.log(todo1);
+var search_view = new SearchView({el: $('#search_container')});
