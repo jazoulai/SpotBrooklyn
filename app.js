@@ -1,31 +1,23 @@
-SearchView = Backbone.View.extend({
-    initialize: function(){
-        this.render();
-    },
-    render: function(){
-        var variables = {search_label: 'My Search'};
-        var template = _.template($('#search_template').html(), variables);
-        this.$el.html(template);
-
-    },
-    events: {
-        "click input[type=button]" : "doSearch"
-    },
-    doSearch: function(){
-        console.log($('#search_input').val());
-    }
-});
-
-var search_view = new SearchView({el: $('#search_container')});
-
-Person = Backbone.Model.extend({
+var Model = Backbone.Model.extend({
     urlRoot: 'data.json'
 });
 
-var person = new Person();
-
-person.fetch({
-    success: function(person){
-        console.log(person.toJSON());
+var View = Backbone.View.extend({
+   initialize: function(){
+       var _thisView = this;
+       this.model.fetch().done(function(){
+           _thisView.render();
+       });
+   },
+    template: _.template($('#search_template').html()),
+    render: function(){
+        this.$el.html(this.template(this.model.toJSON()));
+        return this;
     }
+});
+
+var myModel = new Model({});
+var myView = new View({
+    model: myModel,
+    el: $('#search_container')
 });
