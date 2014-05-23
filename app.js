@@ -17,3 +17,15 @@ SearchView = Backbone.View.extend({
 });
 
 var search_view = new SearchView({el: $('#search_container')});
+
+Person = Backbone.Model.extend({
+    urlRoot: 'data.json'
+});
+
+var person = new Person();
+
+person.fetch({
+    success: function(person){
+        console.log(person.toJSON());
+    }
+});
