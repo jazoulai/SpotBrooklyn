@@ -1,23 +1,76 @@
-var Model = Backbone.Model.extend({
-    urlRoot: 'data.json'
+// Models
+window.Wine = Backbone.Model.extend();
+
+window.WineCollection = Backbone.Collection.extend({
+    model:Wine,
+    url: 'api/wines'
 });
 
-var View = Backbone.View.extend({
-   initialize: function(){
-       var _thisView = this;
-       this.model.fetch().done(function(){
-           _thisView.render();
-       });
-   },
-    template: _.template($('#search_template').html()),
-    render: function(){
-        this.$el.html(this.template(this.model.toJSON()));
+
+// Views
+window.WineListView = Backbone.View.extend({
+
+    tagName:'ul',
+
+    initialize:function () {
+        this.model.bind("reset", this.render, this);
+    },
+
+    render:function (eventName) {
+        _.each(this.model.models, function (wine) {
+            $(this.el).append(new WineListItemView({model:wine}).render().el);
+        }, this);
         return this;
+    }
+
+});
+
+window.WineListItemView = Backbone.View.extend({
+
+    tagName:"li",
+
+    template:_.template($('#tpl-wine-list-item').html()),
+
+    render:function (eventName) {
+        $(this.el).html(this.template(this.model.toJSON()));
+        return this;
+    }
+
+});
+
+window.WineView = Backbone.View.extend({
+
+    template:_.template($('#tpl-wine-details').html()),
+
+    render:function (eventName) {
+        $(this.el).html(this.template(this.model.toJSON()));
+        return this;
+    }
+
+});
+
+
+// Router
+var AppRouter = Backbone.Router.extend({
+
+    routes:{
+        "":"list",
+        "wines/:id":"wineDetails"
+    },
+
+    list:function () {
+        this.wineList = new WineCollection();
+        this.wineListView = new WineListView({model:this.wineList});
+        this.wineList.fetch();
+        $('#sidebar').html(this.wineListView.render().el);
+    },
+
+    wineDetails:function (id) {
+        this.wine = this.wineList.get(id);
+        this.wineView = new WineView({model:this.wine});
+        $('#content').html(this.wineView.render().el);
     }
 });
 
-var myModel = new Model({});
-var myView = new View({
-    model: myModel,
-    el: $('#search_container')
-});
+var app = new AppRouter();
+Backbone.history.start();

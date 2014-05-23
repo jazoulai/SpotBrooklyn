@@ -1,3 +1,22 @@
-{
-    "search_label" : "My Working Search"
-}
+[
+    {
+        "id": 1,
+        "name": "CHATEAU DE SAINT COSME",
+        "year": "2009",
+        "grapes": "Grenache / Syrah",
+        "country": "France",
+        "region": "Southern Rhone",
+        "description": "The aromas of fruit and spice give one a hint of the light drinkability of this lovely wine, which makes an excellent complement to fish dishes.",
+        "picture": "saint_cosme.jpg"
+    },
+    {
+        "id": 2,
+        "name": "LAN RIOJA CRIANZA",
+        "year": "2006",
+        "grapes": "Tempranillo",
+        "country": "Spain",
+        "region": "Rioja",
+        "description": "A resurgence of interest in boutique vineyards has opened the door for this excellent foray into the dessert wine market. Light and bouncy, with a hint of black truffle, this wine will not fail to tickle the taste buds.",
+        "picture": "lan_rioja.jpg"
+    }
+]
