@@ -62,13 +62,13 @@ var AppRouter = Backbone.Router.extend({
         this.wineList = new WineCollection();
         this.wineListView = new WineListView({model:this.wineList});
         this.wineList.fetch();
-        $('#sidebar').html(this.wineListView.render().el);
+        $('#content_container').html(this.wineListView.render().el);
     },
 
     wineDetails:function (id) {
         this.wine = this.wineList.get(id);
         this.wineView = new WineView({model:this.wine});
-        $('#content').html(this.wineView.render().el);
+        $('#content_container').html(this.wineView.render().el);
     }
 });
 
