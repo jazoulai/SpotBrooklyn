@@ -10,7 +10,7 @@ window.WineCollection = Backbone.Collection.extend({
 // Views
 window.WineListView = Backbone.View.extend({
 
-    tagName:'ul',
+    id: 'list_container',
 
     initialize:function () {
         this.model.bind("reset", this.render, this);
@@ -27,9 +27,9 @@ window.WineListView = Backbone.View.extend({
 
 window.WineListItemView = Backbone.View.extend({
 
-    tagName:"li",
+    className: 'list_item',
 
-    template:_.template($('#tpl-wine-list-item').html()),
+    template:_.template($('#list_item_template').html()),
 
     render:function (eventName) {
         $(this.el).html(this.template(this.model.toJSON()));
@@ -40,7 +40,9 @@ window.WineListItemView = Backbone.View.extend({
 
 window.WineView = Backbone.View.extend({
 
-    template:_.template($('#tpl-wine-details').html()),
+    id: 'story_container',
+
+    template:_.template($('#story_template').html()),
 
     render:function (eventName) {
         $(this.el).html(this.template(this.model.toJSON()));

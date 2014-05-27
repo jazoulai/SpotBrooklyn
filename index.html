@@ -10,29 +10,25 @@
     <div id="content_container"></div>
 
     <!-- Templates -->
-    <script type="text/template" id="tpl-wine-list-item">
-        <a href='#wines/<%= id %>'><%= name %></a>
+    <script type="text/template" id="list_item_template">
+            <div class="thumbnail_image">
+                <img src="pics/<%= picture %>"/>
+            </div>
+            <div class="headline">
+                <p>
+                    <a href='#wines/<%= id %>'><%= name %></a>
+                </p>
+            </div>
     </script>
 
-    <script type="text/template" id="tpl-wine-details">
+    <script type="text/template" id="story_template">
         <div class="form-left-col">
-            <label>Id:</label>
-            <input type="text" id="wineId" name="id" value="<%= id %>" disabled />
-            <label>Name:</label>
-            <input type="text" id="name" name="name" value="<%= name %>" required/>
-            <label>Grapes:</label>
-            <input type="text" id="grapes" name="grapes" value="<%= grapes %>"/>
-            <label>Country:</label>
-            <input type="text" id="country" name="country" value="<%= country %>"/>
-            <label>Region:</label>
-            <input type="text" id="region" name="region" value="<%= region %>"/>
-            <label>Year:</label>
-            <input type="text" id="year" name="year" value="<%= year %>"/>
-        </div>
-        <div class="form-right-col">
-            <img height="300" src="pics/<%= picture %>"/>
-            <label>Notes:</label>
-            <textarea id="description" name="description"><%= description %></textarea>
+            <p><%= id %></p>
+            <p><%= grapes %></p>
+            <p><%= country %></p>
+            <p><%= region %></p>
+            <p><%= year %></p>
+            <p><%= description %></p>
         </div>
     </script>
 
