@@ -1,3 +1,7 @@
+// Map
+
+var map = L.mapbox.map('map', 'spotbrooklyn.i3jb181a').setView([40.685259, -73.977664], 14);
+
 // Models
 window.Wine = Backbone.Model.extend();
 
