@@ -1,14 +1,14 @@
 // The in-memory Store. Encapsulates logic to access wine data.
 window.store = {
 
-    wines: {},
+    wines: [],
 
     populate: function () {
 
         this.wines[1] = {
             id: 1,
             name: "CHATEAU DE SAINT COSME",
-            year: "2009",
+            year: ["2009", "2008"],
             grapes: "Grenache / Syrah",
             country: "France",
             region: "Southern Rhone",
@@ -245,33 +245,10 @@ window.store = {
             description: "Legend has it the gods didn't share their ambrosia with mere mortals.  This merlot may be the closest we've ever come to a taste of heaven.",
             picture: "waterbrook.jpg"
         };
-
-        this.lastId = 24;
-    },
-
-    find: function (model) {
-        return this.wines[model.id];
     },
 
     findAll: function () {
         return _.values(this.wines);
-    },
-
-    create: function (model) {
-        this.lastId++;
-        model.set('id', this.lastId);
-        this.wines[this.lastId] = model;
-        return model;
-    },
-
-    update: function (model) {
-        this.wines[model.id] = model;
-        return model;
-    },
-
-    destroy: function (model) {
-        delete this.wines[model.id];
-        return model;
     }
 
 };
@@ -281,27 +258,7 @@ store.populate();
 // Overriding Backbone's sync method. Replace the default RESTful services-based implementation
 // with a simple in-memory approach.
 Backbone.sync = function (method, model, options) {
-
-    var resp;
-
-    switch (method) {
-        case "read":
-            resp = model.id ? store.find(model) : store.findAll();
-            break;
-        case "create":
-            resp = store.create(model);
-            break;
-        case "update":
-            resp = store.update(model);
-            break;
-        case "delete":
-            resp = store.destroy(model);
-            break;
-    }
-
-    if (resp) {
-        options.success(resp);
-    } else {
-        options.error("Record not found");
-    }
+        var response = store.findAll();
+        console.log(response);
+        options.success(response);
 };
