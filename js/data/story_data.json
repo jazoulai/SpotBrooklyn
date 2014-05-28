@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "headline": "Fake Headline #1",
+        "date": "5/12/2014",
+        "copy": "Axonas velum in cirpi!",
+        "picture": "saint_cosme.jpg"
+    },
+    {
+        "id": 2,
+        "headline": "Fake Headline #2",
+        "date": "5/11/2014",
+        "copy": "Contencios ridetis, tanquam secundus gabalium.",
+        "picture": "saint_cosme.jpg"
+    },
+    {
+        "id": 3,
+        "headline": "Fake Headline #3",
+        "date": "5/10/2014",
+        "copy": "Burguss nocere!",
+        "picture": "saint_cosme.jpg"
+    }
+]

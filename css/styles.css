@@ -1,7 +1,3 @@
-* {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 18px;
-}
 body, html {
     width: 100%;
     height: 100%;
@@ -35,16 +31,15 @@ body, html {
     background: lightblue;
     padding: 0;
     margin: 0;
-    margin-bottom: 1%;
-    margin-top: 1%;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
 }
 .thumbnail_image {
     position: relative;
-    top: 8%;
-    width: 18%;
-    height: 78%;
+    width: 20%;
+    height: 100%;
     padding: 0;
-    margin: 1%;
+    margin: 0;
     float: left;
     background-color: lightgoldenrodyellow;
 }
@@ -54,13 +49,14 @@ img {
 }
 .headline {
     position: relative;
-    width: 78%;
-    height: 78%;
-    top: 8%;
+    width: 80%;
+    height: 100%;
     padding: 0;
-    margin: 1%;
+    margin: 0;
     float: right;
-    background-color: white;
+    font-size: 4vh;
+    text-align: center;
+    background-color: lightblue;
 }
 #content {
     position: absolute;
