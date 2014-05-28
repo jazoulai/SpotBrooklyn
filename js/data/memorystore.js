@@ -259,6 +259,5 @@ store.populate();
 // with a simple in-memory approach.
 Backbone.sync = function (method, model, options) {
         var response = store.findAll();
-        console.log(response);
         options.success(response);
 };
