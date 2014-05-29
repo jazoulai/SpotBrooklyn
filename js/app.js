@@ -1,42 +1,17 @@
-//  Air Pair Tasks
-//      (1) Review and clarify current code
-//      (2) General discussion about handling data:
-//              (a) ajax
-//              (b) localStorage
-//              (c) database options
-//              (d) connecting backbone model data with map data
-//      (3) Discuss options for creating interaction between Backbone views and map.
-//      (4) Refactor code to use json file for model data
-//      (5) Discuss next steps
-//
-//
-//QUESTION: is it necessary to use window.attribute syntax?
-//NOTES:
-window.Stories = Backbone.Model.extend();
+Stories = Backbone.Model.extend();
 
-window.StoryCollection = Backbone.Collection.extend({
+StoryCollection = Backbone.Collection.extend({
     model:Stories,
-//QUESTION: this url doesn't actually do anything right now?
-//NOTES:
-    url: 'api/stories'
+    url: 'js/data/story_data.json'
 });
 
-window.StoryListView = Backbone.View.extend({
+StoryListView = Backbone.View.extend({
     id: 'list_container',
-//DOCUMENTATION: when you pass a function as a callback, its value for this is lost.
-//QUESTION: (1) use 'bind' or 'on'?
-//          (2) what does the 'this' argument do?
-//NOTES:
     initialize:function () {
-        this.model.bind("reset", this.render, this);
+        this.model.on("reset", this.render, this);
     },
-//QUESTION: (1) can I remove the eventName argument?
-//          (2) clarify 'model.models'?
-//          (3) does the 'story' argument create a new 'sub-model' from the data?
-//          (4) purpose of final 'this' argument in _.each function'?
-//          (5) why return 'this'?
-//NOTES:
     render:function (eventName) {
+        console.log(this.model);
         _.each(this.model.models, function (story) {
             $(this.el).append(new StoryListItemView({model:story}).render().el);
         }, this);
@@ -44,7 +19,7 @@ window.StoryListView = Backbone.View.extend({
     }
 });
 
-window.StoryListItemView = Backbone.View.extend({
+StoryListItemView = Backbone.View.extend({
     className: 'list_item',
     template:_.template($('#list_item_template').html()),
     render:function (eventName) {
@@ -53,7 +28,7 @@ window.StoryListItemView = Backbone.View.extend({
     }
 });
 
-window.StoryView = Backbone.View.extend({
+StoryView = Backbone.View.extend({
     id: 'story_container',
     template:_.template($('#story_template').html()),
     render:function (eventName) {
@@ -67,27 +42,29 @@ var AppRouter = Backbone.Router.extend({
         "":"list",
         "story/:id":"storyContent"
     },
+    initialize: function(storyListCollection){
+        this.storyListCollection = storyListCollection;
+        console.log(this.storyListCollection);
+    },
     list:function () {
-//QUESTION: is it necessary to use 'this' if there's only one instance of StoryCollection and StoryView?
-//NOTES:
-        this.storyListCollection = new StoryCollection();
         this.storyListView = new StoryListView({model:this.storyListCollection});
-        this.storyListCollection.fetch();
         $('#content_container').html(this.storyListView.render().el);
     },
     storyContent:function (id) {
         this.story = this.storyListCollection.get(id);
-//QUESTION: How does the new StoryView get the whole model with only an ID?
-//NOTES:
         this.storyView = new StoryView({model:this.story});
         $('#content_container').html(this.storyView.render().el);
     }
 });
 
-var app = new AppRouter();
-Backbone.history.start();
-
 $(document).ready(function(){
+    var storyListCollection = new StoryCollection();
+    storyListCollection.fetch({
+        success: function(){
+            var app = new AppRouter(storyListCollection);
+            Backbone.history.start();
+        }
+    });
 
     function ajaxResponse (){
         return $.get('js/data/geo_data.json');
