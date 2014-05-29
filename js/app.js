@@ -16,7 +16,9 @@ window.Stories = Backbone.Model.extend();
 
 window.StoryCollection = Backbone.Collection.extend({
     model:Stories,
-    url: 'api/wines'
+//QUESTION: this url doesn't actually do anything right now?
+//NOTES:
+    url: 'api/stories'
 });
 
 window.StoryListView = Backbone.View.extend({
