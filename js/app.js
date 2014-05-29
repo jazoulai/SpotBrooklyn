@@ -1,3 +1,5 @@
+var map = L.mapbox.map('map', 'spotbrooklyn.i3jb181a').setView([40.685259, -73.977664], 11);
+
 Stories = Backbone.Model.extend();
 
 StoryCollection = Backbone.Collection.extend({
@@ -11,7 +13,6 @@ StoryListView = Backbone.View.extend({
         this.model.on("reset", this.render, this);
     },
     render:function (eventName) {
-        console.log(this.model);
         _.each(this.model.models, function (story) {
             $(this.el).append(new StoryListItemView({model:story}).render().el);
         }, this);
@@ -39,22 +40,27 @@ StoryView = Backbone.View.extend({
 
 var AppRouter = Backbone.Router.extend({
     routes:{
-        "":"list",
-        "story/:id":"storyContent"
+        "":"loadList",
+        "story/:id":"loadStory"
     },
     initialize: function(storyListCollection){
         this.storyListCollection = storyListCollection;
-        console.log(this.storyListCollection);
     },
-    list:function () {
+    loadList:function () {
         this.storyListView = new StoryListView({model:this.storyListCollection});
         $('#content_container').html(this.storyListView.render().el);
+
     },
-    storyContent:function (id) {
+    loadStory:function (id) {
         this.story = this.storyListCollection.get(id);
         this.storyView = new StoryView({model:this.story});
         $('#content_container').html(this.storyView.render().el);
-    }
+        this.marker = L.marker(this.story.attributes.spot).addTo(map);
+        var header = this.story.attributes.headline;
+        this.marker.on('click', function(){
+            alert(header);
+        });
+    },
 });
 
 $(document).ready(function(){
@@ -66,12 +72,5 @@ $(document).ready(function(){
         }
     });
 
-    function ajaxResponse (){
-        return $.get('js/data/geo_data.json');
-    }
 
-    ajaxResponse().done(function(geoData){
-    var map = L.mapbox.map('map', 'spotbrooklyn.i3jb181a').setView([40.685259, -73.977664], 14);
-        L.geoJson(geoData).addTo(map);
-    });
 });

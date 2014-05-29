@@ -4,20 +4,23 @@
         "headline": "Fake Headline #fsdfs",
         "date": "5/12/2014",
         "copy": "Jonathan is a cool dude!",
-        "picture": "saint_cosme.jpg"
+        "picture": "saint_cosme.jpg",
+        "spot" : [40.6778, -73.989321]
     },
     {
         "id": 2,
         "headline": "Fake Headline #2",
         "date": "5/11/2014",
         "copy": "Contencios ridetis, tanquam secundus gabalium.",
-        "picture": "saint_cosme.jpg"
+        "picture": "saint_cosme.jpg",
+        "spot" : [40.721876, -73.957386]
     },
     {
         "id": 3,
         "headline": "Fake Headline #3",
         "date": "5/10/2014",
         "copy": "Burguss nocere!",
-        "picture": "saint_cosme.jpg"
+        "picture": "saint_cosme.jpg",
+        "spot" : [40.66853, -73.970389]
     }
 ]
