@@ -58,7 +58,9 @@ var AppRouter = Backbone.Router.extend({
     load_list:function () {
         this.storyListView = new StoryListView({model:this.storyListCollection});
         $('#content_container').html(this.storyListView.render().el);
-
+        if(map.hasLayer(this.markers)){
+            map.removeLayer(this.markers);
+        }
     },
     load_story:function (id) {
         this.story = this.storyListCollection.get(id);
@@ -73,6 +75,9 @@ var AppRouter = Backbone.Router.extend({
                     });
                 }
             }).addTo(map);
+        this.button = $('#nav').on('click', function(){
+
+        });
     }
 });
 
