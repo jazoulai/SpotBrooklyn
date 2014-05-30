@@ -5,7 +5,50 @@
         "date": "5/12/2014",
         "copy": "Jonathan is a cool dude!",
         "picture": "saint_cosme.jpg",
-        "spot" : [40.6778, -73.989321]
+        "spots" : {
+            "type": "FeatureCollection",
+            "features": [
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -73.989321,
+                            40.6778
+                        ]
+                    },
+                    "properties": {
+                        "id": 1
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -73.957386,
+                            40.721876
+                        ]
+                    },
+                    "properties": {
+                        "id": 2
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -73.970389,
+                            40.66853
+                        ]
+                    },
+                    "properties": {
+                        "id": 3
+                    }
+                }
+            ]
+        }
     },
     {
         "id": 2,
@@ -13,7 +56,50 @@
         "date": "5/11/2014",
         "copy": "Contencios ridetis, tanquam secundus gabalium.",
         "picture": "saint_cosme.jpg",
-        "spot" : [40.721876, -73.957386]
+        "spots" : {
+            "type": "FeatureCollection",
+            "features": [
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -73.977664,
+                            40.685259
+                        ]
+                    },
+                    "properties": {
+                        "id": 1
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -73.988543,
+                            40.676444
+                        ]
+                    },
+                    "properties": {
+                        "id": 2
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -73.968131,
+                            40.672347
+                        ]
+                    },
+                    "properties": {
+                        "id": 3
+                    }
+                }
+            ]
+        }
     },
     {
         "id": 3,
@@ -21,6 +107,49 @@
         "date": "5/10/2014",
         "copy": "Burguss nocere!",
         "picture": "saint_cosme.jpg",
-        "spot" : [40.66853, -73.970389]
+        "spots" : {
+            "type": "FeatureCollection",
+            "features": [
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -73.975861,
+                            40.573951
+                        ]
+                    },
+                    "properties": {
+                        "id": 1
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -73.96981,
+                            40.687732
+                        ]
+                    },
+                    "properties": {
+                        "id": 2
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -73.979136,
+                            40.574226
+                        ]
+                    },
+                    "properties": {
+                        "id": 3
+                    }
+                }
+            ]
+        }
     }
 ]

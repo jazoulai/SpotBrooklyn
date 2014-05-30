@@ -38,29 +38,42 @@ StoryView = Backbone.View.extend({
     }
 });
 
+SpotView = Backbone.View.extend({
+    id: 'story_container',
+    template: _.template($('#spot_template').html()),
+    render: function () {
+        $(this.el).html(this.template(this.model));
+        return this;
+    }
+});
+
 var AppRouter = Backbone.Router.extend({
     routes:{
-        "":"loadList",
-        "story/:id":"loadStory"
+        "":"load_list",
+        "story/:id":"load_story"
     },
     initialize: function(storyListCollection){
         this.storyListCollection = storyListCollection;
     },
-    loadList:function () {
+    load_list:function () {
         this.storyListView = new StoryListView({model:this.storyListCollection});
         $('#content_container').html(this.storyListView.render().el);
 
     },
-    loadStory:function (id) {
+    load_story:function (id) {
         this.story = this.storyListCollection.get(id);
         this.storyView = new StoryView({model:this.story});
         $('#content_container').html(this.storyView.render().el);
-        this.marker = L.marker(this.story.attributes.spot).addTo(map);
-        var header = this.story.attributes.headline;
-        this.marker.on('click', function(){
-            alert(header);
-        });
-    },
+        this.geoData = this.story.attributes.spots;
+        this.markers = L.geoJson(this.geoData, {
+                onEachFeature: function(feature, layer) {
+                    layer.on('click', function(){
+                        var spot = new SpotView({model:layer.feature.properties});
+                        $('#content_container').html(spot.render().el);
+                    });
+                }
+            }).addTo(map);
+    }
 });
 
 $(document).ready(function(){
@@ -71,6 +84,8 @@ $(document).ready(function(){
             Backbone.history.start();
         }
     });
+
+
 
 
 });
