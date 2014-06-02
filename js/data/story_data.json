@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id": "rooftops",
         "headline": "Fake Headline #fsdfs",
         "date": "5/12/2014",
         "copy": "Jonathan is a cool dude!",
@@ -13,12 +13,12 @@
                     "geometry": {
                         "type": "Point",
                         "coordinates": [
-                            -73.989321,
-                            40.6778
+                            -73.959696,
+                            40.734280
                         ]
                     },
                     "properties": {
-                        "id": 1
+                        "id": "eagle_street_rooftop_farm"
                     }
                 },
                 {
@@ -26,12 +26,12 @@
                     "geometry": {
                         "type": "Point",
                         "coordinates": [
-                            -73.957386,
-                            40.721876
+                            -74.010852,
+                            40.671229
                         ]
                     },
                     "properties": {
-                        "id": 2
+                        "id": "ikea_solar_panels"
                     }
                 },
                 {
@@ -39,12 +39,12 @@
                     "geometry": {
                         "type": "Point",
                         "coordinates": [
-                            -73.970389,
-                            40.66853
+                            -73.982827,
+                            40.579350
                         ]
                     },
                     "properties": {
-                        "id": 3
+                        "id": "pigeon_fancier_anthony_martire"
                     }
                 }
             ]

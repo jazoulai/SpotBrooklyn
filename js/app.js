@@ -7,6 +7,13 @@ StoryCollection = Backbone.Collection.extend({
     url: 'js/data/story_data.json'
 });
 
+Spots = Backbone.Model.extend();
+
+SpotCollection = Backbone.Collection.extend({
+    model: Spots,
+    url: 'js/data/spot_data.json'
+});
+
 StoryListView = Backbone.View.extend({
     id: 'list_container',
     initialize:function () {
@@ -50,7 +57,8 @@ SpotView = Backbone.View.extend({
 var AppRouter = Backbone.Router.extend({
     routes:{
         "":"load_list",
-        "story/:id":"load_story"
+        "story/:id":"load_story",
+        "spot/:id":"load_spot"
     },
     initialize: function(storyListCollection){
         this.storyListCollection = storyListCollection;
@@ -70,27 +78,38 @@ var AppRouter = Backbone.Router.extend({
         this.markers = L.geoJson(this.geoData, {
                 onEachFeature: function(feature, layer) {
                     layer.on('click', function(){
-                        var spot = new SpotView({model:layer.feature.properties});
-                        $('#content_container').html(spot.render().el);
+                      location.href = '#spot/' + feature.properties.id;
                     });
                 }
             }).addTo(map);
         this.button = $('#nav').on('click', function(){
 
         });
+    },
+    load_spot: function(id){
+        console.log(id);
     }
 });
 
-$(document).ready(function(){
-    var storyListCollection = new StoryCollection();
-    storyListCollection.fetch({
-        success: function(){
-            var app = new AppRouter(storyListCollection);
+$(document).ready(function() {
+    var storyCollection = new StoryCollection();
+    storyCollection.fetch({
+        success: function () {
+
+            var app = new AppRouter(storyCollection);
             Backbone.history.start();
+
+
         }
     });
-
-
-
-
 });
+
+
+/*load_spot: function (id){
+    this.spot = this.spotCollection.get(id);
+    var spot = new SpotView({model:this.spot});
+    $('#content_container').html(spot.render().el);
+}
+});*/
+
+

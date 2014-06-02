@@ -1,48 +1,11 @@
-{
-    "spot_id": 1,
-    "name": "Fake Place Name",
-    "address": {
-        "street": "420 Dorchester Way",
-        "borough": "Brooklyn",
-        "state": "New York",
-        "zipcode": "11230",
-        "neighborhood": "Ditmas Park"
+[
+    {
+        "id" : "eagle_street_rooftop_farm",
     },
-    "information": {
-        "phone_number": "908-214-3424",
-        "times_operational": [
-            {
-                "Monday": [
-                    "08:00",
-                    "16:00"
-                ]
-            },
-            {
-                "Tuesday": [
-                    "08:00",
-                    "16:00"
-                ]
-            },
-            {
-                "Wednesday": [
-                    "08:00",
-                    "16:00"
-                ]
-            }
-        ]
+    {
+        "id": "ikea_solar_panels"
     },
-    "website": "http://fake_site.com",
-    "copy": "Secundus, bi-color triticums solite transferre de alter, teres planeta.",
-    "thumbnail": "fake_pic_4_thumb.png",
-    "images": [
-        "fake_pic_4.png",
-        "fake_pic_5.png",
-        "fake_pic_6.png"
-    ],
-    "video": "fake_video_url_2.mpg",
-    "keywords": [
-        "brooklyn",
-        "farming",
-        "rooftop"
-    ]
-}
+    {
+        "id": "pigeon_fancier_anthony_martire"
+    }
+]
