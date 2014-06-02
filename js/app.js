@@ -1,4 +1,5 @@
-var map = L.mapbox.map('map', 'spotbrooklyn.i3jb181a').setView([40.685259, -73.977664], 11);
+var map = L.mapbox.map('map', 'spotbrooklyn.i3jb181a');
+map.setView([40.685259, -73.977664], 11);
 
 Stories = Backbone.Model.extend();
 
@@ -68,7 +69,7 @@ var AppRouter = Backbone.Router.extend({
     load_list:function () {
         this.storyListView = new StoryListView({model:this.storyCollection});
         $('#content_container').html(this.storyListView.render().el);
-        if(map.hasLayer(this.markers)){
+        if(map.hasLayer(this.markers || this.spotMarkers)){
             map.removeLayer(this.markers);
         }
     },
@@ -89,11 +90,9 @@ var AppRouter = Backbone.Router.extend({
         this.spot = this.spotsCollection.get(id);
         var spot = new SpotView({model:this.spot});
         $('#content_container').html(spot.render().el);
-        this.spotMarkers = this.spot.attributes.spotFeatures;
-        map.removeLayer(this.markers);
-        this.spotMap = L.geoJson(this.spotMarkers).addTo(map);
-
-
+        this.spotMarkers = this.spot.attributes.coordinates;
+        map.setView(this.spotMarkers, 13);
+        L.marker(this.spotMarkers).addTo(map);
     }
 });
 
