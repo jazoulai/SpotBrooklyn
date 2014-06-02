@@ -9,7 +9,7 @@ StoryCollection = Backbone.Collection.extend({
 
 Spots = Backbone.Model.extend();
 
-SpotCollection = Backbone.Collection.extend({
+SpotsCollection = Backbone.Collection.extend({
     model: Spots,
     url: 'js/data/spot_data.json'
 });
@@ -60,25 +60,27 @@ var AppRouter = Backbone.Router.extend({
         "story/:id":"load_story",
         "spot/:id":"load_spot"
     },
-    initialize: function(storyListCollection){
-        this.storyListCollection = storyListCollection;
+    initialize: function(storyCollection, spotsCollection){
+        this.storyCollection = storyCollection;
+        this.spotsCollection = spotsCollection;
+
     },
     load_list:function () {
-        this.storyListView = new StoryListView({model:this.storyListCollection});
+        this.storyListView = new StoryListView({model:this.storyCollection});
         $('#content_container').html(this.storyListView.render().el);
         if(map.hasLayer(this.markers)){
             map.removeLayer(this.markers);
         }
     },
     load_story:function (id) {
-        this.story = this.storyListCollection.get(id);
+        this.story = this.storyCollection.get(id);
         this.storyView = new StoryView({model:this.story});
         $('#content_container').html(this.storyView.render().el);
         this.geoData = this.story.attributes.spots;
         this.markers = L.geoJson(this.geoData, {
                 onEachFeature: function(feature, layer) {
                     layer.on('click', function(){
-                      location.href = '#spot/' + feature.properties.id;
+                        location.href = '#spot/' + feature.properties.id;
                     });
                 }
             }).addTo(map);
@@ -86,30 +88,30 @@ var AppRouter = Backbone.Router.extend({
 
         });
     },
-    load_spot: function(id){
-        console.log(id);
+    load_spot: function (id){
+        this.spot = this.spotsCollection.get(id);
+        console.log(this.spot);
+        var spot = new SpotView({model:this.spot});
+        $('#content_container').html(spot.render().el);
     }
 });
 
 $(document).ready(function() {
     var storyCollection = new StoryCollection();
+
     storyCollection.fetch({
         success: function () {
-
-            var app = new AppRouter(storyCollection);
-            Backbone.history.start();
-
-
+            var spotsCollection = new SpotsCollection();
+            spotsCollection.fetch({
+                success: function(){
+                    var app = new AppRouter(storyCollection, spotsCollection);
+                    Backbone.history.start();
+                }
+            });
         }
     });
 });
 
 
-/*load_spot: function (id){
-    this.spot = this.spotCollection.get(id);
-    var spot = new SpotView({model:this.spot});
-    $('#content_container').html(spot.render().el);
-}
-});*/
 
 
