@@ -1,6 +1,19 @@
 [
     {
-        "id" : "eagle_street_rooftop_farm"
+        "id" : "eagle_street_rooftop_farm",
+        "spotFeatures" :  {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -73.959696,
+                    40.734280
+                ]
+            },
+            "properties": {
+                "id": "rooftops"
+            }
+        }
     },
     {
         "id": "ikea_solar_panels"

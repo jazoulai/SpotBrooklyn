@@ -84,15 +84,16 @@ var AppRouter = Backbone.Router.extend({
                     });
                 }
             }).addTo(map);
-        this.button = $('#nav').on('click', function(){
-
-        });
     },
     load_spot: function (id){
         this.spot = this.spotsCollection.get(id);
-        console.log(this.spot);
         var spot = new SpotView({model:this.spot});
         $('#content_container').html(spot.render().el);
+        this.spotMarkers = this.spot.attributes.spotFeatures;
+        map.removeLayer(this.markers);
+        this.spotMap = L.geoJson(this.spotMarkers).addTo(map);
+
+
     }
 });
 
