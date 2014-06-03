@@ -1,14 +1,20 @@
 var map = L.mapbox.map('map', 'spotbrooklyn.i3jb181a');
 map.setView([40.685259, -73.977664], 11);
 
-Stories = Backbone.Model.extend();
+Stories = Backbone.Model.extend({
+    defaults: {
+        button_href: "",
+        button_text: "< Home"
+    }
+});
 
 StoryCollection = Backbone.Collection.extend({
     model:Stories,
     url: 'js/data/story_data.json'
 });
 
-Spots = Backbone.Model.extend();
+Spots = Backbone.Model.extend({
+});
 
 SpotsCollection = Backbone.Collection.extend({
     model: Spots,
@@ -55,6 +61,15 @@ SpotView = Backbone.View.extend({
     }
 });
 
+NavigationView = Backbone.View.extend({
+    id: 'navigation_container',
+    template: _.template($('#navigation_template').html()),
+    render: function () {
+        $(this.el).html(this.template(this.model.toJSON()));
+        return this;
+    }
+});
+
 var AppRouter = Backbone.Router.extend({
     routes:{
         "":"load_list",
@@ -66,7 +81,7 @@ var AppRouter = Backbone.Router.extend({
         this.spotsCollection = spotsCollection;
 
     },
-    load_list:function () {
+    load_list:function (id) {
         this.storyListView = new StoryListView({model:this.storyCollection});
         $('#content_container').html(this.storyListView.render().el);
         if(map.hasLayer(this.markers || this.spotMarkers)){
@@ -74,25 +89,52 @@ var AppRouter = Backbone.Router.extend({
         }
     },
     load_story:function (id) {
+        //get Stories model object by id
         this.story = this.storyCollection.get(id);
+        //instantiate a StoryView using Stories model object as the data model
         this.storyView = new StoryView({model:this.story});
+        //render the StoryView's template into a unique div
         $('#content_container').html(this.storyView.render().el);
+        //if spot specific marker exists, remove it
+        if(map.hasLayer(this.spotMarkers)){
+            map.removeLayer(this.markers);
+        }
+        //ensure that map's SetView is always consistent
+        map.setView([40.685259, -73.977664], 11);
+        //store geoJson data in a local variable
         this.geoData = this.story.attributes.spots;
+        //pass geoJson data into leaflet.js geoJson function
         this.markers = L.geoJson(this.geoData, {
+                //on each marker click, add marker's href to the current url
                 onEachFeature: function(feature, layer) {
                     layer.on('click', function(){
                         location.href = '#spot/' + feature.properties.id;
                     });
                 }
+            //render markers to the map
             }).addTo(map);
+        //instantiate NavigationView with stories object as model
+        this.navigationView = new NavigationView({model:this.story});
+        //render the NavigationView's template into a unique div
+        $('#nav').html(this.navigationView.render().el);
     },
     load_spot: function (id){
+        //get Spots model object by id
         this.spot = this.spotsCollection.get(id);
-        var spot = new SpotView({model:this.spot});
-        $('#content_container').html(spot.render().el);
+        //instantiate a SpotView using Spots model object as the model
+        this.spotView = new SpotView({model:this.spot});
+        //render the SpotView's template into a unique div
+        $('#content_container').html(this.spotView.render().el);
+        //This breaks on hard reload
+        //map.removeLayer(this.markers);
+        //store spot coordinates in a local variable
         this.spotMarkers = this.spot.attributes.coordinates;
-        map.setView(this.spotMarkers, 13);
+        //setView of map to the spot's coordinates, and specified zoom level
+        map.setView(this.spotMarkers, 18);
+        //render spot's marker onto the map
         L.marker(this.spotMarkers).addTo(map);
+        this.navigationView = new NavigationView({model:this.spot});
+        $('#nav').html(this.navigationView.render().el);
     }
 });
 

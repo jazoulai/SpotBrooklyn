@@ -1,7 +1,9 @@
 [
     {
-        "id" : "eagle_street_rooftop_farm",
-        "coordinates" : [40.734280, -73.959696]
+        "id" : "eagle_street_rooftop_farms",
+        "coordinates" : [40.734280, -73.959696],
+        "button_href" : "#story/rooftops",
+        "button_text" : "< Story"
     },
     {
         "id": "ikea_solar_panels"

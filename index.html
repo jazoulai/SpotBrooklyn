@@ -9,8 +9,8 @@
     <body>
 
     <div id="map"></div>
-    <div id="nav"><a href="#">HOME</a></div>
     <div id="content_container"></div>
+    <div id="nav"></div>
 
     <!-- Templates -->
     <script type="text/template" id="list_item_template">
@@ -25,18 +25,20 @@
     </script>
 
     <script type="text/template" id="story_template">
-        <div class="form-left-col">
             <p><%= id %></p>
             <p><%= headline %></p>
             <p><%= date %></p>
             <p><%= copy %></p>
-        </div>
     </script>
 
     <script type="text/template" id="spot_template">
         <div class="form-left-col">
             <p>I'm spot #: <%= id %></p>
         </div>
+    </script>
+
+    <script type="text/template" id="navigation_template">
+        <a href="<%= button_href %>"><%= button_text %></a>
     </script>
 
 
