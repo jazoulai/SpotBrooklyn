@@ -1,6 +1,6 @@
 body, html {
-    width: 320px;
-    height: 480px;
+    width: 100%;
+    height: 100%;
     padding: 0;
     margin: 0;
 }
@@ -32,6 +32,26 @@ body, html {
     background-color: lightcoral;
     overflow-y: scroll;
 }
+#story_container {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-y: scroll;
+}
+#spot_container {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-y: scroll;
+}
+#navigation_container{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
 .list_item {
     width: 100%;
     height: 30%;
@@ -53,6 +73,10 @@ body, html {
 img {
     width: 100%;
     height: 100%;
+}
+img.story_image{
+    width: 100%;
+    height: auto;
 }
 .headline {
     position: relative;

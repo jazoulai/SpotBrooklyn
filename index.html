@@ -2,7 +2,8 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+    <title>SpotBrooklyn.com</title>
     <link rel="stylesheet" href="css/mapbox.css">
     <link rel="stylesheet" href="css/styles.css"/>
 </head>
@@ -13,32 +14,30 @@
     <div id="nav"></div>
 
     <!-- Templates -->
-    <script type="text/template" id="list_item_template">
+    <script type="text/x-handlebars-template" id="list_item_template">
             <div class="thumbnail_image">
-                <img src="images/<%= picture %>"/>
+                <img src="images/{{picture}}"/>
             </div>
             <div class="headline">
                 <p>
-                    <a href='#story/<%= id %>'><%= headline %></a>
+                    <a href="#story/{{id}}">{{headline}}</a>
                 </p>
             </div>
     </script>
 
     <script type="text/template" id="story_template">
-            <p><%= id %></p>
-            <p><%= headline %></p>
-            <p><%= date %></p>
-            <p><%= copy %></p>
+            <p>{{id}}</p>
     </script>
 
     <script type="text/template" id="spot_template">
-        <div class="form-left-col">
-            <p>I'm spot #: <%= id %></p>
-        </div>
+            <h1>{{name}}></h1>
+            <img class="story_image" src="images/{{image}}"/>
+            <p>{{description}}</p>
+            <p>{{open_to_the_public.type}}:</p>
     </script>
 
     <script type="text/template" id="navigation_template">
-        <a href="<%= button_href %>"><%= button_text %></a>
+        <a href="{{button_href}}">{{button_text}}</a>
     </script>
 
 
@@ -46,6 +45,7 @@
         <script src="js/libs/jquery-2.1.1.js"></script>
         <script src="js/libs/underscore.js"></script>
         <script src="js/libs/backbone.js"></script>
+        <script src="js/libs/handlebars-v1.3.0.js"></script>
         <script src="js/libs/mapbox.js"></script>
         <script src="js/app.js"></script>
     </body>

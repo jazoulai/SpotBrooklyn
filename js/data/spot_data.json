@@ -1,14 +1,28 @@
 [
     {
         "id" : "eagle_street_rooftop_farms",
+        "name" : "Eagle Street Rooftop Farm",
+        "image" : "EagleStreetAnnie.jpg",
+        "description" : "This 6,000 square foot organic vegetable farm is located atop a warehouse rooftop owned by Broadway Stages.  During the growing season, the farm supplies an on-site farm market, bicycle fresh produce to area restaurants, and educational programs through GrowingChefs.org.",
+        "open_to_the_public" : {
+            "hours": {
+                "Sunday": {
+                    "open": "13:00",
+                    "closed": "16:00"
+                }
+            },
+            "type" : "Open to the public",
+            "notes": "during the growing season"
+        },
+        "address" : {
+            "street": "44 Eagle Street",
+            "borough": "Brooklyn",
+            "state": "New York",
+            "zipcode": "11222",
+            "neighborhood": "Greenpoint"
+        },
         "coordinates" : [40.734280, -73.959696],
         "button_href" : "#story/rooftops",
         "button_text" : "< Story"
-    },
-    {
-        "id": "ikea_solar_panels"
-    },
-    {
-        "id": "pigeon_fancier_anthony_martire"
     }
 ]

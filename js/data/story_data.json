@@ -1,10 +1,13 @@
 [
     {
         "id": "rooftops",
-        "headline": "Fake Headline #fsdfs",
-        "date": "5/12/2014",
+        "headline": "Come Check Out My Roof",
+        "headline_alt_1" : "Join the Rooftop Revolution",
+        "headline_alt_2" : "Rooftops: The Final Frontier",
+        "date_published": "5/12/2014",
+        "date_updated" : "6/03/2014",
         "copy": "Jonathan is a cool dude!",
-        "picture": "saint_cosme.jpg",
+        "picture": "EagleStreetAnnie.jpg",
         "spots" : {
             "type": "FeatureCollection",
             "features": [

@@ -36,7 +36,7 @@ StoryListView = Backbone.View.extend({
 
 StoryListItemView = Backbone.View.extend({
     className: 'list_item',
-    template:_.template($('#list_item_template').html()),
+    template: Handlebars.compile($('#list_item_template').html()),
     render:function (eventName) {
         $(this.el).html(this.template(this.model.toJSON()));
         return this;
@@ -45,7 +45,7 @@ StoryListItemView = Backbone.View.extend({
 
 StoryView = Backbone.View.extend({
     id: 'story_container',
-    template:_.template($('#story_template').html()),
+    template: Handlebars.compile($('#story_template').html()),
     render:function (eventName) {
         $(this.el).html(this.template(this.model.toJSON()));
         return this;
@@ -53,17 +53,17 @@ StoryView = Backbone.View.extend({
 });
 
 SpotView = Backbone.View.extend({
-    id: 'story_container',
-    template: _.template($('#spot_template').html()),
+    id: 'spot_container',
+    template: Handlebars.compile($('#spot_template').html()),
     render: function () {
-        $(this.el).html(this.template(this.model));
+        $(this.el).html(this.template(this.model.toJSON()));
         return this;
     }
 });
 
 NavigationView = Backbone.View.extend({
     id: 'navigation_container',
-    template: _.template($('#navigation_template').html()),
+    template: Handlebars.compile($('#navigation_template').html()),
     render: function () {
         $(this.el).html(this.template(this.model.toJSON()));
         return this;
@@ -91,6 +91,7 @@ var AppRouter = Backbone.Router.extend({
     load_story:function (id) {
         //get Stories model object by id
         this.story = this.storyCollection.get(id);
+        console.log(this.story);
         //instantiate a StoryView using Stories model object as the data model
         this.storyView = new StoryView({model:this.story});
         //render the StoryView's template into a unique div
@@ -121,6 +122,7 @@ var AppRouter = Backbone.Router.extend({
     load_spot: function (id){
         //get Spots model object by id
         this.spot = this.spotsCollection.get(id);
+        console.log(this.spot);
         //instantiate a SpotView using Spots model object as the model
         this.spotView = new SpotView({model:this.spot});
         //render the SpotView's template into a unique div
