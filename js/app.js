@@ -122,7 +122,6 @@ var AppRouter = Backbone.Router.extend({
     load_spot: function (id){
         //get Spots model object by id
         this.spot = this.spotsCollection.get(id);
-        console.log(this.spot);
         //instantiate a SpotView using Spots model object as the model
         this.spotView = new SpotView({model:this.spot});
         //render the SpotView's template into a unique div
@@ -155,7 +154,3 @@ $(document).ready(function() {
         }
     });
 });
-
-
-
-

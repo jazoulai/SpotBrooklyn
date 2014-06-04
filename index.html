@@ -33,12 +33,22 @@
             <h1>{{name}}</h1>
             <img class="story_image" src="images/{{image}}"/>
             <p>{{description}}</p>
+            {{#if sources}}
+                <p>via
+                    {{#each sources}}
+                            <a href="http://{{this.source_link}}">
+                                {{this.source_name}}
+                            </a> and
+                    {{/each}}
+                </p>
+            {{/if}}
             {{#if public_hours}}
-            <p>Open:
+                <p>Open:
                 <br>
-                {{#each public_hours.days}}
-                    {{this.day}}: {{this.opening_time}} - {{this.closing_time}}</p>
-                {{/each}}
+                    {{#each public_hours.days}}
+                        {{this.day}}: {{this.opening_time}} - {{this.closing_time}}
+                </p>
+                    {{/each}}
             {{/if}}
             <p>Location:
                 <br>
@@ -46,7 +56,30 @@
                 <br>
                 {{address.neighborhood}}
                 <br>
-                {{address.borough}}, {{address.state}}  {{address.zipcode}}</p>
+                {{address.borough}}, {{address.state}}  {{address.zipcode}}
+            </p>
+            {{#if contact_info}}
+                <p>Contact:
+                    {{#if contact_info.phone_number}}
+                        <br>
+                        <a href="tel:{{contact_info.phone_number}}">{{contact_info.phone_number}}
+                        </a>
+                    {{/if}}
+                    {{#if contact_info.email_address}}
+                        <br>
+                        <a href="{{contact_info.email_address}}">{{contact_info.email_address}}
+                        </a>
+                    {{/if}}
+                    {{#if contact_info.twitter}}
+                        <br>
+                        <a href="http://twitter.com/{{contact_info.twitter}}">Twitter</a>
+                    {{/if}}
+                    {{#if contact_info.facebook}}
+                        <br>
+                        <a href="http://facebook.com/{{contact_info.facebook}}">facebook</a>
+                    {{/if}}
+                </p>
+            {{/if}}
     </script>
 
     <script type="text/template" id="navigation_template">
