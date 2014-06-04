@@ -34,11 +34,42 @@
         "button_href" : "#story/rooftops",
         "button_text" : "< Story"
     },
-
     {
         "id" : "ikea_solar_panels",
         "name" : "Ikea's Solar Panels",
         "image" : "IkeaSolarPanels.jpg",
+        "description" : "This LEED Silver certified building includes 70,000 square feet of green roof and a 19,000 square foot solar panel array. According to Ikea, the energy produced by these solar panels is equivalent to the yearly energy use of 20 homes. The electricity that is produced does not power the store, but rather is pumped into the electric grid, slightly reducing the store’s ecological impact.",
+        "sources" : [
+            {
+                "source_link" : "brooklynpaper.com/stories/34/18/dtg_ikearoof_2011_5_6_bk.html",
+                "source_name" : "brooklynpaper.com"
+            },
+            {
+                "source_link" : "businesswire.com/news/home/20110427005549/en/System-Complete-IKEA-Powers-up-Solar-Brooklyn-NY#.U483si-otmo",
+                "source_name" : "Business Wire"
+            }
+        ],
+        "address" : {
+            "street": "1 Beard Street",
+            "borough": "Brooklyn",
+            "state": "New York",
+            "zipcode": "11231",
+            "neighborhood": "Red Hook"
+        },
+        "contact_info" : {
+            "phone_number" : "888-888-4532"
+        },
+        "coordinates" : [
+            40.671229, -74.010852
+        ],
+        "button_href" : "#story/rooftops",
+        "button_text" : "< Story"
+    },
+    {
+        "id" : "pigeon_fancier_anthony_martire",
+        "name" : "Pigeon Whisperer",
+        "image" : "IkeaSolarPanels.jpg",
+        "video" : "IkeaSolarPanels.jpg",
         "description" : "This LEED Silver certified building includes 70,000 square feet of green roof and a 19,000 square foot solar panel array. According to Ikea, the energy produced by these solar panels is equivalent to the yearly energy use of 20 homes. The electricity that is produced does not power the store, but rather is pumped into the electric grid, slightly reducing the store’s ecological impact.",
         "sources" : [
             {
