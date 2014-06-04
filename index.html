@@ -36,9 +36,17 @@
             {{#if sources}}
                 <p>via
                     {{#each sources}}
-                            <a href="http://{{this.source_link}}">
+                    {{#if @first}}
+                    {{else}}
+                        {{#if @last}}
+                        and
+                        {{else}}
+                        ,
+                        {{/if}}
+                    {{/if}}
+                    <a href="http://{{this.source_link}}">
                                 {{this.source_name}}
-                            </a> and
+                            </a>
                     {{/each}}
                 </p>
             {{/if}}

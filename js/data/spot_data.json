@@ -42,8 +42,8 @@
         "description" : "This LEED Silver certified building includes 70,000 square feet of green roof and a 19,000 square foot solar panel array. According to Ikea, the energy produced by these solar panels is equivalent to the yearly energy use of 20 homes. The electricity that is produced does not power the store, but rather is pumped into the electric grid, slightly reducing the store’s ecological impact.",
         "sources" : [
             {
-            "source_link" : "brooklynpaper.com/stories/34/18/dtg_ikearoof_2011_5_6_bk.html",
-            "source_name" : "brooklynpaper.com"
+                "source_link" : "brooklynpaper.com/stories/34/18/dtg_ikearoof_2011_5_6_bk.html",
+                "source_name" : "brooklynpaper.com"
             },
             {
                 "source_link" : "businesswire.com/news/home/20110427005549/en/System-Complete-IKEA-Powers-up-Solar-Brooklyn-NY#.U483si-otmo",
@@ -55,7 +55,7 @@
             "borough": "Brooklyn",
             "state": "New York",
             "zipcode": "11231",
-            "neighborhood": "Greenpoint"
+            "neighborhood": "Red Hook"
         },
         "contact_info" : {
             "phone_number" : "888-888-4532"
