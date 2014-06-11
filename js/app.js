@@ -110,6 +110,36 @@ var AppRouter = Backbone.Router.extend({
         }
         //ensure that map's SetView is always consistent
         map.setView([40.685259, -73.977664], 10);
+        //
+
+
+
+
+        var hood = this.neighborhoodsCollection.attributes;
+        var storyNeighborhoods = this.story.attributes.neighborhoods;
+        var nabe = [];
+
+
+        for(var i = 0; i < _.size(hood); i++){
+            nabe.push(this.neighborhoodsCollection.attributes[i].properties.neighborhood);
+        }
+
+        storyNeighborhoods.forEach(function(hoodie){
+            var found = $.inArray(hoodie, nabe);
+
+            if(found > -1){
+                console.log(hoodie);
+            }else{
+                console.log('not found');
+            }
+        });
+
+
+
+
+
+
+
         //store geoJson data in a local variable
         this.geoData = this.story.attributes.spots;
         //pass geoJson data into leaflet.js geoJson function
@@ -155,11 +185,9 @@ $(document).ready(function() {
     var neighborhoodsCollection = new NeighborhoodsCollection();
     neighborhoodsCollection.fetch({
         success: function(){
-            console.log(neighborhoodsCollection);
             var storyCollection = new StoryCollection();
             storyCollection.fetch({
                 success: function () {
-                    console.log(storyCollection);
                     var spotsCollection = new SpotsCollection();
                     spotsCollection.fetch({
                         success: function(){
