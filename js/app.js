@@ -1,5 +1,5 @@
 var map = L.mapbox.map('map', 'spotbrooklyn.i3jb181a');
-map.setView([40.685259, -73.977664], 11);
+map.setView([40.685259, -73.977664], 10);
 
 Stories = Backbone.Model.extend({
     defaults: {
@@ -18,7 +18,7 @@ Spots = Backbone.Model.extend({
 
 SpotsCollection = Backbone.Collection.extend({
     model: Spots,
-    url: 'js/data/spot_data.json'
+    url: 'js/data/pigeon_fanciers.json'
 });
 
 StoryListView = Backbone.View.extend({
@@ -91,7 +91,6 @@ var AppRouter = Backbone.Router.extend({
     load_story:function (id) {
         //get Stories model object by id
         this.story = this.storyCollection.get(id);
-        console.log(this.story);
         //instantiate a StoryView using Stories model object as the data model
         this.storyView = new StoryView({model:this.story});
         //render the StoryView's template into a unique div
@@ -101,7 +100,7 @@ var AppRouter = Backbone.Router.extend({
             map.removeLayer(this.markers);
         }
         //ensure that map's SetView is always consistent
-        map.setView([40.685259, -73.977664], 11);
+        map.setView([40.685259, -73.977664], 10);
         //store geoJson data in a local variable
         this.geoData = this.story.attributes.spots;
         //pass geoJson data into leaflet.js geoJson function
@@ -129,11 +128,13 @@ var AppRouter = Backbone.Router.extend({
         //This breaks on hard reload
         //map.removeLayer(this.markers);
         //store spot coordinates in a local variable
-        this.spotMarkers = this.spot.attributes.coordinates;
+        this.spotMarkers = this.spot.attributes.spot;
+        //center map center coordinates in a local variable
+        this.centerSpot = this.spot.attributes.spot.properties.center;
         //setView of map to the spot's coordinates, and specified zoom level
-        map.setView(this.spotMarkers, 18);
+        map.setView(this.centerSpot);
         //render spot's marker onto the map
-        L.marker(this.spotMarkers).addTo(map);
+        L.geoJson(this.spotMarkers).addTo(map);
         this.navigationView = new NavigationView({model:this.spot});
         $('#nav').html(this.navigationView.render().el);
     }
