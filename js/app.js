@@ -1,6 +1,14 @@
 var map = L.mapbox.map('map', 'spotbrooklyn.i3jb181a');
 map.setView([40.685259, -73.977664], 10);
 
+Neighborhood = Backbone.Model.extend();
+
+NeighborhoodsCollection = Backbone.Model.extend({
+    model: Neighborhood,
+    url: 'js/data/neighborhoods.json'
+});
+
+
 Stories = Backbone.Model.extend({
     defaults: {
         button_href: "",
@@ -76,7 +84,8 @@ var AppRouter = Backbone.Router.extend({
         "story/:id":"load_story",
         "spot/:id":"load_spot"
     },
-    initialize: function(storyCollection, spotsCollection){
+    initialize: function(neighborhoodsCollection, storyCollection, spotsCollection){
+        this.neighborhoodsCollection = neighborhoodsCollection;
         this.storyCollection = storyCollection;
         this.spotsCollection = spotsCollection;
 
@@ -141,15 +150,23 @@ var AppRouter = Backbone.Router.extend({
 });
 
 $(document).ready(function() {
-    var storyCollection = new StoryCollection();
 
-    storyCollection.fetch({
-        success: function () {
-            var spotsCollection = new SpotsCollection();
-            spotsCollection.fetch({
-                success: function(){
-                    var app = new AppRouter(storyCollection, spotsCollection);
-                    Backbone.history.start();
+
+    var neighborhoodsCollection = new NeighborhoodsCollection();
+    neighborhoodsCollection.fetch({
+        success: function(){
+            console.log(neighborhoodsCollection);
+            var storyCollection = new StoryCollection();
+            storyCollection.fetch({
+                success: function () {
+                    console.log(storyCollection);
+                    var spotsCollection = new SpotsCollection();
+                    spotsCollection.fetch({
+                        success: function(){
+                            var app = new AppRouter(neighborhoodsCollection, storyCollection, spotsCollection);
+                            Backbone.history.start();
+                        }
+                    });
                 }
             });
         }

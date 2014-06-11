@@ -2,39 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe0408b6-eeb5-4738-b11d-2e853cd5eeb6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/data/pigeon_fanciers.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/spot_template.json" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/EagleStreetAnnie.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/IkeaSolarPanels.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/argiano.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/block_nine.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/bodega_lurton.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/bouscat.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/calera.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/capineto.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/caronne.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/dinastia.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/domaine_serene.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/ex_umbris.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/fourvines.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/generic.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/hugel.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/lan_rioja.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/le_doyenne.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/lurton-pinot-gris.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/margerum.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/momo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/morizottes.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/petalos.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/ponzi.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/quivira.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/rex_hill.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/saint_cosme.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/shafer.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/viticcio.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/waterbrook.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/app.js" afterPath="$PROJECT_DIR$/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/data/story_data.json" afterPath="$PROJECT_DIR$/js/data/story_data.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -62,7 +30,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.032259" vertical-offset="22" max-vertical-offset="2904">
+            <state vertical-scroll-proportion="-17.032259" vertical-offset="22" max-vertical-offset="2772">
               <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
               <folding />
             </state>
@@ -79,11 +47,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5458468" vertical-offset="1804" max-vertical-offset="3564">
-              <caret line="105" column="44" selection-start-line="105" selection-start-column="44" selection-end-line="105" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1537" max-vertical-offset="3960">
+              <caret line="40" column="20" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="story_data.json" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/data/story_data.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5401786" vertical-offset="0" max-vertical-offset="990">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -92,18 +70,8 @@
       <file leaf-file-name="pigeon_fanciers.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/data/pigeon_fanciers.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.4838705" vertical-offset="220" max-vertical-offset="3806">
+            <state vertical-scroll-proportion="-14.193548" vertical-offset="198" max-vertical-offset="3784">
               <caret line="29" column="27" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="story_data.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/data/story_data.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.806452" vertical-offset="775" max-vertical-offset="20614">
-              <caret line="42" column="35" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -134,9 +102,10 @@
         <option value="$PROJECT_DIR$/css/styles.css" />
         <option value="$PROJECT_DIR$/js/data/spot_data.json" />
         <option value="$PROJECT_DIR$/.idea/spot_template.json" />
-        <option value="$PROJECT_DIR$/js/app.js" />
         <option value="$PROJECT_DIR$/js/data/pigeon_fanciers.json" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/data/nieghborhoods.json" />
+        <option value="$PROJECT_DIR$/js/app.js" />
         <option value="$PROJECT_DIR$/js/data/story_data.json" />
       </list>
     </option>
@@ -146,7 +115,7 @@
     <config-path />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="548" />
+    <option name="x" value="346" />
     <option name="y" value="22" />
     <option name="width" value="1121" />
     <option name="height" value="1024" />
@@ -263,7 +232,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="548" y="22" width="1121" height="1024" extended-state="0" />
+    <frame x="346" y="22" width="1121" height="1024" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -307,13 +276,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1801" max-vertical-offset="2750">
-          <caret line="90" column="16" selection-start-line="90" selection-start-column="16" selection-end-line="90" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/data/story_data.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="792" max-vertical-offset="3586">
@@ -674,24 +636,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/data/pigeon_fanciers.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.4838705" vertical-offset="220" max-vertical-offset="3806">
+        <state vertical-scroll-proportion="-14.193548" vertical-offset="198" max-vertical-offset="3784">
           <caret line="29" column="27" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/data/story_data.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.806452" vertical-offset="775" max-vertical-offset="20614">
-          <caret line="42" column="35" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5458468" vertical-offset="1804" max-vertical-offset="3564">
-          <caret line="105" column="44" selection-start-line="105" selection-start-column="44" selection-end-line="105" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1537" max-vertical-offset="3960">
+          <caret line="40" column="20" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/data/story_data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5401786" vertical-offset="0" max-vertical-offset="990">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding />
         </state>
       </provider>
