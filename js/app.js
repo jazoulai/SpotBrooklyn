@@ -86,7 +86,7 @@ var AppRouter = Backbone.Router.extend({
     },
     initialize: function(neighborhoodsCollection, storyCollection, spotsCollection){
         this.neighborhoodsCollection = neighborhoodsCollection;
-        this.storyCollection = storyCollection;g
+        this.storyCollection = storyCollection;
         this.spotsCollection = spotsCollection;
 
     },
@@ -111,21 +111,37 @@ var AppRouter = Backbone.Router.extend({
         //ensure that map's SetView is always consistent
         map.setView([40.685259, -73.977664], 10);
 
+        var neighborhoodsCollectionObjects = this.neighborhoodsCollection.attributes;
+
+        var neighborhoodsCollectionProperties = _.pluck(neighborhoodsCollectionObjects, 'properties');
+
+        var neighborhoodsCollectionArray = _.pluck(neighborhoodsCollectionProperties, 'neighborhood');
+
+        var storyCollectionNeighborhoods = this.story.attributes.neighborhoods;
+
+        var neighborhoodIntersection = _.intersection(storyCollectionNeighborhoods, neighborhoodsCollectionArray);
+
+       console.log(neighborhoodIntersection);
 
 
 
 
-        //store StoryCollection's neighborhood array in a variable
-        /*var storyNeighborhoods = this.story.attributes.neighborhoods;
+
+
+
+
+        /*//store StoryCollection's neighborhood array in a variable
+        var storyNeighborhoods = this.story.attributes.neighborhoods;
         //for each neighborhood in the neighborhood array, do the following:
         storyNeighborhoods.forEach(function(neighborhood){
             //store all objects in the neighborhoodCollection
-            var hood = neighborhoodsCollection.attributes;
+            var neighborhoods = neighborhoodsCollection.attributes;
+
             var nabe = [];
             var nabeGeo = [];
 
             //increment over each neighborhood object, and neighborhood string value
-            for(var i = 0; i < _.size(hood); i++){
+            for(var i = 0; i < _.size(neighborhoods); i++){
                 //increment over each neighborhood value, and add it to the nabe array
                 nabe.push(neighborhoodsCollection.attributes[i].properties.neighborhood);
                 //increment over each neighborhood obkect, and add it to the nabeGeo array
@@ -134,7 +150,7 @@ var AppRouter = Backbone.Router.extend({
                 var filterNabe = $.inArray(neighborhood, nabe);
                 //if the neighborhood exists, load the current neighborhood object
                 if(filterNabe > -1){
-                    L.geoJson(nabeGeo).addTo(map);
+                    console.log(nabeGeo);
                 }else{
                     console.log('not found')
                 }

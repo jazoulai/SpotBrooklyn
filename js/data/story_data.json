@@ -2,9 +2,7 @@
     {
         "id": "pigeon_fanciers",
         "neighborhoods" : [
-          "Jamaica Bay",
-            "Greenpoint",
-            "Ditmas Park"
+            "Greenpoint"
         ],
         "headline": "The Incredible Homing Pigeon",
         "headline_alt_1": "",
