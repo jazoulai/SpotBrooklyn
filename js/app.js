@@ -113,21 +113,42 @@ var AppRouter = Backbone.Router.extend({
             map.removeLayer(this.markers);
         }
         //ensure that map's SetView is always consistent
-        map.setView([40.685259, -73.977664], 10);
+        map.setView([40.685259, -73.977664], 11);
 
         var neighborhoodsCollection = this.neighborhoodsCollection;
 
         var neighborhoodsCollectionIds = neighborhoodsCollection.pluck('id');
-        console.log(neighborhoodsCollectionIds);
 
         var storyCollectionNeighborhoods = this.story.attributes.neighborhoods;
-        console.log(storyCollectionNeighborhoods);
 
-        neighborhoodsIntersection = _.intersection(neighborhoodsCollectionIds, storyCollectionNeighborhoods);
-        console.log(neighborhoodsIntersection);
+        var currentStory = this.story;
+
+        var neighborhoodsIntersection = _.intersection(neighborhoodsCollectionIds, storyCollectionNeighborhoods);
 
         neighborhoodsIntersection.forEach(function(neighborhood){
-            L.geoJson(neighborhoodsCollection.get(neighborhood).attributes).addTo(map);
+            L.geoJson(neighborhoodsCollection.get(neighborhood).attributes, {
+
+                onEachFeature: function(feature, layer){
+                    layer.on('click', function(){
+
+                        var spots = L.geoJson(currentStory.attributes.spotMarkers, {
+                            onEachFeature: function(feature, layer){
+                                layer.on('click', function(){
+                                    alert(feature.id);
+                                });
+                            }
+                        });
+
+                        var centerPoint = neighborhoodsCollection.get(neighborhood).attributes.properties.center_point;
+                        var zoomLevel = neighborhoodsCollection.get(neighborhood).attributes.properties.zoom_level;
+
+                        map.setView(centerPoint, zoomLevel);
+
+                        spots.addTo(map);
+                    })
+                }
+
+            }).addTo(map);
         });
 
 

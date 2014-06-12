@@ -4,7 +4,12 @@
         "type": "Feature",
         "properties": {
             "neighborhood": "Downtown Brooklyn",
-            "boroughCode": "3",
+            "center_point": [
+                    40.694891,
+                    -73.986962
+
+            ],
+            "zoom_level": 13,
             "borough": "Brooklyn",
             "@id": "http://nyc.pediacities.com/Resource/Neighborhood/Downtown_Brooklyn"
         },

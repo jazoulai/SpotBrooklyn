@@ -18,7 +18,24 @@
                 "source_link": "rooftopfarms.org",
                 "source_name": "rooftopfarms.org"
             }
-        ]
+        ],
+        "spotMarkers" : {
+        "id" : "Willie",
+        "type": "Feature",
+        "properties": {
+            "neighborhood": "Downtown Brooklyn",
+            "boroughCode": "3",
+            "borough": "Brooklyn",
+            "@id": "http://nyc.pediacities.com/Resource/Neighborhood/Downtown_Brooklyn"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -73.986962,
+                40.694891
+            ]
+        }
+    }
     },
     {
         "id": 2,
