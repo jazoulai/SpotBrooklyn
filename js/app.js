@@ -86,7 +86,7 @@ var AppRouter = Backbone.Router.extend({
     },
     initialize: function(neighborhoodsCollection, storyCollection, spotsCollection){
         this.neighborhoodsCollection = neighborhoodsCollection;
-        this.storyCollection = storyCollection;
+        this.storyCollection = storyCollection;g
         this.spotsCollection = spotsCollection;
 
     },
@@ -110,48 +110,46 @@ var AppRouter = Backbone.Router.extend({
         }
         //ensure that map's SetView is always consistent
         map.setView([40.685259, -73.977664], 10);
-        //
-
-
-
-
-        var hood = this.neighborhoodsCollection.attributes;
-        var storyNeighborhoods = this.story.attributes.neighborhoods;
-        var nabe = [];
-
-
-        for(var i = 0; i < _.size(hood); i++){
-            nabe.push(this.neighborhoodsCollection.attributes[i].properties.neighborhood);
-        }
-
-        storyNeighborhoods.forEach(function(hoodie){
-            var found = $.inArray(hoodie, nabe);
-
-            if(found > -1){
-                console.log(hoodie);
-            }else{
-                console.log('not found');
-            }
-        });
 
 
 
 
 
+        //store StoryCollection's neighborhood array in a variable
+        /*var storyNeighborhoods = this.story.attributes.neighborhoods;
+        //for each neighborhood in the neighborhood array, do the following:
+        storyNeighborhoods.forEach(function(neighborhood){
+            //store all objects in the neighborhoodCollection
+            var hood = neighborhoodsCollection.attributes;
+            var nabe = [];
+            var nabeGeo = [];
 
-
-        //store geoJson data in a local variable
-        this.geoData = this.story.attributes.spots;
-        //pass geoJson data into leaflet.js geoJson function
-        this.markers = L.geoJson(this.geoData, {
-                //on each marker click, add marker's href to the current url
-                onEachFeature: function(feature, layer) {
-                    layer.on('click', function(){
-                        location.href = '#spot/' + feature.properties.id;
-                    });
+            //increment over each neighborhood object, and neighborhood string value
+            for(var i = 0; i < _.size(hood); i++){
+                //increment over each neighborhood value, and add it to the nabe array
+                nabe.push(neighborhoodsCollection.attributes[i].properties.neighborhood);
+                //increment over each neighborhood obkect, and add it to the nabeGeo array
+                nabeGeo.push(neighborhoodsCollection.attributes[i]);
+                //check if each item in the storyNeighborhood array is in the nabe array
+                var filterNabe = $.inArray(neighborhood, nabe);
+                //if the neighborhood exists, load the current neighborhood object
+                if(filterNabe > -1){
+                    L.geoJson(nabeGeo).addTo(map);
+                }else{
+                    console.log('not found')
                 }
-            //render markers to the map
-            }).addTo(map);
+            }
+        });*/
+
+
+        /*
+        * NEXT STEPS
+        * create an L.geoJson onEachFeature function that sets the map view and loads the markers within that neighborhood.
+        *create an L.geoJson onEachFeature that sets the location.href for that particular spot
+        *create a Next button in the NavigationTemplate
+        *create a Json record in each spot that references the next spot in order
+        * */
+
         //instantiate NavigationView with stories object as model
         this.navigationView = new NavigationView({model:this.story});
         //render the NavigationView's template into a unique div
