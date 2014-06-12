@@ -2,7 +2,8 @@
     {
         "id": "pigeon_fanciers",
         "neighborhoods" : [
-            "Greenpoint"
+            "Greenpoint",
+            "Dyker_Heights"
         ],
         "headline": "The Incredible Homing Pigeon",
         "headline_alt_1": "",

@@ -1,11 +1,11 @@
 var map = L.mapbox.map('map', 'spotbrooklyn.i3jb181a');
 map.setView([40.685259, -73.977664], 10);
 
-Neighborhood = Backbone.Model.extend();
+Neighborhoods = Backbone.Model.extend();
 
-NeighborhoodsCollection = Backbone.Model.extend({
-    model: Neighborhood,
-    url: 'js/data/neighborhoods.json'
+NeighborhoodsCollection = Backbone.Collection.extend({
+    model: Neighborhoods,
+    url: 'js/data/neighborhoods2.json'
 });
 
 
@@ -98,6 +98,10 @@ var AppRouter = Backbone.Router.extend({
         }
     },
     load_story:function (id) {
+
+
+        //console.log(id);
+        //console.log(this.storyCollection);
         //get Stories model object by id
         this.story = this.storyCollection.get(id);
         //instantiate a StoryView using Stories model object as the data model
@@ -111,60 +115,22 @@ var AppRouter = Backbone.Router.extend({
         //ensure that map's SetView is always consistent
         map.setView([40.685259, -73.977664], 10);
 
-        var neighborhoodsCollectionObjects = this.neighborhoodsCollection.attributes;
+        var neighborhoodsCollection = this.neighborhoodsCollection;
 
-        var neighborhoodsCollectionProperties = _.pluck(neighborhoodsCollectionObjects, 'properties');
-
-        var neighborhoodsCollectionArray = _.pluck(neighborhoodsCollectionProperties, 'neighborhood');
+        var neighborhoodsCollectionIds = neighborhoodsCollection.pluck('id');
+        console.log(neighborhoodsCollectionIds);
 
         var storyCollectionNeighborhoods = this.story.attributes.neighborhoods;
+        console.log(storyCollectionNeighborhoods);
 
-        var neighborhoodIntersection = _.intersection(storyCollectionNeighborhoods, neighborhoodsCollectionArray);
+        neighborhoodsIntersection = _.intersection(neighborhoodsCollectionIds, storyCollectionNeighborhoods);
+        console.log(neighborhoodsIntersection);
 
-       console.log(neighborhoodIntersection);
-
-
-
-
-
-
+        neighborhoodsIntersection.forEach(function(neighborhood){
+            L.geoJson(neighborhoodsCollection.get(neighborhood).attributes).addTo(map);
+        });
 
 
-        /*//store StoryCollection's neighborhood array in a variable
-        var storyNeighborhoods = this.story.attributes.neighborhoods;
-        //for each neighborhood in the neighborhood array, do the following:
-        storyNeighborhoods.forEach(function(neighborhood){
-            //store all objects in the neighborhoodCollection
-            var neighborhoods = neighborhoodsCollection.attributes;
-
-            var nabe = [];
-            var nabeGeo = [];
-
-            //increment over each neighborhood object, and neighborhood string value
-            for(var i = 0; i < _.size(neighborhoods); i++){
-                //increment over each neighborhood value, and add it to the nabe array
-                nabe.push(neighborhoodsCollection.attributes[i].properties.neighborhood);
-                //increment over each neighborhood obkect, and add it to the nabeGeo array
-                nabeGeo.push(neighborhoodsCollection.attributes[i]);
-                //check if each item in the storyNeighborhood array is in the nabe array
-                var filterNabe = $.inArray(neighborhood, nabe);
-                //if the neighborhood exists, load the current neighborhood object
-                if(filterNabe > -1){
-                    console.log(nabeGeo);
-                }else{
-                    console.log('not found')
-                }
-            }
-        });*/
-
-
-        /*
-        * NEXT STEPS
-        * create an L.geoJson onEachFeature function that sets the map view and loads the markers within that neighborhood.
-        *create an L.geoJson onEachFeature that sets the location.href for that particular spot
-        *create a Next button in the NavigationTemplate
-        *create a Json record in each spot that references the next spot in order
-        * */
 
         //instantiate NavigationView with stories object as model
         this.navigationView = new NavigationView({model:this.story});
