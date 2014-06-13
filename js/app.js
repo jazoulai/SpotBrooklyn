@@ -1,4 +1,6 @@
 var current_story_spots = null;
+var current_story_layer = null;
+var polygon_layer = null;
 var map = L.mapbox.map('map', 'spotbrooklyn.i3jb181a');
 map.setView([40.685259, -73.977664], 10);
 
@@ -143,34 +145,45 @@ var AppRouter = Backbone.Router.extend({
         });
 
 
-        window.polygon_layer = L.geoJson(neighborhoodPolygons, {
-            onEachFeature: function(feature, layer){
-
-
-
-                layer.on('click', function(){
-                    var neighborhoodCenter = feature.properties.center_point;
-                    var neighborhoodZoom = feature.properties.zoom_level;
-                    map.setView(neighborhoodCenter, neighborhoodZoom);
-                    window.current_story_spots = currentStory.attributes.spotMarkers;
-                    window.current_story_layer = L.geoJson(current_story_spots, {
-                        onEachFeature: function(feature, layer){
-                            layer.on('click', function(){
-                                location.href = '#/spot/' + spotId;
-                            });
-                        }
-                    }).addTo(map);
-                });
-
-
+        if(current_story_layer != null){
+            if(map.hasLayer(current_story_layer)){
+                map.removeLayer(current_story_layer).setView([40.685259, -73.977664], 10);
             }
-        }).addTo(map);
+        }
+
+
+        if(!map.hasLayer(polygon_layer)) {
+            window.polygon_layer = L.geoJson(neighborhoodPolygons, {
+                onEachFeature: function (feature, layer) {
+                    layer.on('click', function () {
+                        if (current_story_layer != null) {
+                            if (map.hasLayer(current_story_layer)) {
+                                map.removeLayer(current_story_layer).setView([40.685259, -73.977664], 10);
+                            }
+                        }
+                        var neighborhoodCenter = feature.properties.center_point;
+                        var neighborhoodZoom = feature.properties.zoom_level;
+                        map.setView(neighborhoodCenter, neighborhoodZoom);
+                        window.current_story_spots = currentStory.attributes.spotMarkers;
+                        window.current_story_layer = L.geoJson(current_story_spots, {
+                            onEachFeature: function (feature, layer) {
+                                layer.on('click', function () {
+                                    location.href = '#/spot/' + spotId;
+                                });
+                            }
+                        }).addTo(map);
+                    });
+                }
+            }).addTo(map);
+
+        }
 
         //instantiate and render NavigationView with stories object as model
         this.navigationView = new NavigationView({model:this.story});
         $('#nav').html(this.navigationView.render().el);
     },
     load_spot: function (id){
+
         //get Spots model object by id
         this.spot = this.spotsCollection.get(id);
         //instantiate a SpotView using Spots model object as the model
@@ -178,23 +191,11 @@ var AppRouter = Backbone.Router.extend({
         //render the SpotView's template into a unique div
         $('#content_container').html(this.spotView.render().el);
 
+        map.setView(this.spot.attributes.center_point, 15);
 
-
-
-        /*//This breaks on hard reload
-        //map.removeLayer(this.markers);
-        //store spot coordinates in a local variable
-        this.spotMarkers = this.spot.attributes.spot;
-        //center map center coordinates in a local variable
-        this.centerSpot = this.spot.attributes.spot.properties.center;
-        //setView of map to the spot's coordinates, and specified zoom level
-        map.setView(this.centerSpot);
-        //render spot's marker onto the map
-        L.geoJson(this.spotMarkers).addTo(map);*/
 
         this.navigationView = new NavigationView({model:this.spot});
         $('#nav').html(this.navigationView.render().el);
-        console.log(this.spot)
     }
 });
 
