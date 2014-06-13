@@ -137,7 +137,8 @@ var AppRouter = Backbone.Router.extend({
 
         var neighborhoodPolygons = [];
 
-        var spotId = currentStory.attributes.spotMarkers.id;
+        //var spotId = currentStory.attributes.spotMarkers.id;
+
 
         //load and set marker hrefs for each neighborhood polygon
         neighborhoodsIntersection.forEach(function(neighborhood){
@@ -150,7 +151,6 @@ var AppRouter = Backbone.Router.extend({
                 map.removeLayer(current_story_layer).setView([40.685259, -73.977664], 10);
             }
         }
-
 
         if(!map.hasLayer(polygon_layer)) {
             window.polygon_layer = L.geoJson(neighborhoodPolygons, {
@@ -168,7 +168,7 @@ var AppRouter = Backbone.Router.extend({
                         window.current_story_layer = L.geoJson(current_story_spots, {
                             onEachFeature: function (feature, layer) {
                                 layer.on('click', function () {
-                                    location.href = '#/spot/' + spotId;
+                                    location.href = '#/spot/' + feature.id;
                                 });
                             }
                         }).addTo(map);

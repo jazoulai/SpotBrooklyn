@@ -1,42 +1,42 @@
-{
-    "id" : "willie",
-    "fwd_button_text" : "Next",
-    "fwd_button_href" : "#spot/nextspot",
-    "back_button_href" : "#story/pigeon_fanciers",
-    "back_button_text" : "< Story",
-    "name" : "Willie from Bushwick",
-    "image" : "majestic_pigeon.jpg",
-    "description" : "This 6,000 square foot organic vegetable farm is located atop a warehouse rooftop.  The farm delivers bicycle-fresh produce to area restaurants, and runs educational programs through GrowingChefs.org. Stop by for their weekly farmers market.",
-    "sources" : [
-        {
-            "source_link" : "rooftopfarms.org",
-            "source_name" : "rooftopfarms.org"
-        }
-    ],
-    "public_hours" : {
-        "days": [
+[
+    {
+        "id": "willie",
+        "fwd_button_text": "Next",
+        "fwd_button_href": "#spot/frank_viola",
+        "back_button_href": "#story/pigeon_fanciers",
+        "back_button_text": "< Story",
+        "center_point": [
+            40.709457,
+            -73.945339
+        ],
+        "name": "Willie from Bushwick",
+        "image": "majestic_pigeon.jpg",
+        "description": "This 6,000 square foot organic vegetable farm is located atop a warehouse rooftop.  The farm delivers bicycle-fresh produce to area restaurants, and runs educational programs through GrowingChefs.org. Stop by for their weekly farmers market.",
+        "sources": [
             {
-                "day" : "Sunday",
-                "opening_time": "13:00",
-                "closing_time": "16:00"
+                "source_link": "rooftopfarms.org",
+                "source_name": "rooftopfarms.org"
             }
         ]
     },
-    "address" : {
-        "street": "44 Eagle Street",
-        "borough": "Brooklyn",
-        "state": "New York",
-        "zipcode": "11222",
-        "neighborhood": "Greenpoint"
-    },
-    "contact_info" : {
-        "twitter" : "rooftopfarmer",
-        "facebook" : "pages/Eagle-Street-Rooftop-Farm/105973792772558"
-    },
-    "button_href" : "#story/pigeon_fanciers",
-    "button_text" : "< Story",
-    "center_point": [
-        40.709457,
-        -73.945339
-    ]
-}
+    {
+        "id": "frank_viola",
+        "fwd_button_text": "Next",
+        "fwd_button_href": "#spot/nextspot",
+        "back_button_href": "#story/pigeon_fanciers",
+        "back_button_text": "< Story",
+        "center_point": [
+            40.709457,
+            -73.945339
+        ],
+        "name": "Willie from Bushwick",
+        "image": "majestic_pigeon.jpg",
+        "description": "This 6,000 square foot organic vegetable farm is located atop a warehouse rooftop.  The farm delivers bicycle-fresh produce to area restaurants, and runs educational programs through GrowingChefs.org. Stop by for their weekly farmers market.",
+        "sources": [
+            {
+                "source_link": "rooftopfarms.org",
+                "source_name": "rooftopfarms.org"
+            }
+        ]
+    }
+]

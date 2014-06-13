@@ -21,20 +21,36 @@
                 "source_name": "rooftopfarms.org"
             }
         ],
-        "spotMarkers": {
-            "id": "willie",
-            "type": "Feature",
-            "properties": {
-                "neighborhood": "Downtown Brooklyn"
+        "spotMarkers": [
+            {
+                "id": "willie",
+                "type": "Feature",
+                "properties": {
+                    "neighborhood": "Downtown Brooklyn"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        -73.945339,
+                        40.709457
+                    ]
+                }
             },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -73.945339,
-                    40.709457
-                ]
+            {
+                "id": "frank_viola",
+                "type": "Feature",
+                "properties": {
+                    "neighborhood": "Gravesend"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        -73.982822,
+                        40.584569
+                    ]
+                }
             }
-        }
+        ]
     },
     {
         "id": 2,
