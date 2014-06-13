@@ -1,5 +1,9 @@
 {
-    "id" : "bushwick_willie",
+    "id" : "willie",
+    "fwd_button_text" : "Next",
+    "fwd_button_href" : "#spot/nextspot",
+    "back_button_href" : "#story/pigeon_fanciers",
+    "back_button_text" : "< Story",
     "name" : "Willie from Bushwick",
     "image" : "majestic_pigeon.jpg",
     "description" : "This 6,000 square foot organic vegetable farm is located atop a warehouse rooftop.  The farm delivers bicycle-fresh produce to area restaurants, and runs educational programs through GrowingChefs.org. Stop by for their weekly farmers market.",

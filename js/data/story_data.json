@@ -1,13 +1,15 @@
 [
     {
         "id": "pigeon_fanciers",
-        "neighborhoods" : [
-            "Greenpoint",
-            "Dyker_Heights"
+        "neighborhoods": [
+            "bushwick",
+            "brownsville",
+            "coney_island",
+            "east_new_york",
+            "gravesend",
+            "williamsburg"
         ],
         "headline": "The Incredible Homing Pigeon",
-        "headline_alt_1": "",
-        "headline_alt_2": "",
         "date_published": "5/12/2014",
         "date_updated": "6/03/2014",
         "copy": "Homing pigeons and street pigeons come from the same family, but that’s, \"like comparing a Lamborghini to an old pickup truck,” said one pigeon flyer to the New York Times. Homers average 50 miles per hour, with some breaking 90mph. Their speed and homing skills helped the Sultan of Syria send messages across his kingdom in 1150 AD. Medals for bravery have been awarded to at least 44 pigeons for their service in World Wars I and II. Pigeon flyers, mumblers, or fanciers, as they are called, bring their birds often hundreds of miles from home in a race back to the coup. Today, it’s all tracked by GPS.",
@@ -19,23 +21,20 @@
                 "source_name": "rooftopfarms.org"
             }
         ],
-        "spotMarkers" : {
-        "id" : "Willie",
-        "type": "Feature",
-        "properties": {
-            "neighborhood": "Downtown Brooklyn",
-            "boroughCode": "3",
-            "borough": "Brooklyn",
-            "@id": "http://nyc.pediacities.com/Resource/Neighborhood/Downtown_Brooklyn"
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -73.986962,
-                40.694891
-            ]
+        "spotMarkers": {
+            "id": "willie",
+            "type": "Feature",
+            "properties": {
+                "neighborhood": "Downtown Brooklyn"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -73.986962,
+                    40.694891
+                ]
+            }
         }
-    }
     },
     {
         "id": 2,
