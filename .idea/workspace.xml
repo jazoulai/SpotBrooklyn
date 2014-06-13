@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fe0408b6-eeb5-4738-b11d-2e853cd5eeb6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/app.js" afterPath="$PROJECT_DIR$/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/data/neighborhoods2.json" afterPath="$PROJECT_DIR$/js/data/neighborhoods2.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/data/pigeon_fanciers.json" afterPath="$PROJECT_DIR$/js/data/pigeon_fanciers.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/data/story_data.json" afterPath="$PROJECT_DIR$/js/data/story_data.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="backbone_tutorial.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,8 +28,8 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.4838705" vertical-offset="1782" max-vertical-offset="2662">
-              <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+            <state vertical-scroll-proportion="-65.29032" vertical-offset="0" max-vertical-offset="2772">
+              <caret line="92" column="27" selection-start-line="92" selection-start-column="27" selection-end-line="92" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -53,8 +48,8 @@
       <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40091115" vertical-offset="0" max-vertical-offset="4928">
-              <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+            <state vertical-scroll-proportion="-1.7824639" vertical-offset="2794" max-vertical-offset="5610">
+              <caret line="54" column="20" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -63,7 +58,7 @@
       <file leaf-file-name="neighborhoods.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/data/neighborhoods.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="847.3684" vertical-offset="50830" max-vertical-offset="64416">
+            <state vertical-scroll-proportion="1137.228" vertical-offset="67352" max-vertical-offset="80938">
               <caret line="115" column="11833" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="11833" />
               <folding />
             </state>
@@ -73,11 +68,11 @@
       <file leaf-file-name="story_data.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/data/story_data.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.387097" vertical-offset="0" max-vertical-offset="1122">
-              <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+            <state vertical-scroll-proportion="-14.709678" vertical-offset="270" max-vertical-offset="1166">
+              <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
               <folding>
+                <element signature="e#66#237#0" expanded="true" />
                 <element signature="e#1189#1329#0" expanded="true" />
-                <element signature="e#1600#1681#0" expanded="true" />
                 <element signature="e#1717#1913#0" expanded="false" />
                 <element signature="e#1919#2084#0" expanded="false" />
               </folding>
@@ -1012,8 +1007,8 @@
       <file leaf-file-name="pigeon_fanciers.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/data/pigeon_fanciers.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-31.935484" vertical-offset="0" max-vertical-offset="3828">
-              <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+            <state vertical-scroll-proportion="-0.7096774" vertical-offset="0" max-vertical-offset="3894">
+              <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
               <folding>
                 <element signature="e#539#661#0" expanded="true" />
                 <element signature="e#702#856#0" expanded="true" />
@@ -1048,22 +1043,6 @@
                 <element signature="e#4828#4938#0" expanded="true" />
                 <element signature="e#4960#5069#0" expanded="true" />
                 <element signature="e#5091#5201#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="spot_data.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/data/spot_data.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.225806" vertical-offset="0" max-vertical-offset="2530">
-              <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-              <folding>
-                <element signature="e#430#564#0" expanded="true" />
-                <element signature="e#1863#2270#0" expanded="true" />
-                <element signature="e#2590#2635#0" expanded="true" />
-                <element signature="e#3330#3737#0" expanded="true" />
-                <element signature="e#4057#4102#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1110,9 +1089,9 @@
     <config-path />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="545" />
+    <option name="x" value="542" />
     <option name="y" value="22" />
-    <option name="width" value="1055" />
+    <option name="width" value="1135" />
     <option name="height" value="1024" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -1227,7 +1206,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="545" y="22" width="1055" height="1024" extended-state="0" />
+    <frame x="542" y="22" width="1135" height="1024" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1299,8 +1278,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="264" max-vertical-offset="3586">
           <caret line="36" column="49" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="49" />
           <folding>
+            <element signature="e#66#237#0" expanded="true" />
             <element signature="e#1189#1329#0" expanded="true" />
-            <element signature="e#1600#1681#0" expanded="true" />
             <element signature="e#1717#1913#0" expanded="false" />
             <element signature="e#1919#2084#0" expanded="false" />
           </folding>
@@ -1342,8 +1321,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="3520">
           <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
           <folding>
+            <element signature="e#66#237#0" expanded="true" />
             <element signature="e#1189#1329#0" expanded="true" />
-            <element signature="e#1600#1681#0" expanded="true" />
             <element signature="e#1717#1913#0" expanded="false" />
             <element signature="e#1919#2084#0" expanded="false" />
           </folding>
@@ -1385,8 +1364,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1304" max-vertical-offset="3520">
           <caret line="82" column="6" selection-start-line="61" selection-start-column="5" selection-end-line="82" selection-end-column="6" />
           <folding>
+            <element signature="e#66#237#0" expanded="true" />
             <element signature="e#1189#1329#0" expanded="true" />
-            <element signature="e#1600#1681#0" expanded="true" />
             <element signature="e#1717#1913#0" expanded="false" />
             <element signature="e#1919#2084#0" expanded="false" />
           </folding>
@@ -1435,8 +1414,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="2624" max-vertical-offset="3520">
           <caret line="131" column="37" selection-start-line="131" selection-start-column="37" selection-end-line="131" selection-end-column="37" />
           <folding>
+            <element signature="e#66#237#0" expanded="true" />
             <element signature="e#1189#1329#0" expanded="true" />
-            <element signature="e#1600#1681#0" expanded="true" />
             <element signature="e#1717#1913#0" expanded="false" />
             <element signature="e#1919#2084#0" expanded="false" />
           </folding>
@@ -1478,8 +1457,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="462" max-vertical-offset="682">
           <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
           <folding>
+            <element signature="e#66#237#0" expanded="true" />
             <element signature="e#1189#1329#0" expanded="true" />
-            <element signature="e#1600#1681#0" expanded="true" />
             <element signature="e#1717#1913#0" expanded="false" />
             <element signature="e#1919#2084#0" expanded="false" />
           </folding>
@@ -1624,40 +1603,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1603" max-vertical-offset="2750">
-          <caret line="77" column="16" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.4838705" vertical-offset="1782" max-vertical-offset="2728">
-          <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/data/spot_data.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.225806" vertical-offset="0" max-vertical-offset="2530">
           <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
           <folding>
-            <element signature="e#430#564#0" expanded="true" />
-            <element signature="e#1863#2270#0" expanded="true" />
-            <element signature="e#2590#2635#0" expanded="true" />
-            <element signature="e#3330#3737#0" expanded="true" />
-            <element signature="e#4057#4102#0" expanded="true" />
+            <element signature="e#430#564#0" expanded="false" />
+            <element signature="e#1863#2270#0" expanded="false" />
+            <element signature="e#2590#2635#0" expanded="false" />
+            <element signature="e#3330#3737#0" expanded="false" />
+            <element signature="e#4057#4102#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/data/pigeon_fanciers.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-31.935484" vertical-offset="0" max-vertical-offset="3872">
-          <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+        <state vertical-scroll-proportion="-0.7096774" vertical-offset="0" max-vertical-offset="3894">
+          <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
           <folding>
             <element signature="e#539#661#0" expanded="true" />
             <element signature="e#702#856#0" expanded="true" />
@@ -1696,9 +1659,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1603" max-vertical-offset="2750">
+          <caret line="77" column="16" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/data/story_data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.709678" vertical-offset="270" max-vertical-offset="1166">
+          <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+          <folding>
+            <element signature="e#66#237#0" expanded="true" />
+            <element signature="e#1189#1329#0" expanded="true" />
+            <element signature="e#1717#1913#0" expanded="false" />
+            <element signature="e#1919#2084#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/data/neighborhoods.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="847.3684" vertical-offset="50830" max-vertical-offset="64416">
+        <state vertical-scroll-proportion="1137.228" vertical-offset="67352" max-vertical-offset="80938">
           <caret line="115" column="11833" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="11833" />
           <folding />
         </state>
@@ -2626,23 +2610,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/data/story_data.json">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.387097" vertical-offset="0" max-vertical-offset="1122">
-          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-          <folding>
-            <element signature="e#1189#1329#0" expanded="true" />
-            <element signature="e#1600#1681#0" expanded="true" />
-            <element signature="e#1717#1913#0" expanded="false" />
-            <element signature="e#1919#2084#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="-65.29032" vertical-offset="0" max-vertical-offset="2772">
+          <caret line="92" column="27" selection-start-line="92" selection-start-column="27" selection-end-line="92" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40091115" vertical-offset="0" max-vertical-offset="4928">
-          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+        <state vertical-scroll-proportion="-1.7824639" vertical-offset="2794" max-vertical-offset="5610">
+          <caret line="54" column="20" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
           <folding />
         </state>
       </provider>

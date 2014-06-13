@@ -1,18 +1,16 @@
+var current_story_spots = null;
 var map = L.mapbox.map('map', 'spotbrooklyn.i3jb181a');
 map.setView([40.685259, -73.977664], 10);
 map.on('zoomend', function(e){
-    console.log(map.getZoom());
-   if(map.getZoom() <= 12 && map.hasLayer(current_story_spots)){
 
-       map.removeLayer(current_story_spots);
+   if(current_story_spots != null) {
 
+       if (map.getZoom() <= 12 && map.hasLayer(current_story_spots)) {
+           //map.removeLayer(current_story_spots);
+       } else if (map.getZoom() > 12 && !map.hasLayer(current_story_spots)) {
 
-   }else if(map.getZoom() > 12 && !map.hasLayer(current_story_spots)){
-
-       map.addLayer(current_story_spots);
-
-
-
+           //map.addLayer(current_story_spots);
+       }
    }
 });
 
@@ -112,7 +110,6 @@ var AppRouter = Backbone.Router.extend({
         map.setView([40.685259, -73.977664], 10);
     },
     load_story:function (id) {
-        //
 
         //load story
         this.story = this.storyCollection.get(id);
@@ -126,36 +123,71 @@ var AppRouter = Backbone.Router.extend({
         var currentStory = this.story;
         var neighborhoodsIntersection = _.intersection(neighborhoodsCollectionIds, storyCollectionNeighborhoods);
 
-        window.neighborhoodPolygons = [];
+        var neighborhoodPolygons = [];
+        window.current_story_spots = currentStory.attributes.spotMarkers;
+        var spotId = currentStory.attributes.spotMarkers.id;
 
         //load and set marker hrefs for each neighborhood polygon
         neighborhoodsIntersection.forEach(function(neighborhood){
-
-
             neighborhoodPolygons.push(neighborhoodsCollection.get(neighborhood).attributes);
-
-
-            L.geoJson(neighborhoodsCollection.get(neighborhood).attributes, {
-                onEachFeature: function(feature, layer){
-                    layer.on('click', function(){
-                        window.current_story_spots = L.geoJson(currentStory.attributes.spotMarkers, {
-                            onEachFeature: function(feature, layer){
-                                layer.on('click', function(){
-                                    location.href = '#/spot/willie';
-                                });
-                            }
-                        });
-                        //set neighborhood-specific center point and zoom level
-                        var centerPoint = neighborhoodsCollection.get(neighborhood).attributes.properties.center_point;
-                        var zoomLevel = neighborhoodsCollection.get(neighborhood).attributes.properties.zoom_level;
-                        map.setView(centerPoint, zoomLevel);
-                        current_story_spots.addTo(map);
-                    })
-                }
-            }).addTo(map);
         });
 
-        console.log(neighborhoodPolygons);
+
+        L.geoJson(neighborhoodPolygons, {
+            onEachFeature: function(feature, layer){
+                layer.on('click', function(){
+
+                    var neighborhoodCenter = feature.properties.center_point;
+                    var neighborhoodZoom = feature.properties.zoom_level;
+                    map.setView(neighborhoodCenter, neighborhoodZoom);
+
+
+                    L.geoJson(current_story_spots, {
+                        onEachFeature: function(feature, layer){
+                            layer.on('click', function(){
+                                location.href = '#/spot/' + spotId;
+                            });
+                        }
+                    }).addTo(map);
+                });
+            }
+        }).addTo(map);
+
+
+
+
+
+        /*L.geoJson(neighborhoodsCollection.get(neighborhood).attributes, {
+            onEachFeature: function(feature, layer){
+                layer.on('click', function(){
+                    window.current_story_spots = L.geoJson(currentStory.attributes.spotMarkers, {
+                        onEachFeature: function(feature, layer){
+                            layer.on('click', function(){
+                                location.href = '#/spot/willie';
+                            });
+                        }
+                    });
+                    //set neighborhood-specific center point and zoom level
+                    var centerPoint = neighborhoodsCollection.get(neighborhood).attributes.properties.center_point;
+                    var zoomLevel = neighborhoodsCollection.get(neighborhood).attributes.properties.zoom_level;
+                    map.setView(centerPoint, zoomLevel);
+                    current_story_spots.addTo(map);
+                })
+            }
+        }).addTo(map);*/
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         //instantiate and render NavigationView with stories object as model
