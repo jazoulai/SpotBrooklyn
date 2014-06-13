@@ -1,19 +1,29 @@
 var current_story_spots = null;
 var map = L.mapbox.map('map', 'spotbrooklyn.i3jb181a');
 map.setView([40.685259, -73.977664], 10);
-map.on('zoomend', function(e){
 
-   if(current_story_spots != null) {
 
-       if (map.getZoom() <= 12 && map.hasLayer(current_story_spots)) {
-           //map.removeLayer(current_story_spots);
-       } else if (map.getZoom() > 12 && !map.hasLayer(current_story_spots)) {
 
-           //map.addLayer(current_story_spots);
-       }
-   }
+
+map.on('zoomend', function () {
+    if(current_story_spots != null) {
+        if (map.getZoom() <= 12 && map.hasLayer(current_story_layer)) {
+            map.removeLayer(current_story_layer);
+        } else if (map.getZoom() > 12 && !map.hasLayer(current_story_layer)) {
+            map.addLayer(current_story_layer);
+        }
+    }
 });
 
+map.on('zoomend', function () {
+    if(current_story_spots != null) {
+        if (map.getZoom() <= 12 && !map.hasLayer(polygon_layer)) {
+            map.addLayer(polygon_layer);
+        } else if (map.getZoom() > 12 && map.hasLayer(polygon_layer)) {
+            map.removeLayer(polygon_layer);
+        }
+    }
+});
 
 Neighborhoods = Backbone.Model.extend();
 
@@ -124,7 +134,7 @@ var AppRouter = Backbone.Router.extend({
         var neighborhoodsIntersection = _.intersection(neighborhoodsCollectionIds, storyCollectionNeighborhoods);
 
         var neighborhoodPolygons = [];
-        window.current_story_spots = currentStory.attributes.spotMarkers;
+
         var spotId = currentStory.attributes.spotMarkers.id;
 
         //load and set marker hrefs for each neighborhood polygon
@@ -133,16 +143,17 @@ var AppRouter = Backbone.Router.extend({
         });
 
 
-        L.geoJson(neighborhoodPolygons, {
+        window.polygon_layer = L.geoJson(neighborhoodPolygons, {
             onEachFeature: function(feature, layer){
-                layer.on('click', function(){
 
+
+
+                layer.on('click', function(){
                     var neighborhoodCenter = feature.properties.center_point;
                     var neighborhoodZoom = feature.properties.zoom_level;
                     map.setView(neighborhoodCenter, neighborhoodZoom);
-
-
-                    L.geoJson(current_story_spots, {
+                    window.current_story_spots = currentStory.attributes.spotMarkers;
+                    window.current_story_layer = L.geoJson(current_story_spots, {
                         onEachFeature: function(feature, layer){
                             layer.on('click', function(){
                                 location.href = '#/spot/' + spotId;
@@ -150,45 +161,10 @@ var AppRouter = Backbone.Router.extend({
                         }
                     }).addTo(map);
                 });
+
+
             }
         }).addTo(map);
-
-
-
-
-
-        /*L.geoJson(neighborhoodsCollection.get(neighborhood).attributes, {
-            onEachFeature: function(feature, layer){
-                layer.on('click', function(){
-                    window.current_story_spots = L.geoJson(currentStory.attributes.spotMarkers, {
-                        onEachFeature: function(feature, layer){
-                            layer.on('click', function(){
-                                location.href = '#/spot/willie';
-                            });
-                        }
-                    });
-                    //set neighborhood-specific center point and zoom level
-                    var centerPoint = neighborhoodsCollection.get(neighborhood).attributes.properties.center_point;
-                    var zoomLevel = neighborhoodsCollection.get(neighborhood).attributes.properties.zoom_level;
-                    map.setView(centerPoint, zoomLevel);
-                    current_story_spots.addTo(map);
-                })
-            }
-        }).addTo(map);*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         //instantiate and render NavigationView with stories object as model
         this.navigationView = new NavigationView({model:this.story});
