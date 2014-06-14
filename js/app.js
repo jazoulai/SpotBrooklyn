@@ -123,78 +123,92 @@ var AppRouter = Backbone.Router.extend({
     },
     load_story:function (id) {
 
-        //load story
-        this.story = this.storyCollection.get(id);
-        this.storyView = new StoryView({model:this.story});
+
+        var neighborhoodsCollection = this.neighborhoodsCollection;
+        var neighborhoodPolygons = [];
+        var story = this.storyCollection.get(id);
+        window.current_story_spots = story.attributes.spotMarkers;
+        this.storyView = new StoryView({model:story});
         $('#content_container').html(this.storyView.render().el);
 
-        //filter story-specific neighborhood ploygons
-        var neighborhoodsCollection = this.neighborhoodsCollection;
-        var neighborhoodsCollectionIds = neighborhoodsCollection.pluck('id');
-        var storyCollectionNeighborhoods = this.story.attributes.neighborhoods;
-        var currentStory = this.story;
-        var neighborhoodsIntersection = _.intersection(neighborhoodsCollectionIds, storyCollectionNeighborhoods);
 
-        var neighborhoodPolygons = [];
-
-        //var spotId = currentStory.attributes.spotMarkers.id;
-
-
-        //load and set marker hrefs for each neighborhood polygon
-        neighborhoodsIntersection.forEach(function(neighborhood){
-            neighborhoodPolygons.push(neighborhoodsCollection.get(neighborhood).attributes);
-        });
-
-
-        if(current_story_layer != null){
-            if(map.hasLayer(current_story_layer)){
-                map.removeLayer(current_story_layer).setView([40.685259, -73.977664], 10);
+        function clear_spots_on_reload(){
+            if(current_story_layer != null && map.hasLayer(current_story_layer)){
+                    map.removeLayer(current_story_spots).setView([40.685259, -73.977664], 10);
             }
         }
+        function populate_array_for_neighborhood_polygons(){
+            var neighborhoodsCollectionIds = neighborhoodsCollection.pluck('id');
+            var storyCollectionNeighborhoods = story.attributes.neighborhoods;
+            var neighborhoodsIntersection = _.intersection(neighborhoodsCollectionIds, storyCollectionNeighborhoods);
+            neighborhoodsIntersection.forEach(function(neighborhood){
+                neighborhoodPolygons.push(neighborhoodsCollection.get(neighborhood).attributes);
+            });
+
+        }
+        function onEach_neighborhoodPolygon(feature, layer) {
+            layer.on('click', function () {
+                var neighborhoodCenter = feature.properties.center_point;
+                var neighborhoodZoom = feature.properties.zoom_level;
+                map.setView(neighborhoodCenter, neighborhoodZoom);
+                renderSpots();
+            });
+        }
+        function onEach_spotMarker(feature, layer) {//set spot href onclick
+            layer.on('click', function () {
+                location.href = '#/spot/' + feature.id;
+            });
+        }
+
+        function renderSpots(){ //render spot markers onto the map.
+            window.current_story_layer = L.geoJson(current_story_spots, {
+                onEachFeature: onEach_spotMarker
+            }).addTo(map);
+        }
+
+
+        populate_array_for_neighborhood_polygons();
+        clear_spots_on_reload();
 
         if(!map.hasLayer(polygon_layer)) {
+
             window.polygon_layer = L.geoJson(neighborhoodPolygons, {
-                onEachFeature: function (feature, layer) {
-                    layer.on('click', function () {
-                        if (current_story_layer != null) {
-                            if (map.hasLayer(current_story_layer)) {
-                                map.removeLayer(current_story_layer).setView([40.685259, -73.977664], 10);
-                            }
-                        }
-                        var neighborhoodCenter = feature.properties.center_point;
-                        var neighborhoodZoom = feature.properties.zoom_level;
-                        map.setView(neighborhoodCenter, neighborhoodZoom);
-                        window.current_story_spots = currentStory.attributes.spotMarkers;
-                        window.current_story_layer = L.geoJson(current_story_spots, {
-                            onEachFeature: function (feature, layer) {
-                                layer.on('click', function () {
-                                    location.href = '#/spot/' + feature.id;
-                                });
-                            }
-                        }).addTo(map);
-                    });
-                }
+                onEachFeature: onEach_neighborhoodPolygon
             }).addTo(map);
 
         }
 
         //instantiate and render NavigationView with stories object as model
-        this.navigationView = new NavigationView({model:this.story});
+        this.navigationView = new NavigationView({model:story});
         $('#nav').html(this.navigationView.render().el);
     },
     load_spot: function (id){
 
-        //get Spots model object by id
-        this.spot = this.spotsCollection.get(id);
-        //instantiate a SpotView using Spots model object as the model
-        this.spotView = new SpotView({model:this.spot});
-        //render the SpotView's template into a unique div
+        var spot = this.spotsCollection.get(id);
+        this.spotView = new SpotView({model:spot});
         $('#content_container').html(this.spotView.render().el);
 
-        map.setView(this.spot.attributes.center_point, 15);
+        if(map.hasLayer(polygon_layer)){
+            map.removeLayer(polygon_layer);
+        }
+        if(!map.hasLayer(current_story_layer)){
+
+            function onEach_spotMarker(feature, layer) {//set spot href onclick
+                layer.on('click', function () {
+                    location.href = '#/spot/' + feature.id;
+                });
+            }
+            function renderSpots(){ //render spot markers onto the map.
+                window.current_story_layer = L.geoJson(current_story_spots, {
+                    onEachFeature: onEach_spotMarker
+                }).addTo(map);
+            }
+            renderSpots();
+        }
+        map.setView(spot.attributes.center_point, 15);
 
 
-        this.navigationView = new NavigationView({model:this.spot});
+        this.navigationView = new NavigationView({model:spot});
         $('#nav').html(this.navigationView.render().el);
     }
 });
