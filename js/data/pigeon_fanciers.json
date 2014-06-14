@@ -2,7 +2,7 @@
     {
         "id": "frank_viola",
         "fwd_button_text": "Next",
-        "fwd_button_href": "#spot/kings_county_homing_pigeon_club",
+        "fwd_button_href": "#spot/anthony_martire",
         "back_button_href": "#story/pigeon_fanciers",
         "back_button_text": "< Story",
         "center_point": [
@@ -63,7 +63,7 @@
     {
         "id": "meeker_pigeon_exchange",
         "fwd_button_text": "Next",
-        "fwd_button_href": "#spot/pigeons_lofts_maria_hernandez_park",
+        "fwd_button_href": "#spot/frank_viola",
         "back_button_href": "#story/pigeon_fanciers",
         "back_button_text": "< Story",
         "center_point": [
@@ -82,7 +82,7 @@
         ]
     },
     {
-        "id": "pigeons_lofts_maria_hernandez_park",
+        "id": "pigeon_lofts_maria_hernandez_park",
         "fwd_button_text": "Next",
         "fwd_button_href": "#spot/three_amigos_loft",
         "back_button_href": "#story/pigeon_fanciers",
@@ -113,7 +113,7 @@
     {
         "id": "three_amigos_loft",
         "fwd_button_text": "Next",
-        "fwd_button_href": "#spot/mike_tyson",
+        "fwd_button_href": "#spot/kings_county_homing_pigeon_club",
         "back_button_href": "#story/pigeon_fanciers",
         "back_button_text": "< Story",
         "center_point": [
@@ -138,7 +138,7 @@
     {
         "id": "mike_tyson",
         "fwd_button_text": "Next",
-        "fwd_button_href": "#spot/frank_viola",
+        "fwd_button_href": "#spot/pigeon_lofts_maria_hernandez_park",
         "back_button_href": "#story/pigeon_fanciers",
         "back_button_text": "< Story",
         "center_point": [
@@ -159,6 +159,32 @@
                 "source_name": "Animal Planet @ YouTube"
             }
         ]
+    },
+    {
+        "id": "anthony_martire",
+        "fwd_button_text": "Next",
+        "fwd_button_href": "#spot/mike_tyson",
+        "back_button_href": "#story/pigeon_fanciers",
+        "back_button_text": "< Story",
+        "center_point": [
+            40.579350,
+            -73.982827
+],
+        "name": "The Radiator Loft",
+        "image": "majestic_pigeon.jpg",
+        "description": "“Mike Tyson, he’s no champ, I’m the champ,” says Anthony Martire of Coney Island. Watch this video to meet Anthony and the bird he named after his wife.",
+        "action_call" : "Next: This champion flyer has some words for Mike Tyson!",
+        "sources": [
+            {
+                "source_link": "wnyc.org/story/174177-blog-niche-market-pigeons/",
+                "source_name": "WNYC"
+            },
+            {
+                "source_link" : "barclayscenter.com/bctv/video/bctv-brooklyn-spotlight-the-pigeon-fancier",
+                "source_name" : "Barclays Center TV"
+            }
+        ]
     }
+
 
 ]
