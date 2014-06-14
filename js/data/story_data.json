@@ -1,6 +1,8 @@
 [
     {
         "id": "pigeon_fanciers",
+        "fwd_button_text": "Next",
+        "fwd_button_href": "#spot/kings_county_homing_pigeon_club",
         "neighborhoods": [
             "bushwick",
             "brownsville",

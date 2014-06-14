@@ -5,6 +5,8 @@
         "fwd_button_href": "#spot/anthony_martire",
         "back_button_href": "#story/pigeon_fanciers",
         "back_button_text": "< Story",
+        "back_spot_text": "Previous",
+        "back_spot_href": "#spot/meeker_pigeon_exchange",
         "center_point": [
             40.584569,
             -73.982822
@@ -41,6 +43,8 @@
         "fwd_button_href": "#spot/meeker_pigeon_exchange",
         "back_button_href": "#story/pigeon_fanciers",
         "back_button_text": "< Story",
+        "back_spot_text": "Previous",
+        "back_spot_href": "#spot/three_amigos_loft",
         "center_point": [
             40.710727,
             -73.967772
@@ -66,6 +70,8 @@
         "fwd_button_href": "#spot/frank_viola",
         "back_button_href": "#story/pigeon_fanciers",
         "back_button_text": "< Story",
+        "back_spot_text": "Previous",
+        "back_spot_href": "#spot/kings_county_homing_pigeon_club",
         "center_point": [
             40.719064,
             -73.946556
@@ -87,6 +93,8 @@
         "fwd_button_href": "#spot/three_amigos_loft",
         "back_button_href": "#story/pigeon_fanciers",
         "back_button_text": "< Story",
+        "back_spot_text": "Previous",
+        "back_spot_href": "#spot/mike_tyson",
         "center_point": [
             40.703327,
             -73.923943
@@ -116,6 +124,8 @@
         "fwd_button_href": "#spot/kings_county_homing_pigeon_club",
         "back_button_href": "#story/pigeon_fanciers",
         "back_button_text": "< Story",
+        "back_spot_text": "Previous",
+        "back_spot_href": "#spot/kings_county_homing_pigeon_club",
         "center_point": [
             40.709457,
             -73.945339
@@ -141,6 +151,8 @@
         "fwd_button_href": "#spot/pigeon_lofts_maria_hernandez_park",
         "back_button_href": "#story/pigeon_fanciers",
         "back_button_text": "< Story",
+        "back_spot_text": "Previous",
+        "back_spot_href": "#spot/anthony_martire",
         "center_point": [
             40.664780,
             -73.910894
@@ -166,6 +178,8 @@
         "fwd_button_href": "#spot/mike_tyson",
         "back_button_href": "#story/pigeon_fanciers",
         "back_button_text": "< Story",
+        "back_spot_text": "Previous",
+        "back_spot_href": "#spot/frank_viola",
         "center_point": [
             40.579350,
             -73.982827
