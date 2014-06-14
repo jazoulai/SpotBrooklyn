@@ -53,12 +53,15 @@
                         ,
                         {{/if}}
                     {{/if}}
-                    <a href="http://{{this.source_link}}">
-                                {{this.source_name}}
-                            </a>
+                    {{#if this.source_link}}
+                        <a href="http://{{this.source_link}}">{{this.source_name}}</a>
+                    {{else}}
+                        {{this.source_name}}
+                    {{/if}}
                     {{/each}}
                 </p>
             {{/if}}
+            <p>{{action_call}}</p>
             {{#if public_hours}}
                 <p>Open:
                 <br>
@@ -67,6 +70,7 @@
                 </p>
                     {{/each}}
             {{/if}}
+            {{#if location}}
             <p>Location:
                 <br>
                 {{address.street}}
@@ -75,6 +79,7 @@
                 <br>
                 {{address.borough}}, {{address.state}}  {{address.zipcode}}
             </p>
+            {{/if}}
             {{#if contact_info}}
                 <p>Contact:
                     {{#if contact_info.phone_number}}
