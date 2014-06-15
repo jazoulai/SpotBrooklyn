@@ -1,5 +1,5 @@
 [
-    {
+        {
         "id": "frank_viola",
         "fwd_button_text": "Next",
         "fwd_button_href": "#spot/anthony_martire",
@@ -12,7 +12,11 @@
             -73.982822
         ],
         "name": "Frank Viola Homing Pigeon Club",
-        "image": "majestic_pigeon.jpg",
+        "images": [
+            {
+                "image" : "frankViola.jpg"
+            }
+        ],
         "description": "Frank Viola started his namesake homing pigeon club in the 1990s, along with the Frank Viola Invitational--a 400-mile race from Ohio to New York. Frank put up the $30,000 prize for a total of $200,000, and only won his own race once. “He was the only philanthropist in the pigeon world,” his wife Kathleen told the Brooklyn Paper.  Frank fought in World War II, then came home and helped build the World Trade Towers. Frank’s pigeons also fought in World War Two--flying messages across enemy lines. Since Frank’s death in October of 2007, the race is no longer held, but the club lives on with the help of Frank’s nephew, Peter.",
         "action_call" : "Next: This champion flyer has some words for Mike Tyson!",
         "sources": [
@@ -50,8 +54,18 @@
             -73.967772
         ],
         "name": "The Kings County Homing Pigeon Club",
-        "image": "majestic_pigeon.jpg",
-        "description": "The first pigeon club in Brooklyn was started by Henry Rover in the 1880s. On the same year that that Statue of Liberty was unveiled in the harbor, Mr Rover was at home waiting worriedly for his birds to come home from a race. Here is the newsclipping from The Brooklyn Daily Eagle, Tuesday, June 22nd, 1886:",
+        "images": [
+            {
+                "image" : "DailyEagle_HomingPigeon.jpg",
+                "image_caption" : "The first pigeon club in Brooklyn was started by Henry Rover in the 1880s. On the same year that that Statue of Liberty was unveiled in the harbor, Mr Rover was at home waiting worriedly for his birds to come home from a race. By World War I, pigeons were hailed by the Brooklyn Daily Eagle and the rest of the country as heroes!"
+            },
+            {
+                "image" : "DailyEagle_PigeonWarHeroes.jpg"
+            },
+            {
+                "image" : "DailyEagle_PigeonBlurb.jpg"
+            }
+        ],
         "action_call" : "Next: A greenpoint shop packed with pigeons!",
         "sources": [
             {
@@ -77,7 +91,11 @@
             -73.946556
         ],
         "name": "Meeker Pigeon Exchange",
-        "image": "majestic_pigeon.jpg",
+        "images": [
+            {
+                "image" : "PigeonHole.jpg"
+            }
+        ],
         "description": "In 1976, The New Yorker magazine profiled one of about 15 pigeon shops still going in New York City. Patrick Sottile was then the owner of the Meeker Pigeon Exchange. He was covered in tattoos and kept a sign in the window that read, “I DO NOT BUY STREET RATS.” Six coups held almost a thousand birds, almost 40 different breeds: homers, flights, turbits, Viennas, nuns, helmets, tipplers, and monks to name a few.",
         "action_call": "The philanthropist of the pigeon world!",
         "sources": [
@@ -100,8 +118,51 @@
             -73.923943
         ],
         "name": "Pigeon Lofts @ Maria Hernandex Park",
-        "image": "majestic_pigeon.jpg",
-        "description": "Chris Arnade is a physics PHD and former wall street trader turned photographer.  who profiled the pigeon fliers he met around Maroa Hernandex Park.”At the time, I had no idea that they where part of an old sport,” Chris writes on his flickr page. Chris’ portraits of pigeon flyers in Bushwick and East New York are done with a respect that shows everyone, no matter the lifestyle, is as valid as anyone else.",
+        "images": [
+            {
+                "image": "PigeonFancier_Bushwick_Carlos.png"
+            },
+            {
+                "image" : "PigeonFancier_Bushwick_David.png"
+            },
+            {
+                "image" : "PigeonFancier_Bushwick_Delon.png"
+            },
+            {
+                "image" : "PigeonFancier_Bushwick_Frank.png"
+            },
+            {
+                "image" : "PigeonFancier_Bushwick_Goodwin.png"
+            },
+            {
+                "image" : "PigeonFancier_Bushwick_Joey.png",
+                "image_caption" : "test"
+            },
+            {
+                "image" : "PigeonFancier_Bushwick_Johnny.png",
+                "image_caption" : "test"
+            },
+            {
+                "image" : "PigeonFancier_Bushwick_Luis.png",
+                "image_caption" : "test"
+            },
+            {
+                "image" : "PigeonFancier_Bushwick_Nick.png",
+                "image_caption" : "test"
+            },
+            {
+                "image" : "PigeonFancier_Bushwick_Tree.png",
+                "image_caption" : "test"
+            },
+            {
+                "image" : "PigeonFancier_Bushwick_Whitey.png",
+                "image_caption" : "test"
+            },
+            {
+                "image" : "PigeonFancier_Bushwick_Willie.png",
+                "image_caption" : "test"
+            }
+        ],
         "action_call": "See the Brooklyn pigeon craze take off in 1880!",
         "sources": [
             {
@@ -131,7 +192,11 @@
             -73.945339
         ],
         "name": "Three Amigos Loft",
-        "image": "majestic_pigeon.jpg",
+        "images": [
+            {
+                "image" : "PigeonFancier_Gravesend_JoeGreen.jpg"
+            }
+        ],
         "description": "Joe Green is the last of the Three Amigos who still keep pigeons on a rooftop along the rumbling, elevated F train. On Animal Planet’s reality show Taking on Tyson, Joe beat his childhood friend Mike Tyson. “The only way to go is up”, he told The Daily News. About the future of pigeon racing, Joe hope his kids pick the hobby, “but right now if it ain’t Nintendo Wii or Xbox or whatever it is, they aint interested.”",
         "action_call" : "Meet the last of the Three Amigos",
         "sources": [
@@ -158,7 +223,11 @@
             -73.910894
         ],
         "name": "Mike Tyson's Corner",
-        "image": "majestic_pigeon.jpg",
+        "images": [
+            {
+                "image" : "MikeTysonKissingPigeon.jpg"
+            }
+        ],
         "description": "Mike’s reality show Taking on Tyson follows the boxing champ’s return to a childhood passion of racing pigeons. As kids growing up in Brownsville, Mike and his friend David Malone built their coups by stealing wood from around the neighborhood. They used bricks as hammers. Then there was the time some bigger guys took one of Mike’s birds. When Tyson demanded the birds back, the guy ripped its head off. \"I hit him more than he hit me,” Tyson told the New Yorker. “So I guess I won.”",
         "action_call": "Meet Tyson's pigeon flying friends from childhood.",
         "sources": [
@@ -185,7 +254,9 @@
             -73.982827
 ],
         "name": "The Radiator Loft",
-        "image": "majestic_pigeon.jpg",
+        "video": {
+            "video_source" : "//www.youtube.com/embed/Jk1YT95_m1M"
+        },
         "description": "“Mike Tyson, he’s no champ, I’m the champ,” says Anthony Martire of Coney Island. Watch this video to meet Anthony and the bird he named after his wife.",
         "action_call" : "Next: This champion flyer has some words for Mike Tyson!",
         "sources": [
