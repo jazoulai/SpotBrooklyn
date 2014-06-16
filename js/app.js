@@ -1,13 +1,43 @@
+var sbk = sbk || {};
+
+sbk.map = (function () {
+    var map = L.mapbox.map('map', 'spotbrooklyn.i3jb181a');
+    var neighborhoodPolygons = [];
+    return {
+        reset_map: function(){
+            map.setView([40.685259, -73.977664], 10);
+        },
+        clear_map: function(){
+            if(current_story_layer != null && map.hasLayer(current_story_layer)){
+                map.removeLayer(current_story_spots).setView([40.685259, -73.977664], 10);
+            }
+        },
+        render_neighborhood_polygons: function(polygonNeighborhoods, storyNeighborhoods, neighborhoods){
+             var neighborhoodsIntersection = _.intersection(polygonNeighborhoods, storyNeighborhoods);
+             neighborhoodsIntersection.forEach(function(neighborhood){
+                 neighborhoodPolygons.push(neighborhoods.get(neighborhood).attributes);
+             });
+            L.geoJson(neighborhoodPolygons).addTo(map);
+        }
+    };
+} ());
+
+
+
+sbk.map.reset_map();
+
+
+
+
 var current_story_spots = null;
 var current_story_layer = null;
 var polygon_layer = null;
-var map = L.mapbox.map('map', 'spotbrooklyn.i3jb181a');
-map.setView([40.685259, -73.977664], 10);
 
 
 
 
-map.on('zoomend', function () {
+
+/*map.on('zoomend', function () {
     if(current_story_spots != null) {
         if (map.getZoom() <= 12 && map.hasLayer(current_story_layer)) {
             map.removeLayer(current_story_layer);
@@ -25,7 +55,7 @@ map.on('zoomend', function () {
             map.removeLayer(polygon_layer);
         }
     }
-});
+});*/
 
 Neighborhoods = Backbone.Model.extend();
 
@@ -119,33 +149,30 @@ var AppRouter = Backbone.Router.extend({
     load_list:function (id) {
         this.storyListView = new StoryListView({model:this.storyCollection});
         $('#content_container').html(this.storyListView.render().el);
-        map.setView([40.685259, -73.977664], 10);
+        sbk.map.reset_map();
+        sbk.map.clear_map();
     },
     load_story:function (id) {
-
-
-        var neighborhoodsCollection = this.neighborhoodsCollection;
-        var neighborhoodPolygons = [];
-        var story = this.storyCollection.get(id);
-        window.current_story_spots = story.attributes.spotMarkers;
-        this.storyView = new StoryView({model:story});
+        this.story = this.storyCollection.get(id);
+        this.storyView = new StoryView({model:this.story});
         $('#content_container').html(this.storyView.render().el);
 
+        this.neighborhoods = this.neighborhoodsCollection;
+        this.neighborhoodsCollectionIds = this.neighborhoodsCollection.pluck('id');
+        this.storyNeighborhoods = this.story.attributes.neighborhoods;
+        sbk.map.render_neighborhood_polygons(this.neighborhoodsCollectionIds, this.storyNeighborhoods, this.neighborhoods);
 
-        function clear_spots_on_reload(){
-            if(current_story_layer != null && map.hasLayer(current_story_layer)){
-                    map.removeLayer(current_story_spots).setView([40.685259, -73.977664], 10);
-            }
-        }
-        function populate_array_for_neighborhood_polygons(){
-            var neighborhoodsCollectionIds = neighborhoodsCollection.pluck('id');
-            var storyCollectionNeighborhoods = story.attributes.neighborhoods;
-            var neighborhoodsIntersection = _.intersection(neighborhoodsCollectionIds, storyCollectionNeighborhoods);
-            neighborhoodsIntersection.forEach(function(neighborhood){
-                neighborhoodPolygons.push(neighborhoodsCollection.get(neighborhood).attributes);
-            });
 
-        }
+
+
+
+
+
+
+
+
+
+
         function onEach_neighborhoodPolygon(feature, layer) {
             layer.on('click', function () {
                 var neighborhoodCenter = feature.properties.center_point;
@@ -168,9 +195,9 @@ var AppRouter = Backbone.Router.extend({
 
 
         populate_array_for_neighborhood_polygons();
-        clear_spots_on_reload();
+        sbk.map.clear_map();
 
-        if(!map.hasLayer(polygon_layer)) {
+       if(!map.hasLayer(polygon_layer)) {
 
             window.polygon_layer = L.geoJson(neighborhoodPolygons, {
                 onEachFeature: onEach_neighborhoodPolygon
@@ -180,7 +207,7 @@ var AppRouter = Backbone.Router.extend({
 
         //instantiate and render NavigationView with stories object as model
         this.navigationView = new NavigationView({model:story});
-        $('#nav').html(this.navigationView.render().el);
+        $('#nav').html(this.navigationView.render().el);*/
     },
     load_spot: function (id){
 
@@ -216,6 +243,7 @@ var AppRouter = Backbone.Router.extend({
 $(document).ready(function() {
 
 
+
     var neighborhoodsCollection = new NeighborhoodsCollection();
     neighborhoodsCollection.fetch({
         success: function(){
@@ -233,4 +261,6 @@ $(document).ready(function() {
             });
         }
     });
+
+
 });
