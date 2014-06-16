@@ -4,14 +4,6 @@ sbk.map = (function () {
     var map = L.mapbox.map('map', 'spotbrooklyn.i3jb181a');
     var neighborhoodPolygons = [];
     return {
-        reset_map: function(){
-            map.setView([40.685259, -73.977664], 10);
-        },
-        clear_map: function(){
-            if(current_story_layer != null && map.hasLayer(current_story_layer)){
-                map.removeLayer(current_story_spots).setView([40.685259, -73.977664], 10);
-            }
-        },
         render_neighborhood_polygons: function(polygonNeighborhoods, storyNeighborhoods, neighborhoods){
              var neighborhoodsIntersection = _.intersection(polygonNeighborhoods, storyNeighborhoods);
              neighborhoodsIntersection.forEach(function(neighborhood){
@@ -35,12 +27,15 @@ sbk.map = (function () {
                     map.removeLayer(neighborhood_polygon_layer);
                 }
             });
-            neighborhood_polygon_layer.addTo(map);
+            if(!map.hasLayer(neighborhood_polygon_layer)){
+                neighborhood_polygon_layer.addTo(map);
+            }
         },
         render_story_markers: function (points){
             function each_story_marker(feature, layer) {
                 layer.on('click', function () {
                     location.href = '#/spot/' + feature.id;
+                    map.setView([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], 15);
                 });
             }
             var story_markers = L.geoJson(points, {
@@ -53,6 +48,9 @@ sbk.map = (function () {
                     map.removeLayer(story_markers);
                 }
             });
+        },
+        reset_map: function(){
+            map.setView([40.685259, -73.977664], 10);
         }
     };
 } ());
@@ -148,7 +146,6 @@ var AppRouter = Backbone.Router.extend({
         this.storyListView = new StoryListView({model:this.storyCollection});
         $('#content_container').html(this.storyListView.render().el);
         sbk.map.reset_map();
-        sbk.map.clear_map();
     },
     load_story:function (id) {
         this.story = this.storyCollection.get(id);
@@ -159,47 +156,21 @@ var AppRouter = Backbone.Router.extend({
         this.spotMarkers = this.story.attributes.spotMarkers;
         $('#content_container').html(this.storyView.render().el);
         sbk.map.reset_map();
-        sbk.map.clear_map();
         sbk.map.render_neighborhood_polygons(this.neighborhoodsCollectionIds, this.storyNeighborhoods, this.neighborhoods);
         sbk.map.render_story_markers(this.spotMarkers);
         this.navigationView = new NavigationView({model:this.story});
         $('#nav').html(this.navigationView.render().el);
     },
     load_spot: function (id){
-
-        var spot = this.spotsCollection.get(id);
-        this.spotView = new SpotView({model:spot});
+        this.spot = this.spotsCollection.get(id);
+        this.spotView = new SpotView({model:this.spot});
         $('#content_container').html(this.spotView.render().el);
-
-        if(map.hasLayer(polygon_layer)){
-            map.removeLayer(polygon_layer);
-        }
-        if(!map.hasLayer(current_story_layer)){
-
-            function onEach_spotMarker(feature, layer) {//set spot href onclick
-                layer.on('click', function () {
-                    location.href = '#/spot/' + feature.id;
-                });
-            }
-            function renderSpots(){ //render spot markers onto the map.
-                window.current_story_layer = L.geoJson(current_story_spots, {
-                    onEachFeature: onEach_spotMarker
-                }).addTo(map);
-            }
-            renderSpots();
-        }
-        map.setView(spot.attributes.center_point, 15);
-
-
-        this.navigationView = new NavigationView({model:spot});
+        this.navigationView = new NavigationView({model:this.spot});
         $('#nav').html(this.navigationView.render().el);
     }
 });
 
 $(document).ready(function() {
-
-
-
     var neighborhoodsCollection = new NeighborhoodsCollection();
     neighborhoodsCollection.fetch({
         success: function(){
@@ -217,6 +188,4 @@ $(document).ready(function() {
             });
         }
     });
-
-
 });
