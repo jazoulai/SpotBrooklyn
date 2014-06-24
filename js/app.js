@@ -2,15 +2,17 @@ var sbk = sbk || {};
 
 sbk.map = (function () {
 
-    var map = L.mapbox.map('map', 'spotbrooklyn.i3jb181a');
-
-    var executed = false;
+    var map = L.mapbox.map('map', 'spotbrooklyn.i0onatsj');
+    var render_neighborhood_polygons_has_been_executed = false;
+    var render_story_markers_has_been_executed = false;
 
     return {
 
         render_neighborhood_polygons: function (polygonNeighborhoods, storyNeighborhoods, neighborhoods) {
 
-            if (!executed) {
+            cartodb.createLayer(map, 'http://sbk.cartodb.com/api/v2/viz/874dbac0-fbce-11e3-bd5f-0e10bcd91c2b/viz.json').addTo(map);
+
+            if (!render_neighborhood_polygons_has_been_executed) {
                 var neighborhoodPolygons = [];
                 var neighborhoodsIntersection = _.intersection(polygonNeighborhoods, storyNeighborhoods);
 
@@ -23,7 +25,6 @@ sbk.map = (function () {
                         var neighborhoodCenter = feature.properties.center_point;
                         var neighborhoodZoom = feature.properties.zoom_level;
                         map.setView(neighborhoodCenter, neighborhoodZoom);
-                        sbk.map.render_story_markers();
                     });
                 }
 
@@ -33,9 +34,7 @@ sbk.map = (function () {
 
                 neighborhood_polygon_layer.addTo(map);
 
-                console.log(map);
-
-                executed = true;
+                render_neighborhood_polygons_has_been_executed = true;
             }
 
             map.on('zoomend', function () {
@@ -47,23 +46,35 @@ sbk.map = (function () {
             });
         },
         render_story_markers: function (points) {
-            function each_story_marker(feature, layer) {
-                layer.on('click', function () {
-                    window.app.navigate('/spot/' + feature.id, {trigger: true});
-                    map.setView([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], 15);
+
+            //BUG: once story markers are rendered, if the route function triggers again, it breaks leaflet.
+
+            if (!render_story_markers_has_been_executed) {
+
+                function each_story_marker(feature, layer) {
+                    layer.on('click', function () {
+                        window.app.navigate('/spot/' + feature.id, {trigger: true});
+                        map.setView([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], 15);
+                    });
+                }
+
+                var story_markers = L.geoJson(points, {
+                    onEachFeature: each_story_marker
                 });
+
+                render_story_markers_has_been_executed = true;
             }
 
-            var story_markers = L.geoJson(points, {
-                onEachFeature: each_story_marker
-            });
-            map.on('zoomend', function () {
-                if (map.getZoom() >= 13) {
-                    story_markers.addTo(map);
-                } else {
-                    map.removeLayer(story_markers);
-                }
-            });
+                map.on('zoomend', function () {
+                    if (map.getZoom() >= 13 && !map.hasLayer(story_markers)) {
+                        story_markers.addTo(map);
+                    } else if (map.getZoom() >= 13 && !map.hasLayer(story_markers)) {
+                        map.addLayer(story_markers)
+                    } else if (map.getZoom() < 13 && map.hasLayer(story_markers)) {
+                        map.removeLayer(story_markers);
+                    }
+                });
+
         },
         reset_map: function () {
             map.setView([40.685259, -73.977664], 10);
@@ -178,6 +189,9 @@ var AppRouter = Backbone.Router.extend({
         $('#nav').html(this.navigationView.render().el);
     },
     load_spot: function (id) {
+
+        //BUG: When directly visiting spot, markers do not render
+
         this.spot = this.spotsCollection.get(id);
         this.spotView = new SpotView({model: this.spot});
         $('#content_container').html(this.spotView.render().el);
