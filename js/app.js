@@ -2,7 +2,10 @@ var sbk = sbk || {};
 
 sbk.map = (function () {
 
-    var map = L.mapbox.map('map', 'spotbrooklyn.i0onatsj');
+    var map = L.mapbox.map('map', 'spotbrooklyn.i0onatsj', {
+        zoomControl: false,
+        attributionControl: false
+    });
     var render_neighborhood_polygons_has_been_executed = false;
     var render_story_markers_has_been_executed = false;
 
