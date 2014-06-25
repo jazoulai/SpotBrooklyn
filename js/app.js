@@ -13,9 +13,42 @@ sbk.map = (function () {
 
         render_neighborhood_polygons: function (polygonNeighborhoods, storyNeighborhoods, neighborhoods) {
 
-            cartodb.createLayer(map, 'http://sbk.cartodb.com/api/v2/viz/874dbac0-fbce-11e3-bd5f-0e10bcd91c2b/viz.json').addTo(map);
 
-            if (!render_neighborhood_polygons_has_been_executed) {
+
+            // create a layer with 1 sublayer
+            cartodb.createLayer(map, {
+                user_name: 'sbk',
+                type: 'cartodb',
+                sublayers: [
+                    {
+                        sql: "SELECT * FROM nyc_pediacities_neighborhoods_v3_polygon_2",
+                        cartocss: '#table_name {polygon-fill: #F0F0F0; line-color: #000;}'
+                    }
+                ]
+            })
+                .addTo(map) // add the layer to our map which already contains 1 sublayer
+                .done(function(layer) {
+
+                    console.log(layer);
+
+                });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            /*if (!render_neighborhood_polygons_has_been_executed) {
                 var neighborhoodPolygons = [];
                 var neighborhoodsIntersection = _.intersection(polygonNeighborhoods, storyNeighborhoods);
 
@@ -46,7 +79,7 @@ sbk.map = (function () {
                 } else if (map.getZoom() > 12 && map.hasLayer(neighborhood_polygon_layer)) {
                     map.removeLayer(neighborhood_polygon_layer);
                 }
-            });
+            });*/
         },
         render_story_markers: function (points) {
 
