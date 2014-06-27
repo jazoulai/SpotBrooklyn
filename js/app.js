@@ -3,19 +3,22 @@ var sbk = sbk || {};
 sbk.map = (function () {
 
     var map = L.mapbox.map('map', 'spotbrooklyn.i0onatsj', {
-        zoomControl: false,
         attributionControl: false
     });
+
     var render_neighborhood_polygons_has_been_executed = false;
     var render_story_markers_has_been_executed = false;
+    //wrapper that ensures neighborhood polygons are not duplicated
+    // when story route is revisited.
 
     return {
 
         render_neighborhood_polygons: function (polygonNeighborhoods, storyNeighborhoods, neighborhoods) {
 
 
+    /* INCOMPLETE: a test to offload the storage of neighborhood polygon to CartoDB
+                   and to use CartoDb.js for its methods.
 
-            // create a layer with 1 sublayer
             cartodb.createLayer(map, {
                 user_name: 'sbk',
                 type: 'cartodb',
@@ -28,27 +31,12 @@ sbk.map = (function () {
             })
                 .addTo(map) // add the layer to our map which already contains 1 sublayer
                 .done(function(layer) {
-
                     console.log(layer);
-
                 });
+    */
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            /*if (!render_neighborhood_polygons_has_been_executed) {
+            if (!render_neighborhood_polygons_has_been_executed) {
                 var neighborhoodPolygons = [];
                 var neighborhoodsIntersection = _.intersection(polygonNeighborhoods, storyNeighborhoods);
 
@@ -79,14 +67,10 @@ sbk.map = (function () {
                 } else if (map.getZoom() > 12 && map.hasLayer(neighborhood_polygon_layer)) {
                     map.removeLayer(neighborhood_polygon_layer);
                 }
-            });*/
+            });
         },
         render_story_markers: function (points) {
-
-            //BUG: once story markers are rendered, if the route function triggers again, it breaks leaflet.
-
             if (!render_story_markers_has_been_executed) {
-
                 function each_story_marker(feature, layer) {
                     layer.on('click', function () {
                         window.app.navigate('/spot/' + feature.id, {trigger: true});
@@ -225,9 +209,6 @@ var AppRouter = Backbone.Router.extend({
         $('#nav').html(this.navigationView.render().el);
     },
     load_spot: function (id) {
-
-        //BUG: When directly visiting spot, markers do not render
-
         this.spot = this.spotsCollection.get(id);
         this.spotView = new SpotView({model: this.spot});
         $('#content_container').html(this.spotView.render().el);
