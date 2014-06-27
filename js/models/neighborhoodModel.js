@@ -1,0 +1,1 @@
+sbk.Neighborhood = Backbone.Model.extend();
