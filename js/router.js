@@ -27,7 +27,6 @@ sbk.AppRouter = Backbone.Router.extend({
         var storyView = new sbk.StoryView({model: story});
         $('#content_container').html(storyView.render().el);
         this.map.resetMap();
-
         this.map.renderMap(story);
         var navigationView = new sbk.NavigationView({model: story});
         $('#nav').html(navigationView.render().el);
