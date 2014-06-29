@@ -3,38 +3,36 @@
 
 sbk.AppRouter = Backbone.Router.extend({
     routes: {
-        "": "load_list",
-        "story/:id": "load_story",
-        "spot/:id": "load_spot"
+        "": "loadList",
+        "story/:id": "loadStory",
+        "spot/:id": "loadSpot"
     },
     initialize: function (neighborhoodCollection, storyCollection, spotCollection) {
         this.storyCollection = storyCollection;
         this.spotCollection = spotCollection;
         this.neighborhoodCollection = neighborhoodCollection;
-        this.map = new sbk.Map({
+        this.map = new sbk.MapView({
             storyCollection: storyCollection,
             spotCollection: spotCollection,
             neighborhoodCollection: neighborhoodCollection
         });
     },
-    load_list: function () {
+    loadList: function () {
         this.storyListView = new sbk.StoryListView({model: this.storyCollection});
         $('#content_container').html(this.storyListView.render().el);
-        this.map.reset_map();
+        this.map.resetMap();
     },
-    load_story: function (id) {
+    loadStory: function (id) {
         var story = this.storyCollection.get(id);
         var storyView = new sbk.StoryView({model: story});
         $('#content_container').html(storyView.render().el);
-        this.map.reset_map();
+        this.map.resetMap();
 
-        this.map.render(story);
-        //sbk.map.render_neighborhood_polygons(neighborhoodsCollectionIds, storyNeighborhoods, neighborhoods);
-        //sbk.map.render_story_markers(spotMarkers);
+        this.map.renderMap(story);
         var navigationView = new sbk.NavigationView({model: story});
         $('#nav').html(navigationView.render().el);
     },
-    load_spot: function (id) {
+    loadSpot: function (id) {
         var spot = this.spotCollection.get(id);
         var spotView = new sbk.SpotView({model: spot});
         $('#content_container').html(spotView.render().el);
