@@ -1,0 +1,3 @@
+# Kelso of Brooklyn @ Greenpoint Beer Works
+
+Greenpoint Beer Works opened when Heartland Brewery wanted to move their brewing out of their high-rent restaurants. Kelly Taylor, who designed the brewery for Heartland, and serves as their head brewmaster. Kelso of Brooklyn, named by combining his and his wife's name, Sonya, who runs the marketing and social media for the brewery. The brewery kept it's name even after the original location fell through, and the ended up in Clinton Hill.

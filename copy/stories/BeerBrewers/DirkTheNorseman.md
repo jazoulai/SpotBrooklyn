@@ -1,0 +1,3 @@
+# Greenpoint Beer and Ale Co.
+
+This brewery is housed in the Dirk the Norseman. The brewpub is named after a Dutchman who was an early settler  for the 1600s, a way for owner Ed Raven to pay homage to his and Greenpoint's Norwegian/Scandanavian roots. The brewpub is a huge space whose front garage door, left over from the buidlifns past as a plastic bag factory, opens up to the street, comunal seating on old church pews, a potbelly stove for the winter, and oputdoor seating with a view of the manhattan skyline, and a shiny brewery you can see behind a glass wall. The brewery's label, Greepoint Beer and Ale Co. will be available in the pub to eat along with a meat-centric menu, and these establishments.

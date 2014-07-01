@@ -6,7 +6,7 @@
 @park: #cec;
 
 Map {
-  background-color:#fff;
+  background-color:#f9f0e3;
 }
 
 #landuse {
@@ -45,10 +45,10 @@ Map {
       line-width: 2;
     }
     [zoom=13] {
-      line-width: 4;
+      line-width: 6;
     }
     [zoom=14] {
-      line-width: 4;
+      line-width: 6;
     }
     [zoom=15] {
       line-width: 8;
@@ -83,7 +83,7 @@ Map {
 #road {
   [class='street'] {
     [zoom>=11] {
-      line-color: #000;
+      line-color: #fff;
     }
     [zoom<=12] {
       line-width:.5;
@@ -131,13 +131,27 @@ Map {
 
 
 
-#road_label 
-  [zoom=17]{  
+#road_label
+  [zoom<=13] {
+      [class='main']
+    {
+     text-name: [name];
+     text-face-name: 'Roboto Thin';
+     text-size: 11;   
+     text-placement: line;
+     text-fill: #000; 
+     text-min-path-length: 100;
+     text-character-spacing: 2; 
+     text-spacing: 10000;
+     text-allow-overlap: false;
+  }
+}
+  [zoom>13]{  
     [class='main'],  
     [class='street']{
      text-name: [name];
      text-face-name: 'Roboto Thin';
-     text-size: 11;   
+     text-size: 10;   
      text-placement: line;
      text-fill: #000;
      text-halo-fill: #fff;
