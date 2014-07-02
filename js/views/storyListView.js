@@ -1,3 +1,6 @@
+/*jshint strict: false*/
+/*globals Backbone: false, L: false, $: false, Handlebars: false, _: false, sbk: false */
+
 sbk.StoryListView = Backbone.View.extend({
     id: 'list_container',
     initialize: function () {

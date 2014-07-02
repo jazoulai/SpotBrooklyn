@@ -1,3 +1,6 @@
+/*jshint strict: false*/
+/*globals Backbone: false, L: false, $: false, Handlebars: false, _: false, sbk: false */
+
 sbk.StoryView = Backbone.View.extend({
     id: 'story_container',
     template: Handlebars.compile($('#story_template').html()),

@@ -69,8 +69,8 @@ sbk.MapView = Backbone.View.extend({
     renderMap: function (story) {
         var self = this;
 
-        self.replaceNeighborhoodsLayer(story.get('neighborhoods'));
-        self.renderStoryMarkers(story.get('spotMarkers'));
+        this.replaceNeighborhoodsLayer(story.get('neighborhoods'));
+        this.renderStoryMarkers(story.get('spotMarkers'));
     },
 
     resetMap: function () {
