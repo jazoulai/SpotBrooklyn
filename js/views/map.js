@@ -8,7 +8,7 @@ sbk.MapView = Backbone.View.extend({
         this.spotCollection = collections.spotCollection;
         this.neighborhoodCollection = collections.neighborhoodCollection;
 
-        var lmap = this.lmap = L.mapbox.map('map', 'mapbox.mapbox-streets-v5', {
+        var lmap = this.lmap = L.mapbox.map('map', 'spotbrooklyn.3xa8n79b', {
             attributionControl: false
         });
 
