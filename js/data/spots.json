@@ -7,10 +7,6 @@
         "back_button_text": "< Story",
         "back_spot_text": "Previous",
         "back_spot_href": "#spot/meeker_pigeon_exchange",
-        "center_point": [
-            40.584569,
-            -73.982822
-        ],
         "name": "Frank Viola Homing Pigeon Club",
         "images": [
             {
@@ -39,7 +35,14 @@
                 "source_name": "Mory Atler for WCBS"
             }
 
-        ]
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -73.982822,
+                40.584569
+            ]
+        }
     },
     {
         "id": "kings_county_homing_pigeon_club",
@@ -49,10 +52,6 @@
         "back_button_text": "< Story",
         "back_spot_text": "Previous",
         "back_spot_href": "#spot/three_amigos_loft",
-        "center_point": [
-            40.710727,
-            -73.967772
-        ],
         "name": "The Kings County Homing Pigeon Club",
         "images": [
             {
@@ -76,7 +75,15 @@
                 "source_link" : "bklyn.newspapers.com",
                 "source_name" : "Brooklyn Newstand"
             }
-        ]
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -73.967772,
+                40.710727
+
+            ]
+        }
     },
     {
         "id": "meeker_pigeon_exchange",
@@ -86,10 +93,6 @@
         "back_button_text": "< Story",
         "back_spot_text": "Previous",
         "back_spot_href": "#spot/kings_county_homing_pigeon_club",
-        "center_point": [
-            40.719064,
-            -73.946556
-        ],
         "name": "Meeker Pigeon Exchange",
         "images": [
             {
@@ -103,7 +106,14 @@
                 "source_link": "newyorker.com/archive/1976/01/05/1976_01_05_017_TNY_CARDS_000316962",
                 "source_name": "The New Yorker"
             }
-        ]
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -73.946556,
+                40.719064
+            ]
+        }
     },
     {
         "id": "pigeon_lofts_maria_hernandez_park",
@@ -113,10 +123,6 @@
         "back_button_text": "< Story",
         "back_spot_text": "Previous",
         "back_spot_href": "#spot/mike_tyson",
-        "center_point": [
-            40.703327,
-            -73.923943
-        ],
         "name": "Pigeon Lofts @ Maria Hernandex Park",
         "images": [
             {
@@ -177,7 +183,14 @@
                 "source_link": "facebook.com/pages/Chris-Arnade-Photography/281993958534617?id=281993958534617&sk=info",
                 "source_name": "Chris Arnade @ Facebook"
             }
-        ]
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -73.923943,
+                40.703327
+            ]
+        }
     },
     {
         "id": "three_amigos_loft",
@@ -187,10 +200,6 @@
         "back_button_text": "< Story",
         "back_spot_text": "Previous",
         "back_spot_href": "#spot/kings_county_homing_pigeon_club",
-        "center_point": [
-            40.709457,
-            -73.945339
-        ],
         "name": "Three Amigos Loft",
         "images": [
             {
@@ -208,7 +217,15 @@
                 "source_link": "pigeonradio.com/images/green.jpg",
                 "source_name": "PigeonRadio.com"
             }
-        ]
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -73.945339,
+                40.709457
+
+            ]
+        }
     },
     {
         "id": "mike_tyson",
@@ -218,10 +235,6 @@
         "back_button_text": "< Story",
         "back_spot_text": "Previous",
         "back_spot_href": "#spot/anthony_martire",
-        "center_point": [
-            40.664780,
-            -73.910894
-        ],
         "name": "Mike Tyson's Corner",
         "images": [
             {
@@ -239,7 +252,14 @@
                 "source_link": "youtube.com/watch?v=jzF9MVdVX38",
                 "source_name": "Animal Planet @ YouTube"
             }
-        ]
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -73.910894,
+                40.664780
+            ]
+        }
     },
     {
         "id": "anthony_martire",
@@ -249,10 +269,6 @@
         "back_button_text": "< Story",
         "back_spot_text": "Previous",
         "back_spot_href": "#spot/frank_viola",
-        "center_point": [
-            40.579350,
-            -73.982827
-],
         "name": "The Radiator Loft",
         "video": {
             "video_source" : "//www.youtube.com/embed/Jk1YT95_m1M"
@@ -268,7 +284,14 @@
                 "source_link" : "barclayscenter.com/bctv/video/bctv-brooklyn-spotlight-the-pigeon-fancier",
                 "source_name" : "Barclays Center TV"
             }
-        ]
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -73.982827,
+                40.579350
+            ]
+        }
     }
 
 

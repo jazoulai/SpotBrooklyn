@@ -14,22 +14,18 @@ sbk.MapView = Backbone.View.extend({
 
         var self = this;
 
-        this.replaceNeighborhoodsLayer([]);
-        this.renderStoryMarkers([]);
+        this.neighborhoodsLayer = new L.GeoJSON([]);
+        this.spotMarkersLayer = new L.GeoJSON([]);
 
         lmap.on('zoomend', function (){
-            if(lmap.getZoom() <=12){
-                lmap.addLayer(self.neighborhoodsLayer);
-                lmap.removeLayer(self.storyMarkers);
-            } else if (lmap.getZoom() > 12) {
-                lmap.removeLayer(self.neighborhoodsLayer);
-                lmap.addLayer(self.storyMarkers);
-            }
+            self.showLayerForZoom();
         });
+        self.showLayerForZoom();
     },
 
-    replaceNeighborhoodsLayer: function (neighborhoodIds) {
+    replaceNeighborhoodsLayer: function (story) {
         var self = this;
+        var neighborhoodIds = story.get('neighborhoods');
         if (this.neighborhoodsLayer) {
             this.lmap.removeLayer(this.neighborhoodsLayer);
         }
@@ -51,30 +47,66 @@ sbk.MapView = Backbone.View.extend({
         this.lmap.addLayer(this.neighborhoodsLayer);
     },
 
-    renderStoryMarkers: function (points) {
+    renderSpotMarkers: function (story) {
         var self = this;
-        this.storyMarkers = L.geoJson(points, {
+        if (this.spotMarkersLayer) {
+            this.lmap.removeLayer(this.spotMarkersLayer);
+        }
+        var spots = self.spotCollection.filter(function (spot) {
+            return _.contains(story.get('spots'), spot.id);
+        });
+        var spotGeometries = [];
+        _.each(spots, function (spot) {
+            var geometry = spot.get('geometry');
+            geometry.id = spot.get('id');
+            spotGeometries.push(geometry);
+        });
+        // var spotGeometries = _.invoke(spots, 'get', 'geometry');  // This wouldn't include spot IDs.
+        this.spotMarkersLayer = new L.GeoJSON(spotGeometries, {
             onEachFeature: function (feature, layer) {
                 layer.on('click', function () {
-                    sbk.app.navigate('/spot/' + feature.id, {trigger: true});
-                    self.lmap.setView([
-                        feature.geometry.coordinates[1],
-                        feature.geometry.coordinates[0]],
-                        15);
+                    sbk.app.navigate(story.id + '/' + feature.id, {trigger: true});
                 });
             }
         });
     },
 
-    renderMap: function (story) {
+    renderStory: function (story) {
         var self = this;
 
-        this.replaceNeighborhoodsLayer(story.get('neighborhoods'));
-        this.renderStoryMarkers(story.get('spotMarkers'));
+        self.replaceNeighborhoodsLayer(story);
+        self.renderSpotMarkers(story);
+        self.showLayerForZoom();
+    },
+
+    zoomToSpot: function (spot) {
+        var self = this;
+        self.lmap.setView([
+            spot.get('geometry').coordinates[1],
+            spot.get('geometry').coordinates[0]
+        ], 15);
+        self.showLayerForZoom();
+    },
+
+    /**
+     * Show the neighborhoods layer if we're below or at zoom 12,
+     * and the spotMarkers layer otherwise.
+     */
+    showLayerForZoom: function () {
+        var self = this;
+        if(self.lmap.getZoom() <=12){
+            self.lmap.addLayer(self.neighborhoodsLayer);
+            self.lmap.removeLayer(self.spotMarkersLayer);
+        } else if (self.lmap.getZoom() > 12) {
+            self.lmap.removeLayer(self.neighborhoodsLayer);
+            self.lmap.addLayer(self.spotMarkersLayer);
+        }
     },
 
     resetMap: function () {
         var self = this;
         self.lmap.setView([40.685259, -73.977664], 10);
+        self.lmap.removeLayer(self.neighborhoodsLayer);
+        self.lmap.removeLayer(self.spotMarkersLayer);
     }
 });

@@ -20,7 +20,7 @@
             </div>
             <div class="headline">
                 <p>
-                    <a href="#story/{{id}}">{{headline}}</a>
+                    <a href="#{{id}}">{{headline}}</a>
                 </p>
             </div>
     </script>
@@ -51,19 +51,19 @@
             {{#if sources}}
                 <p>via
                     {{#each sources}}
-                    {{#if @first}}
-                    {{else}}
-                        {{#if @last}}
-                        and
+                        {{#if @first}}
                         {{else}}
-                        ,
+                            {{#if @last}}
+                            and
+                            {{else}}
+                            ,
+                            {{/if}}
                         {{/if}}
-                    {{/if}}
-                    {{#if this.source_link}}
-                        <a href="http://{{this.source_link}}">{{this.source_name}}</a>
-                    {{else}}
-                        {{this.source_name}}
-                    {{/if}}
+                        {{#if this.source_link}}
+                            <a href="http://{{this.source_link}}">{{this.source_name}}</a>
+                        {{else}}
+                            {{this.source_name}}
+                        {{/if}}
                     {{/each}}
                 </p>
             {{/if}}
@@ -110,12 +110,19 @@
             {{/if}}
     </script>
 
-    <script type="text/template" id="navigation_template">
-        <a href="{{back_button_href}}">{{back_button_text}}</a>
-        <a href="{{back_spot_href}}">{{back_spot_text}}</a>
-        spot
-        <a href="{{fwd_button_href}}">{{fwd_button_text}}</a>
+    <script type="text/template" id="story_navigation_template">
+        <a href="#" class="home">home</a>
+        <a href="#" class="first_spot">spot</a>
+    </script>
 
+    <script type="text/template" id="spot_navigation_template">
+        <a href="#" class="story">story</a>
+        {{#if next}}
+        <a href="#" class="previous">previous</a>
+        {{/if}}
+        {{#if previous}}
+        <a href="#" class="next">next</a>
+        {{/if}}
     </script>
 
 
@@ -139,7 +146,8 @@
         <script src="js/collections/storyCollection.js"></script>
 
         <script src="js/views/map.js"></script>
-        <script src="js/views/navigationView.js"></script>
+        <script src="js/views/spotNavigationView.js"></script>
+        <script src="js/views/storyNavigationView.js"></script>
         <script src="js/views/spotView.js"></script>
         <script src="js/views/storyView.js"></script>
         <script src="js/views/storyListView.js"></script>
