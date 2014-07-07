@@ -93,13 +93,27 @@ sbk.MapView = Backbone.View.extend({
      * and the spotMarkers layer otherwise.
      */
     showLayerForZoom: function () {
-        var self = this;
-        if(self.lmap.getZoom() <=12){
-            self.lmap.addLayer(self.neighborhoodsLayer);
-            self.lmap.removeLayer(self.spotMarkersLayer);
-        } else if (self.lmap.getZoom() > 12) {
-            self.lmap.removeLayer(self.neighborhoodsLayer);
-            self.lmap.addLayer(self.spotMarkersLayer);
+        var self = this,
+            hasNeighborhoods = self.lmap.hasLayer(self.neighborhoodsLayer),
+            hasSpotMarkers = self.lmap.hasLayer(self.spotMarkersLayer);
+
+        // Show a layer iff a layer is already being shown
+        if (hasNeighborhoods || hasSpotMarkers) {
+            if(self.lmap.getZoom() <= 12){
+                if (!hasNeighborhoods) {
+                    self.lmap.addLayer(self.neighborhoodsLayer);
+                }
+                if (hasSpotMarkers) {
+                    self.lmap.removeLayer(self.spotMarkersLayer);
+                }
+            } else {
+                if (hasNeighborhoods) {
+                    self.lmap.removeLayer(self.neighborhoodsLayer);
+                }
+                if (!hasSpotMarkers) {
+                    self.lmap.addLayer(self.spotMarkersLayer);
+                }
+            }
         }
     },
 

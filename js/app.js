@@ -14,21 +14,4 @@ $(document).ready(function () {
         sbk.app = new sbk.AppRouter(neighborhoodsCollection, storyCollection, spotsCollection);
         Backbone.history.start();
     });
-    //debugger;
-    /*{
-        success: function () {
-            var storyCollection = new sbk.StoryCollection();
-            storyCollection.fetch({
-                success: function () {
-                    var spotsCollection = new sbk.SpotCollection();
-                    spotsCollection.fetch({
-                        success: function () {
-                            sbk.app = new sbk.AppRouter(neighborhoodsCollection, storyCollection, spotsCollection);
-                            Backbone.history.start();
-                        }
-                    });
-                }
-            });
-        }
-    });*/
 });
