@@ -29,8 +29,9 @@ sbk.AppRouter = Backbone.Router.extend({
         var story = this.storyCollection.get(storyId);
         var storyView = new sbk.StoryView({model: story});
         $('#content_container').html(storyView.render().el);
-
+        this.map.resetMap();
         this.map.renderStory(story);
+
 
         var storyNavigationView = new sbk.StoryNavigationView({model: story});
         $('#nav').html(storyNavigationView.render().el);
@@ -45,7 +46,7 @@ sbk.AppRouter = Backbone.Router.extend({
         this.map.renderStory(story);
         this.map.zoomToSpot(spot);
 
-        var spotNavigationView = new sbk.SpotNavigationView({model: spot});
+        var spotNavigationView = new sbk.SpotNavigationView({model: story});
         $('#nav').html(spotNavigationView.render().el);
     }
 });
