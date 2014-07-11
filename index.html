@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
     <title>SpotBrooklyn.com</title>
-    <link rel="stylesheet" href="css/mapbox.css">
+    <link rel="stylesheet" href="css/leaflet.css">
     <link rel="stylesheet" href="css/styles.css"/>
 </head>
     <body>
@@ -20,7 +20,7 @@
             </div>
             <div class="headline">
                 <p>
-                    <a href="#{{id}}">{{headline}}</a>
+                    <a href="#!{{id}}">{{headline}}</a>
                 </p>
             </div>
     </script>
@@ -111,16 +111,20 @@
     </script>
 
     <script type="text/template" id="story_navigation_template">
-        <a href="#" class="home">home</a>
-        <a href="#" class="first_spot">spot</a>
+        <a href="#!" class="home">home</a>
+        <a href="#!" class="first_spot">spot</a>
     </script>
 
     <script type="text/template" id="spot_navigation_template">
-        <a href="#" class="story">story</a>
+        <a href="#!{{ id }}">story</a>
 
-        <a href="#" class="previous">previous</a>
+        {{#if previousSpotId}}
+          <a href="#!{{ id }}/{{ previousSpotId }}">previous</a>
+        {{/if}}
 
-        <a href="#" class="next">next</a>
+        {{#if nextSpotId}}
+          <a href="#!{{ id }}/{{ nextSpotId }}">next</a>
+        {{/if}}
 
     </script>
 
@@ -130,6 +134,8 @@
         <script src="js/libs/underscore.js"></script>
         <script src="js/libs/backbone.js"></script>
         <script src="js/libs/handlebars-v1.3.0.js"></script>
+        <script src="js/libs/modernizr-latest.js"></script>
+
         <script src="js/libs/mapbox.js"></script>
 
         <script src="js/app.js"></script>

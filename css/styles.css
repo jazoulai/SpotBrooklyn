@@ -117,3 +117,11 @@ img.story_image{
     background-color: lightcoral;
     overflow-y: scroll;
 }
+
+html.touch .leaflet-control-container {
+    display: none;
+}
+
+.element-to-only-show-with-mobile {
+    display: none;
+}

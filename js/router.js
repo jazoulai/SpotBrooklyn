@@ -4,8 +4,9 @@
 sbk.AppRouter = Backbone.Router.extend({
     routes: {
         "": "loadList",
-        ":story_id": "loadStory",
-        ":story_id/:spot_id": "loadSpot"
+        "!": "loadList",
+        "!:storyId": "loadStory", //does the storyID argument start at the route?
+        "!:storyId/:spotId": "loadSpot"
     },
 
     initialize: function (neighborhoodCollection, storyCollection, spotCollection) {
@@ -20,8 +21,8 @@ sbk.AppRouter = Backbone.Router.extend({
     },
 
     loadList: function () {
-        this.storyListView = new sbk.StoryListView({model: this.storyCollection});
-        $('#content_container').html(this.storyListView.render().el);
+        this.storyListView = new sbk.StoryListView({collection: this.storyCollection});
+        $('#content_container').html(this.storyListView.render().el);  //how else should we insert views into the dom?
         this.map.resetMap();
     },
 
@@ -46,7 +47,7 @@ sbk.AppRouter = Backbone.Router.extend({
         this.map.renderStory(story);
         this.map.zoomToSpot(spot);
 
-        var spotNavigationView = new sbk.SpotNavigationView({model: story});
+        var spotNavigationView = new sbk.SpotNavigationView({story: story, spot: spot});
         $('#nav').html(spotNavigationView.render().el);
     }
 });

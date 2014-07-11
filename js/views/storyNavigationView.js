@@ -13,7 +13,7 @@ sbk.StoryNavigationView = Backbone.View.extend({
         });
         $(this.el).find('.first_spot').on('click', function (e) {
             e.preventDefault();
-            sbk.app.navigate(self.model.get('id') + '/' + self.model.get('spots')[0],
+            sbk.app.navigate('!' + self.model.get('id') + '/' + self.model.get('spots')[0],
                 { trigger: true });
         });
         return this;
