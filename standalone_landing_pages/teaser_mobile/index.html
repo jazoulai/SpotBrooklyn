@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+    <title>SpotBrooklyn.com</title>
+    <link rel="stylesheet" href="css/leaflet.css">
+    <script src="js/libs/mapbox.js"></script>
+    <script type="text/javascript" src="https://use.typekit.net/urz0jfm.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <script src="js/libs/jquery-2.1.1.js"></script>
+
+    <style>
+        body, html {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            font-family: "proxima-nova",sans-serif;
+            font-style: normal;
+            font-weight: 100;
+        }
+        #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            top: 0;
+        }
+        #message{
+            position: absolute;
+            z-index: 10000;
+            width: 90%;
+            height: auto;
+            margin: 0;
+            padding: 0;
+            top: 10%;
+            left: 5%;
+            text-align: center;
+            background-color: white;
+        }
+        #red {
+            color: red;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div id="map">
+    </div>
+
+    <div id="message">
+        <p>Our mobile site is under construction.</p>
+        <p>Please visit us on your laptop or tablet for a sneak preview.</p>
+        <p id="red">SpotBrooklyn.com launches November 3.</p>
+    </div>
+
+    <script>
+        var map = L.mapbox.map('map', 'spotbrooklyn.06i7wrk9', {
+            center: [40.658437, -74.013884],
+            attributionControl: false,
+            zoom: 12,
+            minZoom: 9,
+            maxZoom: 22,
+            zoomControl: false
+        });
+    </script>
+
+</body>
