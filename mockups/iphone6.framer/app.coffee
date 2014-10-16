@@ -67,7 +67,7 @@ map = new Layer
 	
 map.center()
 
-map.on Events.Drag, ->
+map.on Events.Tap, ->
 	print "Drag!"
 
 ###

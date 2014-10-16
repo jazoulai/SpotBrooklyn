@@ -100,7 +100,7 @@
 
 }).call(this);
 
-// Layer info for /Users/jazoulai/Desktop/BananaPeel/images/wireframes/mockup_iphone_6.framer/imported/mockup_iphone_6/layers.json.js
+// Layer info for /Users/jazoulai/Desktop/BananaPeel/code/SpotBrooklyn/mockups/iphone6.framer/imported/mockup_iphone_6/layers.json.js
 window.__imported__ = window.__imported__ || {};
 window.__imported__["mockup_iphone_6/layers.json.js"] = [
   {
