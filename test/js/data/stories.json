@@ -1,18 +1,54 @@
 [
     {
-        "id": "story1"
+        "id": "spot1",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -73.982822,
+                40.584569
+            ]
+        }
+    },
+    {
+        "id": "spot2",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -73.967772,
+                40.710727
 
+            ]
+        }
     },
     {
-        "id": "story2"
+        "id": "spot3",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -73.946556,
+                40.719064
+            ]
+        }
     },
     {
-        "id": "story3"
+        "id": "spot4",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -73.923943,
+                40.703327
+            ]
+        }
     },
     {
-        "id": "story4"
-    },
-    {
-        "id": "story5"
+        "id": "spot5",
+        "type": "Point",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -73.982827,
+                40.579350
+            ]
+        }
     }
 ]

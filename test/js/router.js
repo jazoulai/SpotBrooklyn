@@ -9,14 +9,16 @@ sbk.AppRouter = Backbone.Router.extend({
 
     initialize: function (storyCollection) {
         this.storyCollection = storyCollection;
-        this.map = new sbk.MapView({
+        this.lmap = new sbk.MapView({
+            storyCollection: storyCollection
         });
     },
 
     loadList: function () {
         this.storyListView = new sbk.StoryListView({collection: this.storyCollection});
         $('#content_container').html(this.storyListView.render().el);
-        this.map.resetMap();
+        this.lmap.resetMap();
+        this.lmap.renderSpotMarkers();
     }
 
 });
