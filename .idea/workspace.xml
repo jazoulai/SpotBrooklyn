@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fe0408b6-eeb5-4738-b11d-2e853cd5eeb6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mockups/iphone_6/js/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mockups/iphone_6/js/libs/backbone.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mockups/iphone_6/js/libs/handlebars-v1.3.0.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mockups/iphone_6/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mockups/iphone_6/js/libs/jquery-2.1.1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mockups/iphone_6/css/leaflet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mockups/iphone_6/js/views/map.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mockups/iphone_6/css/mapbox.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mockups/iphone_6/js/libs/mapbox.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mockups/iphone_6/js/libs/mapbox.standalone.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mockups/iphone_6/js/libs/modernizr-latest.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mockups/iphone_6/js/router.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mockups/iphone_6/css/styles.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mockups/iphone_6/js/libs/underscore.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockups/iphone6.framer/app.coffee" afterPath="$PROJECT_DIR$/mockups/iphone6.framer/app.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockups/iphone6.framer/framer/app.manifest" afterPath="$PROJECT_DIR$/mockups/iphone6.framer/framer/app.manifest" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockups/iphone6.framer/framer/backup.coffee" afterPath="$PROJECT_DIR$/mockups/iphone6.framer/framer/backup.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockups/iphone6.framer/framer/framer.generated.js" afterPath="$PROJECT_DIR$/mockups/iphone6.framer/framer/framer.generated.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="fe0408b6-eeb5-4738-b11d-2e853cd5eeb6" name="Default" comment="" />
     <ignored path="backbone_tutorial.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
