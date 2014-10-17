@@ -20,9 +20,43 @@ sbk.MapView = Backbone.View.extend({
 
     renderSpotMarkers: function(){
 
-        var spotMarkers = this.storyCollection.pluck('geometry');
+        var self = this;
 
-        this.spotMarkersLayer = new L.GeoJSON(spotMarkers).addTo(this.lmap);
+        /*create an id for each spots geometry
+        var spotMarkers = this.storyCollection.pluck('geometry');
+        _.each(spotMarkers, function(spot){
+            spotMarkers.id = 1;
+        });
+        console.log(spotMarkers);
+        */
+
+        /*
+        * Rip the icon scroller from the desktop teaser site
+        *
+        * */
+
+        var m1 = L.marker([40.699570, -73.925093]);
+        var m2 = L.marker([40.702823, -73.981398]);
+        var m3 = L.marker([40.617952, -73.919772]);
+        var m4 = L.marker([40.577937, -73.970240]);
+
+
+        if (1 > 0) {
+
+            self.lmap.addLayer(m1);
+
+        } else {
+
+            self.lmap.removeLayer(m1);
+
+        }
+
+
+
+
+
+
+
 
 
 
