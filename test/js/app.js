@@ -4,9 +4,10 @@
 var sbk = sbk || {};
 
 $(document).ready(function () {
-
-    sbk.app = new sbk.AppRouter();
-
-    Backbone.history.start();
-
+    var storyCollection = new sbk.StoryCollection();
+    $.when(storyCollection.fetch())
+        .then(function () {
+            sbk.app = new sbk.AppRouter(storyCollection);
+            Backbone.history.start();
+        });
 });
