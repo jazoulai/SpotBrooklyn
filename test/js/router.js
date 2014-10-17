@@ -16,6 +16,7 @@ sbk.AppRouter = Backbone.Router.extend({
     loadList: function () {
         this.storyListView = new sbk.StoryListView({collection: this.storyCollection});
         $('#content_container').html(this.storyListView.render().el);
+        this.map.resetMap();
     }
 
 });

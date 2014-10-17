@@ -4,17 +4,17 @@
 sbk.MapView = Backbone.View.extend({
 
     initialize: function () {
-
         var lmap = this.lmap = L.mapbox.map('map', 'spotbrooklyn.06i7wrk9', {
             attributionControl: false,
             zoomControl: false
 
         });
-
         var self = this;
+    },
 
+
+    resetMap: function () {
+        var self = this;
         self.lmap.setView([40.685259, -73.977664], 10);
-
     }
-
 });

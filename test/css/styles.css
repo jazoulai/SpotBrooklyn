@@ -30,7 +30,7 @@ body, html {
     padding: 0;
     margin: 0;
     background-color: goldenrod;
-    overflow-y: auto; /* has to be scroll, not auto */
+    overflow-y: auto;
     -webkit-overflow-scrolling: touch;
 }
 .list_item {
