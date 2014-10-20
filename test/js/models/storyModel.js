@@ -3,4 +3,5 @@
 
 sbk.Story = Backbone.Model.extend({
 
+
 });

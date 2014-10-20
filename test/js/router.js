@@ -18,7 +18,7 @@ sbk.AppRouter = Backbone.Router.extend({
         this.storyListView = new sbk.StoryListView({collection: this.storyCollection});
         $('#content_container').html(this.storyListView.render().el);
         this.lmap.resetMap();
-        this.lmap.renderSpotMarkers();
+        this.lmap.updateMarkerOnScroll();
     }
 
 });
