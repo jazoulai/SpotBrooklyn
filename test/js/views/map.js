@@ -30,10 +30,24 @@ sbk.MapView = Backbone.View.extend({
                     listItem.eq(index).attr('id', 'marker');
                 }
             });
+
+            //TODO: make seperate function
             var storyId = $('#marker div:first').attr('id');
             var story = self.storyCollection.get(storyId);
+
+            var storyGeometry = [];
             var storyMarker = story.get("geometry");
-            self.storyMarkerLayer = new L.GeoJSON(storyMarker);
+            storyMarker.id = storyId;
+            storyGeometry.push(storyMarker);
+
+
+            self.storyMarkerLayer = new L.GeoJSON(storyGeometry, {
+                onEachFeature: function(feature, layer){
+                    layer.on('click', function () {
+                       sbk.app.navigate('!' + feature.id, {trigger: true});
+                    });
+                }
+            });
             self.lmap.addLayer(self.storyMarkerLayer);
         }
         renderStoryMarker();
@@ -48,6 +62,9 @@ sbk.MapView = Backbone.View.extend({
 
         if(this.storyMarkerLayer){
             self.lmap.removeLayer(this.storyMarkerLayer);
+        }
+        if(this.spotMarkersLayer){
+            self.lmap.removeLayer(this.spotMarkersLayer);
         }
     },
 
@@ -69,8 +86,7 @@ sbk.MapView = Backbone.View.extend({
         this.spotMarkersLayer = new L.GeoJSON(spotGeometries, {
             onEachFeature: function (feature, layer) {
                 layer.on('click', function () {
-                    console.log(feature.id);
-                    //sbk.app.navigate('!' + story.id + '/' + feature.id, {trigger: true});
+                    sbk.app.navigate('!' + story.id + '/' + feature.id, {trigger: true});
                 });
             }
         });

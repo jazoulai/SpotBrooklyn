@@ -5,7 +5,8 @@ sbk.AppRouter = Backbone.Router.extend({
     routes: {
         "": "loadList",
         "!": "loadList",
-        "!:storyId": "loadStory"
+        "!:storyId": "loadStory",
+        "!:storyId/:spotId": "loadSpot"
     },
 
     initialize: function (storyCollection, spotCollection) {
@@ -25,10 +26,15 @@ sbk.AppRouter = Backbone.Router.extend({
     },
 
     loadStory: function (storyId) {
+        this.map.resetMap();
         var story = this.storyCollection.get(storyId);
         var storyView = new sbk.StoryView({model: story});
         $('#content_container').html(storyView.render().el);
         this.map.renderStory(story);
+    },
+
+    loadSpot: function () {
+        console.log('spot ready to go!');
     }
 
 });
