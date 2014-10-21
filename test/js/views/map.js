@@ -19,31 +19,16 @@ sbk.MapView = Backbone.View.extend({
         this.currentLayer = new L.GeoJSON([]);
     },
 
-
     updateMarkerOnScroll: function(){
         var self = this;
         var height = $(document).height() * 0.70;
         var listItem =  $('.list_item');
-
-
-
         function renderMarker () {
-
-
-
             if(self.currentLayer){
                 self.lmap.removeLayer(self.currentLayer);
             }
-
             listItem.each(function(index){
-
-
-
                 if($(this).position().top <= height) {
-                    console.log(index);
-                    console.log(height);
-                    console.log($(this).position().top);
-                    console.log($(this).offset().top);
                     listItem.removeAttr('id', 'marker');
                     listItem.eq(index).attr('id', 'marker');
                 }
@@ -55,11 +40,7 @@ sbk.MapView = Backbone.View.extend({
             self.currentLayer = new L.GeoJSON(currentMarker);
             self.lmap.addLayer(self.currentLayer);
         }
-
         renderMarker();
-
-
-
         $('#list_container').on('scroll', function(){
             renderMarker();
         });

@@ -4,7 +4,8 @@
 sbk.AppRouter = Backbone.Router.extend({
     routes: {
         "": "loadList",
-        "!": "loadList"
+        "!": "loadList",
+        "!:storyId": "loadStory"
     },
 
     initialize: function (storyCollection) {
@@ -19,6 +20,10 @@ sbk.AppRouter = Backbone.Router.extend({
         $('#content_container').html(this.storyListView.render().el);
         this.lmap.resetMap();
         this.lmap.updateMarkerOnScroll();
+    },
+
+    loadStory: function () {
+        console.log('story is locked and ready!');
     }
 
 });

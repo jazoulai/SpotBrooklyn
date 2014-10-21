@@ -36,9 +36,15 @@ body, html {
 .list_item {
     width: 100%;
     height: 100%;
-    padding: 30px;
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
     background-color: blueviolet;
+}
+.list_item_content {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
 }
 
