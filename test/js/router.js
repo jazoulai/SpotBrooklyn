@@ -8,22 +8,27 @@ sbk.AppRouter = Backbone.Router.extend({
         "!:storyId": "loadStory"
     },
 
-    initialize: function (storyCollection) {
+    initialize: function (storyCollection, spotCollection) {
         this.storyCollection = storyCollection;
-        this.lmap = new sbk.MapView({
-            storyCollection: storyCollection
+        this.spotCollection = spotCollection;
+        this.map = new sbk.MapView({
+            storyCollection: storyCollection,
+            spotCollection: spotCollection
         });
     },
 
     loadList: function () {
         this.storyListView = new sbk.StoryListView({collection: this.storyCollection});
         $('#content_container').html(this.storyListView.render().el);
-        this.lmap.resetMap();
-        this.lmap.updateMarkerOnScroll();
+        this.map.resetMap();
+        this.map.updateStoryMarkerOnScroll();
     },
 
-    loadStory: function () {
-        console.log('story is locked and ready!');
+    loadStory: function (storyId) {
+        var story = this.storyCollection.get(storyId);
+        var storyView = new sbk.StoryView({model: story});
+        $('#content_container').html(storyView.render().el);
+        this.map.renderStory(story);
     }
 
 });

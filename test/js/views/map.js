@@ -5,6 +5,7 @@ sbk.MapView = Backbone.View.extend({
 
     initialize: function (collections) {
         this.storyCollection = collections.storyCollection;
+        this.spotCollection = collections.spotCollection;
         this.lmap = L.mapbox.map('map', 'spotbrooklyn.06i7wrk9', {
             attributionControl: false,
             zoomControl: false
@@ -12,20 +13,16 @@ sbk.MapView = Backbone.View.extend({
 
 
     },
-
-    resetMap: function () {
+    updateStoryMarkerOnScroll: function(){
         var self = this;
-        self.lmap.setView([40.685259, -73.977664], 10);
-        this.currentLayer = new L.GeoJSON([]);
-    },
-
-    updateMarkerOnScroll: function(){
-        var self = this;
-        var height = $(document).height() * 0.70;
+        var height = $(document).height() * 0.60;
         var listItem =  $('.list_item');
-        function renderMarker () {
-            if(self.currentLayer){
-                self.lmap.removeLayer(self.currentLayer);
+
+        this.storyMarkerLayer = new L.GeoJSON([]);
+
+        function renderStoryMarker () {
+            if(self.storyMarkerLayer){
+                self.lmap.removeLayer(self.storyMarkerLayer);
             }
             listItem.each(function(index){
                 if($(this).position().top <= height) {
@@ -33,18 +30,54 @@ sbk.MapView = Backbone.View.extend({
                     listItem.eq(index).attr('id', 'marker');
                 }
             });
-            var spotId = $('#marker div:first').attr('id');
-            console.log(spotId);
-            var currentSpot = self.storyCollection.get(spotId);
-            var currentMarker = currentSpot.get("geometry");
-            self.currentLayer = new L.GeoJSON(currentMarker);
-            self.lmap.addLayer(self.currentLayer);
+            var storyId = $('#marker div:first').attr('id');
+            var story = self.storyCollection.get(storyId);
+            var storyMarker = story.get("geometry");
+            self.storyMarkerLayer = new L.GeoJSON(storyMarker);
+            self.lmap.addLayer(self.storyMarkerLayer);
         }
-        renderMarker();
+        renderStoryMarker();
         $('#list_container').on('scroll', function(){
-            renderMarker();
+            renderStoryMarker();
         });
+    },
+
+    resetMap: function () {
+        var self = this;
+        self.lmap.setView([40.685259, -73.977664], 10);
+
+        if(this.storyMarkerLayer){
+            self.lmap.removeLayer(this.storyMarkerLayer);
+        }
+    },
+
+    renderStory: function(story) {
+        var self = this;
+
+        //searches the entire spotCollection for IDs that are equal to strings in the storyCollection 'spots' attribute
+        var spots = self.spotCollection.filter(function (spot) {
+            return _.contains(story.get('spots'), spot.id);
+        });
+
+        var spotGeometries = [];
+        _.each(spots, function (spot) {
+            var geometry = spot.get('geometry');
+            geometry.id = spot.get('id'); //does this create a GeoJson ID property on the fly?
+            spotGeometries.push(geometry);
+        });
+        // var spotGeometries = _.invoke(spots, 'get', 'geometry');  // This wouldn't include spot IDs.
+        this.spotMarkersLayer = new L.GeoJSON(spotGeometries, {
+            onEachFeature: function (feature, layer) {
+                layer.on('click', function () {
+                    console.log(feature.id);
+                    //sbk.app.navigate('!' + story.id + '/' + feature.id, {trigger: true});
+                });
+            }
+        });
+        self.lmap.addLayer(this.spotMarkersLayer);
+
     }
+
 
 
 

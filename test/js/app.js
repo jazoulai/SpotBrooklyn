@@ -5,9 +5,12 @@ var sbk = sbk || {};
 
 $(document).ready(function () {
     var storyCollection = new sbk.StoryCollection();
-    $.when(storyCollection.fetch())
+    var spotCollection = new sbk.SpotCollection();
+    $.when(storyCollection.fetch(),
+           spotCollection.fetch())
         .then(function () {
-            sbk.app = new sbk.AppRouter(storyCollection);
+            console.log('fetched!');
+            sbk.app = new sbk.AppRouter(storyCollection, spotCollection);
             Backbone.history.start();
         });
 });
