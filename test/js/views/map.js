@@ -88,11 +88,12 @@ sbk.MapView = Backbone.View.extend({
         var storyGeo = story.get('geometry');
         console.log(storyGeo);
         this.storyMarkerLayer = new L.GeoJSON(storyGeo);
+        this.lmap.addLayer(this.storyMarkerLayer);
         this.lmap.setView([
             storyGeo.coordinates[1],
             storyGeo.coordinates[0]
         ], 12);
-        this.lmap.addLayer(this.storyMarkerLayer);
+
 
     }
 
