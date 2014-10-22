@@ -52,9 +52,22 @@ sbk.MapView = Backbone.View.extend({
             self.lmap.addLayer(self.storyMarkerLayer);
         }
         renderStoryMarker();
+
+        var didScroll = false;
         $('#list_container').on('scroll', function(){
+            didScroll = true;
             renderStoryMarker();
         });
+
+
+        setInterval(function() {
+            if(didScroll) {
+                didScroll = false;
+                console.log('You scrolled');
+            }
+        }, 2000);
+
+
     },
 
     resetMap: function () {
