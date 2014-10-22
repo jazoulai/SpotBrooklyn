@@ -26,15 +26,18 @@ sbk.AppRouter = Backbone.Router.extend({
     },
 
     loadStory: function (storyId) {
-        this.map.resetMap();
+
         var story = this.storyCollection.get(storyId);
-        var storyView = new sbk.StoryView({model: story});
-        $('#content_container').html(storyView.render().el);
+
+        this.spotListView = new sbk.SpotListView({collection: this.spotCollection});
+        $('#content_container').html(this.spotListView.render().el);
+
+        this.map.resetMap();
         this.map.renderStory(story);
     },
 
     loadSpot: function () {
-        console.log('spot ready to go!');
+
     }
 
 });
