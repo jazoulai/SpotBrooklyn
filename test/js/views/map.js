@@ -13,6 +13,7 @@ sbk.MapView = Backbone.View.extend({
 
 
     },
+
     updateStoryMarkerOnScroll: function(){
         var self = this;
         var height = $(document).height() * 0.60;
@@ -63,6 +64,23 @@ sbk.MapView = Backbone.View.extend({
         if(this.storyMarkerLayer){
             self.lmap.removeLayer(this.storyMarkerLayer);
         }
+    },
+
+    renderStoryMarker: function (story) {
+        var self = this;
+        if(this.storyMarkerLayer){
+            self.lmap.removeLayer(this.storyMarkerLayer);
+        }
+
+        var storyGeo = story.get('geometry');
+        console.log(storyGeo);
+        this.storyMarkerLayer = new L.GeoJSON(storyGeo);
+        this.lmap.setView([
+            storyGeo.coordinates[1],
+            storyGeo.coordinates[0]
+        ], 12);
+        this.lmap.addLayer(this.storyMarkerLayer);
+
     }
 
 
