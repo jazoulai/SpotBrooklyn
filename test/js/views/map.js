@@ -10,8 +10,6 @@ sbk.MapView = Backbone.View.extend({
             attributionControl: false,
             zoomControl: false
         });
-
-
     },
 
     updateStoryMarkerOnScroll: function(){
@@ -58,16 +56,11 @@ sbk.MapView = Backbone.View.extend({
             didScroll = true;
             renderStoryMarker();
         });
-
-
         setInterval(function() {
             if(didScroll) {
                 didScroll = false;
-                console.log('You scrolled');
             }
         }, 2000);
-
-
     },
 
     resetMap: function () {
@@ -84,9 +77,7 @@ sbk.MapView = Backbone.View.extend({
         if(this.storyMarkerLayer){
             self.lmap.removeLayer(this.storyMarkerLayer);
         }
-
         var storyGeo = story.get('geometry');
-        console.log(storyGeo);
         this.storyMarkerLayer = new L.GeoJSON(storyGeo);
         this.lmap.addLayer(this.storyMarkerLayer);
         this.lmap.setView([

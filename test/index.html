@@ -13,6 +13,9 @@
     <div id="nav"></div>
     <div id="content_container"></div>
 
+    <script type="text/x-handlebars-template" id="navigation_template">
+    </script>
+
     <script type="text/x-handlebars-template" id="list_item_template">
         <div onclick="location.href='#!{{id}}';" id="{{id}}" class="list_item_content">
             <p>{{id}}</p>
@@ -20,7 +23,7 @@
     </script>
 
     <script type="text/template" id="story_template">
-        <p>{{id}}</p>
+        <p>{{headline}}</p>
     </script>
 
 
@@ -36,12 +39,11 @@
     <script src="js/router.js"></script>
 
     <script src="js/models/storyModel.js"></script>
-    <script src="js/models/spotModel.js"></script>
 
     <script src="js/collections/storyCollection.js"></script>
-    <script src="js/collections/spotCollection.js"></script>
 
     <script src="js/views/map.js"></script>
+    <script src="js/views/navigationView.js"></script>
     <script src="js/views/storyListView.js"></script>
     <script src="js/views/storyListItemView.js"></script>
     <script src="js/views/storyView.js"></script>

@@ -2,6 +2,7 @@
     {
     "id": "story1",
     "spots" : ["spot1", "spot2", "spot3"],
+    "headline" : "headline1",
     "geometry": {
         "type": "Point",
         "coordinates": [
@@ -13,6 +14,7 @@
     {
         "id": "story2",
         "spots" : ["spot4", "spot5", "spot6"],
+        "headline" : "headline2",
         "geometry": {
             "type": "Point",
             "coordinates": [
@@ -25,6 +27,7 @@
     {
         "id": "story3",
         "spots" : ["spot7", "spot8", "spot9"],
+        "headline" : "headline3",
         "geometry": {
             "type": "Point",
             "coordinates": [
