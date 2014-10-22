@@ -37,6 +37,7 @@ sbk.AppRouter = Backbone.Router.extend({
     },
 
     loadAbout: function () {
-        console.log('about!');
+        this.aboutView = new sbk.AboutView();
+        $('#content_container').html(this.aboutView.render().el);
     }
 });

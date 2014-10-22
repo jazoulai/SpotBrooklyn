@@ -23,14 +23,14 @@ body, html {
     height: 100%;
     padding: 0;
     margin: 0;
-    text-align: left;
+    text-align: right;
 }
 #story_nav_container {
     width: 100%;
     height: 100%;
     padding: 0;
     margin: 0;
-    text-align: right;
+    text-align: left;
 }
 #content_container {
     width: 100%;
