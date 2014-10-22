@@ -5,15 +5,17 @@ sbk.AppRouter = Backbone.Router.extend({
     routes: {
         "": "loadList",
         "!": "loadList",
+        //why do these routes trigger the wrong function when they are out of this order?
+        "!about" : "loadAbout",
         "!:storyId": "loadStory"
     },
 
     initialize: function (storyCollection) {
         this.storyCollection = storyCollection;
         this.map = new sbk.MapView({
-            storyCollection: storyCollection,
+            storyCollection: storyCollection
         });
-        this.navigationView = new sbk.NavigationView({collection: this.storyCollection});
+        this.navigationView = new sbk.NavigationView();
         $('#nav').html(this.navigationView.render().el);
     },
 
@@ -24,11 +26,14 @@ sbk.AppRouter = Backbone.Router.extend({
         this.map.updateStoryMarkerOnScroll();
     },
 
-    loadStory: function (storyId) {
+   loadStory: function (storyId) {
         var story = this.storyCollection.get(storyId);
         this.storyView = new sbk.StoryView({model: story});
         $('#content_container').html(this.storyView.render().el);
         this.map.renderStoryMarker(story);
-    }
+    },
 
+    loadAbout: function () {
+        console.log('about!');
+    }
 });
