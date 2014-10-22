@@ -5,16 +5,13 @@ sbk.AppRouter = Backbone.Router.extend({
     routes: {
         "": "loadList",
         "!": "loadList",
-        "!:storyId": "loadStory",
-        "!:storyId/:spotId": "loadSpot"
+        "!:storyId": "loadStory"
     },
 
-    initialize: function (storyCollection, spotCollection) {
+    initialize: function (storyCollection) {
         this.storyCollection = storyCollection;
-        this.spotCollection = spotCollection;
         this.map = new sbk.MapView({
             storyCollection: storyCollection,
-            spotCollection: spotCollection
         });
     },
 
@@ -26,18 +23,9 @@ sbk.AppRouter = Backbone.Router.extend({
     },
 
     loadStory: function (storyId) {
-
         var story = this.storyCollection.get(storyId);
-
-        this.spotListView = new sbk.SpotListView({collection: this.spotCollection});
-        $('#content_container').html(this.spotListView.render().el);
-
-        this.map.resetMap();
-        this.map.renderStory(story);
-    },
-
-    loadSpot: function () {
-
+        this.storyView = new sbk.StoryView({model: story});
+        $('#content_container').html(this.storyView.render().el);
     }
 
 });

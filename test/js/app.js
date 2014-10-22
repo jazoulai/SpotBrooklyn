@@ -5,12 +5,17 @@ var sbk = sbk || {};
 
 $(document).ready(function () {
     var storyCollection = new sbk.StoryCollection();
-    var spotCollection = new sbk.SpotCollection();
-    $.when(storyCollection.fetch(),
-           spotCollection.fetch())
+    $.when(storyCollection.fetch())
         .then(function () {
-            console.log('fetched!');
-            sbk.app = new sbk.AppRouter(storyCollection, spotCollection);
+            sbk.app = new sbk.AppRouter(storyCollection);
             Backbone.history.start();
         });
 });
+
+/*TODO
+*
+* Feature List
+* (1) Story list remembers where you left off
+*
+*
+* */
