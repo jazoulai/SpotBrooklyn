@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe0408b6-eeb5-4738-b11d-2e853cd5eeb6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/js/views/map.js" afterPath="$PROJECT_DIR$/test/js/views/map.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/js/app.js" afterPath="$PROJECT_DIR$/test/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/index.html" afterPath="$PROJECT_DIR$/test/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/js/router.js" afterPath="$PROJECT_DIR$/test/js/router.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/css/styles.css" afterPath="$PROJECT_DIR$/test/css/styles.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="backbone_tutorial.iws" />
@@ -26,36 +29,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/index.html">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/standalone_landing_pages/teaser_desktop/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.677419" vertical-offset="0" max-vertical-offset="1760">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.38831615" vertical-offset="8153" max-vertical-offset="12760">
+              <caret line="379" column="12" selection-start-line="379" selection-start-column="12" selection-end-line="379" selection-end-column="12" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="router.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/js/router.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1254">
-              <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="map.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/js/views/map.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.5575222" vertical-offset="0" max-vertical-offset="2398">
-              <caret line="64" column="17" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
-              <folding>
-                <element signature="e#2886#2970#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -112,18 +91,18 @@
         <option value="$PROJECT_DIR$/test/js/views/spotListItemView.js" />
         <option value="$PROJECT_DIR$/test/js/views/spotListView.js" />
         <option value="$PROJECT_DIR$/test/js/views/spotView.js" />
-        <option value="$PROJECT_DIR$/test/js/app.js" />
         <option value="$PROJECT_DIR$/test/js/data/stories.json" />
         <option value="$PROJECT_DIR$/test/js/views/navigationView.js" />
         <option value="$PROJECT_DIR$/test/js/views/listNavigationView.js" />
         <option value="$PROJECT_DIR$/test/js/views/storyNavigationView.js" />
-        <option value="$PROJECT_DIR$/test/css/styles.css" />
         <option value="$PROJECT_DIR$/test/js/views/storyView.js" />
         <option value="$PROJECT_DIR$/test/js/views/aboutView.js" />
         <option value="$PROJECT_DIR$/standalone_landing_pages/teaser_desktop/index.html" />
-        <option value="$PROJECT_DIR$/test/index.html" />
-        <option value="$PROJECT_DIR$/test/js/router.js" />
         <option value="$PROJECT_DIR$/test/js/views/map.js" />
+        <option value="$PROJECT_DIR$/test/css/styles.css" />
+        <option value="$PROJECT_DIR$/test/js/router.js" />
+        <option value="$PROJECT_DIR$/test/index.html" />
+        <option value="$PROJECT_DIR$/test/js/app.js" />
       </list>
     </option>
   </component>
@@ -249,15 +228,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
+              <option name="myItemId" value="standalone_landing_pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpotBrooklyn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpotBrooklyn.com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="standalone_landing_pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="teaser_desktop" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -642,28 +631,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/js/views/spotListItemView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="352">
-          <caret line="10" column="3" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/js/views/spotListView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26710817" vertical-offset="0" max-vertical-offset="906">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594">
-          <caret line="6" column="52" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/views/map.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-18.615385" vertical-offset="1320" max-vertical-offset="2992">
@@ -745,14 +712,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5386313" vertical-offset="62" max-vertical-offset="1540">
-          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="177.41936" vertical-offset="5940" max-vertical-offset="12936">
@@ -761,39 +720,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/standalone_landing_pages/teaser_desktop/index.html">
+    <entry file="file://$PROJECT_DIR$/test/js/views/spotListView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40228572" vertical-offset="5896" max-vertical-offset="12760">
-          <caret line="284" column="4" selection-start-line="284" selection-start-column="4" selection-end-line="284" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.26769912" vertical-offset="0" max-vertical-offset="904">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/index.html">
+    <entry file="file://$PROJECT_DIR$/test/js/views/map.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.677419" vertical-offset="0" max-vertical-offset="1760">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="682" max-vertical-offset="2398">
+          <caret line="64" column="17" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
+          <folding>
+            <element signature="e#2886#2970#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1826">
+          <caret line="31" column="18" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/js/views/spotListItemView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="352">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38938054" vertical-offset="0" max-vertical-offset="904">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/js/router.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1254">
-          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.7079646" vertical-offset="482" max-vertical-offset="1386">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/js/views/map.js">
+    <entry file="file://$PROJECT_DIR$/test/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5575222" vertical-offset="0" max-vertical-offset="2398">
-          <caret line="64" column="17" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
-          <folding>
-            <element signature="e#2886#2970#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.77319586" vertical-offset="997" max-vertical-offset="1870">
+          <caret line="75" column="49" selection-start-line="75" selection-start-column="49" selection-end-line="75" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/standalone_landing_pages/teaser_desktop/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38831615" vertical-offset="8153" max-vertical-offset="12760">
+          <caret line="379" column="12" selection-start-line="379" selection-start-column="12" selection-end-line="379" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
