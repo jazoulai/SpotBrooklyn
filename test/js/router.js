@@ -1,5 +1,5 @@
 /*jshint strict: false*/
-/*globals Backbone: false, L: false, $: false, Handlebars: false, _: false, sbk: false */
+/*globals Backbone: false, L: false, $: false, Handlebars: false, _: false, sbk: false, ga: false */
 
 sbk.AppRouter = Backbone.Router.extend({
     routes: {
@@ -25,6 +25,7 @@ sbk.AppRouter = Backbone.Router.extend({
         this.map.updateStoryMarkerOnScroll();
         this.listNavigationView = new sbk.ListNavigationView();
         $('#nav').html(this.listNavigationView.render().el);
+        ga('send', 'event', 'button', 'click', 'nav buttons', 4);
     },
 
    loadStory: function (storyId) {
@@ -39,5 +40,7 @@ sbk.AppRouter = Backbone.Router.extend({
     loadAbout: function () {
         this.aboutView = new sbk.AboutView();
         $('#content_container').html(this.aboutView.render().el);
+        this.storyNavigationView = new sbk.StoryNavigationView();
+        $('#nav').html(this.storyNavigationView.render().el);
     }
 });
