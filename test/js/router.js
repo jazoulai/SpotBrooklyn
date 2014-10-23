@@ -15,6 +15,8 @@ sbk.AppRouter = Backbone.Router.extend({
         this.map = new sbk.MapView({
             storyCollection: storyCollection
         });
+        ga('send', 'event', 'test', 'load');
+
 
     },
 
@@ -25,7 +27,8 @@ sbk.AppRouter = Backbone.Router.extend({
         this.map.updateStoryMarkerOnScroll();
         this.listNavigationView = new sbk.ListNavigationView();
         $('#nav').html(this.listNavigationView.render().el);
-        ga('send', 'event', 'button', 'click', 'nav buttons', 4);
+        ga('send', 'event', 'test', 'home');
+
     },
 
    loadStory: function (storyId) {
@@ -35,6 +38,7 @@ sbk.AppRouter = Backbone.Router.extend({
         this.map.renderStoryMarker(story);
         this.storyNavigationView = new sbk.StoryNavigationView();
         $('#nav').html(this.storyNavigationView.render().el);
+        ga('send', 'event', 'test', 'story');
     },
 
     loadAbout: function () {
@@ -42,5 +46,6 @@ sbk.AppRouter = Backbone.Router.extend({
         $('#content_container').html(this.aboutView.render().el);
         this.storyNavigationView = new sbk.StoryNavigationView();
         $('#nav').html(this.storyNavigationView.render().el);
+        ga('send', 'event', 'test', 'about');
     }
 });
