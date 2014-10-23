@@ -10,8 +10,10 @@ sbk.MapView = Backbone.View.extend({
             attributionControl: false,
             zoomControl: false
         });
+        ga('send', 'event', 'test', 'load map');
     },
 
+    //todo: this function comes with a huge performance penalty. FIX!!
     updateStoryMarkerOnScroll: function(){
         var self = this;
         var height = $(document).height() * 0.60;
@@ -47,7 +49,7 @@ sbk.MapView = Backbone.View.extend({
                     });
                 }
             });
-            self.lmap.addLayer(self.storyMarkerLayer);
+            var markerLoad = self.lmap.addLayer(self.storyMarkerLayer);
         }
         renderStoryMarker();
 
@@ -70,6 +72,8 @@ sbk.MapView = Backbone.View.extend({
         if(this.storyMarkerLayer){
             self.lmap.removeLayer(this.storyMarkerLayer);
         }
+
+        ga('send', 'event', 'test', 'reset map');
     },
 
     renderStoryMarker: function (story) {
@@ -85,6 +89,7 @@ sbk.MapView = Backbone.View.extend({
             storyGeo.coordinates[0]
         ], 12);
 
+        ga('send', 'event', 'test', 'zoom to spot marker');
 
     }
 
