@@ -27,6 +27,8 @@ sbk.AppRouter = Backbone.Router.extend({
         this.map.updateStoryMarkerOnScroll();
         this.listNavigationView = new sbk.ListNavigationView();
         $('#nav').html(this.listNavigationView.render().el);
+        this.followView = new sbk.FollowView();
+        $('#follow').html(this.followView.render().el);
         $('#follow_button').on('click', function(){
             $('#follow').animate({height: "10%"}, 500);
             $('#follow').removeClass('hide');
@@ -42,6 +44,14 @@ sbk.AppRouter = Backbone.Router.extend({
         this.map.renderStoryMarker(story);
         this.storyNavigationView = new sbk.StoryNavigationView();
         $('#nav').html(this.storyNavigationView.render().el);
+
+       this.shareView = new sbk.ShareView();
+       $('#follow').html(this.shareView.render().el);
+       $('#share_button').on('click', function(){
+           $('#follow').animate({height: "10%"}, 500);
+           $('#follow').removeClass('hide');
+       });
+
         ga('send', 'event', 'test', 'story');
     },
 

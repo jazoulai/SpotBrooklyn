@@ -24,16 +24,7 @@
     <div id="nav"></div>
 
     <div id="follow" class="hide">
-        <div id="twitter">
-            <a href="https://twitter.com/intent/follow?screen_name=spotbrooklyn">
-                <p>twitter</p>
-            </a>
-        </div>
-        <div id="instagram">
-            <a href="http://instagram.com/spotbrooklyn?ref=badge">
-                <p>instagram</p>
-            </a>
-        </div>
+
     </div>
 
 
@@ -47,7 +38,7 @@
 
     <script type="text/x-handlebars-template" id="story_navigation_template">
         <a href="#">home</a>
-
+        <p id="share_button">share</p>
     </script>
 
     <script type="text/x-handlebars-template" id="list_item_template">
@@ -62,6 +53,32 @@
 
     <script type="text/x-handlebars-template" id="about_template">
         <p>about us!</p>
+    </script>
+
+    <script type="text/x-handlebars-template" id="follow_template">
+        <div id="twitter">
+            <a href="https://twitter.com/intent/follow?screen_name=spotbrooklyn">
+                <p>follow twitter</p>
+            </a>
+        </div>
+        <div id="instagram">
+            <a href="http://instagram.com/spotbrooklyn?ref=badge">
+                <p>follow instagram</p>
+            </a>
+        </div>
+    </script>
+
+    <script type="text/x-handlebars-template" id="share_template">
+        <div id="twitter_share">
+            <a href="https://twitter.com/intent/tweet?text=this%20is%20a%20test&url=http://spotbrooklyn.com&via=spotBrooklyn">
+                <p>share twitter</p>
+            </a>
+        </div>
+        <div id="facebook_share">
+            <a href=https://www.facebook.com/sharer/sharer.php?app_id=113869198637480&sdk=joey&u=http%3A%2F%2Fspotbrooklyn.com%2F&display=popup&ref=plugin">
+                <p>share facebook</p>
+            </a>
+        </div>
     </script>
 
 
@@ -86,6 +103,8 @@
     <script src="js/views/storyListItemView.js"></script>
     <script src="js/views/storyView.js"></script>
     <script src="js/views/aboutView.js"></script>
+    <script src="js/views/followView.js"></script>
+    <script src="js/views/shareView.js"></script>
 
     </body>
 </html>
