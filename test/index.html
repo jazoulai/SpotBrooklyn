@@ -20,15 +20,29 @@
     <body>
 
     <div id="map"></div>
+
     <div id="nav"></div>
+
     <div id="follow" class="hide">
-        <a onclick="window.open('https://twitter.com/intent/follow?screen_name=spotbrooklyn')">Follow @spotbrooklyn</a>
+        <div id="twitter">
+            <a href="https://twitter.com/intent/follow?screen_name=spotbrooklyn">
+                <p>twitter</p>
+            </a>
+        </div>
+        <div id="instagram">
+            <a href="http://instagram.com/spotbrooklyn?ref=badge">
+                <p>instagram</p>
+            </a>
+        </div>
     </div>
+
+
+
     <div id="content_container"></div>
 
     <script type="text/x-handlebars-template" id="list_navigation_template">
         <a id="about_link" href="#!about">About</a>
-        <a href="#!follow">follow</a>
+        <p id="follow_button">follow</p>
     </script>
 
     <script type="text/x-handlebars-template" id="story_navigation_template">
@@ -49,8 +63,6 @@
     <script type="text/x-handlebars-template" id="about_template">
         <p>about us!</p>
     </script>
-
-
 
 
     <script src="js/libs/jquery-2.1.1.js"></script>

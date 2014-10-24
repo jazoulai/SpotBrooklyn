@@ -26,10 +26,26 @@ body, html {
     margin: 0;
     top: 55%;
     background-color: indianred;
-
+    z-index: 1000;
 }
 #follow.hide {
     display: none;
+}
+#twitter {
+    width: 50%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    float: left;
+}
+#instagram {
+    width: 50%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    float: right;
 }
 #list_nav_container {
     width: 100%;

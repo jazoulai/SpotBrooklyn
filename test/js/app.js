@@ -10,6 +10,10 @@ $(document).ready(function () {
             sbk.app = new sbk.AppRouter(storyCollection);
             Backbone.history.start();
         });
+
+
+
+
 });
 
 //todo: instantiate iframe for social media intent links, create the iframeView back the view by a model containing all the intent hrefs
