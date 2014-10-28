@@ -16,7 +16,50 @@ body, html {
     height: 10%;
     padding: 0;
     margin: 0;
-    background-color: lightgrey;
+    background-color: white;
+}
+#content_container {
+    width: 100%;
+    height: 45%;
+    padding: 0;
+    margin: 0;
+}
+/*why does the overflow property cause extra padding between list_container and list_item?*/
+#list_container {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: goldenrod;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.list_item {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: white;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+}
+.list_item_content {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 1.5em;
+}
+.list_item_content>img {
+    width: 90%;
+    height: auto;
+    padding-top: 1%;
+    display: block;
+    margin: 0 auto;
 }
 #follow {
     position: absolute;
@@ -69,34 +112,5 @@ body, html {
     padding: 0;
     margin: 0;
     text-align: left;
-}
-#content_container {
-    width: 100%;
-    height: 45%;
-    padding: 0;
-    margin: 0;
-}
-#list_container {
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    background-color: goldenrod;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-}
-.list_item {
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    background-color: blueviolet;
-}
-.list_item_content {
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
 }
 
