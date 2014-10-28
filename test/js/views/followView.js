@@ -3,11 +3,17 @@
 
 sbk.FollowView = Backbone.View.extend({
 
-    id: 'follow_container',
+
+    events: {
+        "click .twitter" : "alert"
+    },
     template: Handlebars.compile($('#follow_template').html()),
     render: function (){
         $(this.el).html(this.template());
         return this;
+    },
+    alert: function(){
+        alert('instagram!');
     }
 
 });
