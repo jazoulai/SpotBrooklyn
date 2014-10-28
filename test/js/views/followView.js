@@ -17,8 +17,7 @@ sbk.FollowView = Backbone.View.extend({
         return this;
     },
     toggle_follow: function(){
-        $('#follow').animate({height: "10%"}, 500);
-        $('#follow').removeClass('hide');
+            $('#follow').slideToggle({height: "10%"}, 500);
     },
     close_follow: function () {
         $('#follow').animate({height: "0%"}, 500);
