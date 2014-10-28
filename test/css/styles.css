@@ -129,4 +129,29 @@ body, html {
     margin: 0;
     text-align: left;
 }
+#about_container {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+
+}
+#MERGE0 {
+    width: 80%;
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 1%;
+
+}
+#submit {
+    width: 30%;
+    height: auto;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+    -webkit-appearance: none;
+}
 
