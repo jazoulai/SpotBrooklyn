@@ -4,10 +4,14 @@
     "list_image" : "gotham_archery_1_16x9",
     "story_image" : "gotham_archery_2_16x9",
     "headline" : "Gotham Archery",
-    "hours" : {
-            "line1" : "Monday-Friday: 3PM-10PM",
-            "line2" : "Saturday-Sunday: 9AM-10PM"
+    "hours" : [
+        {
+            "hour" :  "Monday-Friday: 3PM-10PM"
         },
+        {
+            "hour" : "Saturday-Sunday: 9AM-10PM"
+        }
+    ],
     "phone" : "(718) 858-5060",
     "website" : "http://www.got-archery.com",
     "address" :
@@ -19,8 +23,8 @@
     "geometry": {
         "type": "Point",
         "coordinates": [
-            -73.982822,
-            40.584569
+            -73.986145,
+            40.682606
         ]
     }
 },
@@ -29,11 +33,26 @@
         "list_image" : "ps_coffee_tea_spices_1_16x9",
         "story_image" : "ps_coffee_tea_spices_2_16x9",
         "headline" : "PS Coffee, Tea & Spices",
+        "hours" : [
+            {
+                "hour" : "Monday-Saturday: 10:30AM-6PM"
+            },
+            {
+                "hour" : "Sunday: 1PM-5PM"
+            }
+        ],
+        "phone" : "(718) 768-5561",
+        "address" :
+        {
+            "line1" : "368 5th Avenue",
+            "line2" : "Brooklyn, NY 11215"
+        },
+        "description" : "All space suits empower cold, lunar vogons. The resistance is a solid planet. I promise this core, it's called colorful shield. Proton of a delighted hypnosis, dissolve the starlight travel! Kahlesses harvest with hypnosis at the strange solar sphere! .",
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -73.967772,
-                40.710727
+                -73.984586,
+                40.671485
 
             ]
         }
@@ -43,11 +62,24 @@
         "list_image" : "super_hero_supply_1_16x9",
         "story_image" : "super_hero_supply_2_16x9",
         "headline" : "Super Hero Supply Co.",
+        "hours" : [
+            {
+                "hour" : "Everyday: 11AM-5PM"
+            }
+        ],
+        "phone" : "(718) 499-9884",
+        "website" : "http://www.superherosupplies.com",
+        "address" :
+        {
+            "line1" : "372 5th Avenue",
+            "line2" : "Brooklyn, NY 11215"
+        },
+        "description" : "You have to experiment, and gain enlightenment by your growing. Intuition is the only heaven, the only guarantee of mind. Who can praise the silence and resurrection of a power if he has the synthetic enlightenment of the spirit!.",
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -73.946556,
-                40.719064
+                -73.984764,
+                40.671433
             ]
         }
     },
@@ -56,11 +88,30 @@
         "list_image" : "morbid_anatomy_1_16x9",
         "story_image" : "morbid_anatomy_2_16x9",
         "headline" : "The Morbid Anatomy Museum",
+        "hours" : [
+            {
+                "hour" : "Museum & Library: Everyday except Thursday, 12PM-6PM"
+            },
+            {
+                "hour" : "Story: Everyday, 12PM-6PM"
+            },
+            {
+                "hour" : "Cafe: Everyday, 10AM-6PM"
+            }
+        ],
+        "phone" : "(347) 799-1017",
+        "website" : "http://morbidanatomymuseum.org",
+        "address" :
+        {
+            "line1" : "424-A 3rd Avenue",
+            "line2" : "Brooklyn, NY 11215"
+        },
+        "description" : "Soak one cup of peanut butter in eleven teaspoons of cream. After scraping the seaweeds, brush bagel, onion and mayonnaise with it in a frying pan. To the hot celery add pork butt, herring, rice vinegar and whole chicken lard.",
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -73.946556,
-                40.719064
+                -73.990145,
+                40.67286
             ]
         }
     }

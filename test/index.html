@@ -41,13 +41,15 @@
         <p>{{headline}}</p>
         <p>{{description}}</p>
         <img src="images/photos/{{story_image}}.jpg"/>
-        <p>{{hours.line1}}</p>
-        <p>{{hours.line2}}</p>
+        {{#each hours}}
+            <p>{{this.hour}}</p>
+        {{/each}}
         <p>{{address.line1}}</p>
         <p>{{address.line2}}</p>
         <p>{{phone}}</p>
-        <a href="{{website}}">website</a>
-
+        {{#if website}}
+            <a href="{{website}}">website</a>
+        {{/if}}
     </script>
 
     <!--about-->
