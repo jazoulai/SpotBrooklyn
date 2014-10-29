@@ -11,12 +11,12 @@ sbk.ListNavigationView = Backbone.View.extend({
     },
     events: {
         "click #follow_button" : "toggle_follow",
-        "touchstart #about_button" : "nav_about"
+        "click #about_button" : "nav_about"
     },
     toggle_follow: function(){
         $('#follow').slideToggle({height: "10%"}, 500);
     },
     nav_about: function(){
-        alert('about ready!');
+        sbk.app.navigate("!about", {trigger: true});
     }
 });
