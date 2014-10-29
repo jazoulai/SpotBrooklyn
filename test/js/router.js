@@ -29,11 +29,7 @@ sbk.AppRouter = Backbone.Router.extend({
         $('#nav').html(this.listNavigationView.render().el);
         this.followView = new sbk.FollowView();
         $('#follow').html(this.followView.render().el);
-        $('#follow_button').on('click', function(){
-            $('#follow').animate({height: "10%"}, 500);
-            $('#follow').removeClass('hide');
-        });
-
+        $('#follow').hide();
         ga('send', 'event', 'test', 'home');
     },
 

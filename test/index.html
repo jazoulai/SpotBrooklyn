@@ -23,7 +23,7 @@
 <!--HTML-->
     <div id="map"></div>
     <div id="nav"></div>
-    <div id="follow" class="hide"></div>
+    <div id="follow"></div>
     <div id="content_container"></div>
 
 <!--HANDLEBARS TEMPLATES-->
@@ -65,8 +65,13 @@
 
     <!--navigation: list-->
     <script type="text/x-handlebars-template" id="list_navigation_template">
-        <a id="about_link" href="#!about">About</a>
-        <p id="follow_button">follow</p>
+        <div id="about_button">
+            <p>About</p>
+        </div>
+        <div id="follow_button">
+            <p>Follow</p>
+        </div>
+
     </script>
 
     <!--navigation: story-->
