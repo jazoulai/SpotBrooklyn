@@ -1,34 +1,5 @@
 [
     {
-    "id": "story1",
-    "list_image" : "gotham_archery_1_16x9",
-    "story_image" : "gotham_archery_2_16x9",
-    "headline" : "Gotham Archery",
-    "hours" : [
-        {
-            "hour" :  "Monday-Friday: 3PM-10PM"
-        },
-        {
-            "hour" : "Saturday-Sunday: 9AM-10PM"
-        }
-    ],
-    "phone" : "(718) 858-5060",
-    "website" : "http://www.got-archery.com",
-    "address" :
-        {
-            "line1" : "480 Baltic Street",
-            "line2" : "Brooklyn, NY 11217"
-        },
-        "description" : "Punishment is a proud wench. Planks are the cockroachs of the jolly treasure. Damn yer tobacco, feed the lad. All winds hail fine, weird skiffs. Damn yer cannibal, feed the wind. Captains scream from punishments like coal-black tobaccos.",
-    "geometry": {
-        "type": "Point",
-        "coordinates": [
-            -73.986145,
-            40.682606
-        ]
-    }
-},
-    {
         "id": "story2",
         "list_image" : "ps_coffee_tea_spices_1_16x9",
         "story_image" : "ps_coffee_tea_spices_2_16x9",
@@ -54,6 +25,35 @@
                 -73.984586,
                 40.671485
 
+            ]
+        }
+    },
+    {
+        "id": "story1",
+        "list_image" : "gotham_archery_1_16x9",
+        "story_image" : "gotham_archery_2_16x9",
+        "headline" : "Gotham Archery",
+        "hours" : [
+            {
+                "hour" :  "Monday-Friday: 3PM-10PM"
+            },
+            {
+                "hour" : "Saturday-Sunday: 9AM-10PM"
+            }
+        ],
+        "phone" : "(718) 858-5060",
+        "website" : "http://www.got-archery.com",
+        "address" :
+        {
+            "line1" : "480 Baltic Street",
+            "line2" : "Brooklyn, NY 11217"
+        },
+        "description" : "Punishment is a proud wench. Planks are the cockroachs of the jolly treasure. Damn yer tobacco, feed the lad. All winds hail fine, weird skiffs. Damn yer cannibal, feed the wind. Captains scream from punishments like coal-black tobaccos.",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -73.986145,
+                40.682606
             ]
         }
     },

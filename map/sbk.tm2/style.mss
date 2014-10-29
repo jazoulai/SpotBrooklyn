@@ -2,11 +2,12 @@
 @name: '[name_en]';
 
 // Common Colors //
-@water: #c3e6ff;
+
+@water: #C4DFF6;
 @park: #cec;
 
 Map {
-  background-color:#f9f0e3;
+  background-color:#FCFBE7;
 }
 
 #landuse {

@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE Map[]>
-<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" background-color="#f9f0e3" maximum-extent="-20037508.34,-20037508.34,20037508.34,20037508.34">
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" background-color="#fcfbe7">
 
 <Parameters>
   <Parameter name="attribution"><![CDATA[Map data © OpenStreetMap contributors]]></Parameter>
   <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
-  <Parameter name="center">-73.9764404296875,40.653294576616204,16</Parameter>
+  <Parameter name="center">-73.9696,40.6527,16</Parameter>
   <Parameter name="format">png8:m=h</Parameter>
   <Parameter name="maxzoom">22</Parameter>
   <Parameter name="minzoom">0</Parameter>
   <Parameter name="name"><![CDATA[sbk]]></Parameter>
-  <Parameter name="scale">2</Parameter>
   <Parameter name="source"><![CDATA[mapbox:///mapbox.mapbox-streets-v4]]></Parameter>
 </Parameters>
 
@@ -64,31 +63,31 @@
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <Filter>([class] = 'main')</Filter>
-    <PolygonSymbolizer fill="#c3e6ff" gamma="0.6" />
+    <PolygonSymbolizer fill="#c4dff6" gamma="0.6" />
     <LineSymbolizer stroke-width="0.4" stroke="#009c84" stroke-opacity="0.5" />
     <TextSymbolizer face-name="Roboto Thin" size="10" placement="line" fill="#000000" halo-fill="#ffffff" halo-radius="2" minimum-path-length="100" character-spacing="2" spacing="10000" allow-overlap="false" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([class] = 'main')</Filter>
-    <PolygonSymbolizer fill="#c3e6ff" gamma="0.6" />
+    <PolygonSymbolizer fill="#c4dff6" gamma="0.6" />
     <LineSymbolizer stroke-width="0.4" stroke="#009c84" stroke-opacity="0.5" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <Filter>([class] = 'street')</Filter>
-    <PolygonSymbolizer fill="#c3e6ff" gamma="0.6" />
+    <PolygonSymbolizer fill="#c4dff6" gamma="0.6" />
     <LineSymbolizer stroke-width="0.4" stroke="#009c84" stroke-opacity="0.5" />
     <TextSymbolizer face-name="Roboto Thin" size="10" placement="line" fill="#000000" halo-fill="#ffffff" halo-radius="2" minimum-path-length="100" character-spacing="2" spacing="10000" allow-overlap="false" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([class] = 'street')</Filter>
-    <PolygonSymbolizer fill="#c3e6ff" gamma="0.6" />
+    <PolygonSymbolizer fill="#c4dff6" gamma="0.6" />
     <LineSymbolizer stroke-width="0.4" stroke="#009c84" stroke-opacity="0.5" />
   </Rule>
   <Rule>
-    <PolygonSymbolizer fill="#c3e6ff" gamma="0.6" />
+    <PolygonSymbolizer fill="#c4dff6" gamma="0.6" />
     <LineSymbolizer stroke-width="0.4" stroke="#009c84" stroke-opacity="0.5" />
   </Rule>
 </Style>

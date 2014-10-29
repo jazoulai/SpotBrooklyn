@@ -6,7 +6,7 @@ sbk.MapView = Backbone.View.extend({
     initialize: function (collections) {
         this.storyCollection = collections.storyCollection;
         this.spotCollection = collections.spotCollection;
-        this.lmap = L.mapbox.map('map', 'spotbrooklyn.06i7wrk9', {
+        this.lmap = L.mapbox.map('map', 'spotbrooklyn.4e3989f5', {
             attributionControl: false,
             zoomControl: false
         });
