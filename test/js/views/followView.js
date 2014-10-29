@@ -5,7 +5,7 @@ sbk.FollowView = Backbone.View.extend({
 
 
     events: {
-        "touchstart #follow_button" : "toggle_follow",
+
         "touchstart .social_button" : "close_follow",
         "touchstart #follow_twitter .social_button_img" : "follow_twitter",
         "touchstart #follow_instagram .social_button_img" : "follow_instagram",
@@ -15,9 +15,6 @@ sbk.FollowView = Backbone.View.extend({
     render: function (){
         $(this.el).html(this.template());
         return this;
-    },
-    toggle_follow: function(){
-            $('#follow').slideToggle({height: "10%"}, 500);
     },
     close_follow: function () {
         $('#follow').animate({height: "0%"}, 500);

@@ -8,6 +8,11 @@ sbk.ListNavigationView = Backbone.View.extend({
     render: function (){
         $(this.el).html(this.template());
         return this;
+    },
+    events: {
+        "click #follow_button" : "toggle_follow"
+    },
+    toggle_follow: function(){
+        $('#follow').slideToggle({height: "10%"}, 500);
     }
-
 });
