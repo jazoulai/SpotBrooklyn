@@ -2,12 +2,85 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe0408b6-eeb5-4738-b11d-2e853cd5eeb6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/bookmarks.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/shield/dot-small.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/shield/motorway_lg_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/shield/motorway_lg_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/shield/motorway_lg_3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/shield/motorway_lg_4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/shield/motorway_lg_5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/shield/motorway_lg_6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/shield/motorway_sm_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/shield/motorway_sm_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/shield/motorway_sm_3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/shield/motorway_sm_4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/shield/motorway_sm_5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/shield/motorway_sm_6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/pattern/wave.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/LICENSE.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/airfield-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/airport-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/alcohol-shop-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/art-gallery-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/bakery-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/bank-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/bar-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/beer-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/bicycle-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/bus-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/cafe-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/camera-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/campsite-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/car-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/cemetery-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/cinema-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/clothing-store-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/college-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/dog-park-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/embassy-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/entrance-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/fast-food-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/ferry-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/fire-station-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/fuel-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/garden-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/golf-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/grocery-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/harbor-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/heliport-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/hospital-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/labels.mss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/laundry-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/library-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/lodging-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/monument-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/museum-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/music-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/park-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/pharmacy-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/place-of-worship-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/police-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/post-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/prison-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/rail-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/rail-light-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/rail-metro-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/religious-christian-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/religious-jewish-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/religious-muslim-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/restaurant-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/road.mss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/school-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/shop-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/suitcase-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/swimming-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/theatre-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/town-hall-12.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map/sbk.tm2/icon/zoo-12.svg" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/map/sbk.tm2/sbk.tm2z" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/map/sbk.tm2/.thumb.png" afterPath="$PROJECT_DIR$/map/sbk.tm2/.thumb.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/js/views/map.js" afterPath="$PROJECT_DIR$/test/js/views/map.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/map/sbk.tm2/project.xml" afterPath="$PROJECT_DIR$/map/sbk.tm2/project.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/map/sbk.tm2/project.yml" afterPath="$PROJECT_DIR$/map/sbk.tm2/project.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/js/data/stories.json" afterPath="$PROJECT_DIR$/test/js/data/stories.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/map/sbk.tm2/style.mss" afterPath="$PROJECT_DIR$/map/sbk.tm2/style.mss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>

@@ -1,17 +1,18 @@
 _prefs: 
-  baselayer: ''
-  mapid: spotbrooklyn.8edc31f9
+  mapid: spotbrooklyn.4e3989f5
   saveCenter: true
-_properties: {}
-attribution: Map data © OpenStreetMap contributors
+_properties: 
+  bridge: 
+    "group-by": layer
+attribution: "<a href='https://www.mapbox.com/about/maps/' target='_blank'>&copy; Mapbox &copy; OpenStreetMap</a> <a class='mapbox-improve-map' href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a>"
 bounds: 
   - -180
   - -85.0511
   - 180
   - 85.0511
 center: 
-  - -73.9696
-  - 40.6527
+  - -73.9847
+  - 40.6308
   - 16
 description: ''
 format: "png8:m=h"
@@ -19,8 +20,10 @@ interactivity_layer: ''
 layers: null
 maxzoom: 22
 minzoom: 0
-name: sbk
-source: "mapbox:///mapbox.mapbox-streets-v4"
+name: OSM Bright 2
+source: "mapbox:///mapbox.mapbox-streets-v5"
 styles: 
   - style.mss
+  - road.mss
+  - labels.mss
 template: ''
