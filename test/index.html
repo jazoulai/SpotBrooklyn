@@ -71,12 +71,16 @@
         <div id="follow_button">
             <p>Follow</p>
         </div>
-
     </script>
 
     <!--navigation: story-->
     <script type="text/x-handlebars-template" id="story_navigation_template">
-        <a href="#">home</a>
+        <div id="home_button">
+            <p>Home</p>
+        </div>
+        <div id="share_button">
+            <p>Share</p>
+        </div>
     </script>
 
     <!--social media: follow-->
@@ -95,15 +99,14 @@
 
     <!--social media: share-->
     <script type="text/x-handlebars-template" id="share_template">
-        <div id="twitter_share">
-            <a href="https://twitter.com/intent/tweet?text=this%20is%20a%20test&url=http://spotbrooklyn.com&via=spotBrooklyn">
-                <p>share twitter</p>
-            </a>
+        <div id="share_twitter" class="social_button">
+            <img class="social_button_img" src="images/logos/twitter-bird.svg"/>
         </div>
-        <div id="facebook_share">
-            <a href="http://www.facebook.com/sharer.php?u=http://spotbrooklyn.com">
-                <p>share facebook</p>
-            </a>
+        <div id="share_facebook" class="social_button">
+            <img class="social_button_img" src="images/logos/fav-facebook.svg"/>
+        </div>
+        <div id="share_email" class="social_button">
+            <img class="social_button_img" src="images/icons/email.svg"/>
         </div>
     </script>
 

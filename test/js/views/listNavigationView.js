@@ -10,8 +10,8 @@ sbk.ListNavigationView = Backbone.View.extend({
         return this;
     },
     events: {
-        "click #follow_button" : "toggle_follow",
-        "click #about_button" : "nav_about"
+        "touchstart #follow_button" : "toggle_follow",
+        "touchstart #about_button" : "nav_about"
     },
     toggle_follow: function(){
         $('#follow').slideToggle({height: "10%"}, 500);

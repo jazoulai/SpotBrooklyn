@@ -111,6 +111,15 @@ img {
 #follow_email {
     width: 33%;
 }
+#share_twitter {
+    width: 33%;
+}
+#share_facebook {
+    width: 34%;
+}
+#share_email {
+    width: 33%;
+}
 .social_button {
     height: 100%;
     padding: 0;
@@ -135,6 +144,25 @@ img {
     float: left;
 }
 #follow_button {
+    text-align: center;
+    color: blue;
+    width: 20%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    float: right;
+}
+#home_button{
+    text-align: center;
+    color: blue;
+    font-size: blue;
+    width: 20%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    float: left;
+}
+#share_button {
     text-align: center;
     color: blue;
     width: 20%;
