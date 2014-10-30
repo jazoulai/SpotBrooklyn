@@ -21,11 +21,11 @@ sbk.ShareView = Backbone.View.extend({
         $('#follow').hide();
     },
     share_twitter: function(){
-        window.open('https://twitter.com/intent/tweet?text=this%20is%20a%20test&url=http://spotbrooklyn.com&via=spotBrooklyn');
+        window.open('https://twitter.com/intent/tweet?text=this%20is%20a%20test&url=http://spotbrooklyn.com&via=spotBrooklyn', '_self');
         this.close_follow();
     },
     share_facebook: function(){
-        window.open('http://www.facebook.com/sharer.php?u=http://spotbrooklyn.com');
+        window.open('http://www.facebook.com/sharer.php?u=http://spotbrooklyn.com', '_self');
         this.close_follow();
     },
     share_email: function(){

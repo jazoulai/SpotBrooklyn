@@ -17,12 +17,12 @@ sbk.FollowView = Backbone.View.extend({
     },
     follow_twitter: function(){
         var self = this;
-        window.open('https://twitter.com/intent/follow?screen_name=spotbrooklyn');
+        window.open('https://twitter.com/intent/follow?screen_name=spotbrooklyn', '_self');
         this.close_follow();
     },
     follow_instagram: function(){
         var self = this;
-        window.open('http://instagram.com/spotbrooklyn?ref=badge');
+        window.open('http://instagram.com/spotbrooklyn?ref=badge', '_self');
         this.close_follow();
     },
     follow_email: function(){
