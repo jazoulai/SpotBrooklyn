@@ -27,7 +27,8 @@ sbk.FollowView = Backbone.View.extend({
     },
     follow_email: function(){
         var self = this;
-        window.location.href = 'mailto:joey@spotbrooklyn.com';
+        //window.location.href = 'mailto:joey@spotbrooklyn.com';
+        sbk.app.navigate('!about', {trigger: true});
         this.close_follow();
     }
 

@@ -185,7 +185,18 @@ img {
     margin: 0;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-
+}
+#about_intro {
+    width: 100%;
+    height: 40%;
+    padding: 0;
+    margin: 0;
+}
+#email_signup {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
 }
 #MERGE0 {
     width: 80%;
