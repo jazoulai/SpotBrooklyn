@@ -11,13 +11,13 @@ sbk.StoryNavigationView = Backbone.View.extend({
     },
     events: {
         "touchstart #share_button" : "toggle_follow",
-        "touchstart #home_button" : "nav_about"
+        "touchstart #home_button" : "nav_home"
     },
     toggle_follow: function(){
         $('#follow').slideToggle({height: "10%"}, 500);
     },
-    nav_about: function(){
-        sbk.app.navigate("!about", {trigger: true});
+    nav_home: function(){
+        sbk.app.navigate("!", {trigger: true});
     }
 
 });
