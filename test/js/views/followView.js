@@ -2,11 +2,7 @@
 /*globals Backbone: false, L: false, $: false, Handlebars: false, _: false, sbk: false */
 
 sbk.FollowView = Backbone.View.extend({
-
-
     events: {
-
-        "touchstart .social_button" : "close_follow",
         "touchstart #follow_twitter .social_button_img" : "follow_twitter",
         "touchstart #follow_instagram .social_button_img" : "follow_instagram",
         "touchstart #follow_email .social_button_img" : "follow_email"
@@ -22,17 +18,17 @@ sbk.FollowView = Backbone.View.extend({
     follow_twitter: function(){
         var self = this;
         window.open('https://twitter.com/intent/follow?screen_name=spotbrooklyn');
-        self.close_follow();
+        this.close_follow();
     },
     follow_instagram: function(){
         var self = this;
         window.open('http://instagram.com/spotbrooklyn?ref=badge');
-        self.close_follow();
+        this.close_follow();
     },
     follow_email: function(){
         var self = this;
         window.location.href = 'mailto:joey@spotbrooklyn.com';
-        self.close_follow();
+        this.close_follow();
     }
 
 });
