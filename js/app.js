@@ -14,4 +14,8 @@ $(document).ready(function () {
         sbk.app = new sbk.AppRouter(neighborhoodsCollection, storyCollection, spotsCollection);
         Backbone.history.start();
     });
+
+
+
+
 });

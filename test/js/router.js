@@ -10,6 +10,15 @@ sbk.AppRouter = Backbone.Router.extend({
         "!:storyId": "loadStory"
     },
 
+    landscape_orienation: function (){
+        window.addEventListener("orientationchange", function() {
+            var orient = window.orientation;
+            if(orient === 90 || orient === -90) {
+                alert('Oops! A landscape version of our site isn\'t ready yet. Sorry for the inconvenience.');
+            }
+        }, false);
+    },
+
     initialize: function (storyCollection) {
         this.storyCollection = storyCollection;
         this.map = new sbk.MapView({
@@ -17,7 +26,12 @@ sbk.AppRouter = Backbone.Router.extend({
         });
         ga('send', 'event', 'test', 'load');
 
+        /*$(window).bind("resize", function(){
+            screenOrientation = ($(window).width() > $(window).height())? 90 : 0;
+            alert(screenOrientation);
+        });*/
 
+       this.landscape_orienation();
     },
 
     loadList: function () {
@@ -52,5 +66,7 @@ sbk.AppRouter = Backbone.Router.extend({
         this.storyNavigationView = new sbk.StoryNavigationView();
         $('#nav').html(this.storyNavigationView.render().el);
         ga('send', 'event', 'test', 'about');
-    }
+    },
+
+
 });
