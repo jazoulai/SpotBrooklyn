@@ -17,7 +17,7 @@ sbk.FollowView = Backbone.View.extend({
         return this;
     },
     close_follow: function () {
-        $('#follow').animate({height: "0%"}, 400);
+        $('#follow').hide();
     },
     follow_twitter: function(){
         var self = this;

@@ -20,7 +20,7 @@ sbk.ShareView = Backbone.View.extend({
         "touchstart #share_email .social_button_img" : "share_email"
     },
     close_follow: function () {
-        $('#follow').animate({height: "0%"}, 400);
+        $('#follow').hide();
     },
     share_twitter: function(){
         var self = this;
