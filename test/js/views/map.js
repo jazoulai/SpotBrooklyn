@@ -41,12 +41,21 @@ sbk.MapView = Backbone.View.extend({
             storyMarker.id = storyId;
             storyGeometry.push(storyMarker);
 
+            var spotIcon = L.icon({
+                iconUrl: 'images/icons/spot_icon.svg',
+                iconSize: [32, 37],
+                iconAnchor: [16, 37],
+                popupAnchor: [0, -28]
+            });
 
             self.storyMarkerLayer = new L.GeoJSON(storyGeometry, {
                 onEachFeature: function(feature, layer){
                     layer.on('click', function () {
                        sbk.app.navigate('!' + feature.id, {trigger: true});
                     });
+                },
+                pointToLayer: function (feature, latlng) {
+                    return L.marker(latlng, {icon: spotIcon});
                 }
             });
             var markerLoad = self.lmap.addLayer(self.storyMarkerLayer);
@@ -82,7 +91,17 @@ sbk.MapView = Backbone.View.extend({
             self.lmap.removeLayer(this.storyMarkerLayer);
         }
         var storyGeo = story.get('geometry');
-        this.storyMarkerLayer = new L.GeoJSON(storyGeo);
+        var spotIcon = L.icon({
+            iconUrl: 'images/icons/spot_icon.svg',
+            iconSize: [32, 37],
+            iconAnchor: [16, 37],
+            popupAnchor: [0, -28]
+        });
+        this.storyMarkerLayer = new L.GeoJSON(storyGeo, {
+            pointToLayer: function(feature, latlng) {
+                return L.marker(latlng, {icon: spotIcon});
+            }
+        });
         this.lmap.addLayer(this.storyMarkerLayer);
         this.lmap.setView([
             storyGeo.coordinates[1],
