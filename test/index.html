@@ -38,7 +38,7 @@
     <!--list item-->
     <script type="text/x-handlebars-template" id="list_item_template">
         <div onclick="location.href='#!{{id}}';" id="{{id}}" class="list_item_content">
-            <img src="images/photos/{{list_image}}.jpg"/>
+            <img src="{{list_image}}"/>
             <p>{{headline}}</p>
         </div>
     </script>
@@ -47,7 +47,7 @@
     <script type="text/template" id="story_template">
         <p>{{headline}}</p>
         <p>{{description}}</p>
-        <img src="images/photos/{{story_image}}.jpg"/>
+        <img src="{{story_image}}"/>
         {{#each hours}}
             <p>{{this.hour}}</p>
         {{/each}}
@@ -93,13 +93,13 @@
     <!--social media: follow-->
     <script type="text/x-handlebars-template" id="follow_template">
         <div id="follow_twitter" class="social_button">
-            <img class="social_button_img" src="images/logos/twitter-bird.svg"/>
+            <img class="social_button_img" src="http://spotbrooklyn.com.s3.amazonaws.com/images/logos/twitter-bird.svg"/>
         </div>
         <div id="follow_instagram" class="social_button">
-            <img class="social_button_img" src="images/logos/instagram.svg"/>
+            <img class="social_button_img" src="http://spotbrooklyn.com.s3.amazonaws.com/images/logos/instagram.svg"/>
         </div>
         <div id="follow_email" class="social_button">
-            <img class="social_button_img" src="images/icons/email.svg"/>
+            <img class="social_button_img" src="http://spotbrooklyn.com.s3.amazonaws.com/images/icons/email.svg"/>
         </div>
 
     </script>
@@ -107,13 +107,13 @@
     <!--social media: share-->
     <script type="text/x-handlebars-template" id="share_template">
         <div id="share_twitter" class="social_button">
-            <img class="social_button_img" src="images/logos/twitter-bird.svg"/>
+            <img class="social_button_img" src="http://spotbrooklyn.com.s3.amazonaws.com/images/logos/twitter-bird.svg"/>
         </div>
         <div id="share_facebook" class="social_button">
-            <img class="social_button_img" src="images/logos/fav-facebook.svg"/>
+            <img class="social_button_img" src="http://spotbrooklyn.com.s3.amazonaws.com/images/logos/fav-facebook.svg"/>
         </div>
         <div id="share_email" class="social_button">
-            <img class="social_button_img" src="images/icons/email.svg"/>
+            <img class="social_button_img" src="http://spotbrooklyn.com.s3.amazonaws.com/images/icons/email.svg"/>
         </div>
     </script>
 

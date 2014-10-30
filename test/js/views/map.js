@@ -42,7 +42,7 @@ sbk.MapView = Backbone.View.extend({
             storyGeometry.push(storyMarker);
 
             var spotIcon = L.icon({
-                iconUrl: 'images/icons/spot_icon.svg',
+                iconUrl: 'http://spotbrooklyn.com.s3.amazonaws.com/images/icons/spot_icon.svg',
                 iconSize: [32, 37],
                 iconAnchor: [16, 37],
                 popupAnchor: [0, -28]
@@ -92,7 +92,7 @@ sbk.MapView = Backbone.View.extend({
         }
         var storyGeo = story.get('geometry');
         var spotIcon = L.icon({
-            iconUrl: 'images/icons/spot_icon.svg',
+            iconUrl: 'http://spotbrooklyn.com.s3.amazonaws.com/images/icons/spot_icon.svg',
             iconSize: [32, 37],
             iconAnchor: [16, 37],
             popupAnchor: [0, -28]

@@ -1,8 +1,8 @@
 [
     {
         "id": "story2",
-        "list_image" : "ps_coffee_tea_spices_1_16x9",
-        "story_image" : "ps_coffee_tea_spices_2_16x9",
+        "list_image" : "http://spotbrooklyn.com.s3.amazonaws.com/images/photos/ps_coffee_tea_spices_1_16x9.jpg",
+        "story_image" : "http://spotbrooklyn.com.s3.amazonaws.com/images/photos/ps_coffee_tea_spices_2_16x9.jpg",
         "headline" : "PS Coffee, Tea & Spices",
         "hours" : [
             {
@@ -30,8 +30,8 @@
     },
     {
         "id": "story1",
-        "list_image" : "gotham_archery_1_16x9",
-        "story_image" : "gotham_archery_2_16x9",
+        "list_image" : "http://spotbrooklyn.com.s3.amazonaws.com/images/photos/gotham_archery_1_16x9.jpg",
+        "story_image" : "http://spotbrooklyn.com.s3.amazonaws.com/images/photos/gotham_archery_2_16x9.jpg",
         "headline" : "Gotham Archery",
         "hours" : [
             {
@@ -59,8 +59,8 @@
     },
     {
         "id": "story3",
-        "list_image" : "super_hero_supply_1_16x9",
-        "story_image" : "super_hero_supply_2_16x9",
+        "list_image" : "http://spotbrooklyn.com.s3.amazonaws.com/images/photos/super_hero_supply_1_16x9.jpg",
+        "story_image" : "http://spotbrooklyn.com.s3.amazonaws.com/images/photos/super_hero_supply_2_16x9.jpg",
         "headline" : "Super Hero Supply Co.",
         "hours" : [
             {
@@ -85,8 +85,8 @@
     },
     {
         "id": "story4",
-        "list_image" : "morbid_anatomy_1_16x9",
-        "story_image" : "morbid_anatomy_2_16x9",
+        "list_image" : "http://spotbrooklyn.com.s3.amazonaws.com/images/photos/morbid_anatomy_1_16x9.jpg",
+        "story_image" : "http://spotbrooklyn.com.s3.amazonaws.com/images/photos/morbid_anatomy_2_16x9.jpg",
         "headline" : "The Morbid Anatomy Museum",
         "hours" : [
             {
