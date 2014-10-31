@@ -7,8 +7,8 @@
 // Eg. @water is used in the #water and #waterway layers directly, but
 // also in the #water_label and #waterway_label layers inside a color
 // manipulation function to get a darker shade of the same hue.
-@land: #f8f4f0;
-@water: #a0c8f0;
+@land: #E6DAB2;
+@water: #96C5D4;
 
 Map {
   background-color:@land;
@@ -37,24 +37,15 @@ Map {
 // Water Features 
 
 #water {
-  polygon-fill: @water - #111;
+  polygon-fill: @water;
+  line-color: #5b9db2;
+  line-opacity: 0.4;
   // Map tiles are 256 pixels by 256 pixels wide, so the height 
   // and width of tiling pattern images must be factors of 256. 
   [zoom<=5] {
     // Below zoom level 5 we use Natural Earth data for water,
     // which has more obvious seams that need to be hidden.
     polygon-gamma: 0.4;
-  }
-  ::blur {
-    // This attachment creates a shadow effect by creating a
-    // light overlay that is offset slightly south. It also
-    // create a slight highlight of the land along the
-    // southern edge of any water body.
-    polygon-fill: #f0f0ff;
-    comp-op: soft-light;
-    image-filters: agg-stack-blur(1,1);
-    polygon-geometry-transform: translate(0,1);
-    polygon-clip: false;
   }
 }
 
@@ -85,7 +76,7 @@ Map {
   // OpenStreetMap, so this layer includes both. The 'class' field
   // is a highly opinionated simplification of the myriad LULC
   // tag combinations into a limited set of general classes.
-  [class='park'] { polygon-fill: #d8e8c8; }
+  [class='park'] { polygon-fill: #C2CD84; }
   [class='cemetery'] { polygon-fill: mix(#d8e8c8, #ddd, 25%); }
   [class='hospital'] { polygon-fill: #fde; }
   [class='school'] { polygon-fill: #f0e8f8; }

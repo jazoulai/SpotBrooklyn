@@ -4,9 +4,7 @@
     <list default="true" id="fe0408b6-eeb5-4738-b11d-2e853cd5eeb6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/map/sbk.tm2/.thumb.png" afterPath="$PROJECT_DIR$/map/sbk.tm2/.thumb.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/map/sbk.tm2/project.xml" afterPath="$PROJECT_DIR$/map/sbk.tm2/project.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/map/sbk.tm2/project.yml" afterPath="$PROJECT_DIR$/map/sbk.tm2/project.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/map/sbk.tm2/road.mss" afterPath="$PROJECT_DIR$/map/sbk.tm2/road.mss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/map/sbk.tm2/style.mss" afterPath="$PROJECT_DIR$/map/sbk.tm2/style.mss" />
     </list>
     <ignored path="backbone_tutorial.iws" />
     <ignored path=".idea/workspace.xml" />
