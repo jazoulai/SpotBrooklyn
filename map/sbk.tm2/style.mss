@@ -18,9 +18,6 @@ Map {
 // Political boundaries
 
 #admin {
-  opacity: 0.5;
-  line-join: round;
-  line-color: #446;
   [maritime=1] {
     // downplay boundaries that are over water
     line-color: @water;
@@ -34,14 +31,6 @@ Map {
     [zoom>=8] { line-width: 4; }
     [disputed=1] { line-dasharray: 4,4; }
   }
-  // States / Provices / Subregions
-  [admin_level>=3] {
-    line-width: 0.3;
-    line-dasharray: 10,3,3,3;
-    [zoom>=6] { line-width: 1; }
-    [zoom>=8] { line-width: 1.5; }
-    [zoom>=12] { line-width: 2; }
-  }
 }
 
 // ---------------------------------------------------------------------
@@ -51,7 +40,6 @@ Map {
   polygon-fill: @water - #111;
   // Map tiles are 256 pixels by 256 pixels wide, so the height 
   // and width of tiling pattern images must be factors of 256. 
-  polygon-pattern-file: url(pattern/wave.png);
   [zoom<=5] {
     // Below zoom level 5 we use Natural Earth data for water,
     // which has more obvious seams that need to be hidden.

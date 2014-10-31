@@ -113,36 +113,9 @@
 // ---------------------------------------------------------------------
 // Cities, towns, villages, etc
 
-// City labels with dots for low zoom levels.
-// The separate attachment keeps the size of the XML down.
-#place_label::citydots[type='city'][zoom>=4][zoom<=7][localrank<=3] {
-  // explicitly defining all the `ldir` values wer'e going
-  // to use shaves a bit off the final project.xml size
-  [ldir='N'],[ldir='S'],[ldir='E'],[ldir='W'],
-  [ldir='NE'],[ldir='SE'],[ldir='SW'],[ldir='NW'] {
-    shield-file: url("shield/dot-small.png");
-    shield-unlock-image: true;
-    shield-name: @name;
-    shield-size: 12;
-    [zoom=7] { shield-size: 14; }
-    shield-face-name: @sans;
-    shield-placement: point;
-    shield-fill: #333;
-    shield-halo-fill: fadeout(#fff, 50%);
-    shield-halo-radius: 1;
-    shield-halo-rasterizer: fast;
-    [ldir='E'] { shield-text-dx: 5; }
-    [ldir='W'] { shield-text-dx: -5; }
-    [ldir='N'] { shield-text-dy: -5; }
-    [ldir='S'] { shield-text-dy: 5; }
-    [ldir='NE'] { shield-text-dx: 4; shield-text-dy: -4; }
-    [ldir='SE'] { shield-text-dx: 4; shield-text-dy: 4; }
-    [ldir='SW'] { shield-text-dx: -4; shield-text-dy: 4; }
-    [ldir='NW'] { shield-text-dx: -4; shield-text-dy: -4; }
-  }
-}
 
-#place_label[zoom>=8][localrank<=3] {
+
+#place_label[zoom>=13][localrank<=3] {
   text-name: @name;
   text-face-name: @sans;
   text-wrap-width: 120;
@@ -152,36 +125,6 @@
   text-halo-radius: 1;
   text-halo-rasterizer: fast;
   text-size: 10;
-  [type='city'][zoom>=8][zoom<=15] {
-  	text-face-name: @sans_md;
-    text-size: 16;
-    [zoom>=10] { 
-      text-size: 18;
-      text-wrap-width: 140;
-    }
-    [zoom>=12] { 
-      text-size: 24;
-      text-wrap-width: 180;
-    }
-    // Hide at largest scales:
-    [zoom>=16] { text-name: "''"; }
-  }
-  [type='town'] {
-    text-size: 14;
-    [zoom>=12] { text-size: 16; }
-    [zoom>=14] { text-size: 20; }
-    [zoom>=16] { text-size: 24; }
-    // Hide at largest scales:
-    [zoom>=18] { text-name: "''"; }
-  }
-  [type='village'] {
-    text-size: 12;
-    [zoom>=12] { text-size: 14; }
-    [zoom>=14] { text-size: 18; }
-    [zoom>=16] { text-size: 22; }
-  }
-  [type='hamlet'],
-  [type='suburb'],
   [type='neighbourhood'] {
     text-fill: #633;
     text-face-name:	@sans_bd;
@@ -233,24 +176,6 @@
 
 // ---------------------------------------------------------------------
 // Roads
-
-#road_label[reflen>=1][reflen<=6]::shield {
-  // Motorways with a 'ref' tag that is 1-6 characters long have a
-  // [ref] value for shield-style labels.
-  // Custom shield png files can be created using make_shields.sh
-  // in _src folder
-  shield-name: [ref];
-  shield-face-name: @sans_bd;
-  shield-fill: #765;
-  shield-min-distance: 60;
-  shield-min-padding: 8;  // prevents clipped shields at tile edges
-  shield-size: 9;
-  shield-file: url('shield/motorway_sm_[reflen].png');
-  [zoom>=15] {
-    shield-size: 11;
-    shield-file: url('shield/motorway_lg_[reflen].png');
-  }
-}
 
 #road_label {
   text-name: @name;
