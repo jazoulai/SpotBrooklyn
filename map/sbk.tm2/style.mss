@@ -91,7 +91,7 @@ Map {
 // ---------------------------------------------------------------------
 // Buildings 
 
-#building [zoom<=17]{
+#building [zoom>=17]{
   // At zoom level 13, only large buildings are included in the
   // vector tiles. At zoom level 14+, all buildings are included.
   polygon-fill: darken(@land, 50%);

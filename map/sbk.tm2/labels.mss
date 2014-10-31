@@ -130,6 +130,7 @@
     text-face-name:	@sans_bd;
     text-transform: uppercase;
     text-character-spacing: 0.5;
+    [zoom>=13] { text-size: 10; }
     [zoom>=14] { text-size: 11; }
     [zoom>=15] { text-size: 12; text-character-spacing: 1; }
     [zoom>=16] { text-size: 14; text-character-spacing: 2; }
@@ -177,7 +178,7 @@
 // ---------------------------------------------------------------------
 // Roads
 
-#road_label [zoom>=14]{
+#road_label [zoom>=15]{
   text-name: @name;
   text-placement: line;  // text follows line path
   text-face-name: @sans;

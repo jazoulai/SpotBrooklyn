@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fe0408b6-eeb5-4738-b11d-2e853cd5eeb6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/map/sbk.tm2/labels.mss" afterPath="$PROJECT_DIR$/map/sbk.tm2/labels.mss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/js/views/map.js" afterPath="$PROJECT_DIR$/test/js/views/map.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/map/sbk.tm2/project.xml" afterPath="$PROJECT_DIR$/map/sbk.tm2/project.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="fe0408b6-eeb5-4738-b11d-2e853cd5eeb6" name="Default" comment="" />
     <ignored path="backbone_tutorial.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,7 +26,7 @@
       <file leaf-file-name="map.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/js/views/map.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.83387274" vertical-offset="1713" max-vertical-offset="2750">
+            <state vertical-scroll-proportion="0.85760516" vertical-offset="1691" max-vertical-offset="2750">
               <caret line="116" column="43" selection-start-line="116" selection-start-column="43" selection-end-line="116" selection-end-column="43" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -762,7 +757,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/js/views/map.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.83387274" vertical-offset="1713" max-vertical-offset="2750">
+        <state vertical-scroll-proportion="0.85760516" vertical-offset="1691" max-vertical-offset="2750">
           <caret line="116" column="43" selection-start-line="116" selection-start-column="43" selection-end-line="116" selection-end-column="43" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
