@@ -1389,7 +1389,7 @@
     <TextSymbolizer size="13" placement="line" fontset-name="fontset-2" fill="#776655" halo-fill="rgba(255, 255, 255, 0.5)" halo-radius="1" halo-rasterizer="fast" avoid-edges="true" ><![CDATA[[name_en]]]></TextSymbolizer>
   </Rule>
   <Rule>
-    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
     <TextSymbolizer placement="line" fontset-name="fontset-2" fill="#776655" halo-fill="rgba(255, 255, 255, 0.5)" halo-radius="1" halo-rasterizer="fast" size="12" avoid-edges="true" ><![CDATA[[name_en]]]></TextSymbolizer>
   </Rule>

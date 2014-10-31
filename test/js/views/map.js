@@ -111,9 +111,11 @@ sbk.MapView = Backbone.View.extend({
     },
 
     detect_map_interaction: function(){
+        var self = this;
 
         this.lmap.on('zoomend', function(){
-            ga('send', 'event', 'map', 'zoomend', 'unknown page');
+            var zoom = self.lmap.getZoom();
+            ga('send', 'event', 'map', 'zoomend', zoom);
         });
     }
 

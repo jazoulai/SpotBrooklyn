@@ -177,7 +177,7 @@
 // ---------------------------------------------------------------------
 // Roads
 
-#road_label [zoom>=13]{
+#road_label [zoom>=14]{
   text-name: @name;
   text-placement: line;  // text follows line path
   text-face-name: @sans;
