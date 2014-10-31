@@ -9,6 +9,7 @@
 // manipulation function to get a darker shade of the same hue.
 @land: #E6DAB2;
 @water: #96C5D4;
+@cemetery: #acacac;
 
 Map {
   background-color:@land;
@@ -77,7 +78,7 @@ Map {
   // is a highly opinionated simplification of the myriad LULC
   // tag combinations into a limited set of general classes.
   [class='park'] { polygon-fill: #C2CD84; }
-  [class='cemetery'] { polygon-fill: mix(#d8e8c8, #ddd, 25%); }
+  [class='cemetery'] { polygon-fill: @cemetery;  }
   [class='hospital'] { polygon-fill: #fde; }
   [class='school'] { polygon-fill: #f0e8f8; }
   ::overlay {
