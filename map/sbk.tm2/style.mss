@@ -39,8 +39,8 @@ Map {
 
 #water {
   polygon-fill: @water;
-  line-color: #5b9db2;
-  line-opacity: 0.4;
+  line-color: #076480;
+  line-width: 0.5;
   // Map tiles are 256 pixels by 256 pixels wide, so the height 
   // and width of tiling pattern images must be factors of 256. 
   [zoom<=5] {

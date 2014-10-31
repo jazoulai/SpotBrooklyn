@@ -42,6 +42,7 @@ sbk.MapView = Backbone.View.extend({
             storyMarker.id = storyId;
             storyGeometry.push(storyMarker);
 
+
             var spotIcon = L.icon({
                 iconUrl: 'http://spotbrooklyn.com.s3.amazonaws.com/images/icons/spot_icon.svg',
                 iconSize: [32, 37],
@@ -77,7 +78,7 @@ sbk.MapView = Backbone.View.extend({
 
     resetMap: function () {
         var self = this;
-        self.lmap.setView([40.685259, -73.977664], 10);
+        self.lmap.setView([40.685259, -73.977664], 11);
 
         if(this.storyMarkerLayer){
             self.lmap.removeLayer(this.storyMarkerLayer);
@@ -105,7 +106,7 @@ sbk.MapView = Backbone.View.extend({
         this.lmap.setView([
             storyGeo.coordinates[1],
             storyGeo.coordinates[0]
-        ], 12);
+        ], 14);
         ga('send', 'event', 'map', 'render', 'story marker');
 
     },

@@ -159,12 +159,12 @@
   <Rule>
     <MinScaleDenominator>12500000</MinScaleDenominator>
     <PolygonSymbolizer gamma="0.4" fill="#96c5d4" />
-    <LineSymbolizer stroke="#5b9db2" stroke-opacity="0.4" />
+    <LineSymbolizer stroke="#076480" stroke-width="0.5" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500000</MaxScaleDenominator>
     <PolygonSymbolizer fill="#96c5d4" />
-    <LineSymbolizer stroke="#5b9db2" stroke-opacity="0.4" />
+    <LineSymbolizer stroke="#076480" stroke-width="0.5" />
   </Rule>
 </Style>
 <Layer name="water"
