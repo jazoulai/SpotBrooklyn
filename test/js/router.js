@@ -15,6 +15,7 @@ sbk.AppRouter = Backbone.Router.extend({
             var orient = window.orientation;
             if(orient === 90 || orient === -90) {
                 alert('Oops! A landscape version of our site isn\'t ready yet. Sorry for the inconvenience.');
+                ga('send', 'event', 'size', 'orientation change', 'landscape');
             }
         }, false);
     },
@@ -24,17 +25,10 @@ sbk.AppRouter = Backbone.Router.extend({
         this.map = new sbk.MapView({
             storyCollection: storyCollection
         });
-        ga('send', 'event', 'test', 'load');
-
-        /*$(window).bind("resize", function(){
-            screenOrientation = ($(window).width() > $(window).height())? 90 : 0;
-            alert(screenOrientation);
-        });*/
-
-       this.landscape_orienation();
+        this.landscape_orienation();
     },
 
-    loadList: function () {
+    loadList: function (id) {
         this.storyListView = new sbk.StoryListView({collection: this.storyCollection});
         $('#content_container').html(this.storyListView.render().el);
         this.map.resetMap();
@@ -44,7 +38,8 @@ sbk.AppRouter = Backbone.Router.extend({
         this.followView = new sbk.FollowView();
         $('#follow').html(this.followView.render().el);
         $('#follow').hide();
-        ga('send', 'event', 'test', 'home');
+        ga('send', 'event', 'route', 'load', 'home');
+        this.map.detect_map_interaction();
     },
 
    loadStory: function (storyId) {
@@ -57,7 +52,7 @@ sbk.AppRouter = Backbone.Router.extend({
         this.shareView = new sbk.ShareView(story);
         $('#follow').html(this.shareView.render().el);
         $('#follow').hide();
-        ga('send', 'event', 'test', 'story');
+        ga('send', 'event', 'route', 'load', storyId);
     },
 
     loadAbout: function () {
@@ -65,8 +60,8 @@ sbk.AppRouter = Backbone.Router.extend({
         $('#content_container').html(this.aboutView.render().el);
         this.storyNavigationView = new sbk.StoryNavigationView();
         $('#nav').html(this.storyNavigationView.render().el);
-        ga('send', 'event', 'test', 'about');
-    },
+        ga('send', 'event', 'route', 'load', 'about');
+    }
 
 
 });

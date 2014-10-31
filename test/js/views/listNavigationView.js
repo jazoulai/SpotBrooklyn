@@ -15,8 +15,10 @@ sbk.ListNavigationView = Backbone.View.extend({
     },
     toggle_follow: function(){
         $('#follow').slideToggle({height: "10%"}, 500);
+        ga('send', 'event', 'follow', 'touchstart', 'toggle buttons', 1);
     },
     nav_about: function(){
         sbk.app.navigate("!about", {trigger: true});
+        ga('send', 'event', 'navigation', 'touchstart', 'about');
     }
 });

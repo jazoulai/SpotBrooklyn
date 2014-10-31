@@ -10,7 +10,8 @@ sbk.MapView = Backbone.View.extend({
             attributionControl: false,
             zoomControl: false
         });
-        ga('send', 'event', 'test', 'load map');
+        ga('send', 'event', 'map', 'initialize', 'map');
+
     },
 
     //todo: this function comes with a huge performance penalty. FIX!!
@@ -81,8 +82,6 @@ sbk.MapView = Backbone.View.extend({
         if(this.storyMarkerLayer){
             self.lmap.removeLayer(this.storyMarkerLayer);
         }
-
-        ga('send', 'event', 'test', 'reset map');
     },
 
     renderStoryMarker: function (story) {
@@ -107,16 +106,15 @@ sbk.MapView = Backbone.View.extend({
             storyGeo.coordinates[1],
             storyGeo.coordinates[0]
         ], 12);
+        ga('send', 'event', 'map', 'render', 'story marker');
 
-        ga('send', 'event', 'test', 'zoom to spot marker');
+    },
 
+    detect_map_interaction: function(){
+
+        this.lmap.on('zoomend', function(){
+            ga('send', 'event', 'map', 'zoomend', 'unknown page');
+        });
     }
-
-
-
-
-
-
-
 
 });
