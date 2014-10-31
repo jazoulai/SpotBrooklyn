@@ -1,6 +1,6 @@
 _prefs: 
   mapid: spotbrooklyn.4e3989f5
-  saveCenter: true
+  saveCenter: false
 _properties: 
   bridge: 
     "group-by": layer
@@ -11,16 +11,16 @@ bounds:
   - 180
   - 85.0511
 center: 
-  - -73.9847
-  - 40.6308
-  - 16
+  - -73.9812
+  - 40.6562
+  - 12
 description: ''
 format: "png8:m=h"
 interactivity_layer: ''
 layers: null
 maxzoom: 22
 minzoom: 0
-name: OSM Bright 2
+name: Spot Brooklyn
 source: "mapbox:///mapbox.mapbox-streets-v5"
 styles: 
   - style.mss
