@@ -47,7 +47,7 @@ body, html {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     background-color: white;
-    border-bottom-width: 7px;
+    border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: rgb(150,197,212);
 }
@@ -56,10 +56,11 @@ body, html {
     width: 90%;
     height: auto;
     padding: 0;
-    margin: 5%;
+    padding-top: 0;
+    margin: 0;
     text-align: center;
 }
-.list_item_content > div {
+.bigtext {
     width: 100%;
     height: auto;
     position: absolute;
@@ -104,21 +105,20 @@ Navigation
     color: rgb(7,100,128);
     width: 18%;
     height: 100%;
-    padding: 0;
+    padding-top: 0;
     margin: 0;
     font-weight: 300;
-    padding-top: 2%;
+    box-sizing: border-box;
+    font-size: 1.5em;
 }
 .list_nav_buttons:active {
     color: rgb(150,197,212);
 }
 #about_button{
     float: left;
-    padding-left: 2%;
 }
 #follow_button {
     float: right;
-    padding-right: 1%;
 }
 #follow {
     position: absolute;

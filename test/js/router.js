@@ -36,9 +36,9 @@ sbk.AppRouter = Backbone.Router.extend({
         this.listNavigationView = new sbk.ListNavigationView();
         $('#nav').html(this.listNavigationView.render().el);
         this.followView = new sbk.FollowView();
-        $('#about_button').bigtext();
-        $('#follow_button').bigtext();
-        $('.list_item_content > div').bigtext({
+        $('.bigtext').bigtext({
+            minfontsize: 18,
+            maxfontsize: 22
         });
         $('#follow').html(this.followView.render().el);
         $('#follow').hide();
