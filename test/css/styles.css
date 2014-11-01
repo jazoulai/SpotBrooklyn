@@ -3,6 +3,9 @@ body, html {
     height: 100%;
     padding: 0;
     margin: 0;
+    font-family: "proxima-nova",sans-serif;
+    font-style: normal;
+    font-weight: 100;
 }
 #map{
     width: 100%;
@@ -24,7 +27,7 @@ body, html {
     height: 100%;
     padding: 0;
     margin: 0;
-    background-color: goldenrod;
+    background-color: rgb(150,197,212);
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
 }
@@ -38,31 +41,44 @@ body, html {
 }
 .list_item {
     width: 100%;
-    height: 100%;
+    height: auto;
     padding: 0;
     margin: 0;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     background-color: white;
-    border-bottom-width: 1px;
+    border-bottom-width: 7px;
     border-bottom-style: solid;
-    border-bottom-color: black;
+    border-bottom-color: rgb(150,197,212);
 }
 .list_item_content {
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    font-size: 1.5em;
-}
-img {
+    position: relative;
     width: 90%;
     height: auto;
-    padding-top: 1%;
-    display: block;
+    padding: 0;
+    margin: 5%;
+    text-align: center;
+}
+.list_item_content > div {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    color: white;
+    background-color: rgba(0,0,0, 0.5);
+    text-align: center;
+    box-sizing: border-box;
+}
+img {
+    position: relative;
+    width: 100%;
+    height: auto;
     margin: 0 auto;
 }
+
+/*
+Navigation
+*/
 #nav {
     position: absolute;
     top: 35%;
@@ -82,6 +98,27 @@ img {
     text-align: right;
     background-color: rgba(255, 255, 255, 0.50);
     -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.list_nav_buttons {
+    text-align: center;
+    color: rgb(7,100,128);
+    width: 18%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-weight: 300;
+    padding-top: 2%;
+}
+.list_nav_buttons:active {
+    color: rgb(150,197,212);
+}
+#about_button{
+    float: left;
+    padding-left: 2%;
+}
+#follow_button {
+    float: right;
+    padding-right: 1%;
 }
 #follow {
     position: absolute;
@@ -133,25 +170,8 @@ img {
     display: block;
     margin: 0 auto;
 }
-#about_button{
-    text-align: center;
-    color: blue;
-    font-size: blue;
-    width: 20%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    float: left;
-}
-#follow_button {
-    text-align: center;
-    color: blue;
-    width: 20%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    float: right;
-}
+
+
 #home_button{
     text-align: center;
     color: blue;

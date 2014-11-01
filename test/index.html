@@ -14,6 +14,8 @@
         }
         ga('send', 'event', 'size', 'screen width', '>=480');
     </script>-->
+    <script type="text/javascript" src="https://use.typekit.net/urz0jfm.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 <!--Google Analytics-->
     <script>
@@ -40,7 +42,9 @@
     <script type="text/x-handlebars-template" id="list_item_template">
         <div onclick="location.href='#!{{id}}';" id="{{id}}" class="list_item_content">
             <img src="{{list_image}}"/>
-            <p>{{headline}}</p>
+            <div>
+                <h1>{{headline}}</h1>
+            </div>
         </div>
     </script>
 
@@ -82,19 +86,15 @@
 
     <!--navigation: list-->
     <script type="text/x-handlebars-template" id="list_navigation_template">
-        <div id="about_button">
-            <p>About</p>
+        <div id="about_button" class="list_nav_buttons">
+            <span>About</span>
         </div>
-        <div id="follow_button">
-            <p>Follow</p>
+        <div id="follow_button" class="list_nav_buttons">
+            <span>Follow</span>
         </div>
     </script>
 
-    <!--TEST: bigtext.js
-    <script>
-        $('#about_button').bigtext();
-        $('#follow_button').bigtext();
-    </script>-->
+
 
     <!--TEST: fittext.js
     <script>
