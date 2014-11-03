@@ -106,7 +106,7 @@ sbk.MapView = Backbone.View.extend({
         this.lmap.setView([
             storyGeo.coordinates[1],
             storyGeo.coordinates[0]
-        ], 14);
+        ], 15);
         ga('send', 'event', 'map', 'render', 'story marker');
 
     },
