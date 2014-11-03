@@ -40,6 +40,7 @@ sbk.AppRouter = Backbone.Router.extend({
             minfontsize: 18,
             maxfontsize: 22
         });
+        $('.fittext').fitText({ minFontSize: '40px', maxFontSize: '60px' });
         $('#follow').html(this.followView.render().el);
         $('#follow').hide();
         ga('send', 'event', 'route', 'load', 'home');

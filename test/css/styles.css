@@ -56,8 +56,8 @@ body, html {
     width: 90%;
     height: auto;
     padding: 0;
-    padding-top: 2%;
-    padding-bottom: 2%;
+    padding-top: 5%;
+    padding-bottom: 5%;
     margin: 0;
     margin-left: 5%;
     text-align: center;
@@ -66,7 +66,7 @@ body, html {
     width: 100%;
     height: auto;
     position: absolute;
-    bottom: 2%;
+    bottom: 10%;
     color: white;
     background-color: rgba(0,0,0, 0.5);
     text-align: center;
@@ -104,13 +104,13 @@ Navigation
 .list_nav_buttons {
     text-align: center;
     color: rgb(7,100,128);
-    width: 18%;
+    width: 25%;
     height: 100%;
-    padding-top: 0;
+    padding-top: 5%;
     margin: 0;
     font-weight: 300;
     box-sizing: border-box;
-    font-size: 1.5em;
+    display: block;
 }
 .list_nav_buttons:active {
     color: rgb(150,197,212);
