@@ -50,15 +50,18 @@
 
     <!--story-->
     <script type="text/template" id="story_template">
-        <p>{{headline}}</p>
+        <h3>{{headline}}</h3>
         <p>{{description}}</p>
-        <img src="{{story_image}}"/>
+        <img src="{{story_image}}"/><br>
+        <h5>Hours</h5>
         {{#each hours}}
-            <p>{{this.hour}}</p>
+            <span>{{this.hour}}</span><br>
         {{/each}}
-        <p>{{address.line1}}</p>
-        <p>{{address.line2}}</p>
-        <p>{{phone}}</p>
+        <h5>Address</h5>
+            <span>{{address.line1}}
+            <br>{{address.line2}}</span><br>
+        <h5>Phone</h5>
+        <span>{{phone}}</span><br>
         {{#if website}}
             <a href="{{website}}">website</a>
         {{/if}}
@@ -104,11 +107,11 @@
 
     <!--navigation: story-->
     <script type="text/x-handlebars-template" id="story_navigation_template">
-        <div id="home_button">
-            <p>Home</p>
+        <div id="home_button" class="list_nav_buttons">
+            <span class="fittext">Home</span>
         </div>
-        <div id="share_button">
-            <p>Share</p>
+        <div id="share_button" class="list_nav_buttons">
+             <span class="fittext">Share</span>
         </div>
     </script>
 
@@ -129,10 +132,10 @@
     <!--social media: share-->
     <script type="text/x-handlebars-template" id="share_template">
         <div id="share_twitter" class="social_button">
-            <img class="social_button_img" src="http://spotbrooklyn.com.s3.amazonaws.com/images/logos/twitter-bird.svg"/>
+            <img class="social_button_img" src="http://spotbrooklyn.com.s3.amazonaws.com/images/logos/twitter.svg"/>
         </div>
         <div id="share_facebook" class="social_button">
-            <img class="social_button_img" src="http://spotbrooklyn.com.s3.amazonaws.com/images/logos/fav-facebook.svg"/>
+            <img class="social_button_img" src="http://spotbrooklyn.com.s3.amazonaws.com/images/logos/facebook.svg"/>
         </div>
         <div id="share_email" class="social_button">
             <img class="social_button_img" src="http://spotbrooklyn.com.s3.amazonaws.com/images/icons/email.svg"/>
