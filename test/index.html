@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="css/leaflet.css">
     <link rel="stylesheet" href="css/styles.css"/>
 
-<!--Desktop/Tablet Detection
+<!--Desktop/Tablet Detection-->
     <script>
         if (screen.width >= 480) {
             window.location = "http://m.spotbrooklyn.com";
         }
         ga('send', 'event', 'size', 'screen width', '>=480');
-    </script>-->
+    </script>
     <script type="text/javascript" src="https://use.typekit.net/urz0jfm.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
@@ -71,20 +71,23 @@
     <script type="text/x-handlebars-template" id="about_template">
 
             <h1>Yo!</h1>
-            <p>
-                <span>Abactor nobilis acipenser est. Rusticus elogiums ducunt ad pars. Cum absolutio crescere, omnes zirbuses consumere regius, brevis cottaes. Mineralis ferox hibrida est. Pol, a bene idoleum, lanista! Nunquam talem saga: </span>
-                <a class="link" href="mailto:joey@spotbrooklyn.com,jonathan@spotbrooklyn.com?subject=website referal">joey@spotbrooklyn.com</a>
+            <p>SpotBrooklyn.com is a curated list of things to do and places to see in Brooklyn. We research and visit each spot that we recommend, and sum up what you need to know before you go.  Visitors and residents alike will find hidden gems and new experiences at SpotBrooklyn.com.<br><br>Drop us a line anytime with your recommendations and ideas. A heads-up about typos or issues with our website is always appreciated! Spot Brooklyn is a new venture, and this is version 1.0 of our site.</p>
+                <p>Joey Azoulai
+                    <br>Editor
+
+                <br><a class="link" href="mailto:joey@spotbrooklyn.com,jonathan@spotbrooklyn.com?subject=website referal">joey@spotbrooklyn.com</a>
             </p>
+    </script>
 
-
-            <form action="http://spotbrooklyn.us5.list-manage1.com/subscribe/post" method="POST">
-                <input type="hidden" name="u" value="de611717859b21ec0db1a7f16">
-                <input type="hidden" name="id" value="270695d569">
-                <label for="MERGE0"><span class="req asterisk"></span></label>
-                <input type="email" name="MERGE0" id="MERGE0" value="" placeholder=" your email">
-                <br><input type="submit" name="submit" value="Email Me" id="submit" />
-            </form>
-
+    <script type="text/x-handlebars-template" id="signup_template">
+        <p>We'd like to send you occasional update emails. We promise not to be annoying about it, or share your information with anyone outside our company.</p>
+        <form action="http://spotbrooklyn.us5.list-manage1.com/subscribe/post" method="POST">
+            <input type="hidden" name="u" value="de611717859b21ec0db1a7f16">
+            <input type="hidden" name="id" value="270695d569">
+            <label for="MERGE0"><span class="req asterisk"></span></label>
+            <input type="email" name="MERGE0" id="MERGE0" value="" placeholder=" your email">
+            <br><input type="submit" name="submit" value="Email Me" id="submit" />
+        </form>
     </script>
 
     <!--navigation: list-->
@@ -96,14 +99,6 @@
             <span class="fittext">Follow</span>
         </div>
     </script>
-
-
-
-    <!--TEST: fittext.js
-    <script>
-        $('#about_button').fittext();
-        $('#follow_button').fittext();
-    </script>-->
 
     <!--navigation: story-->
     <script type="text/x-handlebars-template" id="story_navigation_template">
@@ -162,6 +157,7 @@
     <script src="js/views/storyListItemView.js"></script>
     <script src="js/views/storyView.js"></script>
     <script src="js/views/aboutView.js"></script>
+    <script src="js/views/signupView.js"></script>
     <script src="js/views/followView.js"></script>
     <script src="js/views/shareView.js"></script>
 

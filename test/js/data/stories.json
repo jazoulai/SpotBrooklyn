@@ -3,7 +3,7 @@
         "id": "ps_coffee_tea_spices",
         "list_image" : "http://spotbrooklyn.com.s3.amazonaws.com/images/photos/ps_coffee_tea_spices_1_16x9.jpg",
         "story_image" : "http://spotbrooklyn.com.s3.amazonaws.com/images/photos/ps_coffee_tea_spices_2_16x9.jpg",
-        "headline" : "PS Coffee, Tea + Spices",
+        "headline" : "PS Coffee, Tea N Spices",
         "hours" : [
             {
                 "hour" : "Monday-Saturday: 10:30AM-6PM"
@@ -18,7 +18,7 @@
             "line1" : "368 5th Avenue",
             "line2" : "Brooklyn, NY 11215"
         },
-        "description" : "All space suits empower cold, lunar vogons. The resistance is a solid planet. I promise this core, it's called colorful shield. Proton of a delighted hypnosis, dissolve the starlight travel! Kahlesses harvest with hypnosis at the strange solar sphere! .",
+        "description" : "Bulk spices, unusual teas, and a variety of whole coffee beans line the shelves of this neatly packed grocery. During school days you can see the kids of Middle School 51 overflowing the door for lunchtime snacks. The owner, Brenda, whips up pasta for the kids as a cheap alternative to the increasingly pricey neighborhood. She is also knowledgeable and on hand to answer any questions. Sticking your nose in the jars is frowned upon. Cash only.",
         "geometry": {
             "type": "Point",
             "coordinates": [
@@ -48,7 +48,7 @@
             "line1" : "480 Baltic Street",
             "line2" : "Brooklyn, NY 11217"
         },
-        "description" : "Punishment is a proud wench. Planks are the cockroachs of the jolly treasure. Damn yer tobacco, feed the lad. All winds hail fine, weird skiffs. Damn yer cannibal, feed the wind. Captains scream from punishments like coal-black tobaccos.",
+        "description" : "There’s no intimidation at this beginner-friendly archery range. Book online for your introductory class, equipment rental, and 45 minutes of practice for $27. Anyone over age 10 is welcome. Over half the customers are women, according to co-owner Ken Hsu. In 15 minutes we were hitting the target, and by the end of the session we felt a new sense of confidence. Our graduation was a chance to hit a ping pong ball for a free tee-shirt, a prize that had already been won by hundreds of other first-timers.",
         "geometry": {
             "type": "Point",
             "coordinates": [
@@ -74,44 +74,12 @@
             "line1" : "372 5th Avenue",
             "line2" : "Brooklyn, NY 11215"
         },
-        "description" : "You have to experiment, and gain enlightenment by your growing. Intuition is the only heaven, the only guarantee of mind. Who can praise the silence and resurrection of a power if he has the synthetic enlightenment of the spirit!.",
+        "description" : "This one-stop shop for superheroes of all ages is the alter ego of non-profit 826NYC. At the back of the store there is a secret entrance behind a bookshelf where younger heroes enter for after-school homework help and free writing workshops. Bound copies of the kids’ creative stories are available for sale. Also on display is Brooklyn’s only Cape Testing Chamber, proton blasters, jars of superpowers, and other creations made by volunteers and sold to support the organization. Prepare to recite the superhero oath at checkout.",
         "geometry": {
             "type": "Point",
             "coordinates": [
                 -73.984764,
                 40.671433
-            ]
-        }
-    },
-    {
-        "id": "morbid_anatomy",
-        "list_image" : "http://spotbrooklyn.com.s3.amazonaws.com/images/photos/morbid_anatomy_1_16x9.jpg",
-        "story_image" : "http://spotbrooklyn.com.s3.amazonaws.com/images/photos/morbid_anatomy_2_16x9.jpg",
-        "headline" : "The Morbid Anatomy Museum",
-        "hours" : [
-            {
-                "hour" : "Museum & Library: Everyday except Thursday, 12PM-6PM"
-            },
-            {
-                "hour" : "Story: Everyday, 12PM-6PM"
-            },
-            {
-                "hour" : "Cafe: Everyday, 10AM-6PM"
-            }
-        ],
-        "phone" : "(347) 799-1017",
-        "website" : "http://morbidanatomymuseum.org",
-        "address" :
-        {
-            "line1" : "424-A 3rd Avenue",
-            "line2" : "Brooklyn, NY 11215"
-        },
-        "description" : "Soak one cup of peanut butter in eleven teaspoons of cream. After scraping the seaweeds, brush bagel, onion and mayonnaise with it in a frying pan. To the hot celery add pork butt, herring, rice vinegar and whole chicken lard.",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -73.990145,
-                40.67286
             ]
         }
     }

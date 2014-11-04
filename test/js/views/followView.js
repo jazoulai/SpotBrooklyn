@@ -30,7 +30,7 @@ sbk.FollowView = Backbone.View.extend({
     follow_email: function(){
         var self = this;
         //window.location.href = 'mailto:joey@spotbrooklyn.com';
-        sbk.app.navigate('!about', {trigger: true});
+        sbk.app.navigate('!signup', {trigger: true});
         this.close_follow();
         ga('send', 'event', 'follow', 'touchstart', 'email');
     }

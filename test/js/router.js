@@ -7,6 +7,7 @@ sbk.AppRouter = Backbone.Router.extend({
         "!": "loadList",
         //why do these routes trigger the wrong function when they are out of this order?
         "!about" : "loadAbout",
+        "!signup" : "loadSignup",
         "!:storyId": "loadStory"
     },
 
@@ -66,6 +67,14 @@ sbk.AppRouter = Backbone.Router.extend({
         this.storyNavigationView = new sbk.StoryNavigationView();
         $('#nav').html(this.storyNavigationView.render().el);
         ga('send', 'event', 'route', 'load', 'about');
+    },
+
+    loadSignup: function () {
+        this.signupView = new sbk.SignupView();
+        $('#content_container').html(this.signupView.render().el);
+        this.storyNavigationView = new sbk.StoryNavigationView();
+        $('#nav').html(this.storyNavigationView.render().el);
+        ga('send', 'event', 'route', 'load', 'signup');
     }
 
 

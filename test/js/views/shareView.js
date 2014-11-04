@@ -20,7 +20,7 @@ sbk.ShareView = Backbone.View.extend({
     close_follow: function () {
         $('#follow').hide();
     },
-    share_twitter: function(){
+    share_twitter: function(e){
         window.open('https://twitter.com/intent/tweet?text=check%20out:%20&url=http://spotbrooklyn.com&via=spotBrooklyn', '_self');
         this.close_follow();
         ga('send', 'event', 'share', 'touchstart', 'twitter');
