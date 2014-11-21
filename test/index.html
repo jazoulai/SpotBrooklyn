@@ -10,11 +10,14 @@
 
 
 <!--HTML-->
-    <div id="logo">
-        <img src=""/>
+    <div id="header">
         <h1>Spot Brooklyn</h1>
     </div>
-    <div id="main">
+    <div id="intro">
+        <h2>How are you feeling?</h2>
+    </div>
+    <div id="feelings"></div>
+    <div id="nav">
 
     </div>
 
@@ -23,10 +26,7 @@
     <!--list item-->
     <script type="text/x-handlebars-template" id="list_item_template">
         <div onclick="location.href='#!{{id}}';" id="{{id}}" class="list_item_content">
-            <img src="{{list_image}}"/>
-            <div class="bigtext">
                 <h1>{{headline}}</h1>
-            </div>
         </div>
     </script>
 

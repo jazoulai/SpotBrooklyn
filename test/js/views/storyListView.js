@@ -2,7 +2,7 @@
 /*globals Backbone: false, L: false, $: false, Handlebars: false, _: false, sbk: false */
 
 sbk.StoryListView = Backbone.View.extend({
-    id: 'list_container',
+    id: 'feelings-list',
     initialize: function () {
         this.collection.on("reset", this.render, this);
     },
