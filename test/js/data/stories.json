@@ -1,86 +1,74 @@
 [
     {
-        "id": "ps_coffee_tea_spices",
-        "list_image" : "http://spotbrooklyn.com.s3.amazonaws.com/images/photos/ps_coffee_tea_spices_1_16x9.jpg",
-        "story_image" : "http://spotbrooklyn.com.s3.amazonaws.com/images/photos/ps_coffee_tea_spices_2_16x9.jpg",
-        "headline" : "PS Coffee, Tea N Spices",
-        "hours" : [
-            {
-                "hour" : "Monday-Saturday: 10:30AM-6PM"
-            },
-            {
-                "hour" : "Sunday: 1PM-5PM"
-            }
-        ],
-        "phone" : "(718) 768-5561",
-        "address" :
-        {
-            "line1" : "368 5th Avenue",
-            "line2" : "Brooklyn, NY 11215"
-        },
-        "description" : "Bulk spices, unusual teas, and a variety of whole coffee beans line the shelves of this neatly packed grocery. During school days you can see the kids of Middle School 51 overflowing the door for lunchtime snacks. The owner, Brenda, whips up pasta for the kids as a cheap alternative to the increasingly pricey neighborhood. She is also knowledgeable and on hand to answer any questions. Sticking your nose in the jars is frowned upon. Cash only.",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -73.984586,
-                40.671485
-
-            ]
-        }
+        "id" : "tired"
     },
     {
-        "id": "gotham_archery",
-        "list_image" : "http://spotbrooklyn.com.s3.amazonaws.com/images/photos/gotham_archery_1_16x9.jpg",
-        "story_image" : "http://spotbrooklyn.com.s3.amazonaws.com/images/photos/gotham_archery_2_16x9.jpg",
-        "headline" : "Gotham Archery",
-        "hours" : [
-            {
-                "hour" :  "Monday-Friday: 3PM-10PM"
-            },
-            {
-                "hour" : "Saturday-Sunday: 9AM-10PM"
-            }
-        ],
-        "phone" : "(718) 858-5060",
-        "website" : "http://www.got-archery.com",
-        "address" :
-        {
-            "line1" : "480 Baltic Street",
-            "line2" : "Brooklyn, NY 11217"
-        },
-        "description" : "There’s no intimidation at this beginner-friendly archery range. Book online for your introductory class, equipment rental, and 45 minutes of practice for $27. Anyone over age 10 is welcome. Over half the customers are women, according to co-owner Ken Hsu. In 15 minutes we were hitting the target, and by the end of the session we felt a new sense of confidence. Our graduation was a chance to hit a ping pong ball for a free tee-shirt, a prize that had already been won by hundreds of other first-timers.",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -73.986145,
-                40.682606
-            ]
-        }
+        "id" : "empowered"
     },
     {
-        "id": "super_hero_supply_co",
-        "list_image" : "http://spotbrooklyn.com.s3.amazonaws.com/images/photos/super_hero_supply_1_16x9.jpg",
-        "story_image" : "http://spotbrooklyn.com.s3.amazonaws.com/images/photos/super_hero_supply_2_16x9.jpg",
-        "headline" : "Super Hero Supply Co.",
-        "hours" : [
-            {
-                "hour" : "Everyday: 11AM-5PM"
-            }
-        ],
-        "phone" : "(718) 499-9884",
-        "website" : "http://www.superherosupplies.com",
-        "address" :
-        {
-            "line1" : "372 5th Avenue",
-            "line2" : "Brooklyn, NY 11215"
-        },
-        "description" : "This one-stop shop for superheroes of all ages is the alter ego of non-profit 826NYC. At the back of the store there is a secret entrance behind a bookshelf where younger heroes enter for after-school homework help and free writing workshops. Bound copies of the kids’ creative stories are available for sale. Also on display is Brooklyn’s only Cape Testing Chamber, proton blasters, jars of superpowers, and other creations made by volunteers and sold to support the organization. Prepare to recite the superhero oath at checkout.",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -73.984764,
-                40.671433
-            ]
-        }
+        "id" : "creative"
+    },
+    {
+        "id" : "cranky"
+    },
+    {
+        "id" : "ranty"
+    },
+    {
+        "id" : "freezing!"
+    },
+    {
+        "id" : "drunk"
+    },
+    {
+        "id" : "bored"
+    },
+    {
+        "id" : "offended"
+    },
+    {
+        "id" : "adventurous"
+    },
+    {
+        "id" : "lonely"
+    },
+    {
+        "id" : "curious"
+    },
+    {
+        "id" : "proud"
+    },
+    {
+        "id" : "angry"
+    },
+    {
+        "id" : "romantic"
+    },
+    {
+        "id" : "hungry"
+    },
+    {
+        "id" : "pumped"
+    },
+    {
+        "id" : "artsy"
+    },
+    {
+        "id" : "lost"
+    },
+    {
+        "id" : "none of your business"
+    },
+    {
+        "id" : "generous"
+    },
+    {
+        "id" : "moody"
+    },
+    {
+        "id" : "scared"
+    },
+    {
+        "id" : "sweaty"
     }
 ]
