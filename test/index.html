@@ -3,38 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
-    <title>SpotBrooklyn.com</title>
-    <link rel="stylesheet" href="css/leaflet.css">
+    <title>SpotBrooklyn.com Vader</title>
     <link rel="stylesheet" href="css/styles.css"/>
-
-<!--Desktop/Tablet Detection-->
-    <script>
-        if (screen.width >= 480) {
-            window.location = "http://m.spotbrooklyn.com";
-        }
-        ga('send', 'event', 'size', 'screen width', '>=480');
-    </script>
-    <script type="text/javascript" src="https://use.typekit.net/urz0jfm.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
-<!--Google Analytics-->
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-46046711-1', 'auto');
-        ga('send', 'pageview');
-    </script>
 </head>
     <body>
 
 
 <!--HTML-->
-    <div id="map"></div>
-    <div id="nav"></div>
-    <div id="follow"></div>
-    <div id="content_container"></div>
+    <div id="logo">
+        <img src=""/>
+        <h1>Spot Brooklyn</h1>
+    </div>
+    <div id="main">
+
+    </div>
 
 <!--HANDLEBARS TEMPLATES-->
 
@@ -53,88 +35,6 @@
         <h3>{{headline}}</h3>
         <p>{{description}}</p>
         <img src="{{story_image}}"/><br>
-        <h5>Hours</h5>
-        {{#each hours}}
-            <span>{{this.hour}}</span><br>
-        {{/each}}
-        <h5>Address</h5>
-            <span>{{address.line1}}
-            <br>{{address.line2}}</span><br>
-        <h5>Phone</h5>
-        <span>{{phone}}</span><br>
-        {{#if website}}
-            <a href="{{website}}">website</a>
-        {{/if}}
-    </script>
-
-    <!--about-->
-    <script type="text/x-handlebars-template" id="about_template">
-
-            <h1>Yo!</h1>
-            <p>SpotBrooklyn.com is a curated list of things to do and places to see in Brooklyn. We research and visit each spot that we recommend, and sum up what you need to know before you go.  Visitors and residents alike will find hidden gems and new experiences at SpotBrooklyn.com.<br><br>Drop us a line anytime with your recommendations and ideas. A heads-up about typos or issues with our website is always appreciated! Spot Brooklyn is a new venture, and this is version 1.0 of our site.</p>
-                <p>Joey Azoulai
-                    <br>Editor
-
-                <br><a class="link" href="mailto:joey@spotbrooklyn.com,jonathan@spotbrooklyn.com?subject=website referal">joey@spotbrooklyn.com</a>
-            </p>
-    </script>
-
-    <script type="text/x-handlebars-template" id="signup_template">
-        <p>We'd like to send you occasional update emails. We promise not to be annoying about it, or share your information with anyone outside our company.</p>
-        <form action="http://spotbrooklyn.us5.list-manage1.com/subscribe/post" method="POST">
-            <input type="hidden" name="u" value="de611717859b21ec0db1a7f16">
-            <input type="hidden" name="id" value="270695d569">
-            <label for="MERGE0"><span class="req asterisk"></span></label>
-            <input type="email" name="MERGE0" id="MERGE0" value="" placeholder=" your email">
-            <br><input type="submit" name="submit" value="Email Me" id="submit" />
-        </form>
-    </script>
-
-    <!--navigation: list-->
-    <script type="text/x-handlebars-template" id="list_navigation_template">
-        <div id="about_button" class="list_nav_buttons">
-            <span class="fittext">About</span>
-        </div>
-        <div id="follow_button" class="list_nav_buttons">
-            <span class="fittext">Follow</span>
-        </div>
-    </script>
-
-    <!--navigation: story-->
-    <script type="text/x-handlebars-template" id="story_navigation_template">
-        <div id="home_button" class="list_nav_buttons">
-            <span class="fittext">Home</span>
-        </div>
-        <div id="share_button" class="list_nav_buttons">
-             <span class="fittext">Share</span>
-        </div>
-    </script>
-
-    <!--social media: follow-->
-    <script type="text/x-handlebars-template" id="follow_template">
-        <div id="follow_twitter" class="social_button">
-            <img class="social_button_img" src="http://spotbrooklyn.com.s3.amazonaws.com/images/logos/twitter.svg"/>
-        </div>
-        <div id="follow_instagram" class="social_button">
-            <img class="social_button_img" src="http://spotbrooklyn.com.s3.amazonaws.com/images/logos/instagram.svg"/>
-        </div>
-        <div id="follow_email" class="social_button">
-            <img class="social_button_img" src="http://spotbrooklyn.com.s3.amazonaws.com/images/icons/email.svg"/>
-        </div>
-
-    </script>
-
-    <!--social media: share-->
-    <script type="text/x-handlebars-template" id="share_template">
-        <div id="share_twitter" class="social_button">
-            <img class="social_button_img" src="http://spotbrooklyn.com.s3.amazonaws.com/images/logos/twitter.svg"/>
-        </div>
-        <div id="share_facebook" class="social_button">
-            <img class="social_button_img" src="http://spotbrooklyn.com.s3.amazonaws.com/images/logos/facebook.svg"/>
-        </div>
-        <div id="share_email" class="social_button">
-            <img class="social_button_img" src="http://spotbrooklyn.com.s3.amazonaws.com/images/icons/email.svg"/>
-        </div>
     </script>
 
 <!--Dependencies-->
@@ -142,24 +42,13 @@
     <script src="js/libs/underscore.js"></script>
     <script src="js/libs/backbone.js"></script>
     <script src="js/libs/handlebars-v1.3.0.js"></script>
-    <script src="js/libs/mapbox.js"></script>
-    <script src="js/libs/bigtext.js"></script>
-    <script src="js/libs/jquery.fittext.js"></script>
-    <script src="js/libs/jquery.slabtext.js"></script>
     <script src="js/app.js"></script>
     <script src="js/router.js"></script>
     <script src="js/models/storyModel.js"></script>
     <script src="js/collections/storyCollection.js"></script>
-    <script src="js/views/map.js"></script>
-    <script src="js/views/listNavigationView.js"></script>
-    <script src="js/views/storyNavigationView.js"></script>
     <script src="js/views/storyListView.js"></script>
     <script src="js/views/storyListItemView.js"></script>
     <script src="js/views/storyView.js"></script>
-    <script src="js/views/aboutView.js"></script>
-    <script src="js/views/signupView.js"></script>
-    <script src="js/views/followView.js"></script>
-    <script src="js/views/shareView.js"></script>
 
     </body>
 </html>

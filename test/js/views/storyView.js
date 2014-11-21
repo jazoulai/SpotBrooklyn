@@ -1,4 +1,4 @@
-/*jshint strict: false*/
+    /*jshint strict: false*/
 /*globals Backbone: false, L: false, $: false, Handlebars: false, _: false, sbk: false */
 
 sbk.StoryView = Backbone.View.extend({
