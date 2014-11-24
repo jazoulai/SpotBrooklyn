@@ -23,8 +23,9 @@ sbk.AppRouter = Backbone.Router.extend({
         this.contentDiv.append(this.FeelingsView.render().el);
     },
 
-   loadFeelings: function () {
-        this.storiesView = new sbk.StoriesView({collection: this.storiesCollection});
+   loadFeelings: function (feelingId) {
+
+        this.storiesView = new sbk.StoriesView({collection: this.storiesCollection, feelingId: feelingId});
         this.contentDiv.html('');
         this.contentDiv.append(this.storiesView.render().el);
     }

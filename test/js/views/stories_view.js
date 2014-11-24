@@ -4,12 +4,17 @@
 sbk.StoriesView = Backbone.View.extend({
     tagName: 'ul',
     id: 'stories-list',
-    initialize: function () {
-
+    initialize: function (collection) {
+        var feelingId = collection.feelingId;
+        this.collection = collection.collection;
+        var matchingModels = this.collection.filter(function(story){
+            return _.contains(story.get('feelings'), feelingId);
+        });
+        this.filteredCollection = new Backbone.Collection(matchingModels);
         this.collection.on('reset', this.render, this);
     },
     render: function () {
-        _.each(this.collection.models, function (story) {
+        _.each(this.filteredCollection.models, function (story) {
             $(this.el).append(new sbk.StoryView({model: story}).render().el);
         }, this);
 
