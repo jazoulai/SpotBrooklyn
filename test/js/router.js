@@ -12,9 +12,14 @@ sbk.AppRouter = Backbone.Router.extend({
         this.storyCollection = storyCollection;
     },
 
-    loadList: function (id) {
-        this.storyListView = new sbk.StoryListView({collection: this.storyCollection});
-        $('#feelings').html(this.storyListView.render().el);
+    loadList: function () {
+        this.contentDiv = $('#content');
+        this.introView = new sbk.IntroView();
+        this.FeelingsView = new sbk.FeelingsView({collection: this.storyCollection});
+
+        this.contentDiv.html();
+        this.contentDiv.prepend(this.introView.render().el);
+        this.contentDiv.append(this.FeelingsView.render().el);
     },
 
    loadStory: function (storyId) {

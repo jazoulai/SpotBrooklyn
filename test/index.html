@@ -13,19 +13,22 @@
     <div id="header">
         <h1>Spot Brooklyn</h1>
     </div>
-    <div id="intro">
-        <h2>How are you feeling?</h2>
-    </div>
-    <div id="feelings"></div>
-    <div id="nav">
 
-    </div>
+    <div id="content"></div>
+
+    <div id="nav"></div>
 
 <!--HANDLEBARS TEMPLATES-->
 
+    <!--intro view-->
+    <script type="text/x-handlebars-template" id="intro_template">
+        <h2>How are you feeling?</h2>
+        <div id="down-icon"></div>
+    </script>
+
     <!--list item-->
-    <script type="text/x-handlebars-template" id="list_item_template">
-        <div onclick="location.href='#!{{id}}';" id="{{id}}" class="list_item_content">
+    <script type="text/x-handlebars-template" id="feeling_template">
+        <div onclick="location.href='#!{{id}}';">
                 <h1>{{id}}</h1>
         </div>
     </script>
@@ -44,8 +47,9 @@
     <script src="js/router.js"></script>
     <script src="js/models/storyModel.js"></script>
     <script src="js/collections/storyCollection.js"></script>
-    <script src="js/views/storyListView.js"></script>
-    <script src="js/views/storyListItemView.js"></script>
+    <script src="js/views/introView.js"></script>
+    <script src="js/views/feelings_view.js"></script>
+    <script src="js/views/feeling_view.js"></script>
     <script src="js/views/storyView.js"></script>
 
     </body>
