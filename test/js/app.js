@@ -4,10 +4,12 @@
 var sbk = sbk || {};
 
 $(document).ready(function () {
-    var storyCollection = new sbk.StoryCollection();
-    $.when(storyCollection.fetch())
+    var feelingsCollection = new sbk.FeelingsCollection();
+    var storiesCollection = new sbk.StoriesCollection();
+    $.when(feelingsCollection.fetch(),
+           storiesCollection.fetch())
         .then(function () {
-            sbk.app = new sbk.AppRouter(storyCollection);
+            sbk.app = new sbk.AppRouter(feelingsCollection, storiesCollection);
             Backbone.history.start();
         });
 });

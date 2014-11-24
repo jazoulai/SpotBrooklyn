@@ -10,8 +10,8 @@ sbk.FeelingsView = Backbone.View.extend({
         this.collection.on('reset', this.render, this);
     },
     render: function () {
-        _.each(this.filteredCollection.models, function (story) {
-            $(this.el).append(new sbk.FeelingView({model: story}).render().el);
+        _.each(this.filteredCollection.models, function (feeling) {
+            $(this.el).append(new sbk.FeelingView({model: feeling}).render().el);
         }, this);
 
         return this;

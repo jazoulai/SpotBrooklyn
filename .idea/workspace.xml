@@ -2,9 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe0408b6-eeb5-4738-b11d-2e853cd5eeb6" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/js/data/feelings.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/js/collections/storiesCollection.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/js/views/story_view.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/js/collections/storyCollection.js" afterPath="$PROJECT_DIR$/test/js/collections/feelingsCollection.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/js/models/spotModel.js" afterPath="$PROJECT_DIR$/test/js/models/feelingModel.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/js/views/introView.js" afterPath="$PROJECT_DIR$/test/js/views/intro_view.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/js/views/storyView.js" afterPath="$PROJECT_DIR$/test/js/views/stories_view.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/js/app.js" afterPath="$PROJECT_DIR$/test/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/js/views/feeling_view.js" afterPath="$PROJECT_DIR$/test/js/views/feeling_view.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/js/views/feelings_view.js" afterPath="$PROJECT_DIR$/test/js/views/feelings_view.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/index.html" afterPath="$PROJECT_DIR$/test/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/js/router.js" afterPath="$PROJECT_DIR$/test/js/router.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/js/data/stories.json" afterPath="$PROJECT_DIR$/test/js/data/stories.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="backbone_tutorial.iws" />
@@ -29,21 +39,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/css/styles.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="218" max-vertical-offset="1144">
-              <caret line="25" column="15" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.548388" vertical-offset="315" max-vertical-offset="1342">
-              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state vertical-scroll-proportion="-9.709678" vertical-offset="249" max-vertical-offset="1408">
+              <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -52,18 +52,18 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
-              <caret line="6" column="52" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="440">
+              <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="router.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="router.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/js/router.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="770">
-              <caret line="0" column="24" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.49892008" vertical-offset="0" max-vertical-offset="926">
+              <caret line="21" column="60" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -72,50 +72,59 @@
       <file leaf-file-name="stories.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/js/data/stories.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.451612" vertical-offset="0" max-vertical-offset="1738">
-              <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
-              <folding />
+            <state vertical-scroll-proportion="-16.32258" vertical-offset="22" max-vertical-offset="1034">
+              <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+              <folding>
+                <marker date="1416851467000" expanded="true" signature="173:328" placeholder="{&quot;id&quot;: &quot;story_2&quot;...}" />
+                <marker date="1416851467000" expanded="true" signature="269:322" placeholder="[...]" />
+                <marker date="1416851467000" expanded="true" signature="334:487" placeholder="{&quot;id&quot;: &quot;story_3&quot;...}" />
+                <marker date="1416851467000" expanded="true" signature="429:481" placeholder="[...]" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="storyCollection.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/js/collections/storyCollection.js">
+      <file leaf-file-name="storyModel.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/js/models/storyModel.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="264">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="feelings_view.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/js/views/feelings_view.js">
+      <file leaf-file-name="storiesCollection.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/js/collections/storiesCollection.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2613391" vertical-offset="0" max-vertical-offset="926">
-              <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="264">
+              <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="feeling_view.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/js/views/feeling_view.js">
+      <file leaf-file-name="stories_view.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/js/views/stories_view.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="528">
-              <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="storyView.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/js/views/storyView.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="352">
-              <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="506">
+              <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
               <folding>
                 <element signature="e#4#28#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="story_view.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/js/views/story_view.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="528">
+              <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -134,17 +143,24 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test/js/data/stories.json" />
         <option value="$PROJECT_DIR$/test/css/styles.css" />
         <option value="$PROJECT_DIR$/test/js/views/storyView.js" />
         <option value="$PROJECT_DIR$/test/js/views/introView.js" />
         <option value="$PROJECT_DIR$/test/js/views/storyListItemView.js" />
         <option value="$PROJECT_DIR$/test/js/views/storyListView.js" />
+        <option value="$PROJECT_DIR$/test/js/views/story_view.js" />
+        <option value="$PROJECT_DIR$/test/js/views/stories_view.js" />
+        <option value="$PROJECT_DIR$/test/js/collections/storyCollection.js" />
+        <option value="$PROJECT_DIR$/test/js/data/feelings.json" />
+        <option value="$PROJECT_DIR$/test/js/models/feelingsModel.js" />
+        <option value="$PROJECT_DIR$/test/js/collections/feelingsCollection.js" />
+        <option value="$PROJECT_DIR$/test/js/data/stories.json" />
         <option value="$PROJECT_DIR$/test/index.html" />
         <option value="$PROJECT_DIR$/test/js/views/feeling_view.js" />
+        <option value="$PROJECT_DIR$/test/js/views/feelings_view.js" />
+        <option value="$PROJECT_DIR$/test/js/collections/storiesCollection.js" />
         <option value="$PROJECT_DIR$/test/js/app.js" />
         <option value="$PROJECT_DIR$/test/js/router.js" />
-        <option value="$PROJECT_DIR$/test/js/views/feelings_view.js" />
       </list>
     </option>
   </component>
@@ -306,6 +322,50 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpotBrooklyn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spotbrooklyn.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpotBrooklyn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spotbrooklyn.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="collections" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -323,10 +383,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/test/js/views" />
       <recent name="$PROJECT_DIR$/test/js/models" />
       <recent name="$PROJECT_DIR$/test/js/collections" />
       <recent name="$PROJECT_DIR$/test/js/data" />
+      <recent name="$PROJECT_DIR$/test/js/views" />
       <recent name="$PROJECT_DIR$/test/js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -457,23 +517,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1144">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="176" max-vertical-offset="1276">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/js/data/stories.json">
+    <entry file="file://$PROJECT_DIR$/test/js/data/feelings.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="572" max-vertical-offset="1738">
           <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
@@ -489,7 +533,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/js/collections/storyCollection.js">
+    <entry file="file://$PROJECT_DIR$/test/js/collections/feelingsCollection.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="264">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -521,7 +565,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/js/views/storyView.js">
+    <entry file="file://$PROJECT_DIR$/test/js/views/stories_view.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="220" max-vertical-offset="352">
           <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
@@ -584,7 +628,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/js/data/stories.json">
+    <entry file="file://$PROJECT_DIR$/test/js/data/feelings.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="946" max-vertical-offset="1298">
           <caret line="43" column="22" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
@@ -662,13 +706,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/js/models/spotModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="904">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/views/spotNavigationView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="550">
@@ -740,7 +777,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/js/views/introView.js">
+    <entry file="file://$PROJECT_DIR$/test/js/views/intro_view.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="352">
           <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
@@ -764,76 +801,119 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
-          <caret line="6" column="52" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/js/models/storyModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.095032394" vertical-offset="0" max-vertical-offset="926">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/js/collections/storyCollection.js">
+    <entry file="file://$PROJECT_DIR$/test/js/models/feelingModel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="264">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/js/data/stories.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.451612" vertical-offset="0" max-vertical-offset="1738">
-          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/js/router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="770">
-          <caret line="0" column="24" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.548388" vertical-offset="315" max-vertical-offset="1342">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/js/views/storyView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="352">
-          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
-            <element signature="e#4#28#0" expanded="false" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/js/views/feelings_view.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="528">
+          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/js/views/feeling_view.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="528">
-          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+          <caret line="6" column="64" selection-start-line="6" selection-start-column="64" selection-end-line="6" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/js/views/feelings_view.js">
+    <entry file="file://$PROJECT_DIR$/test/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2613391" vertical-offset="0" max-vertical-offset="926">
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+        <state vertical-scroll-proportion="-9.709678" vertical-offset="249" max-vertical-offset="1408">
+          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/js/data/feelings.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.645162" vertical-offset="0" max-vertical-offset="550">
+          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/js/data/stories.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.32258" vertical-offset="22" max-vertical-offset="1034">
+          <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+          <folding>
+            <marker date="1416851467000" expanded="true" signature="173:328" placeholder="{&quot;id&quot;: &quot;story_2&quot;...}" />
+            <marker date="1416851467000" expanded="true" signature="269:322" placeholder="[...]" />
+            <marker date="1416851467000" expanded="true" signature="334:487" placeholder="{&quot;id&quot;: &quot;story_3&quot;...}" />
+            <marker date="1416851467000" expanded="true" signature="429:481" placeholder="[...]" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/js/models/storyModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="264">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/js/collections/feelingsCollection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14254859" vertical-offset="0" max-vertical-offset="926">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/js/collections/storiesCollection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="264">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/js/views/stories_view.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="506">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+          <folding>
+            <element signature="e#4#28#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/js/views/story_view.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="528">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="440">
+          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/js/router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49892008" vertical-offset="0" max-vertical-offset="926">
+          <caret line="21" column="60" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="60" />
           <folding />
         </state>
       </provider>

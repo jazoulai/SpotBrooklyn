@@ -1,74 +1,42 @@
 [
     {
-        "id" : "tired"
+        "id" : "story_1",
+        "title" : "Are you tired and empowered?",
+        "feelings" : [
+            "tired",
+            "empowered"
+        ]
     },
     {
-        "id" : "empowered"
+        "id" : "story_2",
+        "title" : "Are you tired and cranky?",
+        "feelings" : [
+            "tired",
+            "cranky"
+        ]
     },
     {
-        "id" : "creative"
+        "id" : "story_3",
+        "title" : "Are you drunk and ranty?",
+        "feelings" : [
+            "drunk",
+            "ranty"
+        ]
     },
     {
-        "id" : "cranky"
+        "id" : "story_4",
+        "title" : "Are you empowered and ranty?",
+        "feelings" : [
+            "empowered",
+            "ranty"
+        ]
     },
     {
-        "id" : "ranty"
-    },
-    {
-        "id" : "freezing!"
-    },
-    {
-        "id" : "drunk"
-    },
-    {
-        "id" : "bored"
-    },
-    {
-        "id" : "offended"
-    },
-    {
-        "id" : "adventurous"
-    },
-    {
-        "id" : "lonely"
-    },
-    {
-        "id" : "curious"
-    },
-    {
-        "id" : "proud"
-    },
-    {
-        "id" : "angry"
-    },
-    {
-        "id" : "romantic"
-    },
-    {
-        "id" : "hungry"
-    },
-    {
-        "id" : "pumped"
-    },
-    {
-        "id" : "artsy"
-    },
-    {
-        "id" : "lost"
-    },
-    {
-        "id" : "none of your business"
-    },
-    {
-        "id" : "generous"
-    },
-    {
-        "id" : "moody"
-    },
-    {
-        "id" : "scared"
-    },
-    {
-        "id" : "sweaty"
+        "id" : "story_5",
+        "title" : "Are you empowered and creative?",
+        "feelings" : [
+            "empowered",
+            "creative"
+        ]
     }
 ]
