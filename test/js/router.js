@@ -4,8 +4,7 @@
 sbk.AppRouter = Backbone.Router.extend({
     routes: {
         "": "loadList",
-        "!": "loadList",
-        "!:feelingsId": "loadFeelings"
+        "!": "loadList"
     },
 
     initialize: function (feelingsCollection, storiesCollection) {
@@ -16,16 +15,10 @@ sbk.AppRouter = Backbone.Router.extend({
     loadList: function () {
         this.contentDiv = $('#content');
         this.introView = new sbk.IntroView();
-        this.FeelingsView = new sbk.FeelingsView({collection: this.feelingsCollection});
+        this.feelingsView = new sbk.FeelingsView({collection: this.feelingsCollection});
 
         this.contentDiv.html('');
         this.contentDiv.prepend(this.introView.render().el);
-        this.contentDiv.append(this.FeelingsView.render().el);
-
-    },
-
-   loadFeelings: function (feelingId) {
-        this.storiesView = new sbk.StoriesView({collection: this.storiesCollection, feelingId: feelingId});
-        this.contentDiv.append(this.storiesView.render().el);
+        this.contentDiv.append(this.feelingsView.render().el);
     }
 });

@@ -41,6 +41,13 @@ body, body > *, #content > * {
     margin: 10vh 0;
     height: auto;
 }
-/*
 
+/*
+*
+*
+*/
+
+#intro, #feelings-list {
+    height: calc(80vh/2);
+}
 
