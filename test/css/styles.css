@@ -1,47 +1,46 @@
-body, html {
-    height: 100%;
-    font-family: "proxima-nova",sans-serif;
-    font-style: normal;
-    font-weight: 100;
-    font-size: 18px;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-body{
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-    position: absolute;
-}
-body, html, #header, #intro, #nav {
-    width: 100%;
-}
-body, html, #header, #intro, #nav, #feelings, h1 {
+/*
+
+
+*/
+
+
+* {
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
+body {
+    font-family: "proxima-nova", sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 1em;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+body, body > *, #content > * {
+    width: 100vw;
+}
 #header {
-    height: 10%;
+    height: 10vh;
     background-color: #003650;
     top: 0;
 }
+#header h1 {
+    font-size: 8vh;
+}
 #header, #nav {
     position: fixed;
-}
-#intro {
-    height: 80%;
-}
-#intro p {
-    vertical-align: middle;
-}
-#feelings {
-    height: auto;
 }
 #nav {
     height: 10%;
     background-color: #003650;
     bottom: 0;
 }
-#down-icon {
-    width: 30px;
-    height: 30px;
-    background-color: #990000;
+#content {
+    margin: 10vh 0;
+    height: auto;
 }
+/*
+
+

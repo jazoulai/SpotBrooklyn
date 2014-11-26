@@ -21,12 +21,11 @@ sbk.AppRouter = Backbone.Router.extend({
         this.contentDiv.html('');
         this.contentDiv.prepend(this.introView.render().el);
         this.contentDiv.append(this.FeelingsView.render().el);
+
     },
 
    loadFeelings: function (feelingId) {
-
         this.storiesView = new sbk.StoriesView({collection: this.storiesCollection, feelingId: feelingId});
-        this.contentDiv.html('');
         this.contentDiv.append(this.storiesView.render().el);
     }
 });

@@ -2,7 +2,7 @@
 /*globals Backbone: false, L: false, $: false, Handlebars: false, _: false, sbk: false */
 
 sbk.FeelingsView = Backbone.View.extend({
-    tagName: 'ul',
+    tagName: 'div',
     id: 'feelings-list',
     initialize: function () {
         var filteredArray = this.collection.reset(this.collection.shuffle(), {silent:true});
