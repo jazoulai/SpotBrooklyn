@@ -27,8 +27,14 @@ body, body > *, #content > * {
     top: 0;
     position: fixed;
 }
-#header {
-    font-size: 8vh;
+#header img {
+    width: 10vh;
+    height: 10vh;
+    background-color: #990000;
+    float: left;
+}
+#header h1 {
+    float: right;
 }
 #content {
     margin: 10vh 0;
@@ -37,4 +43,35 @@ body, body > *, #content > * {
 #content > * {
     height: 90vh;
 }
+#intro {
+    text-align: center;
 
+}
+#intro > * {
+    width: 100vw;
+    height: 30vh;
+}
+#problem {
+    background-color: #0054a3;
+}
+#problem p {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#solution {
+    background-color: #003650;
+}
+#solution h1 {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#first-step {
+    background-color: #005983;
+}
+#first-step p {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
