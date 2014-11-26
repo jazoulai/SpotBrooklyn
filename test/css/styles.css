@@ -25,29 +25,16 @@ body, body > *, #content > * {
     height: 10vh;
     background-color: #003650;
     top: 0;
-}
-#header h1 {
-    font-size: 8vh;
-}
-#header, #nav {
     position: fixed;
 }
-#nav {
-    height: 10%;
-    background-color: #003650;
-    bottom: 0;
+#header {
+    font-size: 8vh;
 }
 #content {
     margin: 10vh 0;
     height: auto;
 }
-
-/*
-*
-*
-*/
-
-#intro, #feelings-list {
-    height: calc(80vh/2);
+#content > * {
+    height: 90vh;
 }
 

@@ -7,18 +7,20 @@ sbk.AppRouter = Backbone.Router.extend({
         "!": "loadList"
     },
 
-    initialize: function (feelingsCollection, storiesCollection) {
+    initialize: function (feelingsCollection) {
         this.feelingsCollection = feelingsCollection;
-        this.storiesCollection = storiesCollection;
     },
 
     loadList: function () {
         this.contentDiv = $('#content');
         this.introView = new sbk.IntroView();
         this.feelingsView = new sbk.FeelingsView({collection: this.feelingsCollection});
+        this.votingExplainedView = new sbk.VotingExplainedView();
 
         this.contentDiv.html('');
         this.contentDiv.prepend(this.introView.render().el);
+        this.contentDiv.append(this.votingExplainedView.render().el);
         this.contentDiv.append(this.feelingsView.render().el);
+
     }
 });
