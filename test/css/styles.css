@@ -23,14 +23,15 @@ body, body > *, #content > * {
 }
 #header {
     height: 10vh;
-    background-color: #003650;
     top: 0;
     position: fixed;
+    z-index: 100;
+    border: solid 1px #000000;
 }
 #header img {
     width: 10vh;
     height: 10vh;
-    background-color: #990000;
+    border: solid 1px #000000;
     float: left;
 }
 #header h1 {
@@ -61,16 +62,25 @@ body, body > *, #content > * {
     width: 100vw;
     height: 90vh;
     left:0;
-    content: "text";
+    content: "";
     z-index: -1;
-    background-image: url('../images/suspicious_young_woman.jpg');
+    background-image: url('../images/peeping-neighbor.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    -webkit-filter: blur(2px) grayscale(100%);
+    -webkit-filter: blur(0px) grayscale(100%) contrast(50%);
 }
-#problem div {
+#bigtext {
     width: 100vw;
     height: 90vh;
     margin: 0 auto;
+    padding: 5%;
+    color: white;
+}
+#bigtext span {
+    line-height: 2em;
+}
+#button {
+    position: absolute;
+    bottom: 10vh;
 }
