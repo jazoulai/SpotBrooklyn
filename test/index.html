@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
-    <title>SpotBrooklyn.com Vader</title>
+    <title>SpotBrooklyn.com Vader 2</title>
     <link rel="stylesheet" href="css/styles.css"/>
 </head>
     <body>
@@ -27,31 +27,29 @@
     <script type="text/x-handlebars-template" id="intro_template">
 
         <div id="problem">
-            <div id="bigtext">
-                <span>We can tweet our thoughts to the world,<br>
-                but we still don't talk to our neighbors.</span>
-                <button id="button" type="button">Let's Talk, Brooklyn</button>
+            <div id="bigtext-container">
+                <div id="bigtext">
+                    <span>BROOKLYN'S FORUM FOR</span>
+                    <span>DISCUSSION &</span>
+                    <span>CREATIVITY</span>
+                </div>
             </div>
+            <div id="bigtext2-container">
+                <div id="bigtext2">
+                    <button type="button">Let's talk, Neighbor.</button>
+                </div>
+            </div>
+
+
         </div>
 
     </script>
 
-    <!--explanation of the voting system-->
     <script type="text/x-handlebars-template" id="voting-explained">
-        <p>Here are a few conversation starters. Vote them up or down. Or, suggest your own.</p>
+
+
     </script>
 
-    <!--list item-->
-    <script type="text/x-handlebars-template" id="feeling-template">
-        <ul>
-            {{id}}
-        </ul>
-    </script>
-
-    <!--story item-->
-    <script type="text/template" id="story-template">
-        <h1>{{title}}</h1>
-    </script>
 
 
 
@@ -68,8 +66,7 @@
     <script src="js/collections/feelingsCollection.js"></script>
     <script src="js/collections/storiesCollection.js"></script>
     <script src="js/views/intro_view.js"></script>
-    <script src="js/views/feelings_view.js"></script>
-    <script src="js/views/feeling_view.js"></script>
     <script src="js/views/voting_explained_view.js"></script>
+
     </body>
 </html>
