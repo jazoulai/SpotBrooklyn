@@ -48,30 +48,29 @@ body, body > *, #content > * {
 
 }
 #intro > * {
-    width: 100vw;
-    height: 30vh;
+    height: 45vh;
 }
 #problem {
-    background-color: #0054a3;
+    position: absolute;
+    top: 10vh;
+    width: 100vw;
+    height: 90vh;
 }
-#problem p {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+#problem:before {
+    position: absolute;
+    width: 100vw;
+    height: 90vh;
+    left:0;
+    content: "text";
+    z-index: -1;
+    background-image: url('../images/suspicious_young_woman.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    -webkit-filter: blur(2px) grayscale(100%);
 }
-#solution {
-    background-color: #003650;
-}
-#solution h1 {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-}
-#first-step {
-    background-color: #005983;
-}
-#first-step p {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+#problem div {
+    width: 100vw;
+    height: 90vh;
+    margin: 0 auto;
 }
