@@ -5,11 +5,9 @@ var sbk = sbk || {};
 
 $(document).ready(function () {
     var feelingsCollection = new sbk.FeelingsCollection();
-    var storiesCollection = new sbk.StoriesCollection();
-    $.when(feelingsCollection.fetch(),
-           storiesCollection.fetch())
+    $.when(feelingsCollection.fetch())
         .then(function () {
-            sbk.app = new sbk.AppRouter(feelingsCollection, storiesCollection);
+            sbk.app = new sbk.AppRouter(feelingsCollection);
             Backbone.history.start();
         });
 });

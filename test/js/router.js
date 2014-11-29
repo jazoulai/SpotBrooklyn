@@ -19,8 +19,8 @@ sbk.AppRouter = Backbone.Router.extend({
         this.contentDiv.html('');
         this.contentDiv.prepend(this.introView.render().el);
         this.contentDiv.append(this.votingExplained.render().el);
-        $('#bigtext').bigtext();
-        $('#button').bigtext();
+        $('.bigtext').bigtext();
+
 
     }
 });
