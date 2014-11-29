@@ -4,7 +4,7 @@
 var sbk = sbk || {};
 
 $(document).ready(function () {
-    var storyCollection = new sbk.FeelingsCollection();
+    var storyCollection = new sbk.StoriesCollection();
     $.when(storyCollection.fetch())
         .then(function () {
             sbk.app = new sbk.AppRouter(storyCollection);

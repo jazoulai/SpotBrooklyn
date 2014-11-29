@@ -1,42 +1,44 @@
 [
     {
-        "id" : "story_1",
-        "title" : "Are you tired and empowered?",
-        "feelings" : [
-            "tired",
-            "empowered"
-        ]
+        "id" : "tired"
     },
     {
-        "id" : "story_2",
-        "title" : "Are you tired and cranky?",
-        "feelings" : [
-            "tired",
-            "cranky"
-        ]
+        "id" : "empowered"
     },
     {
-        "id" : "story_3",
-        "title" : "Are you drunk and ranty?",
-        "feelings" : [
-            "drunk",
-            "ranty"
-        ]
+        "id" : "creative"
     },
     {
-        "id" : "story_4",
-        "title" : "Are you empowered and ranty?",
-        "feelings" : [
-            "empowered",
-            "ranty"
-        ]
+        "id" : "cranky"
     },
     {
-        "id" : "story_5",
-        "title" : "Are you empowered and creative?",
-        "feelings" : [
-            "empowered",
-            "creative"
-        ]
+        "id" : "ranty"
+    },
+    {
+        "id" : "drunk"
+    },
+    {
+        "id" : "dont1"
+    },
+    {
+        "id" : "dont2"
+    },
+    {
+        "id" : "dont3"
+    },
+    {
+        "id" : "dont4"
+    },
+    {
+        "id" : "dont"
+    },
+    {
+        "id" : "dont5"
+    },
+    {
+        "id" : "dont6"
+    },
+    {
+        "id" : "dont7"
     }
 ]
