@@ -12,22 +12,25 @@
     margin: 0;
     border: 0;
 }
-html, body {
+html {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+body {
     font-family: "proxima-nova", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 1em;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-    width: 100%;
-    height: 100%;
+
+
 }
 #content {
     position: absolute;
-    top: 0;
+    top: 50px;
     width: 100%;
-    height: 100%;
+    height: calc(100% - 50px);
+
 }
 #header {
     width: 100%;
@@ -50,11 +53,8 @@ html, body {
     text-align: center;
     width: 100%;
     height: 100%;
-    margin-top: 50px;
 }
 #problem {
-    position: absolute;
-    top: 50px;
     width: 100%;
     height: 100%;
 }
@@ -72,41 +72,43 @@ html, body {
     -webkit-filter: blur(1px) grayscale(100%) contrast(50%);
 }
 #bigtext-container {
+    display: table;
     width: 100%;
     height: 50%;
-    margin: 0 auto;
-}
-#bigtext2-container {
-    width: 100%;
-    height: 50%;
-    margin: 0 auto;
+    background-color: #0000ee;
 }
 #bigtext {
     width: 100%;
-    height: auto;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
     color: white;
-    padding: 5%;
+    padding: 0 5%;
+}
+#bigtext2-container {
+    display: table;
+    width: 100%;
+    height: 50%;
+    background-color: #0054a3;
+}
+#bigtext2 {
+    width: 100%;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
 }
 #bigtext span, #bigtext2 span {
     line-height: 1em;
 }
-#bigtext2 {
-    width: 100%;
-    height: auto;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-}
+
 #bigtext2 button {
-    Width: 40%;
-    margin-left: 30%;
+    width: 40%;
+
     appearance: none;
     background-color: #9e061b;
     color: white;
-    padding: 5px;
+    padding: 5%;
     border-radius: 5px;
 
 }
