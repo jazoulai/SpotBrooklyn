@@ -176,3 +176,48 @@ form {
     margin-top: 10px;
     padding: 5px;
 }
+
+/*
+    Following Explained
+*/
+
+#following-explained {
+    width: 100%;
+    height: 50%;
+}
+#following-explained .centered-container {
+    height: 100%;
+}
+
+/*
+    Follow
+*/
+
+#follow {
+    width: 100%;
+    height: 50%;
+    background-color: #9e784b;
+}
+
+/*
+    Sharing Explained
+*/
+
+#sharing-explained {
+    width: 100%;
+    height: 50%;
+}
+#sharing-explained .centered-container {
+    height: 100%;
+}
+
+/*
+    Share
+*/
+
+#share {
+    width: 100%;
+    height: 50%;
+    background-color: #003650;
+}
+
