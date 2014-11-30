@@ -16,11 +16,15 @@ sbk.AppRouter = Backbone.Router.extend({
         this.introView = new sbk.IntroView();
         this.votingExplainedView = new sbk.VotingExplainedView();
         this.storyListView = new sbk.StoryListView({collection: this.storyCollection});
+        this.signupExplainedView = new sbk.SignupExplainedView();
+        this.signupFormView = new sbk.SignupFormView();
 
         this.contentDiv.html('');
         this.contentDiv.prepend(this.introView.render().el);
         this.contentDiv.append(this.votingExplainedView.render().el);
         this.contentDiv.append(this.storyListView.render().el);
+        this.contentDiv.append(this.signupExplainedView.render().el);
+        this.contentDiv.append(this.signupFormView.render().el);
         $('.bigtext').bigtext();
 
 

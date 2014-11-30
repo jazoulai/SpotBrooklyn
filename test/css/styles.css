@@ -91,8 +91,6 @@ html {
 */
 
 #voting-explained {
-    position: absolute;
-    top: 100%;
     width: 100%;
     height: calc(50% - 50px);
 }
@@ -105,8 +103,6 @@ html {
 */
 
 #story-list {
-    position: absolute;
-    top: 150%;
     width: 100%;
     background-color: #003650;
     padding-top: 10px;
@@ -141,4 +137,42 @@ html {
 }
 .dislike {
     background-color: #b51118;
+}
+
+/*
+    Signup Explained
+*/
+
+#signup-explained {
+    width: 100%;
+    height: 50%;
+}
+#signup-explained .centered-container {
+    height: 100%;
+}
+
+/*
+    Signup Form
+*/
+
+#signup-form {
+    width: 100%;
+    height: 50%;
+    display: -webkit-flex;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+}
+form {
+    width: 70%;
+}
+[type=text] {
+    width: 100%;
+    height: 100px;
+    border: 1px solid black;
+}
+[type=submit] {
+    width: 40%;
+    margin-left: 60%;
+    margin-top: 10px;
+    padding: 5px;
 }

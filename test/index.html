@@ -23,7 +23,6 @@
 
 <!--HANDLEBARS TEMPLATES-->
 
-    <!--intro view-->
     <script type="text/x-handlebars-template" id="intro_template">
             <div class="centered-container">
                 <div class="bigtext">
@@ -41,7 +40,7 @@
             </div>
     </script>
 
-    <script type="text/x-handlebars-template" id="voting-explained">
+    <script type="text/x-handlebars-template" id="voting-explained-template">
         <div class="centered-container">
             <div class="bigtext">
                 <span>Which topics matter to you?</span>
@@ -52,17 +51,34 @@
 
     <script type="text/x-handlebars-template" id="story-list-item-template">
         <div class="story-list-item">
-
-            <div class="story-list-item-image like"></div>
-
+            <div class="story-list-item-image like">
+            </div>
             <div class="story-list-item-title">
                 <span>{{id}}</span>
             </div>
-
             <div class="story-list-item-image dislike"></div>
         </div>
-
     </script>
+
+    <script type="text/x-handlebars-template" id="signup-explained-template">
+        <div class="centered-container">
+            <div class="bigtext">
+                <span>Why should you signup?</span>
+                <p class="bigtext-exempt">Because it would be super awesome of you, and we know you wouldn't let us down.</p>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/x-handlebars-template" id="signup-form-template">
+            <form action="">
+                <input id="test" type="text" placeholder="wow us!" name="wow">
+                <input type="submit" value="send!">
+            </form>
+    </script>
+
+
+
+
 
 
 
@@ -81,6 +97,8 @@
     <script src="js/views/voting_explained_view.js"></script>
     <script src="js/views/story_list_view.js"></script>
     <script src="js/views/story_list_item_view.js"></script>
+    <script src="js/views/signup_explained_view.js"></script>
+    <script src="js/views/signup_form_view.js"></script>
 
     </body>
 </html>
