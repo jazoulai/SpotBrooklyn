@@ -108,25 +108,37 @@ html {
     position: absolute;
     top: 150%;
     width: 100%;
-    height: auto;
-}
-.story-list-item {
-    background-color: #0054a3;
-    width: 100%;
-    height: 50px;
-    border: 1px solid black;
+    background-color: #003650;
+    padding-top: 10px;
 }
 .story-list-item-container {
-    text-align: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.story-list-item {
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+    padding: 5px;
 }
 .story-list-item-title {
-    width: calc(100% - 100px);
-    height: 50px;
-    float: left;
+    width: 65%;
+    padding: 5px;
+    text-align: center;
 }
 .story-list-item-image {
+    width: 15%;
+    height: 50px;
+    margin: 5px 0;
+}
+.like {
     background-color: #2a9e26;
-    height: 40px;
-    width: 50px;
-    float: left;
+}
+.dislike {
+    background-color: #b51118;
 }
