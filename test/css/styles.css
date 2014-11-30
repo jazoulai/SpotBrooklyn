@@ -140,22 +140,22 @@ html {
 }
 
 /*
-    Signup Explained
+    Contribution Explained
 */
 
-#signup-explained {
+#contribution-explained {
     width: 100%;
     height: 50%;
 }
-#signup-explained .centered-container {
+#contribution-explained .centered-container {
     height: 100%;
 }
 
 /*
-    Signup Form
+    Contribution Form
 */
 
-#signup-form {
+#contribution-form {
     width: 100%;
     height: 50%;
     display: -webkit-flex;
