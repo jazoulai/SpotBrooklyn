@@ -14,45 +14,55 @@ html {
     font-family: "proxima-nova", sans-serif;
     font-style: normal;
     font-weight: 400;
+    width: 100vw;
+    height: 100vh;
 }
+#body {
+    width: 100%;
+    height: auto;
+}
+/*
+    header_view.js
+*/
 #header {
     position: fixed;
-    width: 100%;
-    height: 50px;
+    top: 0;
+    width: 100vw;
+    height: 10vh;
     z-index: 100;
     background-color: white;
 }
-#header img {
-    width: 40px;
+#company-logo {
+    width: 20vw;
     height: 100%;
     float: left;
     background-color: #161c9e;
 }
-#header h1 {
+#company-name {
     float: right;
+    width: 80vw;
+    text-align: center;
 }
-#content {
-    position: absolute;
-    top: 50px;
-    width: 100%;
-    height: calc(100% - 50px);
-}
-
 
 /*
-    Intro
+    introview.js
 */
-
 #intro {
+    margin-top: 10vh;
     text-align: center;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 90vh;
     color: white;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
 }
 #intro:before {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 90vh;
+    top: 10vh;
     left:0;
     content: "";
     z-index: -1;
@@ -61,23 +71,19 @@ html {
     background-position: center;
     background-size: cover;
     -webkit-filter: blur(1px) grayscale(100%) contrast(50%);
+
 }
-.centered-container {
-    display: table;
+#intro > div {
     width: 100%;
-}
-#intro .centered-container {
     height: 50%;
-}
-.bigtext {
-    width: 100%;
-    display: table-cell;
-    vertical-align: middle;
-    padding: 5%;
+    padding: 0 5%;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
 }
 #button {
     width: 50%;
-    margin-left: 25%;
     appearance: none;
     background-color: #9e061b;
     color: white;
@@ -91,11 +97,12 @@ html {
 */
 
 #voting-explained {
-    width: 100%;
-    height: calc(50% - 50px);
-}
-#voting-explained .centered-container {
-    height: 100%;
+    width: 100vw;
+    height: 90vh;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
 }
 
 /*

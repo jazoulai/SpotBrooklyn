@@ -9,44 +9,37 @@
     <body>
 
 
-<!--HTML-->
-    <div id="header">
-        <img src=""/>
-        <h1>Spot Brooklyn</h1>
-    </div>
-
-    <div id="content">
-
-    </div>
-
 
 
 <!--HANDLEBARS TEMPLATES-->
 
+    <script type="text/x-handlebars-template" id="header-template">
+        <div id="company-logo">
+            <img src=""/>
+        </div>
+        <div id="company-name" class="bigtext">
+            <h1>Spot Brooklyn</h1>
+        </div>
+    </script>
+
     <script type="text/x-handlebars-template" id="intro_template">
-            <div class="centered-container">
-                <div class="bigtext">
-                    <span>BROOKLYN'S ONLINE PLACE FOR</span>
-                    <span>CONVERSATION &</span>
-                    <span>CREATIVITY</span>
-                </div>
-            </div>
-            <div class="centered-container">
-                <div class="bigtext">
-                    <button class="bigtext" id="button" type="button">
-                        <span>Join us, neighbor.</span>
-                    </button>
-                </div>
-            </div>
+        <div class="bigtext">
+            <span>BROOKLYN'S ONLINE PLACE FOR</span>
+            <span>CONVERSATION &</span>
+            <span>CREATIVITY</span>
+        </div>
+        <div>
+            <button class="bigtext" id="button" type="button">
+                <span>Join us, neighbor.</span>
+            </button>
+        </div>
     </script>
 
     <script type="text/x-handlebars-template" id="voting-explained-template">
-        <div class="centered-container">
             <div class="bigtext">
                 <span>Which topics matter to you?</span>
                 <p class="bigtext-exempt">Vote up or down on the topics below to help us make Spot Brooklyn work for you.</p>
             </div>
-        </div>
     </script>
 
     <script type="text/x-handlebars-template" id="story-list-item-template">
@@ -119,6 +112,7 @@
     <script src="js/router.js"></script>
     <script src="js/models/storyModel.js"></script>
     <script src="js/collections/storiesCollection.js"></script>
+    <script src="js/views/header_view.js"></script>
     <script src="js/views/intro_view.js"></script>
     <script src="js/views/voting_explained_view.js"></script>
     <script src="js/views/story_list_view.js"></script>
