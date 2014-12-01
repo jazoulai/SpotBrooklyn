@@ -98,7 +98,7 @@ html {
 
 #voting-explained {
     width: 100vw;
-    height: 90vh;
+    height: 50vh;
     display: -webkit-flex;
     -webkit-flex-direction: column;
     -webkit-justify-content: center;
@@ -152,11 +152,9 @@ html {
 */
 
 #contribution-explained {
-    width: 100%;
-    height: 50%;
-}
-#contribution-explained .centered-container {
-    height: 100%;
+    width: 100vw;
+    height: 45vh;
+    margin-top: 10vh;
 }
 
 /*
@@ -164,8 +162,8 @@ html {
 */
 
 #contribution-form {
-    width: 100%;
-    height: 50%;
+    width: 100vw;
+    height: 45vh;
     display: -webkit-flex;
     -webkit-justify-content: center;
     -webkit-align-items: center;
@@ -190,11 +188,9 @@ form {
 */
 
 #following-explained {
-    width: 100%;
-    height: 50%;
-}
-#following-explained .centered-container {
-    height: 100%;
+    width: 100vw;
+    height: 45vh;
+    margin-top: 10vh;
 }
 
 /*
@@ -202,8 +198,8 @@ form {
 */
 
 #follow {
-    width: 100%;
-    height: 50%;
+    width: 100vw;
+    height: 45vh;
     background-color: #9e784b;
 }
 
@@ -212,20 +208,19 @@ form {
 */
 
 #sharing-explained {
-    width: 100%;
-    height: 50%;
+    width: 100vw;
+    height: 45vh;
+    margin-top: 10vh;
 }
-#sharing-explained .centered-container {
-    height: 100%;
-}
+
 
 /*
     Share
 */
 
 #share {
-    width: 100%;
-    height: 50%;
+    width: 100vw;
+    height: 45vh;
     background-color: #003650;
 }
 
