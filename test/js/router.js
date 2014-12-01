@@ -35,7 +35,7 @@ sbk.AppRouter = Backbone.Router.extend({
         this.bodyElement.append(this.followView.render().el);
         this.bodyElement.append(this.sharingExplainedView.render().el);
         this.bodyElement.append(this.shareView.render().el);*/
-        //$('.bigtext').bigtext();
+        $('.big').bigtext();
 
 
     }
