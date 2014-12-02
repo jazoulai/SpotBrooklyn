@@ -25,7 +25,7 @@ sbk.AppRouter = Backbone.Router.extend({
         this.shareView = new sbk.ShareView();
 
         this.bodyElement.html('');
-        this.bodyElement.append(this.headerView.render().el)
+        this.bodyElement.append(this.headerView.render().el);
         this.bodyElement.append(this.introView.render().el);
         this.bodyElement.append(this.votingExplainedView.render().el);
         this.bodyElement.append(this.storyListView.render().el);
@@ -35,7 +35,8 @@ sbk.AppRouter = Backbone.Router.extend({
         this.bodyElement.append(this.shareView.render().el);
         this.bodyElement.append(this.followingExplainedView.render().el);
         this.bodyElement.append(this.followView.render().el);
-        $('.big').bigtext();
+
+
 
 
     }

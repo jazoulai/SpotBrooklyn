@@ -12,14 +12,10 @@
             WebFont.load({
                 typekit: {
                     id: 'urz0jfm'
-                },
-                active: function() {
-                    $('.big').bigtext();
                 }
             });
         });
     </script>
-
 </head>
     <body>
 
@@ -33,15 +29,13 @@
             <img src=""/>
         </div>
         <div id="company-name" class="bigtext">
-            <h1>Spot Brooklyn</h1>
+            <h3>Spot Brooklyn</h3>
         </div>
     </script>
 
     <script type="text/x-handlebars-template" id="intro_template">
         <div class="big">
-            <span>CELEBRATE OUR</span>
-            <span>BROOKLYN</span>
-            <span>COMMUNITY</span>
+            <h1>INVITED OUR BROOKLYN COMMUNITY</h1>
         </div>
         <div>
             <button class="big" id="button" type="button">
@@ -53,7 +47,7 @@
 
     <script type="text/x-handlebars-template" id="voting-explained-template">
             <div class="big">
-                <span>WHAT'LL IT BE?</span>
+                <h2>WHAT'LL IT BE?</h2>
                 <p class="bigtext-exempt">We are a new digital magazine for the Brooklyn community. </p>
                 <p class="bigtext-exempt">We are what you make of us, so vote on the ideas below.</p>
             </div>
@@ -72,7 +66,7 @@
 
     <script type="text/x-handlebars-template" id="contribution-explained-template">
             <div class="big">
-                <span>JOIN THE CONVERSATION.</span>
+                <h2>JOIN THE CONVERSATION.</h2>
                 <p class="bigtext-exempt">If you have an idea, we want to hear it!</p>
             </div>
     </script>
@@ -86,7 +80,7 @@
 
     <script type="text/x-handlebars-template" id="following-explained-template">
             <div class="big">
-                <span>KEEP IN TOUCH</span>
+                <h2>KEEP IN TOUCH</h2>
                 <p class="bigtext-exempt">This is just the beginning. Follow us or signup for email updates.</p>
                 <span class="fine-print">(We promise not to be annoying, or share your information.)</span>
             </div>
@@ -98,8 +92,7 @@
 
     <script type="text/x-handlebars-template" id="sharing-explained-template">
             <div class="big">
-                <span>TELL YOUR</span>
-                <span>FRIENDS</span>
+                <h2>TELL YOUR FRIENDS</h2>
                 <p class="bigtext-exempt">The more people we hear, the better we'll be. Help us be better!</p>
             </div>
     </script>
@@ -120,7 +113,6 @@
     <script src="js/libs/underscore.js"></script>
     <script src="js/libs/backbone.js"></script>
     <script src="js/libs/handlebars-v1.3.0.js"></script>
-    <script src="js/libs/bigtext.js"></script>
     <script src="js/app.js"></script>
     <script src="js/router.js"></script>
     <script src="js/models/storyModel.js"></script>

@@ -15,16 +15,33 @@ html {
     -webkit-overflow-scrolling: touch;
     font-family: "museo-sans", sans-serif;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 100;
     font-size: 100%;
 }
 #body {
     width: 100%;
     height: auto;
 }
+h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+}
+h2 {
+    font-size: 2rem;
+    line-height: 2rem;
+}
+h3 {
+    font-size: 5vh;
+    line-height: 5vh;
+    padding: 2.5vh;
+}
+p {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
 .fine-print {
     font-size: .5rem;
-    padding-top: 3%;
+    line-height: 2rem;
 }
 /*
     header_view.js
