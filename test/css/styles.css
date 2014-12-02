@@ -21,7 +21,10 @@ html {
 #body {
     width: 100%;
     height: auto;
-
+}
+.fine-print {
+    font-size: .5rem;
+    padding-top: 3%;
 }
 /*
     header_view.js
@@ -92,6 +95,12 @@ html {
     padding: 5%;
     border-radius: 5px;
 }
+#down-arrow {
+    padding: 5% 0;
+    font-size: 2rem;
+    font-weight: 100;
+    color: #9e061b;
+}
 /*
     Voting Explained
 */
@@ -151,10 +160,14 @@ html {
     Contribution Explained
 */
 
-#contribution-explained {
+#contribution-explained, #following-explained, #sharing-explained {
     width: 100vw;
     height: 45vh;
     margin-top: 10vh;
+    padding: 0 5%;
+}
+p {
+    margin-top: 5%;
 }
 
 /*
@@ -187,11 +200,7 @@ form {
     Following Explained
 */
 
-#following-explained {
-    width: 100vw;
-    height: 45vh;
-    margin-top: 10vh;
-}
+
 
 /*
     Follow
@@ -207,11 +216,6 @@ form {
     Sharing Explained
 */
 
-#sharing-explained {
-    width: 100vw;
-    height: 45vh;
-    margin-top: 10vh;
-}
 
 
 /*
