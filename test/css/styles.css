@@ -1,3 +1,6 @@
+                                    /*
+                                        GLOBAL STYLES
+                                    */
 * {
     box-sizing: border-box;
     padding: 0;
@@ -22,29 +25,46 @@ html {
     width: 100%;
     height: auto;
 }
+/*
+    TYPOGRAPHY
+*/
+h1, h2, h3 {
+    text-align: center;
+}
 h1 {
     font-size: 3rem;
     line-height: 3rem;
+    font-weight: 100;
 }
 h2 {
     font-size: 2rem;
-    line-height: 2rem;
+    line-height: 3.5rem;
+    font-weight: 600;
 }
 h3 {
     font-size: 5vh;
     line-height: 5vh;
     padding: 2.5vh;
+    font-weight: 100;
 }
 p {
     font-size: 1.5rem;
-    line-height: 1.5rem;
+    line-height: 1.75rem;
+    font-weight: 100;
+    margin-bottom: 1.5rem;
 }
 .fine-print {
     font-size: .5rem;
     line-height: 2rem;
+    font-weight: 100;
+}
+#button {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+
 }
 /*
-    header_view.js
+    HEADER
 */
 #header {
     position: fixed;
@@ -65,13 +85,11 @@ p {
     width: 80vw;
     text-align: center;
 }
-
 /*
-    introview.js
+    INTRO
 */
 #intro {
     margin-top: 10vh;
-    text-align: center;
     width: 100vw;
     height: 90vh;
     color: white;
@@ -105,37 +123,33 @@ p {
     -webkit-align-items: center;
 }
 #button {
-    width: 50%;
     appearance: none;
     background-color: #9e061b;
     color: white;
-    padding: 5%;
     border-radius: 5px;
+    padding: 1rem;
 }
 #down-arrow {
     padding: 5% 0;
     font-size: 2rem;
-    font-weight: 100;
     color: #9e061b;
 }
 /*
-    Voting Explained
+    VOTE
 */
-
-#voting-explained {
+#voting-explained, #contribution-explained, #following-explained, #sharing-explained {
     width: 100vw;
-    height: 50vh;
+    height: 45vh;
+    padding: 5%;
+    padding-top: 10vh;
     display: -webkit-flex;
     -webkit-flex-direction: column;
     -webkit-justify-content: center;
     -webkit-align-items: center;
-    padding: 0 5%;
 }
-
 /*
-    Story List
+    STORY
 */
-
 #story-list {
     width: 100%;
     background-color: #003650;
@@ -172,23 +186,8 @@ p {
 .dislike {
     background-color: #b51118;
 }
-
 /*
-    Contribution Explained
-*/
-
-#contribution-explained, #following-explained, #sharing-explained {
-    width: 100vw;
-    height: 45vh;
-    margin-top: 10vh;
-    padding: 0 5%;
-}
-p {
-    margin-top: 5%;
-}
-
-/*
-    Contribution Form
+    CONTRIBUTION FORM
 */
 
 #contribution-form {
@@ -199,18 +198,27 @@ p {
     -webkit-align-items: center;
 }
 form {
-    width: 70%;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
 }
-[type=text] {
-    width: 100%;
-    height: 100px;
+textarea {
+    width: 80vw;
+    height: 30vh;
     border: 1px solid black;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 2vw;
 }
 [type=submit] {
-    width: 40%;
-    margin-left: 60%;
-    margin-top: 10px;
-    padding: 5px;
+    width: 40vw;
+    height: 5vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
 }
 
 /*

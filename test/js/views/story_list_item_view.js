@@ -8,5 +8,18 @@ sbk.StoryListItemView = Backbone.View.extend({
     render: function () {
         $(this.el).html(this.template(this.model.toJSON()));
         return this;
+    },
+    events : {
+        'click .like' : 'like',
+        'click .dislike' : 'dislike'
+    },
+    like: function () {
+        var title = this.model.get('id');
+        ga('send', 'event', 'dislike', 'click', title, 1);
+
+    },
+    dislike: function () {
+        var title = this.model.get('id');
+        ga('send', 'event', 'like', 'click', title, 1);
     }
 });

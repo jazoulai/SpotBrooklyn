@@ -7,5 +7,13 @@ sbk.IntroView = Backbone.View.extend({
     render: function () {
         $(this.el).html(this.template());
         return this;
+    },
+    events: {
+        'click button' : 'joinUs'
+    },
+    joinUs: function() {
+        $('html, body').animate({
+            scrollTop: $('#voting-explained').offset().top
+        }, 500);
     }
 });
