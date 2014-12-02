@@ -149,6 +149,9 @@ p {
     -webkit-justify-content: center;
     -webkit-align-items: center;
 }
+#voting-explained {
+    height: 80vh;
+}
 /*
     STORY
 */
