@@ -7,5 +7,13 @@ sbk.VotingExplainedView = Backbone.View.extend({
     render: function () {
         $(this.el).html(this.template());
         return this;
+    },
+    events : {
+        'click #dotell' : 'dotell'
+    },
+    dotell: function () {
+        $('html, body').animate({
+            scrollTop: $('#contribution-explained').offset().top
+        }, 500);
     }
 });

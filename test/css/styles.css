@@ -20,6 +20,7 @@ html {
     font-style: normal;
     font-weight: 100;
     font-size: 100%;
+    text-align: center;
 }
 #body {
     width: 100%;
@@ -28,17 +29,15 @@ html {
 /*
     TYPOGRAPHY
 */
-h1, h2, h3 {
-    text-align: center;
-}
 h1 {
     font-size: 3rem;
     line-height: 3rem;
-    font-weight: 100;
+    font-weight: 700;
+    -webkit-text-stroke: 2px black;
 }
 h2 {
     font-size: 2rem;
-    line-height: 3.5rem;
+    line-height: 2rem;
     font-weight: 600;
 }
 h3 {
@@ -51,12 +50,15 @@ p {
     font-size: 1.5rem;
     line-height: 1.75rem;
     font-weight: 100;
-    margin-bottom: 1.5rem;
+    margin: 1.5rem 0;
 }
 .fine-print {
     font-size: .5rem;
     line-height: 2rem;
     font-weight: 100;
+}
+#dotell {
+    color: #0003f4;
 }
 #button {
     font-size: 1.5rem;

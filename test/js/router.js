@@ -31,10 +31,11 @@ sbk.AppRouter = Backbone.Router.extend({
         this.bodyElement.append(this.storyListView.render().el);
         this.bodyElement.append(this.contributionExplainedView.render().el);
         this.bodyElement.append(this.contributionFormView.render().el);
-        this.bodyElement.append(this.sharingExplainedView.render().el);
-        this.bodyElement.append(this.shareView.render().el);
         this.bodyElement.append(this.followingExplainedView.render().el);
         this.bodyElement.append(this.followView.render().el);
+        this.bodyElement.append(this.sharingExplainedView.render().el);
+        this.bodyElement.append(this.shareView.render().el);
+
 
 
 

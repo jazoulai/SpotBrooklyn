@@ -7,5 +7,13 @@ sbk.HeaderView = Backbone.View.extend({
     render: function () {
         $(this.el).html(this.template());
         return this;
+    },
+    events : {
+        'click #company-logo' : 'backToTop'
+    },
+    backToTop: function () {
+        $('html, body').animate({
+            scrollTop: $('html').offset().top
+        }, 500);
     }
 });
