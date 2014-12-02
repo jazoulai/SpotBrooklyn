@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>SpotBrooklyn.com Vader 2</title>
     <link rel="stylesheet" href="css/styles.css"/>
+    <script src="js/libs/jquery-2.1.1.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+    <script>
+        $(function() {
+            WebFont.load({
+                typekit: {
+                    id: 'urz0jfm'
+                },
+                active: function() {
+                    $('.big').bigtext();
+                }
+            });
+        });
+    </script>
+
 </head>
     <body>
 
@@ -101,7 +116,7 @@
 
 
 <!--Dependencies-->
-    <script src="js/libs/jquery-2.1.1.js"></script>
+
     <script src="js/libs/underscore.js"></script>
     <script src="js/libs/backbone.js"></script>
     <script src="js/libs/handlebars-v1.3.0.js"></script>
