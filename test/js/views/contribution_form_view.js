@@ -7,5 +7,13 @@ sbk.ContributionFormView = Backbone.View.extend({
     render: function () {
         $(this.el).html(this.template());
         return this;
+    },
+    events: {
+        'click input' : 'submit_idea'
+    },
+    submit_idea: function (event) {
+        event.preventDefault();
+        var idea = $('textarea').val();
+        ga('send', 'event', 'ideas', 'click', idea, 1);
     }
 });
