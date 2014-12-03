@@ -50,7 +50,7 @@
             <h1>A Digital Magazine for our Brooklyn Community.</h1>
         </div>
         <div>
-            <button class="big" id="button" type="button">
+            <button id="button" type="button">
                 Join Us
             </button>
         </div>
@@ -58,9 +58,9 @@
 
     <script type="text/x-handlebars-template" id="voting-explained-template">
             <div>
-                <h2>Let's Build This Together</h2>
-                <p>We will publish topics that spark conversations and creativity, then showcase the best responses for the community to see.</p>
-                <p>Vote on the topics below.</p>
+                <h2>Let's build this together.</h2>
+                <p>We'll suggest a topic to spark your conversations and creativity, then showcase the best responses for the community to see.</p>
+                <p class="bold">Vote on the topics below.</p>
                 <span id="dotell">Or submit your own.</span>
             </div>
     </script>
@@ -92,15 +92,22 @@
     </script>
 
     <script type="text/x-handlebars-template" id="following-explained-template">
-            <div class="big">
-                <h2>It's just the beginning.</h2>
-                <p class="bigtext-exempt"> Follow us or sign up for updates.</p>
-                <span class="fine-print">(We promise not to be annoying, or share your information.)</span>
-            </div>
+        <div class="big">
+            <h2>This is just the beginning.</h2>
+            <p class="bigtext-exempt"> Follow us or sign up for updates.</p>
+            <span class="fine-print">(We promise not to be annoying, or share your information.)</span>
+        </div>
     </script>
 
     <script type="text/x-handlebars-template" id="follow-template">
-
+        <form id="email-signup">
+            <input type="text" placeholder="you@example.com">
+            <input type="submit" value="send!">
+        </form>
+        <div id="follow-buttons">
+            <div id="twitter"></div>
+            <div id="instagram"></div>
+        </div>
     </script>
 
     <script type="text/x-handlebars-template" id="sharing-explained-template">

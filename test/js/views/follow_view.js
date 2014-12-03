@@ -7,5 +7,16 @@ sbk.FollowView = Backbone.View.extend({
     render: function () {
         $(this.el).html(this.template());
         return this;
+    },
+    events: {
+        'click #twitter' : 'twitterFollow',
+        'click #instagram' : 'instagramFollow'
+    },
+    twitterFollow: function () {
+
+        window.open('https://twitter.com/intent/follow?screen_name=spotbrooklyn', '_self');
+    },
+    instagramFollow: function () {
+        window.open('http://instagram.com/spotbrooklyn?ref=badge', '_self');
     }
 });
