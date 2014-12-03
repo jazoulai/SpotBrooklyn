@@ -47,11 +47,11 @@
 
     <script type="text/x-handlebars-template" id="intro_template">
         <div >
-            <h1>A Digital Magazine for our Brooklyn Community.</h1>
+            <h1>A Digital Magazine<br><span>for and by the</span><br>People of Brooklyn.</h1>
         </div>
         <div>
             <button id="button" type="button">
-                Join Us
+                JOIN US
             </button>
         </div>
     </script>
@@ -59,8 +59,8 @@
     <script type="text/x-handlebars-template" id="voting-explained-template">
             <div>
                 <h2>Let's build this together.</h2>
-                <p>We'll suggest a topic to spark your conversations and creativity, then showcase the best responses for the community to see.</p>
-                <p class="bold">Vote on the topics below.</p>
+                <p>We'll suggest topics that inspire creative and thoughtful responses from our community, then showcase the best responses for everyone to see.</p>
+                <p class="bold">VOTE ON THE TOPICS BELOW.</p>
                 <span id="dotell">Or submit your own.</span>
             </div>
     </script>
@@ -79,30 +79,33 @@
     <script type="text/x-handlebars-template" id="contribution-explained-template">
             <div>
                 <h2>We don't judge.</h2>
-                <p class="bigtext-exempt">Submit a topic, idea, suggestion, comment or complaint in the box below.</p>
+                <p>Submit a topic, idea, suggestion, comment or complaint in the box below.</p>
+                <span class="bold">WE WILL PUBLISH AND CREDIT THE BEST RESPONSES</span>
             </div>
     </script>
 
     <script type="text/x-handlebars-template" id="contribution-form-template">
             <form action="">
 
-                <textarea autofocus="autofocus" rows="1" placeholder="There is no such thing as a dumb idea..."></textarea>
-                <input type="submit" value="send!">
+                <textarea autofocus="autofocus" rows="1" placeholder="There is no such thing as a dumb idea."></textarea>
+                <input type="text" placeholder="Who should we credit?">
+                <input type="submit" value="Submit">
             </form>
     </script>
 
     <script type="text/x-handlebars-template" id="following-explained-template">
-        <div class="big">
+        <div>
             <h2>This is just the beginning.</h2>
-            <p class="bigtext-exempt"> Follow us or sign up for updates.</p>
-            <span class="fine-print">(We promise not to be annoying, or share your information.)</span>
+            <p>We're planning a magazine full of the best photos, illustrations, comments, surveys, quizes and other creativite responses from the community.</p>
+            <p class="bold">FOLLOW US OR SIGN UP FOR UPDATES.</p>
+            <span class="fine-print">(We won't be annoying, or share your information.)</span>
         </div>
     </script>
 
     <script type="text/x-handlebars-template" id="follow-template">
         <form id="email-signup">
             <input type="text" placeholder="you@example.com">
-            <input type="submit" value="send!">
+            <input type="submit" value="Subscribe">
         </form>
         <div id="follow-buttons">
             <div id="twitter"></div>
@@ -111,9 +114,10 @@
     </script>
 
     <script type="text/x-handlebars-template" id="sharing-explained-template">
-            <div class="big">
-                <h2>Tell your friends</h2>
-                <p class="bigtext-exempt">The more voices we hear, the better we'll be.</p>
+            <div>
+                <h2>Let your friends in.</h2>
+                <p>Let them know that Spot Brooklyn is a digital magazine that publishes the people's voice.</p>
+                <span class="bold">POST OR EMAIL OUR LINK.</span>
             </div>
     </script>
 

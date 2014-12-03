@@ -19,7 +19,7 @@ html {
     font-family: "museo-sans", sans-serif;
     font-style: normal;
     font-weight: 100;
-    font-size: 100%;
+    font-size: 75%;
     text-align: center;
 }
 #body {
@@ -30,10 +30,15 @@ html {
     TYPOGRAPHY
 */
 h1 {
-    font-size: 3rem;
-    line-height: 3rem;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
     font-weight: 700;
+    padding: 0 1em;
     -webkit-text-stroke: 2px black;
+}
+h1 > span {
+    font-size: 2.25rem;
+    -webkit-text-stroke: 1px black;
 }
 h2 {
     font-size: 2rem;
@@ -58,7 +63,8 @@ p {
     font-weight: 100;
 }
 .bold {
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 1rem
 }
 #dotell {
     color: #0003f4;
@@ -119,13 +125,15 @@ p {
 
 }
 #intro > div {
-    width: 100%;
-    height: 50%;
-    padding: 0 5%;
+    width: 100vw;
+    height: 40vh;
     display: -webkit-flex;
     -webkit-flex-direction: column;
     -webkit-justify-content: center;
     -webkit-align-items: center;
+}
+#intro > div:first-child {
+    height: 60vh
 }
 #button {
     appearance: none;
@@ -213,11 +221,12 @@ p {
 }
 textarea {
     width: 80vw;
-    height: 30vh;
+    height: 20vh;
     border: 1px solid black;
     border-radius: 5px;
     font-size: 1rem;
     padding: 2vw;
+    margin: 2vh 0
 }
 [type=submit] {
     width: 40vw;
@@ -252,10 +261,11 @@ textarea {
     -webkit-justify-content: center;
     -webkit-align-items: center;
 }
-#email-signup > [type=text] {
+[type=text] {
     width: 80vw;
     height: 2rem;
     padding: 0 1rem;
+
     background-color: white;
     border: 1px solid black;
     border-radius: 5px;
