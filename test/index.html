@@ -37,51 +37,40 @@
 <!--HANDLEBARS TEMPLATES-->
 
     <script type="text/x-handlebars-template" id="header-template">
-        <div id="company-logo">
-            <img src=""/>
-        </div>
-        <div id="company-name" class="bigtext">
-            <h3>Spot Brooklyn</h3>
-        </div>
+        <img src="images/logo.svg"/>
+        <h3>Spot Brooklyn</h3>
     </script>
 
     <script type="text/x-handlebars-template" id="intro_template">
-        <div >
             <h1>A Digital Magazine<br><span>for and by the</span><br>People of Brooklyn.</h1>
-        </div>
-        <div>
             <button id="button" type="button">
-                JOIN US
+                Join Us
             </button>
-        </div>
     </script>
 
     <script type="text/x-handlebars-template" id="voting-explained-template">
-            <div>
-                <h2>Let's build this together.</h2>
+                <h2>This is just the beginning.</h2>
                 <p>We'll suggest topics that inspire creative and thoughtful responses from our community, then showcase the best responses for everyone to see.</p>
                 <p class="bold">VOTE ON THE TOPICS BELOW.</p>
-                <span id="dotell">Or submit your own.</span>
-            </div>
+                <p id="dotell">Or submit your own ></p>
+    </script>
+
+    <script type="text/x-handlebars-template" id="story-list-template">
+        <span>Load More</span>
     </script>
 
     <script type="text/x-handlebars-template" id="story-list-item-template">
-        <div class="story-list-item">
-            <div class="story-list-item-image like">
-            </div>
-            <div class="story-list-item-title">
-                <span>{{id}}</span>
-            </div>
-            <div class="story-list-item-image dislike"></div>
+        <h4>{{headline}}</h4>
+        <p>{{description}}</p>
+        <div>
+            <span class="plus-one">+1</span>
         </div>
     </script>
 
     <script type="text/x-handlebars-template" id="contribution-explained-template">
-            <div>
-                <h2>We don't judge.</h2>
-                <p>Submit a topic, idea, suggestion, comment or complaint in the box below.</p>
-                <span class="bold">WE WILL PUBLISH AND CREDIT THE BEST RESPONSES</span>
-            </div>
+        <h2>We don't judge.</h2>
+        <p>Submit your idea for an article.</p>
+        <span class="bold">WE WILL PUBLISH AND CREDIT THE BEST RESPONSES</span>
     </script>
 
     <script type="text/x-handlebars-template" id="contribution-form-template">

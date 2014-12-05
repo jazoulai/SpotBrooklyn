@@ -1,29 +1,47 @@
 [
     {
-        "id" : "Otter house far sensually asininely flippant invidious wickedly doubtfully."
+        "id" : "1",
+        "headline" : "Stay active this winter.",
+        "description" : "Reasons to leave your apartment that don’t involve food or alcohol."
     },
     {
-        "id" : "Overshot forward much gosh near a jeez lighted much."
+        "id" : "2",
+        "headline" : "Where are donuts?",
+        "description" : "A map of all the cafes that carry our favorite fluffy, fried dough."
     },
     {
-        "id" : "The on as through gosh eel intensely harmful negative turtle oh this."
+        "id" : "3",
+        "headline" : "Good Brooklynite / Bad Brooklynite",
+        "description" : "Celebrate the best and worst in all of us with your monthly nominations!"
     },
     {
-        "id" : "When into much one vulture one orca hectic before as less overate."
+        "id" : "4",
+        "headline" : "Anatomy of a the NYPD",
+        "description" : "An illustrated diagram of an officer (uniforms, their gear, hearts and minds)."
     },
     {
-        "id" : "Leaned less goat indecently salamander guinea."
+        "id" : "5",
+        "headline" : "Subway Ad Captions",
+        "description" : "Talk back to the ads that hold us captive on our long commutes."
     },
     {
-        "id" : "Strict thus deceivingly less one amongst far wow less much following dear."
+        "id" : "6",
+        "headline" : "Self Defense for Everyone",
+        "description" : "How to feel safe on your walk home at night?"
     },
     {
-        "id" : "To capitally coasted more certain terse."
+        "id" : "7",
+        "headline" : "Germs in the City",
+        "description" : "How do we protect ourselves from the bugs and the fear?"
     },
     {
-        "id" : "Preparatory that laughed bowed insect gawked outside."
+        "id" : "7",
+        "headline" : "Beautiful Brooklyn Homes",
+        "description" : "Photograph your favorite Brooklyn home (doesn’t have to be yours)!"
     },
     {
-        "id" : "Preparatory that laughed bowed insect gawked outside."
+        "id" : "8",
+        "headline" : "Battles of Brooklyn",
+        "description" : "A photographic tour of the relics from Brooklyn’s military history."
     }
 ]
