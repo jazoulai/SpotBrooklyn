@@ -67,31 +67,23 @@
         </div>
     </script>
 
-    <script type="text/x-handlebars-template" id="contribution-explained-template">
+    <script type="text/x-handlebars-template" id="contribution-form-template">
         <h2>We don't judge.</h2>
         <p>Submit your idea for an article.</p>
         <span class="bold">WE WILL PUBLISH AND CREDIT THE BEST RESPONSES</span>
+        <form action="">
+            <textarea autofocus="autofocus" rows="1" placeholder="There is no such thing as a dumb idea."></textarea>
+            <input type="text" placeholder="Who should we credit?">
+            <input type="submit" value="Submit">
+        </form>
     </script>
 
-    <script type="text/x-handlebars-template" id="contribution-form-template">
-            <form action="">
-
-                <textarea autofocus="autofocus" rows="1" placeholder="There is no such thing as a dumb idea."></textarea>
-                <input type="text" placeholder="Who should we credit?">
-                <input type="submit" value="Submit">
-            </form>
-    </script>
-
-    <script type="text/x-handlebars-template" id="following-explained-template">
-        <div>
-            <h2>This is just the beginning.</h2>
-            <p>We're planning a magazine full of the best photos, illustrations, comments, surveys, quizes and other creativite responses from the community.</p>
-            <p class="bold">FOLLOW US OR SIGN UP FOR UPDATES.</p>
-            <span class="fine-print">(We won't be annoying, or share your information.)</span>
-        </div>
-    </script>
 
     <script type="text/x-handlebars-template" id="follow-template">
+        <h2>This is just the beginning.</h2>
+        <p>We're planning a magazine full of the best photos, illustrations, comments, surveys, quizes and other creativite responses from the community.</p>
+        <p class="bold">FOLLOW US OR SIGN UP FOR UPDATES.</p>
+        <span class="fine-print">(We won't be annoying, or share your information.)</span>
         <form id="email-signup">
             <input type="text" placeholder="you@example.com">
             <input type="submit" value="Subscribe">
@@ -102,16 +94,10 @@
         </div>
     </script>
 
-    <script type="text/x-handlebars-template" id="sharing-explained-template">
-            <div>
-                <h2>Let your friends in.</h2>
-                <p>Let them know that Spot Brooklyn is a digital magazine that publishes the people's voice.</p>
-                <span class="bold">POST OR EMAIL OUR LINK.</span>
-            </div>
-    </script>
-
     <script type="text/x-handlebars-template" id="share-template">
-
+        <h2>Let your friends in.</h2>
+        <p>Let them know that Spot Brooklyn is a digital magazine that publishes the people's voice.</p>
+        <span class="bold">POST OR EMAIL OUR LINK.</span>
     </script>
 
 
@@ -135,11 +121,8 @@
     <script src="js/views/voting_explained_view.js"></script>
     <script src="js/views/story_list_view.js"></script>
     <script src="js/views/story_list_item_view.js"></script>
-    <script src="js/views/contribution_explained_view.js"></script>
     <script src="js/views/contribution_form_view.js"></script>
-    <script src="js/views/following_explained_view.js"></script>
     <script src="js/views/follow_view.js"></script>
-    <script src="js/views/sharing_explained_view.js"></script>
     <script src="js/views/share_view.js"></script>
 
 

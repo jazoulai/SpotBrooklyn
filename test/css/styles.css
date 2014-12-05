@@ -1,5 +1,5 @@
                                     /*
-                                        GLOBAL STYLES
+                                    GLOBAL DEFAULTS START
                                     */
 * {
     box-sizing: border-box;
@@ -25,13 +25,31 @@ html {
     font-size: 75%;
     text-align: center;
 }
+                                    /*
+                                    LAYOUT START
+                                    */
 #body {
     width: 100vh;
     height: auto;
 }
-/*
-    TYPOGRAPHY
-*/
+#voting-explained, #submit, #follow, #share {
+    width: 100vw;
+    height: auto;
+    padding: 10vh 10vw;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+}
+#submit, #follow, #share {
+    height: 100vh;
+}
+                                    /*
+                                    LAYOUT END
+                                    */
+                                    /*
+                                    TYPOGRAPHY START
+                                    */
 h1 {
     font-size: 4rem;
     line-height: 4rem;
@@ -92,6 +110,13 @@ p {
     line-height: 2rem;
 
 }
+                                    /*
+                                    GLOBAL DEFAULTS END
+                                    */
+
+                                    /*
+                                    LOCAL STYLES START
+                                    */
 /*
     HEADER
 */
@@ -155,15 +180,7 @@ p {
 /*
     VOTE
 */
-#voting-explained, #contribution-explained, #following-explained, #sharing-explained {
-    width: 100vw;
-    height: auto;
-    padding: 10vh 10vw;
-    display: -webkit-flex;
-    -webkit-flex-direction: column;
-    -webkit-justify-content: center;
-    -webkit-align-items: center;
-}
+
 #voting-explained > * {
     margin-bottom: 5vh;
 }
@@ -173,17 +190,13 @@ p {
 /*
     CONTRIBUTION FORM
 */
-#contribution-explained {
-    height: 45vh;
-}
-#contribution-form {
-    width: 100vw;
-    height: 45vh;
+#submit {
     display: -webkit-flex;
+    -webkit-flex-direction: column;
     -webkit-justify-content: center;
     -webkit-align-items: center;
 }
-#contribution-form > form {
+#submit > form {
     display: -webkit-flex;
     -webkit-flex-direction: column;
     -webkit-justify-content: center;
@@ -196,81 +209,19 @@ textarea {
     border-radius: 5px;
     font-size: 1rem;
     padding: 2vw;
-    margin: 2vh 0
+    margin: 10vh 0 2vh;
 }
 [type=submit] {
     width: 40vw;
     height: 5vh;
-    margin: 2vh 0;
     background-color: white;
     border: 1px solid black;
     border-radius: 5px;
 }
 /*
-    STORY
-*/
-#story-list {
-    width: 100vw;
-    height: auto;
-    background-color: #000;
-    padding: 10vh 2vw 0 0;
-}
-#story-list > span {
-    color: #ffffff;
-}
-.story-list-item {
-    width: 100vw;
-    height: auto;
-    margin-bottom: 1.5vh;
-    padding: 1.5vh;
-    background-color: #fff;
-    display: -webkit-flex;
-    -webkit-flex-direction: column;
-    -webkit-justify-content: space-around;
-    -webkit-align-items: center;
-}
-.story-list-item:last-child {
-    margin-bottom: 0;
-}
-.story-list-item > * {
-    margin-bottom: 1.5vh;
-}
-.story-list-item > div {
-    border-radius: 50%;
-    background-color: #ED1C24;
-    width: 40px;
-    height: 40px;
-    display: -webkit-flex;
-    -webkit-flex-direction: column;
-    -webkit-justify-content: center;
-    -webkit-align-items: center;
-}
-.story-list-item span {
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    font-weight: 900;
-    color: #fff;
-}
-
-
-/*
-    Following Explained
-*/
-
-
-
-/*
     Follow
 */
 
-#follow {
-    width: 100vw;
-    height: 45vh;
-    display: -webkit-flex;
-    -webkit-flex-direction: column;
-    -webkit-justify-content: center;
-    -webkit-align-items: center;
-}
 #follow > form {
     display: -webkit-flex;
     -webkit-flex-direction: column;
@@ -281,7 +232,7 @@ textarea {
     width: 80vw;
     height: 2rem;
     padding: 0 1rem;
-
+    margin: 10vh 0 2vh;
     background-color: white;
     border: 1px solid black;
     border-radius: 5px;
@@ -305,18 +256,50 @@ textarea {
     padding-top: 100%;
 }
 /*
-    Sharing Explained
+    Share
 */
 
 
 
 /*
-    Share
+    STORY
 */
-
-#share {
+#story-list {
     width: 100vw;
-    height: 45vh;
-    background-color: #003650;
+    height: auto;
+    padding-top: 10vh;
+}
+#story-list > span {
+    color: #000;
+}
+.story-list-item {
+    width: 100vw;
+    height: auto;
+    padding: 1.5vh;
+    background-color: #fff;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: space-around;
+    -webkit-align-items: center;
+    border-bottom: solid 2px #000;
+}
+.story-list-item:first-child {
+    border-top: solid 2px #000;
+}
+.story-list-item > div {
+    margin-top: 1.5vh;
+    border-radius: 50%;
+    background-color: #ED1C24;
+    width: 40px;
+    height: 40px;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+}
+.story-list-item span {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    font-weight: 900;
 }
 
