@@ -22,6 +22,7 @@ sbk.StoryListView = Backbone.View.extend({
         'click span' : 'loadMore'
     },
     loadMore: function () {
+
         $('html, body').animate({
             scrollTop: $('#story-list').offset().top
         }, 500);

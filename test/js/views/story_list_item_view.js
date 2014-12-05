@@ -13,9 +13,8 @@ sbk.StoryListItemView = Backbone.View.extend({
         'click .plus-one' : 'plusOne'
     },
     plusOne: function () {
+        $(this.el).toggleClass('select');
         var title = this.model.get('id');
         ga('send', 'event', '+1', 'click', title, 1);
-        alert('+1');
-
     }
 });
