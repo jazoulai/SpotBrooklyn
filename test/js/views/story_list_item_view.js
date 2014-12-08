@@ -15,7 +15,7 @@ sbk.StoryListItemView = Backbone.View.extend({
     plusOne: function (ev) {
         $(ev.currentTarget).toggleClass('select');
         $(ev.currentTarget).siblings().removeClass('select');
-        var title = this.model.get('id');
+        var title = this.model.get('headline');
         var vote = $(ev.currentTarget).find('span').html();
         ga('send', 'event', vote, 'click', title, 1);
     }
