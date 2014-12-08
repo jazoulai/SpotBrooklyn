@@ -5,13 +5,13 @@ sbk.StoryListView = Backbone.View.extend({
     tagName: 'ul',
     id: 'story-list',
     initialize: function () {
-        this.filteredArray = this.collection.reset(this.collection.sample(4), {silent:true});
-        this.filteredCollection = new Backbone.Collection(this.filteredArray);
         this.collection.on('reset', this.render, this);
+        console.log('initialize');
     },
     template: Handlebars.compile($('#story-list-template').html()),
     render: function () {
-        _.each(this.filteredCollection.models, function (storyItem) {
+        var newCollection = _.sample(this.collection.models, 4);
+        _.each(newCollection, function (storyItem) {
             $(this.el).append(new sbk.StoryListItemView({model: storyItem}).render().el);
         }, this);
 
@@ -19,12 +19,13 @@ sbk.StoryListView = Backbone.View.extend({
         return this;
     },
     events: {
-        'click span' : 'loadMore'
+        'click #load-more' : 'loadMore'
     },
-    loadMore: function () {
+    loadMore: function(){
+        this.collection = new Backbone.Collection(this.collection.models);
+        this.$el.empty();
+        this.render();
 
-        $('html, body').animate({
-            scrollTop: $('#story-list').offset().top
-        }, 500);
+
     }
 });

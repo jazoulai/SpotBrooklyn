@@ -56,14 +56,16 @@
     </script>
 
     <script type="text/x-handlebars-template" id="story-list-template">
-        <span>Load More</span>
+        <span id="load-more">Load More</span>
     </script>
 
     <script type="text/x-handlebars-template" id="story-list-item-template">
         <h4>{{headline}}</h4>
         <p>{{description}}</p>
-        <div>
-            <span class="plus-one">+1</span>
+        <div class="vote">
+            <div class="green plus-one"><span>:)</span></div>
+            <div class="yellow plus-one"><span>:|</span></div>
+            <div class="red plus-one"><span>:(</span></div>
         </div>
     </script>
 

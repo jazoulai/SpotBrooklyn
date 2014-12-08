@@ -286,24 +286,42 @@ textarea {
 .story-list-item:first-child {
     border-top: solid 2px #000;
 }
-.story-list-item > div {
-    margin-top: 1.5vh;
+.vote {
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+}
+.plus-one {
     border-radius: 50%;
-    background-color: #ED1C24;
     opacity: .5;
     width: 40px;
     height: 40px;
+    padding: 2px;
+    margin: 4px;
+    -webkit-transform: rotate(90deg);
     display: -webkit-flex;
     -webkit-flex-direction: column;
     -webkit-justify-content: center;
     -webkit-align-items: center;
 }
-.select > div {
+.select {
     opacity: 1;
+}
+.red {
+    background-color: #ED1C24;
+}
+.green {
+    background-color: #009926;
+}
+.yellow {
+    background-color: #f4da2e;
 }
 .story-list-item span {
     font-size: 1.5rem;
     line-height: 1.5rem;
     font-weight: 900;
+    text-align: center;
+
 }
 
