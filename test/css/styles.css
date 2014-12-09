@@ -25,6 +25,16 @@ html {
     font-size: 75%;
     text-align: center;
 }
+button {
+    appearance: none;
+    border: solid 3px #7BC6D4;
+    color: #7BC6D4;
+    border-radius: 5px;
+    padding: 3vw;
+    font-size: 2rem;
+    line-height: 2rem;
+    background-color: #ffffff;
+}
                                     /*
                                     LAYOUT START
                                     */
@@ -32,7 +42,7 @@ html {
     width: 100vh;
     height: auto;
 }
-#voting-explained, #submit, #follow, #share {
+#voting-explained, #submit, #follow, #share, #results-signup {
     width: 100vw;
     height: auto;
     padding: 10vh 10vw;
@@ -105,10 +115,9 @@ p {
     font-size: 1rem;
     line-height: 1rem;
 }
-#button {
-    font-size: 2rem;
-    line-height: 2rem;
-
+#intro button {
+    background: rgba(0,0,0, .5);
+    margin-top: 7vh;
 }
                                     /*
                                     GLOBAL DEFAULTS END
@@ -168,13 +177,7 @@ p {
 
 }
 #intro > button {
-    appearance: none;
-    background: rgba(0,0,0, .5);
-    border: solid 3px #7BC6D4;
-    color: #7BC6D4;
-    border-radius: 5px;
-    padding: 3vw;
-    margin-top: 7vh;
+
 }
 
 /*

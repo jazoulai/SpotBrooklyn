@@ -9,18 +9,11 @@ sbk.StoryListView = Backbone.View.extend({
     },
     template: Handlebars.compile($('#story-list-template').html()),
     render: function () {
-
-
-
-
-
-
         this.newCollection = _.sample(this.collection.models, 3);
+        $(this.el).html(this.template());
         _.each(this.newCollection, function (storyItem) {
-            $(this.el).append(new sbk.StoryListItemView({model: storyItem}).render().el);
+            $(this.el).prepend(new sbk.StoryListItemView({model: storyItem}).render().el);
         }, this);
-
-        $(this.el).append(this.template());
 
         return this;
     },
@@ -35,10 +28,14 @@ sbk.StoryListView = Backbone.View.extend({
             _.each(self.newCollection, function(child){
                 self.collection.remove(child);
             });
-            this.$el.empty();
             this.render();
         } else {
-            $(this.el).html('<span>no more!</span>');
+            console.log('results view');
+            this.resultsSignupView = new sbk.ResultsSignupView();
+            $(this.el).replaceWith(this.resultsSignupView.render().el);
+            $('html, body').animate({
+                scrollTop: $('#results-signup').offset().top
+            }, 500);
         }
     }
 });
