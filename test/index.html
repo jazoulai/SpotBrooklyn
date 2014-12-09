@@ -42,10 +42,11 @@
     </script>
 
     <script type="text/x-handlebars-template" id="intro_template">
-            <h1>Local Stories<br><span>about the</span><br>People of Brooklyn.</h1>
+            <h1>Local Stories<br><span>for and by the</span><br>People of Brooklyn.</h1>
             <button id="button" type="button">
                 Join Us
             </button>
+            <div id="your-photo">(your photo here)</div>
     </script>
 
     <script type="text/x-handlebars-template" id="voting-explained-template">
@@ -56,6 +57,9 @@
     </script>
 
     <script type="text/x-handlebars-template" id="story-list-template">
+        <div id="stories">
+
+        </div>
         <button id="load-more">Load More</button>
     </script>
 
@@ -97,9 +101,9 @@
             <input type="text" placeholder="you@example.com">
             <input type="submit" value="Subscribe">
         </form>
-        <div id="follow-buttons">
-            <div id="twitter"></div>
-            <div id="instagram"></div>
+        <div class="social-buttons">
+            <div id="twitter-follow"></div>
+            <div id="instagram-follow"></div>
         </div>
     </script>
 
@@ -107,6 +111,11 @@
         <h2>Let your friends in.</h2>
         <p>Let them know that Spot Brooklyn is a digital magazine that publishes the people's voice.</p>
         <span class="bold">POST OR EMAIL OUR LINK.</span>
+        <div class="social-buttons">
+            <div id="twitter-share"></div>
+            <div id="facebook-share"></div>
+            <div id="email-share"></div>
+        </div>
     </script>
 
 

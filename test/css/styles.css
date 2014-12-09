@@ -42,19 +42,16 @@ button {
     width: 100vh;
     height: auto;
 }
-#voting-explained, #submit, #follow, #share, #results-signup {
+#voting-explained, #story-list, #submit, #follow, #share, #results-signup {
     width: 100vw;
-    height: auto;
-    padding: 10vh 10vw;
+    height: 100vh;
+    padding: 10vh 10vw 0;
     display: -webkit-flex;
     -webkit-flex-direction: column;
     -webkit-justify-content: center;
     -webkit-align-items: center;
 }
-#submit, #follow, #share {
-    height: 100vh;
-}
-                                    /*
+/*
                                     LAYOUT END
                                     */
                                     /*
@@ -174,12 +171,14 @@ p {
     background-position: center;
     background-size: cover;
     -webkit-filter: blur(3px) grayscale(100%) contrast(200%);
-
 }
-#intro > button {
-
+#intro > div {
+    position: absolute;
+    bottom: 10vh;
+    left: 90vw;
+    color: #7BC6D4;
+    -webkit-transform: rotate(90deg);
 }
-
 /*
     VOTE
 */
@@ -240,20 +239,20 @@ textarea {
     border: 1px solid black;
     border-radius: 5px;
 }
-#follow-buttons {
+.social-buttons {
     width: 80%;
     display: -webkit-flex;
     -webkit-flex-direction: row;
     -webkit-justify-content: center;
     -webkit-align-items: center;
 }
-#follow-buttons > div {
+.social-buttons > div {
     width: 15vw;
     margin: 1vh;
     background-color: #0054a3;
     position: relative;
 }
-#follow-buttons > div:before {
+.social-buttons > div:before {
     content: "";
     display: block;
     padding-top: 100%;
@@ -268,15 +267,13 @@ textarea {
     STORY
 */
 #story-list {
-    width: 100vw;
-    height: auto;
-    padding-top: 10vh;
+    -webkit-justify-content: space-around;
 }
 #story-list > span {
     color: #000;
 }
 .story-list-item {
-    width: 100vw;
+    width: 80vw;
     height: auto;
     padding: 1.5vh;
     background-color: #fff;
@@ -284,10 +281,10 @@ textarea {
     -webkit-flex-direction: column;
     -webkit-justify-content: space-around;
     -webkit-align-items: center;
-    border-bottom: solid 2px #000;
+    border-bottom: solid 1px dimgrey;
 }
 .story-list-item:first-child {
-    border-top: solid 2px #000;
+    border-top: solid 1px dimgrey;
 }
 .vote {
     display: -webkit-flex;

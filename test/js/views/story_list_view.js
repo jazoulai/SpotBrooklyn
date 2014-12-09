@@ -12,7 +12,7 @@ sbk.StoryListView = Backbone.View.extend({
         this.newCollection = _.sample(this.collection.models, 3);
         $(this.el).html(this.template());
         _.each(this.newCollection, function (storyItem) {
-            $(this.el).prepend(new sbk.StoryListItemView({model: storyItem}).render().el);
+            $(this.el).find('#stories').prepend(new sbk.StoryListItemView({model: storyItem}).render().el);
         }, this);
 
         return this;
