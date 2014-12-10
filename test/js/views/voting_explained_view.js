@@ -6,6 +6,8 @@ sbk.VotingExplainedView = Backbone.View.extend({
     template: Handlebars.compile($('#voting-explained-template').html()),
     render: function () {
         $(this.el).html(this.template());
+        this.voteButtonsView = new sbk.VoteButtonsView();
+        $(this.el).find('h2').append(this.voteButtonsView.render().el);
         return this;
     },
     events : {

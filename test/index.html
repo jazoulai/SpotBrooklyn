@@ -50,10 +50,16 @@
     </script>
 
     <script type="text/x-handlebars-template" id="voting-explained-template">
-                <h2>This is just the beginning.</h2>
-                <p>We'll suggest topics that inspire creative and thoughtful responses from our community, then showcase the best responses for everyone to see.</p>
-                <p class="bold">VOTE ON THE TOPICS BELOW.</p>
+                <h2>Vote On The Topics Below.</h2>
+                <p>Spot Brooklyn will publish original and crowdsourced content on the topics that matters to us all.</p>
+        <p>Tell us what matters to you by voting below.</p>
                 <p id="dotell">Or submit your own ></p>
+    </script>
+
+    <script type="text/x-handlebars-template" id="vote-buttons-template">
+        <div class="green plus-one"><span>:)</span></div>
+        <div class="yellow plus-one"><span>:|</span></div>
+        <div class="red plus-one"><span>:(</span></div>
     </script>
 
     <script type="text/x-handlebars-template" id="story-list-template">
@@ -66,11 +72,6 @@
     <script type="text/x-handlebars-template" id="story-list-item-template">
         <h4>{{headline}}</h4>
         <p>{{description}}</p>
-        <div class="vote">
-            <div class="green plus-one"><span>:)</span></div>
-            <div class="yellow plus-one"><span>:|</span></div>
-            <div class="red plus-one"><span>:(</span></div>
-        </div>
     </script>
 
     <script type="text/x-handlebars-template" id="results-signup-template">
@@ -144,6 +145,7 @@
     <script src="js/views/contribution_form_view.js"></script>
     <script src="js/views/follow_view.js"></script>
     <script src="js/views/share_view.js"></script>
+    <script src="js/views/vote_buttons_view.js"></script>
 
 
     </body>

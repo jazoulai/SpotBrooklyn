@@ -163,7 +163,17 @@ p {
     width: 100vw;
     height: 100vh;
     top: 0;
-    left:0;
+    left: 0;
+    content: "";
+    z-index: -2;
+    background-color: #000;
+}
+#intro:after {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
     content: "";
     z-index: -1;
     background-image: url('../images/nytmes_stoop.jpg');
@@ -175,14 +185,16 @@ p {
 #intro > div {
     position: absolute;
     bottom: 10vh;
-    left: 90vw;
+    left: 80vw;
     color: #7BC6D4;
     -webkit-transform: rotate(90deg);
 }
 /*
     VOTE
 */
-
+#voting-explained {
+    height: 80vh;
+}
 #voting-explained > * {
     margin-bottom: 5vh;
 }
@@ -267,7 +279,8 @@ textarea {
     STORY
 */
 #story-list {
-    -webkit-justify-content: space-around;
+    -webkit-justify-content: flex-start;
+    padding-top: 0;
 }
 #story-list > span {
     color: #000;
@@ -305,7 +318,7 @@ textarea {
     -webkit-justify-content: center;
     -webkit-align-items: center;
 }
-.select {
+#voting-explained .plus-one, #stories .select {
     opacity: 1;
 }
 .red {
