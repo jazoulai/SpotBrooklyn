@@ -18,6 +18,6 @@ sbk.IntroView = Backbone.View.extend({
         }, 500);
     },
     coverPhoto: function (){
-        window.location.href = 'mailto:?subject=cover photos this out&body=upload photos of you and your friends and neighbors!';
+        alert('photo credit TK');
     }
 });

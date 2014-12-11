@@ -3,11 +3,10 @@
 }
 #submit:before {
     background-image: url('../images/woman_concentrating.jpg');
-    background-position: bottom;
     -webkit-filter: blur(1px) grayscale(100%);
 
 }
-#submit > form {
+#submit > div {
     display: -webkit-flex;
     -webkit-flex-direction: column;
     -webkit-justify-content: center;

@@ -5,7 +5,6 @@
 #follow:before {
     background-image: url('../images/tin_can_phone.jpg');
     background-repeat: no-repeat;
-    background-position: right bottom;
     -webkit-filter: blur(1px) grayscale(100%);
 }
 #follow > form {
@@ -17,4 +16,7 @@
 #follow textarea {
     width: 80vw;
     max-width: 400px;
+}
+#fine-print {
+    font-size: 1rem;
 }

@@ -29,18 +29,21 @@ body {
 #submit, #follow, #share {
     position: relative;
 }
-#intro:before, #intro:after, #submit:before, #follow:before, #share:before {
-    position: absolute;
+#intro:before, #intro:after {
     top: 0;
     left: 0;
+}
+#intro:before, #intro:after, #submit:before, #follow:before, #share:before {
+    position: absolute;
     content: "";
     z-index: -1;
     background-repeat: no-repeat;
 }
 #submit:before, #follow:before, #share:before {
-    height: 50vh;
-    top: 50vh;
+    max-height: 300px;
+    bottom: 0;
     background-size: contain;
+    background-position: right bottom;
 }
 #intro, #voting-explained, #story-list, #submit, #follow, #share, #results-signup {
     padding-top: 10vh;

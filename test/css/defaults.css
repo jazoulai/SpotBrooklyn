@@ -11,7 +11,6 @@
 ul {
     list-style-type: none;
 }
-
 button {
     width: 150px;
     appearance: none;
@@ -34,23 +33,18 @@ textarea {
 ::-webkit-input-placeholder {
     color: #DFDFDF;
     font-size: 1rem;
-
 }
 .social-buttons {
     width: 80%;
+    max-width: 200px;
     display: -webkit-flex;
     -webkit-flex-direction: row;
     -webkit-justify-content: center;
     -webkit-align-items: center;
 }
-.social-buttons > div {
-    width: 15vw;
-    margin: 1vh;
-    background-color: #0054a3;
-    position: relative;
-}
-.social-buttons > div:before {
-    content: "";
-    display: block;
-    padding-top: 100%;
+.social-buttons > span {
+    font-size: 5rem;
+    line-height: 5rem;
+    color: #7BC6D4;
+    margin: 10px;
 }

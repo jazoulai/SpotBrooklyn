@@ -38,6 +38,10 @@ p {
     font-weight: 100;
     margin: 0 5vh 1.5rem;
 }
+#voting-explained > p:last-child, #results-signup > p:last-child {
+    color: #7BC6D4;
+    font-size: 1rem;
+}
 .story-list-item-title > p {
     font-size: 1.25rem;
     line-height: 1.5rem;
