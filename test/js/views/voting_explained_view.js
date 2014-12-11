@@ -7,11 +7,11 @@ sbk.VotingExplainedView = Backbone.View.extend({
     render: function () {
         $(this.el).html(this.template());
         this.voteButtonsView = new sbk.VoteButtonsView();
-        $(this.el).find('h2').append(this.voteButtonsView.render().el);
+        $(this.el).find('h2').after(this.voteButtonsView.render().el);
         return this;
     },
     events : {
-        'click #dotell' : 'dotell'
+        'click span:last-child' : 'dotell'
     },
     dotell: function () {
         $('html, body').animate({

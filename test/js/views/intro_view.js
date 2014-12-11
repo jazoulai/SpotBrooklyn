@@ -9,16 +9,15 @@ sbk.IntroView = Backbone.View.extend({
         return this;
     },
     events: {
-        'click .arrow-down' : 'joinUs',
-        'click #your-photo' : 'yourPhoto'
+        'click .arrow-down' : 'arrowDown',
+        'click .fa-camera-retro' : 'coverPhoto'
     },
-    joinUs: function() {
+    arrowDown: function() {
         $('html, body').animate({
             scrollTop: $('#voting-explained').offset().top
         }, 500);
     },
-    yourPhoto: function (){
-        console.log('photo');
+    coverPhoto: function (){
         window.location.href = 'mailto:?subject=cover photos this out&body=upload photos of you and your friends and neighbors!';
     }
 });

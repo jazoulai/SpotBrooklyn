@@ -4,10 +4,6 @@ h1 {
     font-weight: 700;
     margin: 0 15vw;
 }
-h1 > span:first-of-type {
-    font-size: 5.25rem;
-    line-height: 5.25rem;
-}
 h1 > span {
     font-size: 2.5rem;
     line-height: 4rem;
@@ -16,6 +12,7 @@ h2 {
     font-size: 2rem;
     line-height: 2rem;
     font-weight: 600;
+    margin: 2rem 0 1rem;
 }
 h3 {
     font-size: 5vh;
@@ -25,29 +22,19 @@ h3 {
 }
 h4 {
     font-size: 1.5rem;
-    line-height: 2rem;
+    line-height: 1.5rem;
     font-weight: 600;
+    margin-bottom: 1rem;
 }
 p {
     font-size: 1.5rem;
-    line-height: 1.75rem;
+    line-height: 2rem;
     font-weight: 100;
+    margin: 0 5vh 1.5rem;
 }
 .story-list-item-title > p {
     font-size: 1.25rem;
     line-height: 1.5rem;
     text-align: left;
     margin: 1.5rem 0;
-}
-.fine-print {
-    font-size: .5rem;
-    line-height: .5rem;
-    font-weight: 100;
-    margin: 1rem;
-}
-#dotell {
-    color: #0003f4;
-    font-weight: 500;
-    font-size: 1rem;
-    line-height: 1rem;
 }

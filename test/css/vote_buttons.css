@@ -5,13 +5,13 @@
     -webkit-align-items: center;
 }
 .vote > span {
-    padding: 2px;
-    margin: 4px;
+    color: #7BC6D4;
+
     display: -webkit-flex;
     -webkit-flex-direction: column;
     -webkit-justify-content: center;
     -webkit-align-items: center;
-    font-size: 10vh;
+
 }
 .vote > span.select.fa-smile-o {
     color: #009926;

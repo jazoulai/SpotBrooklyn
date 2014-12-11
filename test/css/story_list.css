@@ -2,14 +2,11 @@
     -webkit-justify-content: flex-start;
     padding-top: 0;
 }
-#story-list > span {
-    color: #000;
-}
 .story-list-item {
     width: 80vw;
     max-width: 700px;
     height: auto;
-    padding: 1.5vh;
+    padding: 1rem 0;
     background-color: #fff;
     display: -webkit-flex;
     -webkit-flex-direction: column;
@@ -25,4 +22,12 @@
     line-height: 1.5rem;
     font-weight: 900;
     text-align: center;
+}
+.story-list-item span.fa {
+    font-size: 5vh;
+    line-height: 5vh;
+    margin-right: 2rem;
+}
+.story-list-item span.fa:last-child {
+    margin-right: 0;
 }

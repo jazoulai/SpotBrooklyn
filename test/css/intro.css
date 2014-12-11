@@ -8,15 +8,8 @@
 #intro:after {
     background-image: url('../images/stoop2.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: left top;
     -webkit-filter: blur(3px) grayscale(100%) brightness(50%);
-}
-#your-photo {
-    position: absolute;
-    bottom: 10vh;
-    left: 80vw;
-    color: #7BC6D4;
-    -webkit-transform: rotate(90deg);
 }
 .arrow-down {
     margin-top: 7vh;
@@ -28,4 +21,14 @@
 }
 #intro button {
     margin-top: 7vh;
+}
+.fa-camera-retro {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+    font-size: 3rem;
+    line-height: 3rem;
+    color: #7BC6D4;
+
 }
