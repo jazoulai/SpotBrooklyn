@@ -1,0 +1,9 @@
+#share {
+    position: relative;
+    -webkit-justify-content: flex-start;
+}
+#share:before {
+    background-image: url('../images/teen-secrets.jpg');
+    background-position: bottom;
+    -webkit-filter: blur(1px) grayscale(100%);
+}

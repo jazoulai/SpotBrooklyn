@@ -1,0 +1,31 @@
+#intro {
+    color: #fff;
+}
+#intro:before {
+    z-index: -2;
+    background-color: #000;
+}
+#intro:after {
+    background-image: url('../images/stoop2.jpg');
+    background-size: cover;
+    background-position: center;
+    -webkit-filter: blur(3px) grayscale(100%) brightness(50%);
+}
+#your-photo {
+    position: absolute;
+    bottom: 10vh;
+    left: 80vw;
+    color: #7BC6D4;
+    -webkit-transform: rotate(90deg);
+}
+.arrow-down {
+    margin-top: 7vh;
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 40px solid #f00;
+}
+#intro button {
+    margin-top: 7vh;
+}

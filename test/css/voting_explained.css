@@ -1,0 +1,14 @@
+#voting-explained {
+    height: 80vh;
+    color: #7BC6D4;
+}
+#voting-explained > * {
+    margin-bottom: 5vh;
+}
+#voting-explained > *:first-child {
+    margin-top: 5vh;
+}
+#voting-explained .plus-one {
+    width: 80px;
+    height: 80px;
+}

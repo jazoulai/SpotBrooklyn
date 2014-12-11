@@ -1,0 +1,18 @@
+#header {
+    position: fixed;
+    width: 100vw;
+    height: 10vh;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, .25);
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+    color: #fff;
+}
+#header > img {
+    width: auto;
+    height: 8vh;
+}

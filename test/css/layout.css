@@ -1,0 +1,46 @@
+html {
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    font-family: "museo-sans", sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 75%;
+    text-align: center;
+}
+body {
+    width: 100vw;
+    height: auto;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -webkit-align-items: center;
+}
+#intro, #voting-explained, #story-list, #submit, #follow, #share, #results-signup {
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+}
+#intro, #intro:before, #intro:after, #voting-explained, #story-list, #submit, #submit:before, #follow, #follow:before, #share, #share:before, #results-signup {
+    width: 100vw;
+    height: 100vh
+}
+#intro:before, #intro:after, #submit:before, #follow:before, #share:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    z-index: -1;
+    background-repeat: no-repeat;
+}
+#submit:before, #follow:before, #share:before {
+    height: 50vh;
+    max-width: 700px;
+    top: 50vh;
+    background-size: contain;
+}
+#intro, #voting-explained, #story-list, #submit, #follow, #share, #results-signup {
+    max-width: 700px;
+    padding: 10vh 10vw 0;
+}
