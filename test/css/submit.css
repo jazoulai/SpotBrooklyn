@@ -1,5 +1,5 @@
 #submit {
-    -webkit-justify-content: space-between;
+    -webkit-justify-content: flex-start;
 }
 #submit:before {
     background-image: url('../images/woman_concentrating.jpg');
@@ -13,14 +13,22 @@
     -webkit-justify-content: center;
     -webkit-align-items: center;
 }
-textarea {
+#submission-field {
     width: 80vw;
-    height: 20vh;
-    border: 1px solid black;
-    border-radius: 5px;
-    font-size: 1rem;
-    padding: 2vw;
+    max-width: 400px;
+    height: 10vh;
+    border-radius: 5px 5px 0 0;
+    border-bottom: 1px solid #DFDFDF;
+}
+#credit-field {
+    width: 80vw;
+    max-width: 400px;
+    border-radius: 0 0 5px 5px;
+    height: 3rem;
+    border-top: 1px solid #DFDFDF;
+
 }
 #submit button {
+    margin-top: 3vh;
     background: transparent;
 }

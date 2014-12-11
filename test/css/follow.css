@@ -14,11 +14,7 @@
     -webkit-justify-content: center;
     -webkit-align-items: center;
 }
-[type=text] {
+#follow textarea {
     width: 80vw;
-    height: 2rem;
-    padding: 0 1rem;
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 5px;
+    max-width: 400px;
 }

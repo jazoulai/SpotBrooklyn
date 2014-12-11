@@ -6,7 +6,13 @@ h1 {
 }
 h1 > span {
     font-size: 2.5rem;
+    line-height: 5rem;
+    font-weight: 400;
+}
+h1 > span:last-child {
+    font-size: 4rem;
     line-height: 4rem;
+    font-weight: 400;
 }
 h2 {
     font-size: 2rem;

@@ -22,6 +22,20 @@ button {
     background: transparent;
     border: solid 4px red;
 }
+textarea {
+    border: 2px solid #7BC6D4;
+    border-radius: 5px;
+    font-size: 2rem;
+    line-height: 3rem;
+    padding: 0 2vw;
+    background: transparent;
+    vertical-align: top
+}
+::-webkit-input-placeholder {
+    color: #DFDFDF;
+    font-size: 1rem;
+
+}
 .social-buttons {
     width: 80%;
     display: -webkit-flex;

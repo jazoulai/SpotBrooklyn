@@ -9,7 +9,7 @@ sbk.HeaderView = Backbone.View.extend({
         return this;
     },
     events : {
-        'click #company-logo' : 'backToTop'
+        'click img' : 'backToTop'
     },
     backToTop: function () {
         $('html, body').animate({

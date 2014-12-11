@@ -9,8 +9,12 @@ sbk.FollowView = Backbone.View.extend({
         return this;
     },
     events: {
+        'click #subscribe-email' : 'submit',
         'click #twitter-follow' : 'twitterFollow',
         'click #instagram-follow' : 'instagramFollow'
+    },
+    submit: function(){
+      $('form').submit();
     },
     twitterFollow: function () {
 

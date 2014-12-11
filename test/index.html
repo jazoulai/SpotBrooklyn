@@ -53,14 +53,14 @@
     </script>
 
     <script type="text/x-handlebars-template" id="intro_template">
-            <h1>LOCAL STORIES</span><br><span>for and by the</span><br>PEOPLE of BROOKLYN.</h1>
+            <h1>LOCAL STORIES</span><br><span>for and by the</span><br>PEOPLE <span>of</span> BROOKLYN</h1>
             <div class="arrow-down"></div>
             <span class="fa fa-camera-retro"></span>
     </script>
 
     <script type="text/x-handlebars-template" id="voting-explained-template">
                 <h2>Vote On The Topics Below</h2>
-                <p>Spot Brooklyn will publish original content and community submissions about topics that matter</p>
+                <p>Spot Brooklyn will publish original content and community submissions on topics that matter to our community.</p>
         <p>Tell us what matters to you by voting below.</p>
                 <span>Or submit your own</span>
     </script>
@@ -94,9 +94,9 @@
     <script type="text/x-handlebars-template" id="contribution-form-template">
         <div>
             <h2>Submit A Topic</h2>
-            <p>We will publish and credit the best submissions.</p>
-            <textarea rows="1" placeholder="There is no such thing as a dumb idea."></textarea>
-            <input type="text" placeholder="Who should we credit?">
+            <p>The best topics will be published and credited.</p>
+            <textarea id="submission-field" rows="1" placeholder="There is no such thing as a dumb idea."></textarea>
+            <textarea id="credit-field" rows="1" placeholder="Who should we credit?"></textarea>
         </div>
         <button id="submit-topic">Submit</button>
     </script>
@@ -104,17 +104,32 @@
 
     <script type="text/x-handlebars-template" id="follow-template">
         <h2>Stay In The Loop</h2>
-        <p>We'll send updates when we turn each winning topic into interactive articles for your enjoyment.</p>
+        <p>We'll send updates when we turn the best topics into interactive articles for your enjoyment.</p>
         <span>(We won't be annoying, or share your information.)</span>
-        <form id="email-signup">
-            <input type="text" placeholder="you@example.com">
-            <input type="submit" value="Subscribe">
+        <form action="http://spotbrooklyn.us5.list-manage1.com/subscribe/post" method="POST" id="email-signup">
+            <input type="hidden" name="u" value="de611717859b21ec0db1a7f16">
+            <input type="hidden" name="id" value="270695d569">
+            <textarea name="MERGE0" id="MERGE0" rows="1" placeholder="your@email.com"></textarea>
+            <button id="subscribe-email">Subscribe</button>
         </form>
         <div class="social-buttons">
             <div id="twitter-follow"></div>
             <div id="instagram-follow"></div>
         </div>
     </script>
+
+
+    <!--
+
+    <form action="http://spotbrooklyn.us5.list-manage1.com/subscribe/post" method="POST">
+            <input type="hidden" name="u" value="de611717859b21ec0db1a7f16">
+            <input type="hidden" name="id" value="270695d569">
+            <label for="MERGE0"><span class="req asterisk"></span></label>
+            <input type="email" name="MERGE0" id="MERGE0" value="" placeholder=" your email">
+            <br><input type="submit" name="submit" value="Email Me" id="submit" />
+        </form>
+
+    -->
 
     <script type="text/x-handlebars-template" id="share-template">
         <h2>Tell Your Friends.</h2>
