@@ -1,7 +1,7 @@
                                     /*
                                     GLOBAL DEFAULTS START
                                     */
-* {
+*, *:before {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -27,13 +27,13 @@ html {
 }
 button {
     appearance: none;
-    border: solid 3px #7BC6D4;
-    color: #7BC6D4;
+    color: #000;
     border-radius: 5px;
     padding: 3vw;
     font-size: 2rem;
     line-height: 2rem;
-    background-color: #ffffff;
+    background: transparent;
+    border: solid 4px red;
 }
                                     /*
                                     LAYOUT START
@@ -41,15 +41,39 @@ button {
 #body {
     width: 100vh;
     height: auto;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: center;
 }
-#voting-explained, #story-list, #submit, #follow, #share, #results-signup {
-    width: 100vw;
-    height: 100vh;
-    padding: 10vh 10vw 0;
+#intro, #voting-explained, #story-list, #submit, #follow, #share, #results-signup {
     display: -webkit-flex;
     -webkit-flex-direction: column;
     -webkit-justify-content: center;
     -webkit-align-items: center;
+    margin: auto;
+}
+#intro, #intro:before, #intro:after, #voting-explained, #story-list, #submit, #submit:before, #follow, #follow:before, #share, #share:before, #results-signup {
+    width: 100vw;
+    height: 100vh
+}
+#intro:before, #intro:after, #submit:before, #follow:before, #share:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    z-index: -1;
+    background-repeat: no-repeat;
+}
+#submit:before, #follow:before, #share:before {
+    height: 50vh;
+    max-width: 700px;
+    top: 50vh;
+    margin: auto;
+    background-size: contain;
+}
+#intro, #voting-explained, #story-list, #submit, #follow, #share, #results-signup {
+    max-width: 700px;
+    padding: 10vh 10vw 0;
 }
 /*
                                     LAYOUT END
@@ -61,8 +85,11 @@ h1 {
     font-size: 4rem;
     line-height: 4rem;
     font-weight: 700;
-    -webkit-text-stroke: 1px #000;
     margin: 0 15vw;
+}
+h1 > span:first-of-type {
+    font-size: 5.25rem;
+    line-height: 5.25rem;
 }
 h1 > span {
     font-size: 2.5rem;
@@ -113,7 +140,6 @@ p {
     line-height: 1rem;
 }
 #intro button {
-    background: rgba(0,0,0, .5);
     margin-top: 7vh;
 }
                                     /*
@@ -132,13 +158,13 @@ p {
     height: 10vh;
     top: 0;
     z-index: 100;
-    background-color: rgba(0, 0, 0, .75);
+    background-color: rgba(0, 0, 0, .25);
     display: -webkit-flex;
     -webkit-flex-direction: row;
     -webkit-flex-wrap: nowrap;
     -webkit-justify-content: center;
     -webkit-align-items: center;
-    color: rgb(255, 255, 255);
+    color: #fff;
 
 }
 #header > img {
@@ -149,51 +175,39 @@ p {
     INTRO
 */
 #intro {
-    width: 100vw;
-    height: 100vh;
     color: #fff;
-    display: -webkit-flex;
-    -webkit-flex-direction: column;
-    -webkit-flex-wrap: nowrap;
-    -webkit-justify-content: center;
-    -webkit-align-items: center;
 }
 #intro:before {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    content: "";
     z-index: -2;
     background-color: #000;
 }
 #intro:after {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    content: "";
-    z-index: -1;
-    background-image: url('../images/nytmes_stoop.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: url('../images/stoop2.jpg');
     background-size: cover;
-    -webkit-filter: blur(3px) grayscale(100%) contrast(200%);
+    background-position: center;
+    -webkit-filter: blur(3px) grayscale(100%) brightness(50%);
 }
-#intro > div {
+#your-photo {
     position: absolute;
     bottom: 10vh;
     left: 80vw;
     color: #7BC6D4;
     -webkit-transform: rotate(90deg);
 }
+.arrow-down {
+    margin-top: 7vh;
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 40px solid #f00;
+}
 /*
     VOTE
 */
 #voting-explained {
     height: 80vh;
+    color: #7BC6D4;
 }
 #voting-explained > * {
     margin-bottom: 5vh;
@@ -205,10 +219,14 @@ p {
     CONTRIBUTION FORM
 */
 #submit {
-    display: -webkit-flex;
-    -webkit-flex-direction: column;
-    -webkit-justify-content: center;
-    -webkit-align-items: center;
+    position: relative;
+    -webkit-justify-content: space-between;
+}
+#submit:before {
+    background-image: url('../images/woman_concentrating.jpg');
+    background-position: top;
+    -webkit-filter: blur(1px) grayscale(100%);
+
 }
 #submit > form {
     display: -webkit-flex;
@@ -223,19 +241,23 @@ textarea {
     border-radius: 5px;
     font-size: 1rem;
     padding: 2vw;
-    margin: 10vh 0 2vh;
 }
-[type=submit] {
-    width: 40vw;
-    height: 5vh;
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 5px;
+#submit button {
+    background: transparent;
 }
 /*
     Follow
 */
-
+#follow {
+    position: relative;
+    -webkit-justify-content: flex-start;
+}
+#follow:before {
+    background-image: url('../images/tin_can_phone.jpg');
+    background-repeat: no-repeat;
+    background-position: right top;
+    -webkit-filter: blur(1px) grayscale(100%);
+}
 #follow > form {
     display: -webkit-flex;
     -webkit-flex-direction: column;
@@ -246,7 +268,6 @@ textarea {
     width: 80vw;
     height: 2rem;
     padding: 0 1rem;
-    margin: 10vh 0 2vh;
     background-color: white;
     border: 1px solid black;
     border-radius: 5px;
@@ -272,7 +293,15 @@ textarea {
 /*
     Share
 */
-
+#share {
+    position: relative;
+    -webkit-justify-content: flex-start;
+}
+#share:before {
+    background-image: url('../images/teen-secrets.jpg');
+    background-position: right top;
+    -webkit-filter: blur(1px) grayscale(100%);
+}
 
 
 /*
@@ -287,6 +316,7 @@ textarea {
 }
 .story-list-item {
     width: 80vw;
+    max-width: 700px;
     height: auto;
     padding: 1.5vh;
     background-color: #fff;
@@ -318,6 +348,10 @@ textarea {
     -webkit-justify-content: center;
     -webkit-align-items: center;
 }
+#voting-explained .plus-one {
+    width: 80px;
+    height: 80px;
+}
 #voting-explained .plus-one, #stories .select {
     opacity: 1;
 }
@@ -335,6 +369,12 @@ textarea {
     line-height: 1.5rem;
     font-weight: 900;
     text-align: center;
+}
+/*
+VOTING RESULTS
+*/
 
+#results-signup > h2 {
+    color: red;
 }
 

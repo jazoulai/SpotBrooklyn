@@ -9,7 +9,7 @@ sbk.IntroView = Backbone.View.extend({
         return this;
     },
     events: {
-        'click button' : 'joinUs',
+        'click .arrow-down' : 'joinUs',
         'click #your-photo' : 'yourPhoto'
     },
     joinUs: function() {

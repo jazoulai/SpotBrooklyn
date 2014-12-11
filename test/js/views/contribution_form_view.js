@@ -9,7 +9,7 @@ sbk.ContributionFormView = Backbone.View.extend({
         return this;
     },
     events: {
-        'click input' : 'submit_idea'
+        'click #submit-topic' : 'submit_idea'
     },
     submit_idea: function (event) {
         event.preventDefault();
