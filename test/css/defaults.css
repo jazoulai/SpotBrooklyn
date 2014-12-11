@@ -13,14 +13,14 @@ ul {
 }
 
 button {
+    width: 150px;
     appearance: none;
-    color: #000;
+    color: #fff;
     border-radius: 5px;
-    padding: 3vw;
     font-size: 2rem;
-    line-height: 2rem;
-    background: transparent;
-    border: solid 4px red;
+    line-height: 4rem;
+    background-color: red;
+    margin-top: 3vh;
 }
 textarea {
     border: 2px solid #7BC6D4;
