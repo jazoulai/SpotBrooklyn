@@ -1,0 +1,24 @@
+.vote {
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+}
+.vote > span {
+    padding: 2px;
+    margin: 4px;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+    font-size: 10vh;
+}
+.vote > span.select.fa-smile-o {
+    color: #009926;
+}
+.vote > span.select.fa-meh-o {
+    color: #f4da2e;
+}
+.vote > span.select.fa-frown-o {
+    color: #ED1C24;
+}

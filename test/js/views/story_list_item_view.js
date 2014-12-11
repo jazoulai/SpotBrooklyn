@@ -11,13 +11,13 @@ sbk.StoryListItemView = Backbone.View.extend({
         $(this.el).append(this.voteButtonsView.render().el);
         return this;
     },
-    events : {
-        'click .plus-one' : 'plusOne'
+    events: {
+        'click span' : 'vote'
     },
-    plusOne: function (ev) {
+    vote: function (ev) {
         $(ev.currentTarget).toggleClass('select');
         $(ev.currentTarget).siblings().removeClass('select');
-        var vote = $(ev.currentTarget).find('span').html();
+        var vote = $(ev.currentTarget).attr('aria-label');
         var title = this.model.get('headline');
         console.log(vote + ' ' + title);
         ga('send', 'event', vote, 'click', title, 1);

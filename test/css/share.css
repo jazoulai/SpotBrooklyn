@@ -1,5 +1,4 @@
 #share {
-    position: relative;
     -webkit-justify-content: flex-start;
 }
 #share:before {

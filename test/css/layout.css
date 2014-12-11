@@ -26,6 +26,9 @@ body {
     width: 100vw;
     height: 100vh
 }
+#submit, #follow, #share {
+    position: relative;
+}
 #intro:before, #intro:after, #submit:before, #follow:before, #share:before {
     position: absolute;
     top: 0;
@@ -36,11 +39,9 @@ body {
 }
 #submit:before, #follow:before, #share:before {
     height: 50vh;
-    max-width: 700px;
     top: 50vh;
     background-size: contain;
 }
 #intro, #voting-explained, #story-list, #submit, #follow, #share, #results-signup {
-    max-width: 700px;
     padding: 10vh 10vw 0;
 }

@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>Spot Brooklyn</title>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/layout.css"/>
     <link rel="stylesheet" href="css/type.css"/>
     <link rel="stylesheet" href="css/defaults.css"/>
     <link rel="stylesheet" href="css/header.css"/>
     <link rel="stylesheet" href="css/intro.css"/>
+    <link rel="stylesheet" href="css/vote_buttons.css"/>
     <link rel="stylesheet" href="css/voting_explained.css"/>
     <link rel="stylesheet" href="css/story_list.css"/>
     <link rel="stylesheet" href="css/results_signup.css"/>
@@ -53,7 +55,7 @@
     <script type="text/x-handlebars-template" id="intro_template">
             <h1><span>LOCAL STORIES</span></span><br><span>for and by the</span><br>PEOPLE of BROOKLYN.</h1>
             <div class="arrow-down"></div>
-            <div id="your-photo">(your photo here)</div>
+            <div id="your-photo"><i class="fa fa-camera-retro">(your photo here)</i></div>
     </script>
 
     <script type="text/x-handlebars-template" id="voting-explained-template">
@@ -64,9 +66,9 @@
     </script>
 
     <script type="text/x-handlebars-template" id="vote-buttons-template">
-        <div class="green plus-one"><span>:)</span></div>
-        <div class="yellow plus-one"><span>:|</span></div>
-        <div class="red plus-one"><span>:(</span></div>
+        <span aria-label="smile" class="fa fa-smile-o"></span>
+        <span aria-label="meh" class="fa fa-meh-o"></span>
+        <span aria-label="frown" class="fa fa-frown-o"></span>
     </script>
 
     <script type="text/x-handlebars-template" id="story-list-template">
