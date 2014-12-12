@@ -19,7 +19,7 @@ body {
 }
 #intro, #intro:before, #intro:after, #voting-explained, #story-list, #submit, #submit:before, #follow, #follow:before, #share, #share:before, #results-signup {
     width: 100vw;
-    height: 100vh
+    height: 100vh;
 }
 #submit, #follow, #share {
     position: relative;

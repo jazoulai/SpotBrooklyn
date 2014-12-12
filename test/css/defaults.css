@@ -35,8 +35,6 @@ textarea {
     font-size: 1rem;
 }
 .social-buttons {
-    width: 80%;
-    max-width: 200px;
     display: -webkit-flex;
     -webkit-flex-direction: row;
     -webkit-justify-content: center;
@@ -46,5 +44,6 @@ textarea {
     font-size: 5rem;
     line-height: 5rem;
     color: #7BC6D4;
-    margin: 10px;
+    margin: 1vw;
+
 }

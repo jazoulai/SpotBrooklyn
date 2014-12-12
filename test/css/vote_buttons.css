@@ -10,6 +10,7 @@
     -webkit-flex-direction: column;
     -webkit-justify-content: center;
     -webkit-align-items: center;
+    margin: 0 1rem;
 }
 .vote > span.select.fa-smile-o {
     color: #009926;
