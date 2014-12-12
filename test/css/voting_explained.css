@@ -1,14 +1,8 @@
 #voting-explained {
     height: 80vh;
 }
+
 #voting-explained > .vote {
     margin-bottom: 5vh;
-    font-size: 10vh;
-    line-height: 10vh;
-}
-#voting-explained span.fa {
-    margin-right: 1rem;
-}
-#voting-explained span.fa:last-child {
-    margin-right: 0;
+
 }

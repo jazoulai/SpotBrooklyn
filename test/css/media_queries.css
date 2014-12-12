@@ -1,0 +1,22 @@
+/*iphone 4, 4s, */
+@media (max-height: 480px) {
+    html {
+        font-size: 60% !important;
+    }
+    #submit:before, #share:before {
+        max-height: 100px !important;
+    }
+    #follow:before {
+        max-height: 150px !important;
+    }
+}
+@media (orientation: landscape) {
+    body {
+        -webkit-text-size-adjust: 125% !important;
+    }
+}
+@media (max-height: 480px) and (orientation: landscape) {
+    body {
+        -webkit-text-size-adjust: 100% !important;
+    }
+}

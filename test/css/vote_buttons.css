@@ -6,12 +6,10 @@
 }
 .vote > span {
     color: #7BC6D4;
-
     display: -webkit-flex;
     -webkit-flex-direction: column;
     -webkit-justify-content: center;
     -webkit-align-items: center;
-
 }
 .vote > span.select.fa-smile-o {
     color: #009926;

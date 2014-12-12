@@ -9,11 +9,23 @@ sbk.ContributionFormView = Backbone.View.extend({
         return this;
     },
     events: {
-        'click #submit-topic' : 'submit_idea'
+        'click #submit-topic' : 'submitIdea',
+        'focus #submission-field' : 'scrollToTextarea'
     },
-    submit_idea: function (event) {
+    submitIdea: function (event) {
         event.preventDefault();
         var idea = $('textarea').val();
         ga('send', 'event', 'ideas', 'click', idea, 1);
+    },
+    scrollToTextarea: function () {
+
+        //TODO this includes padding and requires a css layout fix
+        var viewHeight = $(this.el).height();
+
+
+        var headerHeight = viewHeight/10; //calculated to match #header css height of 10vh
+        $('html, body').animate({
+            scrollTop: $('textarea').offset().top-headerHeight
+        }, 500);
     }
 });

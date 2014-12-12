@@ -1,3 +1,10 @@
+html {
+    font-family: "museo-sans", sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 75%;
+    text-align: center;
+}
 h1 {
     font-size: 4rem;
     line-height: 4rem;
@@ -47,4 +54,12 @@ p {
     line-height: 1.5rem;
     text-align: left;
     margin: 1.5rem 0;
+}
+.story-list-item span.fa, #voting-explained span.fa {
+    font-size: 10vh;
+    line-height: 10vh;
+    margin-right: 2rem;
+}
+#voting-explained span.fa:last-child, .story-list-item span.fa:last-child {
+    margin-right: 0;
 }
