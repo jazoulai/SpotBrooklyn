@@ -44,6 +44,7 @@ body {
     bottom: 0;
     background-size: contain;
     background-position: right bottom;
+    -webkit-filter: blur(1px) grayscale(100%);
 }
 #intro, #voting-explained, #story-list, #submit, #follow, #share, #results-signup {
     padding-top: 10vh;

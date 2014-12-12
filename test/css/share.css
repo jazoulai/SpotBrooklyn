@@ -3,5 +3,4 @@
 }
 #share:before {
     background-image: url('../images/teen-secrets.jpg');
-    -webkit-filter: blur(1px) grayscale(100%);
 }

@@ -5,7 +5,6 @@
 #follow:before {
     background-image: url('../images/tin_can_phone.jpg');
     background-repeat: no-repeat;
-    -webkit-filter: blur(1px) grayscale(100%);
 }
 #follow > form {
     display: -webkit-flex;

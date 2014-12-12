@@ -11,7 +11,7 @@ sbk.VotingExplainedView = Backbone.View.extend({
         return this;
     },
     events : {
-        'click span:last-child' : 'dotell'
+        'click p:last-child' : 'dotell'
     },
     dotell: function () {
         $('html, body').animate({
