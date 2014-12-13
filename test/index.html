@@ -61,10 +61,10 @@
     </script>
 
     <script type="text/x-handlebars-template" id="voting-explained-template">
-                <h2>Vote On The Topics Below</h2>
-                <p>Spot Brooklyn will publish original content and community submissions on topics that matter to our community.</p>
-        <p>Tell us what matters to you by voting below.</p>
-                <p>Or submit your own</p>
+        <h2>Vote On The Ideas Below</h2>
+        <p>We'll explore our community by publishing short, interactive articles, creative submissions and thoughtful responses from people like you.</p>
+        <p>Help us choose what to publish first by voting on the ideas below.</p>
+        <p class="scrollLink">or submit your own</p>
     </script>
 
     <script type="text/x-handlebars-template" id="vote-buttons-template">
@@ -74,8 +74,9 @@
     </script>
 
     <script type="text/x-handlebars-template" id="story-list-template">
-        <div id="stories"></div>
-        <button id="load-more">More</button>
+
+        <ul id="stories-list-ul"></ul>
+        <button id="load-more">Load More</button>
     </script>
 
     <script type="text/x-handlebars-template" id="story-list-item-template">
@@ -85,7 +86,7 @@
 
     <script type="text/x-handlebars-template" id="results-signup-template">
         <h2>Your Vote Has Been Cast!</h2>
-        <p>See how your votes compared to the community's.</p>
+        <p>See how your votes compares to the community's.</p>
         <form action="http://spotbrooklyn.us5.list-manage1.com/subscribe/post" method="POST">
             <input type="hidden" name="u" value="de611717859b21ec0db1a7f16">
             <input type="hidden" name="id" value="270695d569">
@@ -97,8 +98,8 @@
 
     <script type="text/x-handlebars-template" id="contribution-form-template">
         <div>
-            <h2>Submit A Topic</h2>
-            <p>The best topics will be published and credited.</p>
+            <h2>Submit An Idea</h2>
+            <p>The best ideas will be developed and published.</p>
             <textarea id="submission-field" rows="1" placeholder="There is no such thing as a dumb idea."></textarea>
             <textarea id="credit-field" rows="1" placeholder="Who should we credit?"></textarea>
         </div>
@@ -108,7 +109,7 @@
 
     <script type="text/x-handlebars-template" id="follow-template">
         <h2>Stay In The Loop</h2>
-        <p>We'll send updates once we've turn the best topics into interactive articles for your enjoyment.</p>
+        <p>We'll send updates once the best ideas become content for your enjoyment.</p>
         <p id="fine-print">(We won't be annoying, or share your information.)</p>
         <form action="http://spotbrooklyn.us5.list-manage1.com/subscribe/post" method="POST">
             <input type="hidden" name="u" value="de611717859b21ec0db1a7f16">
@@ -124,7 +125,7 @@
 
     <script type="text/x-handlebars-template" id="share-template">
         <h2>Tell Your Friends.</h2>
-        <p>Let them know that Spot Brooklyn is a local blog that publishes the people's voice.</p>
+        <p>Let them know that Spot Brooklyn is a website that publishes the voice of the community.</p>
         <div class="social-buttons">
             <span id="twitter-share" class="fa fa-twitter-square"></span>
             <span id="facebook-share" class="fa fa-facebook-square"></span>

@@ -1,47 +1,62 @@
 [
     {
         "id" : "1",
-        "headline" : "Stay active this winter.",
+        "headline" : "Root for the Home Team.",
         "description" : "Reasons to leave your apartment that don’t involve food or alcohol."
     },
     {
         "id" : "2",
-        "headline" : "Where are donuts?",
-        "description" : "A map of all the cafes that carry our favorite fluffy, fried dough."
+        "headline" : "People In My Community",
+        "description" : "Meet your local butcher, doctor, cop and more in this lighthearted and informative illustrated series."
     },
     {
         "id" : "3",
-        "headline" : "Good Brooklynite / Bad Brooklynite",
-        "description" : "Celebrate the best and worst in all of us with your monthly nominations!"
-    },
-    {
-        "id" : "4",
-        "headline" : "Anatomy of a the NYPD",
-        "description" : "An illustrated diagram of an officer (uniforms, their gear, hearts and minds)."
-    },
-    {
-        "id" : "5",
         "headline" : "Subway Ad Captions",
         "description" : "Talk back to the ads that hold us captive on our long commutes."
     },
     {
+        "id" : "4",
+        "headline" : "Good New Yorker / Bad New Yorker",
+        "description" : "Celebrate the best and worst in all of us with your monthly nominations!"
+    },
+    {
+        "id" : "5",
+        "headline" : "How does city government work?",
+        "description" : "What are the six levels of government between you and your Mayor?"
+    },
+    {
         "id" : "6",
-        "headline" : "Self Defense for Everyone",
-        "description" : "How to feel safe on your walk home at night?"
+        "headline" : "Brooklyn’s Military Past",
+        "description" : "Photos of the buildings and statues left behind by war."
     },
     {
         "id" : "7",
-        "headline" : "Germs in the City",
-        "description" : "How do we protect ourselves from the bugs and the fear?"
-    },
-    {
-        "id" : "7",
-        "headline" : "Beautiful Brooklyn Homes",
-        "description" : "Photograph your favorite Brooklyn home (doesn’t have to be yours)!"
+        "headline" : "Where are donuts?",
+        "description" : "A map of all the cafes that carry our favorite fluffy, fried dough"
     },
     {
         "id" : "8",
-        "headline" : "Battles of Brooklyn",
-        "description" : "A photographic tour of the relics from Brooklyn’s military history."
+        "headline" : "Cures for Cabin Fever!",
+        "description" : "Reasons to leave your apartment that don’t involve food or alcohol."
+    },
+    {
+        "id" : "9",
+        "headline" : "Your Brooklyn Dream Home",
+        "description" : "Photograph your favorite home (doesn’t have to be yours)!"
+    },
+    {
+        "id" : "10",
+        "headline" : "Tell Us Your Pest Problems!",
+        "description" : "Share stories about your battles with the creepy crawlies. We’ll start!"
+    },
+    {
+        "id" : "11",
+        "headline" : "Urban Survival Guide",
+        "description" : "Creative tips to prepare us for disasters big and small."
+    },
+    {
+        "id" : "12",
+        "headline" : "Self Defense for Everyone",
+        "description" : "How to feel safe when you're walking home at night."
     }
 ]
