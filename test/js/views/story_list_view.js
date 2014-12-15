@@ -8,12 +8,39 @@ sbk.StoryListView = Backbone.View.extend({
         this.collection.on('reset', this.render, this);
     },
     template: Handlebars.compile($('#story-list-template').html()),
-    render: function () {
+    sampleCollection: function() {
+
+        var self = this;
+        this.findStoryList = $(this.el).find('#stories-list-ul');
+
+        //create a randomly sampled copy of this.collection
         this.newCollection = _.sample(this.collection.models, 3);
-        $(this.el).html(this.template());
+
+        //append each story-list-item to the a child element of this view.
         _.each(this.newCollection, function (storyItem) {
-            $(this.el).find('#stories-list-ul').prepend(new sbk.StoryListItemView({model: storyItem}).render().el);
+            this.findStoryList.append(new sbk.StoryListItemView({model: storyItem}).render().el);
         }, this);
+
+        //count the number of currently displayed ideas
+        this.liLength = this.findStoryList.find('li').length;
+
+        //store the length of this.collection before it is redefined
+        this.totalIdeas = this.collection.length;
+
+        //remove each child of the sampled copy from this.collection to avoid rendering duplicates.
+        _.each(self.newCollection, function(child){
+            self.collection.remove(child);
+        });
+
+    },
+    render: function () {
+        $(this.el).html(this.template());
+
+        this.sampleCollection();
+
+        //insert the total length of this.collection after the template is rendered
+        $(this.el).find('#tally').html(this.liLength);
+        $(this.el).find('#count').html(' of ' + this.totalIdeas);
 
         return this;
     },
@@ -22,22 +49,24 @@ sbk.StoryListView = Backbone.View.extend({
     },
     loadMore: function(ev){
 
-        if(this.collection.length > 3){
-            console.log(this.collection.length);
-            var self = this;
-            _.each(self.newCollection, function(child){
-                self.collection.remove(child);
-            });
-            this.render();
+        if(this.collection.length > 0){
+
+            this.sampleCollection();    
+            $(this.el).find('#tally').html(this.liLength);
+            var liIndex = this.liLength - 4;
+
             $('html, body').animate({
-                scrollTop: $('#story-list').offset().top
-            }, 500);
+             scrollTop: $('li:eq(' + liIndex + ')').offset().top
+             }, 500);
+
+
+
         } else {
-            this.resultsSignupView = new sbk.ResultsSignupView();
-            $(this.el).replaceWith(this.resultsSignupView.render().el);
-            $('html, body').animate({
+
+
+            /*$('html, body').animate({
                 scrollTop: $('#results-signup').offset().top
-            }, 500);
+            }, 500);*/
         }
     }
 });
