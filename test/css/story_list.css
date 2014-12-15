@@ -23,3 +23,6 @@
     font-weight: 900;
     text-align: center;
 }
+.story-list-item img {
+    width: 80%;
+}

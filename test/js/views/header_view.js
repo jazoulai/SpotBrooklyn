@@ -9,11 +9,16 @@ sbk.HeaderView = Backbone.View.extend({
         return this;
     },
     events : {
-        'click img' : 'backToTop'
+        'click img' : 'backToTop',
+        'click .fa-bars' : 'toggleMenu'
     },
     backToTop: function () {
         $('html, body').animate({
             scrollTop: $('html').offset().top
         }, 500);
+    },
+    toggleMenu: function () {
+        $('#results-signup').slideToggle();
     }
+
 });

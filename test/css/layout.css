@@ -17,7 +17,7 @@ body {
     -webkit-justify-content: center;
     -webkit-align-items: center;
 }
-#intro, #intro:before, #intro:after, #voting-explained, #story-list, #submit, #submit:before, #follow, #follow:before, #share, #share:before, #results-signup {
+#intro, #intro:before, #intro:after, #voting-explained, #story-list, #submit, #submit:before, #follow, #follow:before, #share, #share:before {
     width: 100vw;
     height: 100vh;
 }
@@ -43,6 +43,6 @@ body {
 #follow:before {
     max-height: 200px;
 }
-#intro, #voting-explained, #story-list, #submit, #follow, #share, #results-signup {
+#intro, #voting-explained, #story-list, #submit, #follow, #share {
     padding-top: 10vh;
 }

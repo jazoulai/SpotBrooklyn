@@ -4,15 +4,22 @@
     height: 10vh;
     top: 0;
     z-index: 100;
-    background-color: rgba(0, 0, 0, .25);
+    background-color: rgba(0, 0, 0, .85);
     display: -webkit-flex;
     -webkit-flex-direction: row;
     -webkit-flex-wrap: nowrap;
-    -webkit-justify-content: center;
+    -webkit-justify-content: space-between;
     -webkit-align-items: center;
     color: #fff;
 }
 #header > img {
     width: auto;
     height: 8vh;
+}
+#header > span {
+    font-size: 8vh;
+    line-height: 8vh;
+}
+#header > img, #header > span {
+    margin: 1vh;
 }

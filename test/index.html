@@ -52,6 +52,7 @@
     <script type="text/x-handlebars-template" id="header-template">
         <img src="images/logo.svg"/>
         <h3>Spot Brooklyn</h3>
+        <span class="fa fa-bars"></span>
     </script>
 
     <script type="text/x-handlebars-template" id="intro_template">
@@ -61,10 +62,7 @@
     </script>
 
     <script type="text/x-handlebars-template" id="voting-explained-template">
-        <h2>Vote On The Ideas Below</h2>
-        <p>We'll explore our community by publishing short, interactive articles, creative submissions and thoughtful responses from people like you.</p>
-        <p>Help us choose what to publish first by voting on the ideas below.</p>
-        <p class="scrollLink">or submit your own</p>
+        <p>We'll explore our community by publishing short articles as well as creative submissions and thoughtful responses from people like you.</p>
     </script>
 
     <script type="text/x-handlebars-template" id="vote-buttons-template">
@@ -74,7 +72,8 @@
     </script>
 
     <script type="text/x-handlebars-template" id="story-list-template">
-
+        <h2>Tap To Vote</h2>
+        <p>Help us choose what to publish first by voting on the ideas below.</p>
         <ul id="stories-list-ul"></ul>
         <button id="load-more">Load More</button>
         <span id="tally"></span><span id="count"></span>
@@ -82,19 +81,15 @@
 
     <script type="text/x-handlebars-template" id="story-list-item-template">
         <h4>{{headline}}</h4>
+        <img src="images/woman_concentrating.jpg"/>
         <p>{{description}}</p>
+        <p class="scrollLink">Tap to Vote</p>
     </script>
 
     <script type="text/x-handlebars-template" id="results-signup-template">
-        <h2>Your Vote Has Been Cast!</h2>
-        <p>See how your votes compares to the community's.</p>
-        <form action="http://spotbrooklyn.us5.list-manage1.com/subscribe/post" method="POST">
-            <input type="hidden" name="u" value="de611717859b21ec0db1a7f16">
-            <input type="hidden" name="id" value="270695d569">
-            <textarea name="MERGE0" rows="1" placeholder="your@email.com"></textarea>
-        </form>
-        <button id="results-email">Submit</button>
-        <p>then continue below</p>
+        <p>Sumbit Any Idea</p>
+        <p>Follow Us</p>
+        <p>Share Our Link</p>
     </script>
 
     <script type="text/x-handlebars-template" id="contribution-form-template">
@@ -109,7 +104,7 @@
 
 
     <script type="text/x-handlebars-template" id="follow-template">
-        <h2>Stay In The Loop</h2>
+        <h2>Follow Us via Email or Social Media</h2>
         <p>We'll send updates once the best ideas become content for your enjoyment.</p>
         <p id="fine-print">(We won't be annoying, or share your information.)</p>
         <form action="http://spotbrooklyn.us5.list-manage1.com/subscribe/post" method="POST">
@@ -125,7 +120,7 @@
     </script>
 
     <script type="text/x-handlebars-template" id="share-template">
-        <h2>Tell Your Friends.</h2>
+        <h2>Share Our Link</h2>
         <p>Let them know that Spot Brooklyn is a website that publishes the voice of the community.</p>
         <div class="social-buttons">
             <span id="twitter-share" class="fa fa-twitter-square"></span>

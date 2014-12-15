@@ -35,6 +35,8 @@ sbk.StoryListView = Backbone.View.extend({
     },
     render: function () {
         $(this.el).html(this.template());
+        this.voteButtonsView = new sbk.VoteButtonsView();
+        $(this.el).find('h2').after(this.voteButtonsView.render().el);
 
         this.sampleCollection();
 
@@ -51,7 +53,7 @@ sbk.StoryListView = Backbone.View.extend({
 
         if(this.collection.length > 0){
 
-            this.sampleCollection();    
+            this.sampleCollection();
             $(this.el).find('#tally').html(this.liLength);
             var liIndex = this.liLength - 4;
 
@@ -64,9 +66,6 @@ sbk.StoryListView = Backbone.View.extend({
         } else {
 
 
-            /*$('html, body').animate({
-                scrollTop: $('#results-signup').offset().top
-            }, 500);*/
         }
     }
 });
