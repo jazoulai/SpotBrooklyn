@@ -6,11 +6,15 @@ sbk.ContributionFormView = Backbone.View.extend({
     template: Handlebars.compile($('#contribution-form-template').html()),
     render: function () {
         $(this.el).html(this.template());
+        _.defer(function(view){
+            view.activeButtonStyle();
+        }, this );
         return this;
     },
     events: {
         'click #submit-topic' : 'submitIdea',
-        'focus #submission-field' : 'scrollToTextarea'
+        'focus #submission-field' : 'scrollToTextarea',
+        'keyup' : 'activeButtonStyle'
     },
     textareaHasValue: function() {
         this.textarea = $('#submission-field');
@@ -20,22 +24,24 @@ sbk.ContributionFormView = Backbone.View.extend({
         var textareaValueLength = this.textareaValue.trim().length;
         return (textareaValueLength > 1);
     },
-    //in progress
     activeButtonStyle : function () {
-      if(this.textareaHasValue()) {
-          $('#submit > button').toggleClass('active-button');
-      }
+        var button = $(this.el).find('button');
+        
+        if(this.textareaHasValue()){
+            button.addClass('active');
+            button.removeAttr('disabled', 'disabled');
+        } else {
+            button.removeClass('active');
+        }
     },
     submitIdea: function (event) {
         event.preventDefault();
-        if(this.textareaHasValue()) {
+
             $('#submit').append('<p>Thanks for your submission, ' + this.creditTextareaValue + '!</p>');
             ga('send', 'event', 'ideas', 'click', this.textareaValue, 1);
             this.textarea.val('');
             this.creditTextarea.val('');
-        } else {
-            alert('Please enter your email address.');
-        }
+            console.log('submitted');
     },
     scrollToTextarea: function () {
 

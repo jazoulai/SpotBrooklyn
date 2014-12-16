@@ -9,29 +9,22 @@ sbk.StoryListView = Backbone.View.extend({
     },
     template: Handlebars.compile($('#story-list-template').html()),
     sampleCollection: function() {
-
         var self = this;
-        this.findStoryList = $(this.el).find('#stories-list-ul');
-
-        //create a randomly sampled copy of this.collection
-        this.newCollection = _.sample(this.collection.models, 3);
+        this.storyList = $(this.el).find('#stories-list-ul');
+        this.sampledCollection = _.sample(this.collection.models, 3);
 
         //append each story-list-item to the a child element of this view.
-        _.each(this.newCollection, function (storyItem) {
-            this.findStoryList.append(new sbk.StoryListItemView({model: storyItem}).render().el);
+        _.each(this.sampledCollection, function (idea) {
+            this.storyList.append(new sbk.StoryListItemView({model: idea}).render().el);
         }, this);
 
-        //count the number of currently displayed ideas
-        this.liLength = this.findStoryList.find('li').length;
-
-        //store the length of this.collection before it is redefined
-        this.totalIdeas = this.collection.length;
+        this.countListItems = this.storyList.find('li').length;
+        this.countTotalItems = this.collection.length;
 
         //remove each child of the sampled copy from this.collection to avoid rendering duplicates.
-        _.each(self.newCollection, function(child){
+        _.each(self.sampledCollection, function(child){
             self.collection.remove(child);
         });
-
     },
     render: function () {
         $(this.el).html(this.template());
@@ -41,8 +34,8 @@ sbk.StoryListView = Backbone.View.extend({
         this.sampleCollection();
 
         //insert the total length of this.collection after the template is rendered
-        $(this.el).find('#tally').html(this.liLength);
-        $(this.el).find('#count').html(' of ' + this.totalIdeas);
+        $(this.el).find('#tally').html(this.countListItems);
+        $(this.el).find('#count').html(' of ' + this.countTotalItems);
 
         return this;
     },
@@ -52,8 +45,8 @@ sbk.StoryListView = Backbone.View.extend({
     loadMore: function(){
         if(this.collection.length > 0){
             this.sampleCollection();
-            $(this.el).find('#tally').html(this.liLength);
-            var liIndex = this.liLength - 4;
+            $(this.el).find('#tally').html(this.countListItems);
+            var liIndex = this.countListItems - 4;
 
             $('html, body').animate({
              scrollTop: $('li:eq(' + liIndex + ')').offset().top
