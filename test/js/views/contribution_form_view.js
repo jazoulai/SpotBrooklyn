@@ -26,17 +26,17 @@ sbk.ContributionFormView = Backbone.View.extend({
     },
     activeButtonStyle : function () {
         var button = $(this.el).find('button');
-        
         if(this.textareaHasValue()){
-            button.addClass('active');
+            button.removeClass('disabled');
+            button.addClass('enabled');
             button.removeAttr('disabled', 'disabled');
         } else {
-            button.removeClass('active');
+            button.removeClass('enabled');
+            button.addClass('disabled');
         }
     },
     submitIdea: function (event) {
         event.preventDefault();
-
             $('#submit').append('<p>Thanks for your submission, ' + this.creditTextareaValue + '!</p>');
             ga('send', 'event', 'ideas', 'click', this.textareaValue, 1);
             this.textarea.val('');

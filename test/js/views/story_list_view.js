@@ -53,7 +53,10 @@ sbk.StoryListView = Backbone.View.extend({
              }, 500);
 
             if (this.collection.length === 0) {
-                $(this.el).find('button').remove();
+                var button = $(this.el).find('button');
+                button.removeClass('enabled');
+                button.addClass('disabled');
+                button.html('No More');
             }
         }
     }

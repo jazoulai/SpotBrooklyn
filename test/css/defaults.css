@@ -18,8 +18,13 @@ button {
     border-radius: 5px;
     font-size: 2rem;
     line-height: 4rem;
-    background-color: grey;
     margin-top: 3vh;
+}
+button.enabled {
+    background-color: red;
+}
+button.disabled {
+    background-color: #eee;
 }
 textarea {
     border: 2px solid #7BC6D4;

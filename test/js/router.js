@@ -6,11 +6,9 @@ sbk.AppRouter = Backbone.Router.extend({
         "": "loadList",
         "!": "loadList"
     },
-
     initialize: function (storyCollection) {
         this.storyCollection = storyCollection;
     },
-
     loadList: function () {
         this.bodyElement = $('body');
         this.resultsSignupView = new sbk.ResultsSignupView();
@@ -28,10 +26,5 @@ sbk.AppRouter = Backbone.Router.extend({
         this.bodyElement.append(this.votingExplainedView.render().el);
         this.bodyElement.append(this.storyListView.render().el);
         this.bodyElement.append(this.contributionFormView.render().el);
-
-
-
-
-
     }
 });
