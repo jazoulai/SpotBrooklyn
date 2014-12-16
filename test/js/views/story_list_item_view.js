@@ -15,11 +15,17 @@ sbk.StoryListItemView = Backbone.View.extend({
         'click span' : 'vote'
     },
     vote: function (ev) {
-        $(ev.currentTarget).toggleClass('select');
-        $(ev.currentTarget).siblings().removeClass('select');
+        var target = $(ev.currentTarget);
+        var votePrompt = target.parent().siblings('.scrollLink');
+        target.toggleClass('select');
+        target.siblings().removeClass('select');
+        if(target.hasClass('select') || target.siblings().hasClass('select')) {
+            votePrompt.html('You voted!');
+        } else {
+            votePrompt.html('Click to Vote!');
+        }
         var vote = $(ev.currentTarget).attr('aria-label');
         var title = this.model.get('headline');
-        console.log(vote + ' ' + title);
         ga('send', 'event', vote, 'click', title, 1);
     }
 });

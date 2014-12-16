@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe0408b6-eeb5-4738-b11d-2e853cd5eeb6" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/js/views/contribution_explained_view.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/js/views/contribution_form_view.js" afterPath="$PROJECT_DIR$/test/js/views/contribution_form_view.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/js/router.js" afterPath="$PROJECT_DIR$/test/js/router.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/js/views/story_list_item_view.js" afterPath="$PROJECT_DIR$/test/js/views/story_list_item_view.js" />
     </list>
     <ignored path="backbone_tutorial.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,8 +29,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="11.290322" vertical-offset="1758" max-vertical-offset="3762">
-              <caret line="64" column="150" selection-start-line="64" selection-start-column="150" selection-end-line="64" selection-end-column="150" />
+            <state vertical-scroll-proportion="-6.451613" vertical-offset="1648" max-vertical-offset="3762">
+              <caret line="84" column="30" selection-start-line="84" selection-start-column="30" selection-end-line="84" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -49,11 +46,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contribution_form_view.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="contribution_form_view.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/js/views/contribution_form_view.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.04" vertical-offset="429" max-vertical-offset="1254">
+            <state vertical-scroll-proportion="0.0" vertical-offset="55" max-vertical-offset="1254">
               <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="story_list_item_view.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/js/views/story_list_item_view.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.53333336" vertical-offset="0" max-vertical-offset="825">
+              <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -99,7 +106,6 @@
         <option value="$PROJECT_DIR$/test/js/views/vote_buttons_view.js" />
         <option value="$PROJECT_DIR$/test/css/styles.css" />
         <option value="$PROJECT_DIR$/test/js/libs/google_analytics.js" />
-        <option value="$PROJECT_DIR$/test/js/views/story_list_item_view.js" />
         <option value="$PROJECT_DIR$/test/js/views/follow_view.js" />
         <option value="$PROJECT_DIR$/test/js/views/intro_view.js" />
         <option value="$PROJECT_DIR$/test/css/submit.css" />
@@ -123,6 +129,7 @@
         <option value="$PROJECT_DIR$/test/index.html" />
         <option value="$PROJECT_DIR$/test/js/router.js" />
         <option value="$PROJECT_DIR$/test/js/views/contribution_form_view.js" />
+        <option value="$PROJECT_DIR$/test/js/views/story_list_item_view.js" />
       </list>
     </option>
   </component>
@@ -675,14 +682,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/js/views/story_list_item_view.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
-          <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/css/defaults.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="467" max-vertical-offset="1210">
@@ -791,16 +790,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="11.290322" vertical-offset="1758" max-vertical-offset="3762">
-          <caret line="64" column="150" selection-start-line="64" selection-start-column="150" selection-end-line="64" selection-end-column="150" />
+        <state vertical-scroll-proportion="-6.451613" vertical-offset="1648" max-vertical-offset="3762">
+          <caret line="84" column="30" selection-start-line="84" selection-start-column="30" selection-end-line="84" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/js/views/contribution_form_view.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.04" vertical-offset="429" max-vertical-offset="1254">
+        <state vertical-scroll-proportion="0.0" vertical-offset="429" max-vertical-offset="1254">
           <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/js/views/story_list_item_view.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.53333336" vertical-offset="0" max-vertical-offset="825">
+          <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
           <folding />
         </state>
       </provider>
