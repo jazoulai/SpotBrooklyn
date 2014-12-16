@@ -49,10 +49,8 @@ sbk.StoryListView = Backbone.View.extend({
     events: {
         'click #load-more' : 'loadMore'
     },
-    loadMore: function(ev){
-
+    loadMore: function(){
         if(this.collection.length > 0){
-
             this.sampleCollection();
             $(this.el).find('#tally').html(this.liLength);
             var liIndex = this.liLength - 4;
@@ -61,11 +59,9 @@ sbk.StoryListView = Backbone.View.extend({
              scrollTop: $('li:eq(' + liIndex + ')').offset().top
              }, 500);
 
-
-
-        } else {
-
-
+            if (this.collection.length === 0) {
+                $(this.el).find('button').remove();
+            }
         }
     }
 });
