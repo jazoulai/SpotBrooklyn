@@ -7,6 +7,14 @@ sbk.VoteButtonsView = Backbone.View.extend({
     render: function () {
         $(this.el).html(this.template());
         return this;
+    },
+    events : {
+        'click span' : 'voteColorToggle'
+    },
+    voteColorToggle: function(ev){
+        var target = $(ev.currentTarget);
+        target.toggleClass('select');
+        target.siblings().removeClass('select');
     }
 
 

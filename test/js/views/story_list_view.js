@@ -30,6 +30,8 @@ sbk.StoryListView = Backbone.View.extend({
         $(this.el).html(this.template());
         this.voteButtonsView = new sbk.VoteButtonsView();
         $(this.el).find('h2').after(this.voteButtonsView.render().el);
+        $(this.el).find('.fa-smile-o').addClass('select');
+
 
         this.sampleCollection();
 

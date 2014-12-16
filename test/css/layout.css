@@ -3,6 +3,8 @@ html {
     height: 100vh;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
 }
 body {
     width: 100vw;
@@ -17,18 +19,18 @@ body {
     -webkit-justify-content: center;
     -webkit-align-items: center;
 }
-#intro, #intro:before, #intro:after, #voting-explained, #story-list, #submit, #submit:before, #follow, #follow:before, #share, #share:before {
+#intro, #intro:before, #intro:after, #voting-explained, #voting-explained:before, #voting-explained:after, #story-list, #submit, #submit:before, #follow, #follow:before, #share, #share:before {
     width: 100vw;
     height: 100vh;
 }
-#submit, #follow, #share {
+#voting-explained, #submit, #follow, #share {
     position: relative;
 }
-#intro:before, #intro:after {
+#intro:before, #intro:after, #voting-explained:before, #voting-explained:after {
     top: 0;
     left: 0;
 }
-#intro:before, #intro:after, #submit:before, #follow:before, #share:before {
+#intro:before, #intro:after, #voting-explained:before, #voting-explained:after, #submit:before, #follow:before, #share:before {
     position: absolute;
     content: "";
     z-index: -1;

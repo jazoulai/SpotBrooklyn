@@ -1,3 +1,15 @@
+#voting-explained:before {
+    z-index: -2;
+    background-color: #000;
+}
+#voting-explained:after {
+    background-image: url('../images/brooklyn_view.jpg');
+    background-size: cover;
+    background-position: left top;
+    -webkit-filter: blur(1px) grayscale(100%) brightness(300%);
+}
 #voting-explained {
-    height: auto;
+    -webkit-justify-content: space-between;
+    padding-top: 20vh;
+    padding-bottom: 10vh;
 }

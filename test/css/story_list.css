@@ -26,3 +26,8 @@
 .story-list-item img {
     width: 80%;
 }
+#button-tally {
+    -webkit-flex-direction: row;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+}
