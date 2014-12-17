@@ -9,15 +9,14 @@ sbk.FollowView = Backbone.View.extend({
         return this;
     },
     events: {
-        'click #subscribe-email' : 'submit',
         'click #twitter-follow' : 'twitterFollow',
-        'click #instagram-follow' : 'instagramFollow'
+        'click #instagram-follow' : 'instagramFollow',
+        'scroll body' : 'showFollow'
     },
-    submit: function(){
-      $('form').submit();
+    showFollow: function(){
+        $(this.el).slideToggle();
     },
     twitterFollow: function () {
-
         window.open('https://twitter.com/intent/follow?screen_name=spotbrooklyn', '_self');
     },
     instagramFollow: function () {

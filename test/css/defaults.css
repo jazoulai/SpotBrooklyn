@@ -39,16 +39,3 @@ textarea {
     color: #DFDFDF;
     font-size: 1rem;
 }
-.social-buttons {
-    display: -webkit-flex;
-    -webkit-flex-direction: row;
-    -webkit-justify-content: center;
-    -webkit-align-items: center;
-}
-.social-buttons > span {
-    font-size: 5rem;
-    line-height: 5rem;
-    color: #7BC6D4;
-    margin: 1vw;
-
-}

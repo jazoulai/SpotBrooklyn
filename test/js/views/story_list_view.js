@@ -28,17 +28,10 @@ sbk.StoryListView = Backbone.View.extend({
     },
     render: function () {
         $(this.el).html(this.template());
-        this.voteButtonsView = new sbk.VoteButtonsView();
-        $(this.el).find('h2').after(this.voteButtonsView.render().el);
-        $(this.el).find('.fa-smile-o').addClass('select');
-
-
         this.sampleCollection();
-
         //insert the total length of this.collection after the template is rendered
         $(this.el).find('#tally').html(this.countListItems);
         $(this.el).find('#count').html(' of ' + this.countTotalItems);
-
         return this;
     },
     events: {

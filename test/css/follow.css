@@ -1,21 +1,13 @@
 #follow {
-    -webkit-justify-content: flex-start;
-    max-width: 100vw;
+    position: fixed;
+    height: 10vh;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .85);
+    -webkit-flex-direction: row;
 }
-#follow:before {
-    background-image: url('../images/tin_can_phone.jpg');
-    background-repeat: no-repeat;
-}
-#follow > form {
-    display: -webkit-flex;
-    -webkit-flex-direction: column;
-    -webkit-justify-content: center;
-    -webkit-align-items: center;
-}
-#follow textarea {
-    width: 80vw;
-    max-width: 400px;
-}
-#fine-print {
-    font-size: 1rem;
+.social-buttons > span {
+    font-size: 5rem;
+    line-height: 5rem;
+    color: #7BC6D4;
+    margin: 1vw;
 }

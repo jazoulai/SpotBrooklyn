@@ -17,6 +17,9 @@ sbk.StoryListItemView = Backbone.View.extend({
     vote: function (ev) {
         var target = $(ev.currentTarget);
         var votePrompt = target.parent().siblings('.scrollLink');
+        target.toggleClass('select');
+        target.siblings().removeClass('select');
+
         if(target.hasClass('select') || target.siblings().hasClass('select')) {
             votePrompt.html('You voted!');
         } else {

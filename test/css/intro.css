@@ -9,7 +9,7 @@
     background-image: url('../images/stoop2.jpg');
     background-size: cover;
     background-position: left center;
-    -webkit-filter: blur(3px) grayscale(100%) brightness(50%);
+    -webkit-filter: blur(3px) brightness(60%);
 }
 .arrow-down {
     margin-top: 7vh;
