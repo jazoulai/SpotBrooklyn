@@ -2,12 +2,13 @@
     position: fixed;
     height: 10vh;
     bottom: 0;
+    z-index: 100;
     background-color: rgba(0, 0, 0, .85);
     -webkit-flex-direction: row;
 }
-.social-buttons > span {
-    font-size: 5rem;
-    line-height: 5rem;
+#follow span {
+    font-size: 8vh;
+    line-height: 8vh;
     color: #7BC6D4;
     margin: 1vw;
 }

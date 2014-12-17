@@ -13,9 +13,6 @@
     #submit:before, #share:before {
         max-height: 100px !important;
     }
-    #follow:before {
-        max-height: 50px !important;
-    }
 }
 
 /*iphone 4, 4s landscape*/
@@ -32,14 +29,11 @@
     #submit:before, #share:before {
         max-height: 125px !important;
     }
-    #follow:before {
-        max-height: 175px !important;
-    }
 }
 
 /*iphone 6 landscape*/
 @media (max-height: 750px) and (orientation: landscape) {
-    #voting-explained, #submit, #submit:before, #follow, #follow:before, #share, #share:before, #results-signup {
+    #voting-explained, #submit, #submit:before, #share, #share:before, #results-signup {
         height: 110vh !important;
     }
     .fa-camera-retro {
@@ -49,7 +43,7 @@
 
 /*ipad mini and up*/
 @media (min-device-width : 768px) and (max-device-width : 1024px) {
-    #submit, #follow, #share {
+    #submit, #share {
         -webkit-justify-content: center !important;
     }
     html {
@@ -57,9 +51,6 @@
     }
     #submit:before, #share:before {
         max-height: 250px !important;
-    }
-    #follow:before {
-        max-height: 300px !important;
     }
 }
 

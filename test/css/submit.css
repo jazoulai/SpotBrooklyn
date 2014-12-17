@@ -1,11 +1,7 @@
 #submit {
-    -webkit-justify-content: flex-start;
+    -webkit-justify-content: space-between;
 }
-#submit:before {
-    background-image: url('../images/woman_concentrating.jpg');
-
-}
-#submit > div {
+#submit > div, #submit > form {
     display: -webkit-flex;
     -webkit-flex-direction: column;
     -webkit-justify-content: center;

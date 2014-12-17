@@ -21,7 +21,23 @@
     <script src="js/libs/viewport-units-buggyfill.js"></script>
     <script>window.viewportUnitsBuggyfill.init();</script>
     <script src="js/libs/jquery-2.1.1.js"></script>
-
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+    <script>
+        $(function() {
+            WebFont.load({
+                typekit: {
+                    id: 'urz0jfm'
+                }
+            });
+        });
+        <!--Google Analytics-->
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-46046711-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 </head>
     <body>
 
@@ -78,19 +94,21 @@
         <div>
             <h2>Submit An Idea</h2>
             <p>The best ideas will be developed and published.</p>
-            <textarea id="submission-field" rows="1" placeholder="There is no such thing as a dumb idea."></textarea>
-            <textarea id="credit-field" rows="1" placeholder="Who should we credit?"></textarea>
-            <!--
+        </div>
 
-            <form action="http://spotbrooklyn.us5.list-manage1.com/subscribe/post" method="POST">
+
+        <form action="http://spotbrooklyn.us5.list-manage1.com/subscribe/post" method="POST">
             <input type="hidden" name="u" value="de611717859b21ec0db1a7f16">
             <input type="hidden" name="id" value="270695d569">
             <textarea name="MERGE0" rows="1" placeholder="your@email.com"></textarea>
             <button id="subscribe-email">Subscribe</button>
         </form>
 
-            -->
-        <button id="submit-topic" disabled="disabled" class="disabled"><span>Submit</span></button>
+        <div>
+            <textarea id="submission-field" rows="1" placeholder="There is no such thing as a dumb idea."></textarea>
+            <textarea id="credit-field" rows="1" placeholder="Who should we credit?"></textarea>
+            <button id="submit-topic" disabled="disabled" class="disabled"><span>Submit</span></button>
+        </div>
     </script>
 
 
