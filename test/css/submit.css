@@ -1,6 +1,3 @@
-#submit {
-    -webkit-justify-content: space-between;
-}
 #submit > div, #submit > form {
     display: -webkit-flex;
     -webkit-flex-direction: column;

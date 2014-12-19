@@ -54,8 +54,11 @@ sbk.FollowView = Backbone.View.extend({
     openOnScroll: function(){
         var self = this;
         $(document).scroll(function() {
+            var documentHeight = $(document).height();
             var documentPosition = $(document).scrollTop();
-            if (documentPosition > 45) {
+            var lastPageHeight = $('#submit').height();
+            var buffer = 1.3;
+            if (documentPosition + (lastPageHeight * buffer) > documentHeight) {
                 self.openFollow();
                 $(document).off('scroll');
             }

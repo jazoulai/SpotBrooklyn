@@ -23,11 +23,11 @@ sbk.AppRouter = Backbone.Router.extend({
         this.bodyElement.append(this.resultsSignupView.render().el);
         $('#results-signup').hide();
         this.bodyElement.append(this.headerView.render().el);
-        this.bodyElement.append(this.followView.render().el);
-        $('#follow').hide();
         this.bodyElement.append(this.introView.render().el);
         this.bodyElement.append(this.votingExplainedView.render().el);
         this.bodyElement.append(this.storyListView.render().el);
         this.bodyElement.append(this.contributionFormView.render().el);
+        this.bodyElement.append(this.followView.render().el);
+        $('#follow').hide();
     }
 });
