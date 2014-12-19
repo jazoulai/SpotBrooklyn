@@ -26,7 +26,7 @@ sbk.FollowView = Backbone.View.extend({
     openFollow: function(){
         var self = this;
         $('#header').animate({height : '5vh'});
-        $('#header > img').animate({height : '5vh'});
+        $('#header > img').animate({height : '4vh'});
         $('#header > h3').css({'font-size' : '3vh'});
         $('#header > span').css({'font-size' : '3vh'});
 
@@ -44,9 +44,9 @@ sbk.FollowView = Backbone.View.extend({
                 $('.fade').hide();
             }).promise().done(function(){
                 $('#header').animate({height : '10vh'}, function(){
-                    $('#header > img').animate({height : '10vh'});
+                    $('#header > img').animate({height : '8vh'});
                     $('#header > span').css({'font-size' : '8vh'});
-                    $('#header > h3').css({'font-size' : '8vh'});
+                    $('#header > h3').css({'font-size' : '5vh'});
                 });
             });
         });
