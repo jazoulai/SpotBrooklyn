@@ -44,12 +44,10 @@ sbk.ContributionFormView = Backbone.View.extend({
             console.log('submitted');
     },
     scrollToTextarea: function () {
-
         //TODO this includes padding and requires a css layout fix
         var viewHeight = $(this.el).height();
-
-
-        var headerHeight = viewHeight/10; //calculated to match #header css height of 10vh
+        //calculated to match #header css height of 10vh
+        var headerHeight = viewHeight/10;
         $('html, body').animate({
             scrollTop: $('textarea').offset().top-headerHeight
         }, 500);

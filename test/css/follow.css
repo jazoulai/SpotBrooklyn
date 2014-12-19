@@ -1,14 +1,39 @@
 #follow {
     position: fixed;
-    height: 10vh;
-    bottom: 0;
+    height: 20vh;
+    top: 5vh;
     z-index: 100;
     background-color: rgba(0, 0, 0, .85);
+}
+#follow > div {
+    display: -webkit-flex;
     -webkit-flex-direction: row;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+}
+#follow button {
+    margin-top: 0;
 }
 #follow span {
     font-size: 8vh;
     line-height: 8vh;
     color: #7BC6D4;
     margin: 1vw;
+}
+.fa-times {
+    font-size: 5vh;
+    line-height: 5vh;
+    color: #fff;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.fa-paper-plane {
+    font-size: 2rem;
+    line-height: 3rem;
+    padding: 0 2vw;
+    background-color: red;
+    color: #fff;
+    border: 2px solid #7BC6D4;
+    border-radius: 5px;
 }
