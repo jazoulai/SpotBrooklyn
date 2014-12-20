@@ -8,6 +8,8 @@ sbk.AppRouter = Backbone.Router.extend({
     },
     initialize: function (storyCollection) {
         this.storyCollection = storyCollection;
+        sbk.Notifications = {};
+        _.extend(sbk.Notifications, Backbone.Events);
     },
     loadList: function () {
         this.bodyElement = $('body');

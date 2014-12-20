@@ -4,6 +4,12 @@
 sbk.FollowView = Backbone.View.extend({
     id: 'follow',
     template: Handlebars.compile($('#follow-template').html()),
+    initialize: function(){
+        var self = this;
+        sbk.Notifications.on('toggleFollow', function(){
+            self.toggleFollow();
+        }, this);
+    },
     render: function () {
         $(this.el).html(this.template());
         _.defer(function(view){
@@ -15,7 +21,7 @@ sbk.FollowView = Backbone.View.extend({
     events: {
         'click #twitter-follow' : 'twitterFollow',
         'click #instagram-follow' : 'instagramFollow',
-        'click .fa-times' : 'closeFollow'
+        'click .fa-times' : 'toggleFollow'
     },
     twitterFollow: function () {
         window.open('https://twitter.com/intent/follow?screen_name=spotbrooklyn', '_self');
@@ -23,32 +29,28 @@ sbk.FollowView = Backbone.View.extend({
     instagramFollow: function () {
         window.open('http://instagram.com/spotbrooklyn?ref=badge', '_self');
     },
-    openFollow: function(){
-        var self = this;
+    growHeader: function(){
+        $('#header > *').fadeOut(function(){
+            $('#header').animate({height : '10vh'}, function(){
+                $('#header > span').css({'font-size' : '8vh'});
+                $('#header > h3').css({'font-size' : '5vh'});
+                $('#header > img').animate({height : '8vh'}, function(){
+                    $('#header > *').fadeIn();
+                });
+            });
+        });
+    },
+    shrinkHeader: function(){
         $('#header').animate({height : '5vh'});
         $('#header > img').animate({height : '4vh'});
         $('#header > h3').css({'font-size' : '3vh'});
         $('#header > span').css({'font-size' : '3vh'});
-
-        $(":animated").promise().done(function() {
-            $('.fade').hide();
-            $(self.el).slideDown(300, function(){
-                $('.fade').fadeIn(200);
-            });
-        });
     },
-    closeFollow: function(){
+    toggleFollow: function(){
         var self = this;
-        $('.fade').fadeOut(200, function(){
-            $(self.el).slideUp(300, function(){
-                $('.fade').hide();
-            }).promise().done(function(){
-                $('#header').animate({height : '10vh'}, function(){
-                    $('#header > img').animate({height : '8vh'});
-                    $('#header > span').css({'font-size' : '8vh'});
-                    $('#header > h3').css({'font-size' : '5vh'});
-                });
-            });
+        $('.fade').hide();
+        $(self.el).slideToggle(200, function(){
+            $('.fade').fadeIn(200);
         });
     },
     openOnScroll: function(){
@@ -59,7 +61,7 @@ sbk.FollowView = Backbone.View.extend({
             var lastPageHeight = $('#submit').height();
             var buffer = 1.3;
             if (documentPosition + (lastPageHeight * buffer) > documentHeight) {
-                self.openFollow();
+                self.toggleFollow();
                 $(document).off('scroll');
             }
         });

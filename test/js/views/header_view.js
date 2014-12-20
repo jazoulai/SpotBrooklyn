@@ -18,7 +18,7 @@ sbk.HeaderView = Backbone.View.extend({
         }, 500);
     },
     toggleMenu: function () {
-        $('#results-signup').slideToggle();
+        sbk.Notifications.trigger('toggleFollow');
     }
 
 });
