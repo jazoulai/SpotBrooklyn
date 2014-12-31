@@ -1,62 +1,57 @@
 [
     {
         "id" : "1",
-        "headline" : "Root for the Home Team.",
-        "description" : "Reasons to leave your apartment that don’t involve food or alcohol."
+        "headline" : "People In Your Neighborhood",
+        "description" : "Meet your local butcher, doctor, cop and more in this lighthearted and informative illustrated series.",
+        "image" : "neighbors.jpg"
     },
     {
         "id" : "2",
-        "headline" : "People In My Community",
-        "description" : "Meet your local butcher, doctor, cop and more in this lighthearted and informative illustrated series."
+        "headline" : "Good New Yorker / Bad New Yorker",
+        "description" : "Celebrate the best and worst in all of us with your monthly nominations!",
+        "image" : "nun_burgler.jpg"
     },
     {
         "id" : "3",
-        "headline" : "Subway Ad Captions",
-        "description" : "Talk back to the ads that hold us captive on our long commutes."
+        "headline" : "How does city government work?",
+        "description" : "What are the six levels of government between you and your Mayor?",
+        "image" : "politician.jpg"
     },
     {
         "id" : "4",
-        "headline" : "Good New Yorker / Bad New Yorker",
-        "description" : "Celebrate the best and worst in all of us with your monthly nominations!"
+        "headline" : "Brooklyn’s Military Past",
+        "description" : "Photos of the buildings and statues left behind by war.",
+        "image" : "canon.jpg"
     },
     {
         "id" : "5",
-        "headline" : "How does city government work?",
-        "description" : "What are the six levels of government between you and your Mayor?"
+        "headline" : "Where are donuts?",
+        "description" : "A map of all the cafes that carry our favorite fluffy, fried dough",
+        "image" : "donuts.jpg"
     },
     {
         "id" : "6",
-        "headline" : "Brooklyn’s Military Past",
-        "description" : "Photos of the buildings and statues left behind by war."
+        "headline" : "Cures for Cabin Fever!",
+        "description" : "Reasons to leave your apartment that don’t involve food or alcohol.",
+        "image" : "trapped.jpg"
     },
     {
         "id" : "7",
-        "headline" : "Where are donuts?",
-        "description" : "A map of all the cafes that carry our favorite fluffy, fried dough"
+        "headline" : "Your Brooklyn Dream Home",
+        "description" : "Photograph your favorite home (doesn’t have to be yours)!",
+        "image" : "mansion.jpg"
     },
     {
         "id" : "8",
-        "headline" : "Cures for Cabin Fever!",
-        "description" : "Reasons to leave your apartment that don’t involve food or alcohol."
+        "headline" : "Tell Us Your Pest Problems!",
+        "description" : "Share stories about your battles with the creepy crawlies.",
+        "image" : "elephant_mouse.jpg"
     },
     {
         "id" : "9",
-        "headline" : "Your Brooklyn Dream Home",
-        "description" : "Photograph your favorite home (doesn’t have to be yours)!"
-    },
-    {
-        "id" : "10",
-        "headline" : "Tell Us Your Pest Problems!",
-        "description" : "Share stories about your battles with the creepy crawlies. We’ll start!"
-    },
-    {
-        "id" : "11",
         "headline" : "Urban Survival Guide",
-        "description" : "Creative tips to prepare us for disasters big and small."
-    },
-    {
-        "id" : "12",
-        "headline" : "Self Defense for Everyone",
-        "description" : "How to feel safe when you're walking home at night."
+        "description" : "Creative tips to prepare us for disasters big and small.",
+        "image" : "guide.jpg"
+
     }
 ]

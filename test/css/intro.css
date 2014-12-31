@@ -6,18 +6,18 @@
     background-color: #000;
 }
 #intro:after {
-    background-image: url('../images/stoop2.jpg');
+    background-image: url('../images/stoop.jpg');
     background-size: cover;
     background-position: left center;
-    -webkit-filter: blur(3px) brightness(60%);
+    -webkit-filter: blur(3px) grayscale(100%) brightness(60%);
 }
 .arrow-down {
-    margin-top: 7vh;
     width: 0;
     height: 0;
     border-left: 40px solid transparent;
     border-right: 40px solid transparent;
-    border-top: 40px solid #f00;
+    border-top: 40px solid #FD000F;
+    margin-top: 5vh;
 }
 #intro button {
     margin-top: 7vh;
@@ -29,5 +29,5 @@
     margin: 10px;
     font-size: 2rem;
     line-height: 2rem;
-    color: #7BC6D4;
+    color: #72A9DB;
 }

@@ -13,7 +13,7 @@ sbk.FollowView = Backbone.View.extend({
     render: function () {
         $(this.el).html(this.template());
         _.defer(function(view){
-            view.openOnScroll();
+            view.toggleOnScroll();
 
         }, this);
         return this;
@@ -50,10 +50,10 @@ sbk.FollowView = Backbone.View.extend({
         var self = this;
         $('.fade').hide();
         $(self.el).slideToggle(200, function(){
-            $('.fade').fadeIn(200);
+            $('.fade').show();
         });
     },
-    openOnScroll: function(){
+    toggleOnScroll: function(){
         var self = this;
         $(document).scroll(function() {
             var documentHeight = $(document).height();
@@ -65,20 +65,5 @@ sbk.FollowView = Backbone.View.extend({
                 $(document).off('scroll');
             }
         });
-
-
-
-
-
-
-        /*$(window).on(function(){
-           if($(window).scrollTop() >= 45) {
-               console.log('openFOllow');
-               self.openFollow();
-            } else if ($(window).scrollTop() < 45) {
-               $(self.el).slideUp();
-            }
-        });*/
-
     }
 });

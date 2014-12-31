@@ -42,6 +42,6 @@ body {
     background-size: contain;
     background-position: right bottom;
 }
-#intro, #voting-explained, #story-list, #submit, #share {
+#voting-explained, #story-list, #submit, #share {
     padding-top: 10vh;
 }

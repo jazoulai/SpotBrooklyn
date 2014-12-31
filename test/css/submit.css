@@ -4,6 +4,9 @@
     -webkit-justify-content: center;
     -webkit-align-items: center;
 }
+#submit > div:last-child {
+    margin-bottom: 20vh;
+}
 #submission-field {
     width: 80vw;
     max-width: 400px;

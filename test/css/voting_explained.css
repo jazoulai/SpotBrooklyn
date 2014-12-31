@@ -1,15 +1,18 @@
 #voting-explained:before {
     z-index: -2;
-    background-color: #000;
+    background-color: #fff;
 }
 #voting-explained:after {
-    background-image: url('../images/brooklyn_view.jpg');
+    background-image: url('../images/cityscape.png');
     background-size: cover;
     background-position: left top;
+    top: 40vh;
+    height: 60vh;
 
 }
 #voting-explained {
-    -webkit-justify-content: space-between;
-    padding-top: 20vh;
+    -webkit-justify-content: flex-start;
+    padding-top: 15vh;
     padding-bottom: 10vh;
+    text-align: left;
 }
