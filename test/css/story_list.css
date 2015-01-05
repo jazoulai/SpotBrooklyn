@@ -3,19 +3,19 @@
     height: auto !important;
 }
 .story-list-item {
-    width: 80vw;
+    width: 95vw;
     max-width: 700px;
     height: auto;
-    padding: 1rem 0;
     background-color: #fff;
     display: -webkit-flex;
     -webkit-flex-direction: column;
     -webkit-justify-content: space-around;
     -webkit-align-items: center;
-    border-bottom: solid 1px dimgrey;
+    margin-bottom: 5vh;
+    -webkit-box-shadow: 0 3px 10px #888888;
 }
 .story-list-item:first-child {
-    border-top: solid 1px dimgrey;
+
 }
 .story-list-item span {
     font-size: 1.5rem;
