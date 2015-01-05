@@ -19,18 +19,18 @@ body {
     -webkit-justify-content: center;
     -webkit-align-items: center;
 }
-#intro, #intro:before, #intro:after, #voting-explained, #voting-explained:before, #voting-explained:after, #story-list, #submit, #submit:before, #follow, #share, #share:before {
+#intro, #intro:before, #intro:after, #voting-explained, #story-list, #submit, #submit:before, #follow, #share, #share:before {
     width: 100vw;
     height: 100vh;
 }
 #voting-explained, #submit, #follow, #share {
     position: relative;
 }
-#intro:before, #intro:after, #voting-explained:before, #voting-explained:after {
+#intro:before, #intro:after {
     top: 0;
     left: 0;
 }
-#intro:before, #intro:after, #voting-explained:before, #voting-explained:after, #share:before {
+#intro:before, #intro:after, #share:before {
     position: absolute;
     content: "";
     z-index: -1;

@@ -1,17 +1,5 @@
-#voting-explained:before {
-    z-index: -2;
-    background-color: #fff;
-}
-#voting-explained:after {
-    background-image: url('../images/cityscape.png');
-    background-size: cover;
-    background-position: left top;
-    top: 40vh;
-    height: 60vh;
-
-}
 #voting-explained {
-    -webkit-justify-content: flex-start;
+    -webkit-justify-content: center;
     padding-top: 15vh;
     padding-bottom: 10vh;
     text-align: left;

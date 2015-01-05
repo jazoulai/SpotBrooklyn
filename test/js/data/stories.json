@@ -1,56 +1,47 @@
 [
     {
         "id" : "1",
-        "headline" : "People In Your Neighborhood",
-        "description" : "Meet your local butcher, doctor, cop and more in this lighthearted and informative illustrated series.",
+        "headline" : "Meet Important People in Our Neighborhood.",
         "image" : "neighbors.jpg"
     },
     {
         "id" : "2",
-        "headline" : "Good New Yorker / Bad New Yorker",
-        "description" : "Celebrate the best and worst in all of us with your monthly nominations!",
+        "headline" : "Vote For This Month's Good and Bad New Yorker",
         "image" : "nun_burgler.jpg"
     },
     {
         "id" : "3",
-        "headline" : "How does city government work?",
-        "description" : "What are the six levels of government between you and your Mayor?",
+        "headline" : "How Many Steps Between You and the Mayor?",
         "image" : "politician.jpg"
     },
     {
         "id" : "4",
-        "headline" : "Brooklyn’s Military Past",
-        "description" : "Photos of the buildings and statues left behind by war.",
+        "headline" : "Time Travel with Brooklyn's Wartime Relics.",
         "image" : "canon.jpg"
     },
     {
         "id" : "5",
-        "headline" : "Where are donuts?",
-        "description" : "A map of all the cafes that carry our favorite fluffy, fried dough",
+        "headline" : "Map of All the Best Donut Shops",
         "image" : "donuts.jpg"
     },
     {
         "id" : "6",
-        "headline" : "Cures for Cabin Fever!",
-        "description" : "Reasons to leave your apartment that don’t involve food or alcohol.",
+        "headline" : "Ways to Leave Your Apartment This Winter.",
         "image" : "trapped.jpg"
     },
     {
         "id" : "7",
-        "headline" : "Your Brooklyn Dream Home",
-        "description" : "Photograph your favorite home (doesn’t have to be yours)!",
+        "headline" : "Photos of Brooklyn Dream Homes",
         "image" : "mansion.jpg"
     },
     {
         "id" : "8",
-        "headline" : "Tell Us Your Pest Problems!",
-        "description" : "Share stories about your battles with the creepy crawlies.",
+        "headline" : "Funny and Tragic Battles Against Household Pests",
         "image" : "elephant_mouse.jpg"
     },
     {
         "id" : "9",
-        "headline" : "Urban Survival Guide",
-        "description" : "Creative tips to prepare us for disasters big and small.",
+        "headline" : "Urban Survival Guide for Disasters Big and Small",
         "image" : "guide.jpg"
 
     }
