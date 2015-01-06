@@ -23,9 +23,16 @@ h1 > span:last-child {
 }
 h2 {
     font-size: 2rem;
-    line-height: 2rem;
+    line-height: 6rem;
     font-weight: 600;
     margin: 2rem 2rem 3rem;
+    text-align: left;
+}
+h2 > span {
+    margin-right: 1rem;
+    font-size: 4rem !important;
+    line-height: 4rem !important;
+    vertical-align: middle;
 }
 h3 {
     font-size: 5vh;
@@ -43,6 +50,7 @@ p {
     font-size: 2rem;
     line-height: 2.5rem;
     margin: 0 5vh 1.5rem;
+    text-align: left;
 }
 .scrollLink, #results-signup > p:last-child {
     color: #7BC6D4;

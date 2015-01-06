@@ -58,7 +58,7 @@
     </script>
 
     <script type="text/x-handlebars-template" id="voting-explained-template">
-        <h2><i class="fa fa-info-circle"></i>What is Spot Brooklyn</h2>
+        <h2><span class="fa fa-info-circle"></span>What is Spot Brooklyn?</h2>
         <p>A digital magazine that makes it fun and easy to know Brooklyn better&mdash;not the headlines, but Brooklyn itself and the people who make it special.</p>
         <p>Vote on future stories by tapping the photos below.</p>
         <span class="fa fa-caret-down"></span>
@@ -71,14 +71,15 @@
     </script>
 
     <script type="text/x-handlebars-template" id="story-list-template">
-        <h2><i class="fa fa-hand-o-up"></i>TAP TO VOTE</h2>
+        <h2><span class="fa fa-hand-o-down"></span>Tap To Vote</h2>
         <ul id="stories-list-ul"></ul>
     </script>
 
     <script type="text/x-handlebars-template" id="story-list-item-template">
         <img src="images/{{image}}"/>
         <h4>{{headline}}</h4>
-        <i class="fa fa-heart"></i>
+        <i class="fa fa-thumbs-up"></i>
+        <i class="fa fa-thumbs-up"></i>
     </script>
 
     <script type="text/x-handlebars-template" id="results-signup-template">
@@ -89,8 +90,7 @@
 
     <script type="text/x-handlebars-template" id="contribution-form-template">
         <div>
-            <h2><i class="fa fa-pie-chart"></i>Partner With Us</h2>
-
+            <h2><span class="fa fa-pie-chart"></span>Partner With Us</h2>
             <p>We're seeking creative writers, photographers, journalists, and people with good ideas.</p>
             <p>Let's talk.</p>
             <p>partnerships@spotbrooklyn.com</p>
@@ -137,6 +137,7 @@
     <script src="js/libs/backbone.js"></script>
     <script src="js/libs/handlebars-v1.3.0.js"></script>
     <script src="js/libs/backbone.touch.js"></script>
+    <script src="js/libs/jquery.animate-colors-min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/router.js"></script>
     <script src="js/models/storyModel.js"></script>

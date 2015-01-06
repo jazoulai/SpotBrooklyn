@@ -15,20 +15,28 @@
     margin-bottom: 5vh;
     -webkit-box-shadow: 0 2px 5px 1px #888888;
 }
-#story-list > h2 {
+.fa-thumbs-up:first-of-type {
+    position: absolute;
+    margin: auto;
+    top: 40%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 7rem;
+    line-height: 7rem;
+    font-weight: 900;
+    z-index: 10000;
     color: red;
 }
-.fa-heart {
+.fa-thumbs-up:last-of-type {
     position: absolute;
-    top: 0;
+    bottom: 0;
     right: 0;
-    padding: 1rem;
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    font-weight: 900;
-    text-align: center;
+    margin: 5px;
+    font-size: 2rem;
+    line-height: 2rem;
     z-index: 10000;
-    color: lightgray;
+    color: #D3D3D3;
 }
 .story-list-item img {
     width: 100%;
