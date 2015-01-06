@@ -9,10 +9,10 @@ sbk.IntroView = Backbone.View.extend({
         return this;
     },
     events: {
-        'click .arrow-down' : 'arrowDown',
-        'click .fa-camera-retro' : 'coverPhoto'
+        'click .fa-caret-down' : 'down',
+        'click .fa-copyright' : 'coverPhoto'
     },
-    arrowDown: function() {
+    down: function() {
         $('html, body').animate({
             scrollTop: $('#voting-explained').offset().top
         }, 500);

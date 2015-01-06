@@ -2,7 +2,7 @@
     color: #eae600;
 }
 #intro h1 {
-    text-shadow: 0 5px 0 #000;
+    text-shadow: 0 2px 5px #000;
 }
 #intro:before {
     z-index: -2;
@@ -14,18 +14,7 @@
     background-position: left center;
     -webkit-filter: blur(2px);
 }
-.arrow-down {
-    width: 0;
-    height: 0;
-    border-left: 40px solid transparent;
-    border-right: 40px solid transparent;
-    border-top: 40px solid #FD000F;
-    margin-top: 5vh;
-}
-#intro button {
-    margin-top: 7vh;
-}
-.fa-camera-retro {
+.fa-copyright {
     position: absolute;
     bottom: 0;
     right: 0;

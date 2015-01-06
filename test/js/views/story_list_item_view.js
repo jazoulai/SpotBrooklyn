@@ -19,7 +19,7 @@ sbk.StoryListItemView = Backbone.View.extend({
         $(this.el).css('box-shadow', '0 1px 1px 0px #888888');
         setTimeout( function() {
             $(self.el).css('box-shadow', '0 2px 5px 1px #888888');
-        }, 50);
+        }, 75);
 
 
 

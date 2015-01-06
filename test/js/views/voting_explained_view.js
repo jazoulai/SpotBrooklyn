@@ -9,11 +9,11 @@ sbk.VotingExplainedView = Backbone.View.extend({
         return this;
     },
     events : {
-        'click p:last-child' : 'dotell'
+        'click .fa-caret-down' : 'down'
     },
-    dotell: function () {
+    down: function () {
         $('html, body').animate({
-            scrollTop: $('#submit').offset().top
+            scrollTop: $('#story-list').offset().top
         }, 500);
     }
 });
