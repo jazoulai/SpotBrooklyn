@@ -1,15 +1,18 @@
 #intro {
-    color: #fff;
+    color: #eae600;
+}
+#intro h1 {
+    text-shadow: 0 5px 0 #000;
 }
 #intro:before {
     z-index: -2;
     background-color: #000;
 }
 #intro:after {
-    background-image: url('../images/stoop.jpg');
+    background-image: url('../images/cityscape_bluesky.jpg');
     background-size: cover;
     background-position: left center;
-    -webkit-filter: blur(3px) grayscale(100%) brightness(60%);
+    -webkit-filter: blur(2px);
 }
 .arrow-down {
     width: 0;
@@ -29,5 +32,5 @@
     margin: 10px;
     font-size: 2rem;
     line-height: 2rem;
-    color: #72A9DB;
+    color: #fff;
 }

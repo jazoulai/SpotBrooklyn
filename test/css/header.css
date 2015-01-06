@@ -13,8 +13,8 @@
     color: #fff;
 }
 #header > img {
-    width: auto;
-    height: 8vh;
+    width: 70vw;
+    height: auto;
 }
 #header > span {
     font-size: 8vh;

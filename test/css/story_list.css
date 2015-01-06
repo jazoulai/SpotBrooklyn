@@ -3,6 +3,7 @@
     height: auto !important;
 }
 .story-list-item {
+    position: relative;
     width: 95vw;
     max-width: 700px;
     height: auto;
@@ -12,16 +13,19 @@
     -webkit-justify-content: space-around;
     -webkit-align-items: center;
     margin-bottom: 5vh;
-    -webkit-box-shadow: 0 3px 10px #888888;
+    -webkit-box-shadow: 0 2px 5px 1px #888888;
 }
-.story-list-item:first-child {
-
-}
-.story-list-item span {
+.fa-heart {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
     font-size: 1.5rem;
     line-height: 1.5rem;
     font-weight: 900;
     text-align: center;
+    z-index: 10000;
+    color: lightgray;
 }
 .story-list-item img {
     width: 100%;
