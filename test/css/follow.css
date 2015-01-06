@@ -24,10 +24,13 @@ textarea {
 #follow button {
     margin-top: 0;
 }
-#follow span {
-    font-size: 8vh;
-    line-height: 8vh;
+#follow img {
+    height: 8vh;
+    width: auto;
     margin-bottom: 1rem;
+}
+#facebook {
+    margin: 0 5vw 1rem;
 }
 #follow p {
     font-size: 1rem;
