@@ -21,6 +21,7 @@ sbk.FollowView = Backbone.View.extend({
     events: {
         'click #twitter-follow' : 'twitterFollow',
         'click #instagram-follow' : 'instagramFollow',
+        'click #facebook-follow' : 'facebookFollow',
         'click .fa-times' : 'toggleFollow'
     },
     twitterFollow: function () {
@@ -28,6 +29,9 @@ sbk.FollowView = Backbone.View.extend({
     },
     instagramFollow: function () {
         window.open('http://instagram.com/spotbrooklyn?ref=badge', '_self');
+    },
+    facebookFollow: function(){
+        window.open('https://www.facebook.com/spotBK', '_self');
     },
     growHeader: function(){
         $('#header > *').fadeOut(function(){

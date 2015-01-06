@@ -1,9 +1,10 @@
 #follow {
     position: fixed;
-    height: 20vh;
+    height: auto;
     bottom: 0;
     z-index: 100;
     background-color: rgba(0, 0, 0, .85);
+    padding: 1rem;
 }
 #follow > div {
     display: -webkit-flex;
@@ -11,14 +12,27 @@
     -webkit-justify-content: center;
     -webkit-align-items: center;
 }
+textarea {
+    border: 2px solid #fff;
+    border-radius: 5px 0 0 5px;
+    font-size: 2rem;
+    line-height: 3rem;
+    padding: 0 2vw;
+    background: transparent;
+    vertical-align: top
+}
 #follow button {
     margin-top: 0;
 }
 #follow span {
     font-size: 8vh;
     line-height: 8vh;
-    color: #7BC6D4;
-    margin: 1vw;
+    margin-bottom: 1rem;
+}
+#follow p {
+    font-size: 1rem;
+    line-height: 1rem;
+    color: white;
 }
 .fa-times {
     font-size: 5vh;
@@ -34,6 +48,16 @@
     padding: 0 2vw;
     background-color: red;
     color: #fff;
-    border: 2px solid #7BC6D4;
-    border-radius: 5px;
+    border: 2px solid #fff;
+    border-radius: 0 5px 5px 0;
+}
+.fa-facebook-square {
+    color: #3B5998;
+}
+.fa-twitter-square {
+    color: #4099FF;
+}
+.fa-instagram {
+    color: orange;
+    margin: 0 8vw;
 }
