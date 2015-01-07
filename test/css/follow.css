@@ -3,7 +3,7 @@
     height: auto;
     bottom: 0;
     z-index: 100;
-    background-color: rgba(0, 0, 0, .85);
+    background-color: rgba(0, 45, 64, 1);
     padding: 1rem;
 }
 #follow > div {
@@ -27,7 +27,7 @@ textarea {
 #follow img {
     height: 8vh;
     width: auto;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 #facebook {
     margin: 0 5vw 1rem;
@@ -35,7 +35,11 @@ textarea {
 #follow p {
     font-size: 1rem;
     line-height: 1rem;
-    color: white;
+    text-align: center;
+    -webkit-align-self: center;
+    padding-top: 0; /*remove default padding*/
+    padding-bottom: 1rem;
+    color: #fff;
 }
 .fa-times {
     font-size: 5vh;

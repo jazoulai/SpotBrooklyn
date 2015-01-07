@@ -13,7 +13,6 @@ sbk.AppRouter = Backbone.Router.extend({
     },
     loadList: function () {
         this.bodyElement = $('body');
-        this.resultsSignupView = new sbk.ResultsSignupView();
         this.headerView = new sbk.HeaderView();
         this.followView = new sbk.FollowView();
         this.introView = new sbk.IntroView();
@@ -22,7 +21,6 @@ sbk.AppRouter = Backbone.Router.extend({
         this.contributionFormView = new sbk.ContributionFormView();
 
         this.bodyElement.html('');
-        this.bodyElement.append(this.resultsSignupView.render().el);
         this.bodyElement.append(this.headerView.render().el);
         this.bodyElement.append(this.introView.render().el);
         this.bodyElement.append(this.votingExplainedView.render().el);
@@ -30,7 +28,6 @@ sbk.AppRouter = Backbone.Router.extend({
         this.bodyElement.append(this.contributionFormView.render().el);
         this.bodyElement.append(this.followView.render().el);
 
-        $('#results-signup').hide();
         $('#follow').hide();
         $('.fa-thumbs-up:first-of-type').hide();
     }

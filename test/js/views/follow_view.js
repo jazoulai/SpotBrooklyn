@@ -19,9 +19,9 @@ sbk.FollowView = Backbone.View.extend({
         return this;
     },
     events: {
-        'click #twitter-follow' : 'twitterFollow',
-        'click #instagram-follow' : 'instagramFollow',
-        'click #facebook-follow' : 'facebookFollow',
+        'click #twitter' : 'twitterFollow',
+        'click #instagram' : 'instagramFollow',
+        'click #facebook' : 'facebookFollow',
         'click .fa-times' : 'toggleFollow'
     },
     twitterFollow: function () {

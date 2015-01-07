@@ -59,15 +59,9 @@
 
     <script type="text/x-handlebars-template" id="voting-explained-template">
         <h2><span class="fa fa-info-circle"></span>What is Spot Brooklyn?</h2>
-        <p>A digital magazine that makes it fun and easy to know Brooklyn better&mdash;not the headlines, but Brooklyn itself and the people who make it special.</p>
+        <p>A digital magazine that makes it fun and easy to know Brooklyn better&mdash;not the headlines, but the place itself and the people who make it special.</p>
         <p>Vote on future stories by tapping the photos below.</p>
         <span class="fa fa-caret-down"></span>
-    </script>
-
-    <script type="text/x-handlebars-template" id="vote-buttons-template">
-        <span aria-label="smile" class="fa fa-smile-o"></span>
-        <span aria-label="meh" class="fa fa-meh-o"></span>
-        <span aria-label="frown" class="fa fa-frown-o"></span>
     </script>
 
     <script type="text/x-handlebars-template" id="story-list-template">
@@ -82,57 +76,31 @@
         <i class="fa fa-thumbs-up"></i>
     </script>
 
-    <script type="text/x-handlebars-template" id="results-signup-template">
-        <p>Sumbit Any Idea</p>
-        <p>Follow Us</p>
-        <p>Share Our Link</p>
-    </script>
-
     <script type="text/x-handlebars-template" id="contribution-form-template">
-        <div>
             <h2><span class="fa fa-pie-chart"></span>Partner With Us</h2>
             <p>We're seeking creative writers, photographers, journalists, and people with good ideas.</p>
             <p>Let's talk.</p>
             <p>partnerships@spotbrooklyn.com</p>
-        </div>
     </script>
 
-
     <script type="text/x-handlebars-template" id="follow-template">
-        <p>Follow on Social Media</p>
+        <p>Follow Spot Brooklyn on Social Media</p>
         <div class="fade">
-            <img src="images/twitter.png"/>
+            <img id="twitter" src="images/twitter.png"/>
             <img id="facebook" src="images/facebook.svg"/>
-            <img src="images/instagram.png"/>
+            <img id="instagram" src="images/instagram.png"/>
             <i class="fa fa-times"></i>
         </div>
-        <p>Get Email Updates</p>
+        <p>Get Spot Brooklyn Email Updates</p>
         <div class="fade">
             <form action="http://spotbrooklyn.us5.list-manage1.com/subscribe/post" method="POST">
                 <input type="hidden" name="u" value="de611717859b21ec0db1a7f16">
                 <input type="hidden" name="id" value="270695d569">
-                <textarea name="MERGE0" rows="1" placeholder="your@email.com"></textarea>
+                <textarea name="MERGE0" rows="1" placeholder="Enter your email address."></textarea>
             </form>
             <i class="fa fa-paper-plane"></i>
         </div>
     </script>
-
-    <script type="text/x-handlebars-template" id="share-template">
-        <h2>Share Our Link</h2>
-        <p>Let them know that Spot Brooklyn is a website that publishes the voice of the community.</p>
-        <div class="social-buttons">
-            <span id="twitter-share" class="fa fa-twitter-square"></span>
-            <span id="facebook-share" class="fa fa-facebook-square"></span>
-            <span id="email-share" class="fa fa-envelope-square"></span>
-        </div>
-    </script>
-
-
-
-
-
-
-
 
 <!--Dependencies-->
 
@@ -150,11 +118,8 @@
     <script src="js/views/voting_explained_view.js"></script>
     <script src="js/views/story_list_view.js"></script>
     <script src="js/views/story_list_item_view.js"></script>
-    <script src="js/views/results_signup_view.js"></script>
     <script src="js/views/contribution_form_view.js"></script>
     <script src="js/views/follow_view.js"></script>
-    <script src="js/views/share_view.js"></script>
-    <script src="js/views/vote_buttons_view.js"></script>
 
 
     </body>

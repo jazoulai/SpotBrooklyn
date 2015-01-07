@@ -2,7 +2,6 @@ html {
     width: 100vw;
     height: 100vh;
     overflow-y: scroll;
-    overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -19,6 +18,13 @@ body {
     -webkit-flex-direction: column;
     -webkit-justify-content: center;
     -webkit-align-items: center;
+    padding: 0 5vw;
+}
+#voting-explained, #share {
+    padding-top: 10vh;
+}
+#story-list, #submit {
+    padding-top: 15vh;
 }
 #intro, #intro:before, #intro:after, #voting-explained, #story-list, #submit, #submit:before, #follow, #share, #share:before {
     width: 100vw;
@@ -42,7 +48,4 @@ body {
     bottom: 0;
     background-size: contain;
     background-position: right bottom;
-}
-#voting-explained, #story-list, #submit, #share {
-    padding-top: 10vh;
 }
