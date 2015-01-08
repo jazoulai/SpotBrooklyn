@@ -23,6 +23,9 @@ sbk.AppRouter = Backbone.Router.extend({
         this.bodyElement.html('');
         this.bodyElement.append(this.headerView.render().el);
         this.bodyElement.append(this.introView.render().el);
+
+        $('.bigtext').bigtext();
+
         this.bodyElement.append(this.votingExplainedView.render().el);
         this.bodyElement.append(this.storyListView.render().el);
         this.bodyElement.append(this.contributionFormView.render().el);

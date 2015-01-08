@@ -4,29 +4,21 @@ html {
     font-weight: 100;
     font-size: 75%;
     text-align: center;
+    color: #474747;
+    -webkit-text-size-adjust:none;
 }
-h1 {
-    font-size: 4rem;
-    line-height: 5rem;
-    font-weight: 700;
-    margin: 0 15vw;
-}
-h1 > span {
-    font-size: 2.5rem;
-    line-height: 5rem;
+#story-list {
+    font-family: "open-sans", sans-serif;
+    font-style: normal;
     font-weight: 400;
-}
-h1 > span:last-child {
-    font-size: 4rem;
-    line-height: 4rem;
-    font-weight: 400;
+    font-size: 70%;
 }
 h2 {
     font-size: 2rem;
     line-height: 4rem;
-    font-weight: 600;
+    font-weight: 800;
 }
-h2 > span {
+h2 > span { /*headline icons*/
     margin-right: 1rem;
     font-size: 4rem !important;
     line-height: 4rem !important;
@@ -47,6 +39,7 @@ h4 {
 p {
     font-size: 2rem;
     line-height: 2.5rem;
+    font-weight: 300;
     text-align: left;
     -webkit-align-self: flex-start;
     padding-top: 1rem;

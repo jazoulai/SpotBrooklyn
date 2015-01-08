@@ -3,8 +3,8 @@
     width: 100vw;
     height: 10vh;
     top: 0;
-    z-index: 100;
-    background-color: rgba(0, 45, 64, 1);
+    z-index: 10000;
+    background-color: rgba(0, 45, 64, .95);
     display: -webkit-flex;
     -webkit-flex-direction: row;
     -webkit-flex-wrap: nowrap;
@@ -13,13 +13,12 @@
     color: #fff;
 }
 #header > img {
-    width: 60vw;
+    width: 50vw;
     height: auto;
+    margin-left: 3vw;
 }
-#header > span {
-    font-size: 8vh;
-    line-height: 8vh;
-}
-#header > img, #header > span {
-    margin: 1vh;
+.fa-bars {
+    font-size: 6vh;
+    line-height: 6vh;
+    margin-right: 3vw;
 }

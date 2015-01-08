@@ -14,7 +14,7 @@ sbk.FollowView = Backbone.View.extend({
         $(this.el).html(this.template());
         _.defer(function(view){
             view.toggleOnScroll();
-
+            view.preventCarriageReturn();
         }, this);
         return this;
     },
@@ -22,7 +22,8 @@ sbk.FollowView = Backbone.View.extend({
         'click #twitter' : 'twitterFollow',
         'click #instagram' : 'instagramFollow',
         'click #facebook' : 'facebookFollow',
-        'click .fa-times' : 'toggleFollow'
+        'click .fa-times' : 'toggleFollow',
+        'click .fa-paper-plane' : 'submitForm'
     },
     twitterFollow: function () {
         window.open('https://twitter.com/intent/follow?screen_name=spotbrooklyn', '_self');
@@ -32,6 +33,9 @@ sbk.FollowView = Backbone.View.extend({
     },
     facebookFollow: function(){
         window.open('https://www.facebook.com/spotBK', '_self');
+    },
+    submitForm: function(){
+        $('form').submit();
     },
     growHeader: function(){
         $('#header > *').fadeOut(function(){
@@ -67,6 +71,13 @@ sbk.FollowView = Backbone.View.extend({
             if (documentPosition + (lastPageHeight * buffer) > documentHeight) {
                 self.toggleFollow();
                 $(document).off('scroll');
+            }
+        });
+    },
+    preventCarriageReturn: function(){
+        $('textarea').keypress(function(event) {
+            if (event.keyCode == 13) {
+                event.preventDefault();
             }
         });
     }

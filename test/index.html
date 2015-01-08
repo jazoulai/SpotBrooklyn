@@ -52,15 +52,24 @@
     </script>
 
     <script type="text/x-handlebars-template" id="intro_template">
-            <h1>Explore your Brooklyn community.</h1>
+            <div class="bigtext">
+                <span>Get to Know</span>
+                <span class="bigtext-exempt">the</span>
+                <span>People</span>
+                <span class="bigtext-exempt">&</span>
+                <span>Places</span>
+                <span class="bigtext-exempt">of</span>
+                <span>Brooklyn</span>
+            </div>
+
             <span class="fa fa-caret-down"></span>
             <span class="fa fa-copyright"></span>
     </script>
 
     <script type="text/x-handlebars-template" id="voting-explained-template">
         <h2><span class="fa fa-info-circle"></span>What is Spot Brooklyn?</h2>
-        <p>A digital magazine that makes it fun and easy to know Brooklyn better&mdash;not the headlines, but the place itself and the people who make it special.</p>
-        <p>Vote on future stories by tapping the photos below.</p>
+        <p>A digital magazine that makes it fun and easy to know Brooklyn better&mdash;not just the headlines, but the place itself and the people who make it special.</p>
+        <p>Vote on which stories we should publish by tapping the photos below.</p>
         <span class="fa fa-caret-down"></span>
     </script>
 
@@ -78,7 +87,7 @@
 
     <script type="text/x-handlebars-template" id="contribution-form-template">
             <h2><span class="fa fa-pie-chart"></span>Partner With Us</h2>
-            <p>We're seeking creative writers, photographers, journalists, and people with good ideas.</p>
+            <p>We're seeking creative writers, photographers, journalists, illustrators and people with good ideas.</p>
             <p>Let's talk.</p>
             <p>partnerships@spotbrooklyn.com</p>
     </script>
@@ -89,7 +98,7 @@
             <img id="twitter" src="images/twitter.png"/>
             <img id="facebook" src="images/facebook.svg"/>
             <img id="instagram" src="images/instagram.png"/>
-            <i class="fa fa-times"></i>
+            <span class="fa fa-times"></span>
         </div>
         <p>Get Spot Brooklyn Email Updates</p>
         <div class="fade">
@@ -98,7 +107,7 @@
                 <input type="hidden" name="id" value="270695d569">
                 <textarea name="MERGE0" rows="1" placeholder="Enter your email address."></textarea>
             </form>
-            <i class="fa fa-paper-plane"></i>
+            <span class="fa fa-paper-plane"></span>
         </div>
     </script>
 
@@ -109,6 +118,7 @@
     <script src="js/libs/handlebars-v1.3.0.js"></script>
     <script src="js/libs/backbone.touch.js"></script>
     <script src="js/libs/jquery.animate-colors-min.js"></script>
+    <script src="js/libs/bigtext.js"></script>
     <script src="js/app.js"></script>
     <script src="js/router.js"></script>
     <script src="js/models/storyModel.js"></script>

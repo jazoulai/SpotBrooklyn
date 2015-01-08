@@ -28,8 +28,8 @@
     font-size: 7rem;
     line-height: 7rem;
     font-weight: 900;
-    z-index: 10000;
     color: red;
+    text-shadow: 0 2px 5px #002D40;
 }
 .fa-thumbs-up:last-of-type {
     position: absolute;
@@ -38,7 +38,7 @@
     margin: 5px;
     font-size: 2rem;
     line-height: 2rem;
-    z-index: 10000;
+    z-index: 1000;
     color: #D3D3D3;
 }
 .story-list-item img {

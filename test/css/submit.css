@@ -3,7 +3,13 @@
 }
 #submit p:last-child {
     font-size: 1.5rem;
-    line-height: 2rem;
+    line-height: 4rem;
     font-weight: 500;
     color: #0071A1;
+}
+#submit p {
+    -webkit-align-self: center;
+}
+#submit p:first-child {
+    -webkit-align-self: flex-start;
 }

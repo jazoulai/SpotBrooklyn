@@ -1,42 +1,42 @@
 [
     {
         "id" : "1",
-        "headline" : "Meet Important People in Our Neighborhood.",
+        "headline" : "Who Are the People in Our Neighborhood?",
         "image" : "neighbors.jpg"
     },
     {
         "id" : "2",
-        "headline" : "Vote For This Month's Good and Bad New Yorker",
+        "headline" : "Choose This Month's Good and Bad New Yorker",
         "image" : "nun_burgler.jpg"
     },
     {
         "id" : "3",
-        "headline" : "How Many Steps Between You and the Mayor?",
+        "headline" : "How Does Our Local Government Work?",
         "image" : "politician.jpg"
     },
     {
         "id" : "4",
-        "headline" : "Time Travel with Brooklyn's Wartime Relics.",
+        "headline" : "America's War History Is All Around Us.",
         "image" : "canon.jpg"
     },
     {
         "id" : "5",
-        "headline" : "Map of All the Best Donut Shops",
+        "headline" : "Brooklyn's Best Donut Shops, Mapped!",
         "image" : "donuts.jpg"
     },
     {
         "id" : "6",
-        "headline" : "Ways to Leave Your Apartment This Winter.",
+        "headline" : "Reasons to Leave Your Apartment This Winter.",
         "image" : "trapped.jpg"
     },
     {
         "id" : "7",
-        "headline" : "Photos of Brooklyn Dream Homes",
+        "headline" : "Beautiful Brooklyn Dream Homes",
         "image" : "mansion.jpg"
     },
     {
         "id" : "8",
-        "headline" : "Funny and Tragic Battles Against Household Pests",
+        "headline" : "Funny and Tragic Household Pest Battles",
         "image" : "elephant_mouse.jpg"
     },
     {
