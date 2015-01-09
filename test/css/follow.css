@@ -1,15 +1,20 @@
-#follow {
+.follow {
     position: fixed;
     height: auto;
-    bottom: 0;
+    top: 10vh;
     z-index: 1000;
-    background-color: rgba(0, 45, 64, .95);
+    background-color: rgba(0, 45, 64, .98);
     padding: 1rem;
 }
-#follow * {
+.follow:last-of-type {
+    position: static;
+    height: auto;
+    padding: 1rem;
+}
+.follow * {
     color: #fff;
 }
-#follow > div { /*containers for social buttons and email form*/
+.follow > div { /*containers for social buttons and email form*/
     display: -webkit-flex;
     -webkit-flex-direction: row;
     -webkit-justify-content: center;
@@ -24,32 +29,21 @@ textarea {
     background: transparent;
     vertical-align: top;
 }
-#follow button {
-    margin-top: 0;
-}
-#follow img {
+.follow img {
     height: 8vh;
     width: auto;
     margin-bottom: 2rem;
 }
-#facebook {
+.facebook {
     margin: 0 5vw 1rem;
 }
-#follow p {
+.follow p {
     font-size: 1rem;
     line-height: 1rem;
     text-align: center;
     -webkit-align-self: center;
     padding-top: 0; /*remove default padding*/
     padding-bottom: 1rem;
-}
-.fa-times {
-    font-size: 5vh;
-    line-height: 5vh;
-    color: #fff;
-    position: absolute;
-    right: 2vh;
-    top: 0;
 }
 .fa-paper-plane {
     font-size: 2rem;

@@ -13,24 +13,24 @@ body {
     -webkit-flex-direction: column;
     -webkit-align-items: center;
 }
-#intro, #voting-explained, #story-list, #submit, #follow, #share, #results-signup {
+#intro, #voting-explained, #story-list, #submit, .follow, #share, #results-signup {
     display: -webkit-flex;
     -webkit-flex-direction: column;
     -webkit-justify-content: center;
     -webkit-align-items: center;
     padding: 0 5vw;
 }
-#voting-explained, #share {
+#voting-explained, #share, #submit {
     padding-top: 10vh;
 }
-#story-list, #submit {
+#story-list {
     padding-top: 15vh;
 }
-#intro, #intro:before, #intro:after, #voting-explained, #story-list, #submit, #submit:before, #follow, #share, #share:before {
+#intro, #intro:before, #intro:after, #voting-explained, #story-list, #submit, #submit:before, .follow, #share, #share:before {
     width: 100vw;
     height: 100vh;
 }
-#voting-explained, #submit, #follow, #share {
+#voting-explained, #submit, .follow, #share {
     position: relative;
 }
 #intro:before, #intro:after {

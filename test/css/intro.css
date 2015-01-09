@@ -1,17 +1,9 @@
 #intro {
     color: #fff;
 }
-.bigtext {
-    width: 60vw;
-}
-.bigtext > span {
-    font-weight: 900;
-    text-shadow: 0 5px 5px #002D40;
-    line-height: 4rem;
-}
-.bigtext-exempt {
-    font-size: 2rem;
-    font-weight: 700;
+#intro > img {
+    width: 80vw;
+    height: auto;
 }
 #intro:before {
     z-index: -2;

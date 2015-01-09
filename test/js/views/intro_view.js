@@ -6,18 +6,38 @@ sbk.IntroView = Backbone.View.extend({
     template: Handlebars.compile($('#intro_template').html()),
     render: function () {
         $(this.el).html(this.template());
+        _.defer(function(view){
+            view.horizontalLogo();
+        }, this);
         return this;
     },
     events: {
-        'click .fa-caret-down' : 'down',
-        'click .fa-copyright' : 'coverPhoto'
+        'click .fa-caret-down' : 'tapTriangleToScrollDown',
+        'click .fa-copyright' : 'photoCredit'
     },
-    down: function() {
+    tapTriangleToScrollDown: function() {
         $('html, body').animate({
             scrollTop: $('#voting-explained').offset().top
         }, 500);
     },
-    coverPhoto: function (){
+    photoCredit: function (){
         alert('photo credit TK');
+    },
+    horizontalLogo: function(){
+        var self = this;
+
+        if (window.innerHeight < window.innerWidth) {
+            $(this.el).find('img').attr('src', 'images/cover_text_long.svg');
+        } else {
+            $(this.el).find('img').attr('src', 'images/cover_text.svg');
+        }
+
+        $(window).resize(function(){
+            if (window.innerHeight < window.innerWidth) {
+                $(self.el).find('img').attr('src', 'images/cover_text_long.svg');
+            } else {
+                $(self.el).find('img').attr('src', 'images/cover_text.svg');
+            }
+        });
     }
 });

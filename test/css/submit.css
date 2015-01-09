@@ -1,5 +1,7 @@
 #submit {
-    -webkit-justify-content: flex-start;
+    -webkit-justify-content: center;
+    height: auto;
+    padding-bottom: 10vh;
 }
 #submit p:last-child {
     font-size: 1.5rem;

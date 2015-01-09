@@ -10,7 +10,7 @@ sbk.HeaderView = Backbone.View.extend({
     },
     events : {
         'click img' : 'backToTop',
-        'click .fa-bars' : 'toggleMenu'
+        'click span' : 'toggleMenu'
     },
     backToTop: function () {
         $('html, body').animate({
@@ -18,7 +18,15 @@ sbk.HeaderView = Backbone.View.extend({
         }, 500);
     },
     toggleMenu: function () {
-        sbk.Notifications.trigger('toggleFollow');
+        if($('span').hasClass('fa-share-alt')){
+            $(this.el).find('span').removeClass('fa-share-alt').addClass('fa-times');
+            $(this.el).find('p').text('Close');
+        } else {
+            $(this.el).find('span').removeClass('fa-times').addClass('fa-share-alt');
+            $(this.el).find('p').text('Follow');
+        }
+        sbk.Notifications.trigger('toggleSocialMediaMenu');
+        sbk.Notifications.trigger('fadeToggleSocialMediaView');
     }
 
 });

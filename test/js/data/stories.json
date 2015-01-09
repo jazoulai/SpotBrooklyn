@@ -6,7 +6,7 @@
     },
     {
         "id" : "2",
-        "headline" : "Choose This Month's Good and Bad New Yorker",
+        "headline" : "Choose This Month's Good and Bad Brooklynite",
         "image" : "nun_burgler.jpg"
     },
     {
@@ -26,8 +26,8 @@
     },
     {
         "id" : "6",
-        "headline" : "Reasons to Leave Your Apartment This Winter.",
-        "image" : "trapped.jpg"
+        "headline" : "Things to Do This Winter That Don't Involve Food or Booze.",
+        "image" : "archery.jpg"
     },
     {
         "id" : "7",

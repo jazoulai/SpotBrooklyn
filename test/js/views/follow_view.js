@@ -2,27 +2,26 @@
 /*globals Backbone: false, L: false, $: false, Handlebars: false, _: false, sbk: false */
 
 sbk.FollowView = Backbone.View.extend({
-    id: 'follow',
+    className: 'follow',
     template: Handlebars.compile($('#follow-template').html()),
     initialize: function(){
         var self = this;
-        sbk.Notifications.on('toggleFollow', function(){
-            self.toggleFollow();
+        sbk.Notifications.on('toggleSocialMediaMenu', function(){
+            self.toggleSocialMediaMenu();
         }, this);
     },
     render: function () {
         $(this.el).html(this.template());
         _.defer(function(view){
-            view.toggleOnScroll();
             view.preventCarriageReturn();
         }, this);
         return this;
     },
     events: {
-        'click #twitter' : 'twitterFollow',
-        'click #instagram' : 'instagramFollow',
-        'click #facebook' : 'facebookFollow',
-        'click .fa-times' : 'toggleFollow',
+        'click .twitter' : 'twitterFollow',
+        'click .instagram' : 'instagramFollow',
+        'click .facebook' : 'facebookFollow',
+        'click .fa-times' : 'toggleSocialMediaMenu',
         'click .fa-paper-plane' : 'submitForm'
     },
     twitterFollow: function () {
@@ -54,11 +53,11 @@ sbk.FollowView = Backbone.View.extend({
         $('#header > h3').css({'font-size' : '3vh'});
         $('#header > span').css({'font-size' : '3vh'});
     },
-    toggleFollow: function(){
+    toggleSocialMediaMenu: function(){
         var self = this;
-        $('.fade').hide();
+        $('.follow:first-of-type').find('.fade').hide();
         $(self.el).slideToggle(200, function(){
-            $('.fade').show();
+            $('.follow:first-of-type').find('.fade').show();
         });
     },
     toggleOnScroll: function(){
@@ -69,7 +68,7 @@ sbk.FollowView = Backbone.View.extend({
             var lastPageHeight = $('#submit').height();
             var buffer = 1.3;
             if (documentPosition + (lastPageHeight * buffer) > documentHeight) {
-                self.toggleFollow();
+                self.toggleSocialMediaMenu();
                 $(document).off('scroll');
             }
         });

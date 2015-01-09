@@ -44,8 +44,3 @@
 .story-list-item img {
     width: 100%;
 }
-#button-tally {
-    -webkit-flex-direction: row;
-    -webkit-justify-content: center;
-    -webkit-align-items: center;
-}

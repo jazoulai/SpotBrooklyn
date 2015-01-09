@@ -15,6 +15,7 @@ sbk.AppRouter = Backbone.Router.extend({
         this.bodyElement = $('body');
         this.headerView = new sbk.HeaderView();
         this.followView = new sbk.FollowView();
+        this.followView2 = new sbk.FollowView2();
         this.introView = new sbk.IntroView();
         this.votingExplainedView = new sbk.VotingExplainedView();
         this.storyListView = new sbk.StoryListView({collection: this.storyCollection});
@@ -30,8 +31,10 @@ sbk.AppRouter = Backbone.Router.extend({
         this.bodyElement.append(this.storyListView.render().el);
         this.bodyElement.append(this.contributionFormView.render().el);
         this.bodyElement.append(this.followView.render().el);
+        this.bodyElement.append(this.followView2.render().el);
 
-        $('#follow').hide();
+        $('.follow').hide();
+        $('.follow:last-of-type').show();
         $('.fa-thumbs-up:first-of-type').hide();
     }
 });

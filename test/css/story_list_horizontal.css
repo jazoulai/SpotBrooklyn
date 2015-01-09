@@ -1,0 +1,17 @@
+.story-list-item.horizontal {
+    position: relative;
+    width: 95vw;
+    max-width: 700px;
+    height: auto;
+    background-color: #fff;
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -webkit-justify-content: space-around;
+    -webkit-align-items: flex-start;
+    margin-bottom: 5vh;
+    -webkit-box-shadow: 0 2px 5px 1px #888888;
+}
+.story-list-item.horizontal > img {
+    width: 60vw;
+    height: auto;
+}

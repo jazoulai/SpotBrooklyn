@@ -7,6 +7,9 @@ sbk.StoryListItemView = Backbone.View.extend({
     template: Handlebars.compile($('#story-list-item-template').html()),
     render: function () {
         $(this.el).html(this.template(this.model.toJSON()));
+        _.defer(function(view){
+            view.horizontalStoryPreviews();
+        }, this);
         return this;
     },
     events: {
@@ -47,5 +50,22 @@ sbk.StoryListItemView = Backbone.View.extend({
         var vote = $(ev.currentTarget).attr('aria-label');
         var title = this.model.get('headline');
         ga('send', 'event', vote, 'click', title, 1);
+    },
+    horizontalStoryPreviews: function(){
+        var self = this;
+
+        if (window.innerHeight < window.innerWidth) {
+            $(this.el).addClass('horizontal');
+        } else {
+            $(this.el).removeClass('horizontal');
+        }
+
+        $(window).resize(function(){
+            if (window.innerHeight < window.innerWidth) {
+                $(self.el).addClass('horizontal');
+            } else {
+                $(self.el).removeClass('horizontal');
+            }
+        });
     }
 });
