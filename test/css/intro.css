@@ -5,6 +5,9 @@
     width: 80vw;
     height: auto;
 }
+#intro.landscape img {
+    width: 60vw;
+}
 #intro:before {
     z-index: -2;
     background-color: #000;

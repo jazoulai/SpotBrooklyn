@@ -25,12 +25,15 @@ sbk.FollowView2 = Backbone.View.extend({
     },
     twitterFollow: function () {
         window.open('https://twitter.com/intent/follow?screen_name=spotbrooklyn', '_self');
+        ga('send', 'event', 'twitter', 'click', 'bottom');
     },
     instagramFollow: function () {
         window.open('http://instagram.com/spotbrooklyn?ref=badge', '_self');
+        ga('send', 'event', 'instagram', 'click', 'bottom');
     },
     facebookFollow: function(){
         window.open('https://www.facebook.com/spotBK', '_self');
+        ga('send', 'event', 'facebook', 'click', 'bottom');
     },
     submitForm: function(){
         $('form').submit();

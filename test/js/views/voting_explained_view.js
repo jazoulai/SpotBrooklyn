@@ -15,5 +15,7 @@ sbk.VotingExplainedView = Backbone.View.extend({
         $('html, body').animate({
             scrollTop: $('#story-list').offset().top
         }, 500);
+
+        ga('send', 'event', 'tap to scroll down', 'click', 'about us', 1);
     }
 });

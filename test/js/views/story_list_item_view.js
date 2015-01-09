@@ -22,12 +22,15 @@ sbk.StoryListItemView = Backbone.View.extend({
             $(self.el).css('box-shadow', '0 2px 5px 1px #888888');
         }, 75)).then(function(){
 
+            var title = this.model.get('headline');
+
             if($(self.el).find('.fa-thumbs-up:last-of-type').hasClass('liked')){
 
                 $(self.el).find('.liked').animate({
                     color: "#D3D3D3"
                 });
                 $(self.el).find('.fa-thumbs-up:last-of-type').removeClass('liked');
+                ga('send', 'event', 'like', 'click', title, 1);
 
             } else {
 
@@ -39,17 +42,9 @@ sbk.StoryListItemView = Backbone.View.extend({
                         $(self.el).find('.fa-thumbs-up:first-of-type').fadeOut(500);
                     }, 200);
                 });
-
+                ga('send', 'event', 'unlike', 'click', title, 1);
             }
-
-
-
-
-
         });
-        var vote = $(ev.currentTarget).attr('aria-label');
-        var title = this.model.get('headline');
-        ga('send', 'event', vote, 'click', title, 1);
     },
     horizontalStoryPreviews: function(){
         var self = this;
