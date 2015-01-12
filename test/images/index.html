@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Spot Brooklyn</title>
+
+    <link rel="stylesheet" href="http://test.spotbrooklyn.com/min/?b=css&f=font-awesome-4.2.0/css/font-awesome.min.css,media_queries.css,layout.css,type.css,defaults.css,header.css, intro.css,vote_buttons.css,voting_explained.css,story_list.css,story_list_horizontal.css,results_signup.css,submit.css,follow.css,share.css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+    <body>
+
+
+
+
+<!--HANDLEBARS TEMPLATES-->
+
+    <script type="text/x-handlebars-template" id="header-template">
+        <img src="images/logo/sbk_logo.svg"/>
+        <div>
+            <span class="fa fa-share-alt"></span>
+            <p>Follow</p>
+        </div>
+    </script>
+
+    <script type="text/x-handlebars-template" id="intro_template">
+            <img src="images/covers/cover_headline_portrait.svg"/>
+            <span class="fa fa-caret-down"></span>
+            <span class="fa fa-copyright"></span>
+    </script>
+
+    <script type="text/x-handlebars-template" id="voting-explained-template">
+        <h2><span class="fa fa-info-circle"></span>What is Spot Brooklyn?</h2>
+        <p>A digital magazine that makes it fun and easy to know Brooklyn better&mdash;not just the headlines, but the place itself and the people who make it special.</p>
+        <p>Vote on which stories we should publish by tapping the photos below.</p>
+        <span class="fa fa-caret-down"></span>
+    </script>
+
+    <script type="text/x-handlebars-template" id="story-list-template">
+        <h2><span class="fa fa-hand-o-down"></span>Tap To Vote</h2>
+        <ul id="stories-list-ul"></ul>
+    </script>
+
+    <script type="text/x-handlebars-template" id="story-list-item-template">
+        <img src="images/spots/{{image}}"/>
+        <div>
+            <h4>{{headline}}</h4>
+        </div>
+        <i class="fa fa-thumbs-up"></i>
+        <i class="fa fa-thumbs-up"></i>
+    </script>
+
+    <script type="text/x-handlebars-template" id="contribution-form-template">
+            <h2><span class="fa fa-pie-chart"></span>Partner With Us</h2>
+            <p>We're seeking creative writers, photographers, journalists, illustrators and people with good ideas.</p>
+            <p>Let's talk.</p>
+            <p>partnerships@spotbrooklyn.com</p>
+    </script>
+
+    <script type="text/x-handlebars-template" id="follow-template">
+        <p>Follow Spot Brooklyn on Social Media</p>
+        <div class="fade">
+            <img class="twitter" src="images/icons/twitter.png"/>
+            <img class="facebook" src="images/icons/facebook.svg"/>
+            <img class="instagram" src="images/icons/instagram.png"/>
+        </div>
+        <p>Get Spot Brooklyn Email Updates</p>
+        <div class="fade">
+            <form action="http://spotbrooklyn.us5.list-manage1.com/subscribe/post" method="POST">
+                <input type="hidden" name="u" value="de611717859b21ec0db1a7f16">
+                <input type="hidden" name="id" value="270695d569">
+                <textarea name="MERGE0" rows="1" placeholder="Enter your email address."></textarea>
+            </form>
+            <span class="fa fa-paper-plane"></span>
+        </div>
+    </script>
+
+<!--Dependencies-->
+
+
+
+
+<script src="js/libs/jquery-2.1.1.js"></script>
+<script src="js/libs/viewport-units-buggyfill.js"></script>
+<script src="js/libs/underscore.js"></script>
+<script src="js/libs/backbone.js"></script>
+<script src="js/libs/handlebars-v1.3.0.js"></script>
+<script src="js/libs/backbone.touch.js"></script>
+<script src="js/libs/jquery.animate-colors-min.js"></script>
+<script src="js/libs/bigtext.js"></script>
+<script src="js/app.js"></script>
+<script src="js/router.js"></script>
+<script src="js/models/storyModel.js"></script>
+<script src="js/collections/storiesCollection.js"></script>
+<script src="js/views/header_view.js"></script>
+<script src="js/views/intro_view.js"></script>
+<script src="js/views/voting_explained_view.js"></script>
+<script src="js/views/story_list_view.js"></script>
+<script src="js/views/story_list_item_view.js"></script>
+<script src="js/views/contribution_form_view.js"></script>
+<script src="js/views/follow_view.js"></script>
+<script src="js/views/follow_view2.js"></script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+
+<script>
+    $(function() {
+        WebFont.load({
+            typekit: {
+                id: 'urz0jfm'
+            }
+        });
+    });
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-46046711-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+
+
+
+    </body>
+</html>

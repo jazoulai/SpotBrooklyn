@@ -4,51 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>Spot Brooklyn</title>
-    <link rel="stylesheet" href="css/font-awesome-4.2.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/media_queries.css"/>
-    <link rel="stylesheet" href="css/layout.css"/>
-    <link rel="stylesheet" href="css/type.css"/>
-    <link rel="stylesheet" href="css/defaults.css"/>
-    <link rel="stylesheet" href="css/header.css"/>
-    <link rel="stylesheet" href="css/intro.css"/>
-    <link rel="stylesheet" href="css/vote_buttons.css"/>
-    <link rel="stylesheet" href="css/voting_explained.css"/>
-    <link rel="stylesheet" href="css/story_list.css"/>
-    <link rel="stylesheet" href="css/story_list_horizontal.css"/>
-    <link rel="stylesheet" href="css/results_signup.css"/>
-    <link rel="stylesheet" href="css/submit.css"/>
-    <link rel="stylesheet" href="css/follow.css"/>
-    <link rel="stylesheet" href="css/share.css"/>
-    <script src="js/libs/viewport-units-buggyfill.js"></script>
-    <script>window.viewportUnitsBuggyfill.init();</script>
-    <script src="js/libs/jquery-2.1.1.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
-    <script>
-        $(function() {
-            WebFont.load({
-                typekit: {
-                    id: 'urz0jfm'
-                }
-            });
-        });
 
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-46046711-1', 'auto');
-        ga('send', 'pageview');
-    </script>
+    <link rel="stylesheet" href="http://test.spotbrooklyn.com/min/?b=css&f=font-awesome-4.2.0/css/font-awesome.min.css,media_queries.css,layout.css,type.css,defaults.css,header.css, intro.css,vote_buttons.css,voting_explained.css,story_list.css,story_list_horizontal.css,results_signup.css,submit.css,follow.css,share.css">
+
+    <link rel="stylesheet" href="css/intro.css"/>
+
 </head>
     <body>
 
-
-
-
+    
 <!--HANDLEBARS TEMPLATES-->
 
     <script type="text/x-handlebars-template" id="header-template">
-        <img src="images/sbk_logo.svg"/>
+        <img src="images/logo/sbk_logo.svg"/>
         <div>
             <span class="fa fa-share-alt"></span>
             <p>Follow</p>
@@ -56,7 +24,7 @@
     </script>
 
     <script type="text/x-handlebars-template" id="intro_template">
-            <img src="images/cover_text.svg"/>
+            <img src="images/covers/cover_headline_portrait.svg"/>
             <span class="fa fa-caret-down"></span>
             <span class="fa fa-copyright"></span>
     </script>
@@ -74,7 +42,7 @@
     </script>
 
     <script type="text/x-handlebars-template" id="story-list-item-template">
-        <img src="images/{{image}}"/>
+        <img src="images/spots/{{image}}"/>
         <div>
             <h4>{{headline}}</h4>
         </div>
@@ -92,9 +60,9 @@
     <script type="text/x-handlebars-template" id="follow-template">
         <p>Follow Spot Brooklyn on Social Media</p>
         <div class="fade">
-            <img class="twitter" src="images/twitter.png"/>
-            <img class="facebook" src="images/facebook.svg"/>
-            <img class="instagram" src="images/instagram.png"/>
+            <img class="twitter" src="images/icons/twitter.png"/>
+            <img class="facebook" src="images/icons/facebook.svg"/>
+            <img class="instagram" src="images/icons/instagram.png"/>
         </div>
         <p>Get Spot Brooklyn Email Updates</p>
         <div class="fade">
@@ -109,26 +77,28 @@
 
 <!--Dependencies-->
 
-    <script src="js/libs/underscore.js"></script>
-    <script src="js/libs/backbone.js"></script>
-    <script src="js/libs/handlebars-v1.3.0.js"></script>
-    <script src="js/libs/backbone.touch.js"></script>
-    <script src="js/libs/jquery.animate-colors-min.js"></script>
-    <script src="js/libs/bigtext.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/router.js"></script>
-    <script src="js/models/storyModel.js"></script>
-    <script src="js/collections/storiesCollection.js"></script>
-    <script src="js/views/header_view.js"></script>
-    <script src="js/views/intro_view.js"></script>
-    <script src="js/views/voting_explained_view.js"></script>
-    <script src="js/views/story_list_view.js"></script>
-    <script src="js/views/story_list_item_view.js"></script>
-    <script src="js/views/contribution_form_view.js"></script>
-    <script src="js/views/follow_view.js"></script>
-    <script src="js/views/follow_view2.js"></script>
+
+<script src="http://test.spotbrooklyn.com/min/?b=js&f=libs/jquery-2.1.1.js,libs/viewport-units-buggyfill.js,libs/underscore.js,libs/backbone.js,libs/handlebars-v1.3.0.js,libs/backbone.touch.js,libs/jquery.animate-colors-min.js,libs/bigtext.js,app.js,router.js,models/storyModel.js,collections/storiesCollection.js,views/header_view.js,views/intro_view.js,views/voting_explained_view.js,views/story_list_view.js,views/story_list_item_view.js,views/contribution_form_view.js,views/follow_view.js,views/follow_view2.js"></script>
 
 
+<script src="//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+
+<script>
+    $(function() {
+        WebFont.load({
+            typekit: {
+                id: 'urz0jfm'
+            }
+        });
+    });
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-46046711-1', 'auto');
+    ga('send', 'pageview');
+</script>
 
     </body>
 </html>

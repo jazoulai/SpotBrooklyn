@@ -13,7 +13,7 @@
     background-color: #000;
 }
 #intro:after {
-    background-image: url('../images/cityscape_bluesky.jpg');
+    background-image: url('../images/covers/brooklyn_rooftop_view_manhattan.jpg');
     background-size: cover;
     background-position: left center;
     -webkit-filter: blur(2px);
