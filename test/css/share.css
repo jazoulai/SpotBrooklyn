@@ -1,5 +1,5 @@
 #share {
-    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
 }
 #share:before {
     background-image: url('../images/teen-secrets.jpg');

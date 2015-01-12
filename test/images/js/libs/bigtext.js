@@ -197,7 +197,7 @@
     // font-size isn't the only thing we can modify, we can also mess with:
     // word-spacing and letter-spacing. WebKit does not respect subpixel
     // letter-spacing, word-spacing, or font-size.
-    // TODO try -webkit-transform: scale() as a workaround.
+    // TODO try transform: scale() as a workaround.
     var fontSizes = [],
       wordSpacings = [],
       minFontSizes = [],

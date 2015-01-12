@@ -12,18 +12,13 @@ sbk.IntroView = Backbone.View.extend({
         return this;
     },
     events: {
-        'click .fa-caret-down' : 'tapTriangleToScrollDown',
-        'click .fa-copyright' : 'photoCredit'
+        'click .fa-caret-down' : 'tapTriangleToScrollDown'
     },
     tapTriangleToScrollDown: function() {
         $('html, body').animate({
             scrollTop: $('#voting-explained').offset().top
         }, 500);
         ga('send', 'event', 'tap to scroll down', 'click', 'intro', 1);
-    },
-    photoCredit: function (){
-        alert('modifed photo by Shawn Hoke');
-        ga('send', 'event', 'photo credit', 'click', 'intro', 1);
     },
     horizontalLogo: function(){
         var self = this;

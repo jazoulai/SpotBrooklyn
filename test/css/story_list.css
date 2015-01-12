@@ -1,5 +1,5 @@
 #story-list {
-    -webkit-justify-content: space-around;
+    justify-content: space-around;
     height: auto !important;
 }
 #story-list > h2 {
@@ -7,16 +7,15 @@
 }
 .story-list-item {
     position: relative;
-    width: 95vw;
-    max-width: 700px;
+    width: 85vw;
     height: auto;
     background-color: #fff;
-    display: -webkit-flex;
-    -webkit-flex-direction: column;
-    -webkit-justify-content: space-around;
-    -webkit-align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     margin-bottom: 5vh;
-    -webkit-box-shadow: 0 2px 5px 1px #888888;
+    box-shadow: 0 2px 5px 1px #888888;
 }
 .fa-thumbs-up:first-of-type {
     position: absolute;

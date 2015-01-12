@@ -2,35 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe0408b6-eeb5-4738-b11d-2e853cd5eeb6" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/images/archery.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/images/brooklyn_view.psd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/images/canon.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/images/cityscape.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/images/cityscape.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/images/cityscape_bluesky.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/images/community_professionals.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/images/cover_text.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/images/cover_text_long.ai" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/images/cover_text_long.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/images/donuts.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/images/elephant_mouse.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/images/facebook.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/images/guide.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/images/instagram.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/images/mansion.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/images/neighbors.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/images/nun_burgler.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/images/politician.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/images/sbk_logo.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/images/sbk_logo_long.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/images/stoop.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/images/trapped.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/images/twitter.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/js/app.js" afterPath="$PROJECT_DIR$/test/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/images/min/lib/CSSmin.php" afterPath="$PROJECT_DIR$/test/images/min/lib/CSSmin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/min/lib/CSSmin.php" afterPath="$PROJECT_DIR$/test/min/lib/CSSmin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/images/min/lib/Minify/YUI/CssCompressor.java" afterPath="$PROJECT_DIR$/test/images/min/lib/Minify/YUI/CssCompressor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/min/lib/Minify/YUI/CssCompressor.java" afterPath="$PROJECT_DIR$/test/min/lib/Minify/YUI/CssCompressor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/css/font-awesome-4.2.0/scss/_core.scss" afterPath="$PROJECT_DIR$/test/css/font-awesome-4.2.0/scss/_core.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/css/font-awesome-4.2.0/scss/_mixins.scss" afterPath="$PROJECT_DIR$/test/css/font-awesome-4.2.0/scss/_mixins.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/css/font-awesome-4.2.0/scss/_spinning.scss" afterPath="$PROJECT_DIR$/test/css/font-awesome-4.2.0/scss/_spinning.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/images/js/libs/bigtext.js" afterPath="$PROJECT_DIR$/test/images/js/libs/bigtext.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/js/libs/bigtext.js" afterPath="$PROJECT_DIR$/test/js/libs/bigtext.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/css/font-awesome-4.2.0/less/core.less" afterPath="$PROJECT_DIR$/test/css/font-awesome-4.2.0/less/core.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/images/covers/cover_headline_landscape.svg" afterPath="$PROJECT_DIR$/test/images/covers/cover_headline_landscape.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/css/defaults.css" afterPath="$PROJECT_DIR$/test/css/defaults.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/css/follow.css" afterPath="$PROJECT_DIR$/test/css/follow.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/css/font-awesome-4.2.0/css/font-awesome.css" afterPath="$PROJECT_DIR$/test/css/font-awesome-4.2.0/css/font-awesome.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/css/font-awesome-4.2.0/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/test/css/font-awesome-4.2.0/css/font-awesome.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/css/header.css" afterPath="$PROJECT_DIR$/test/css/header.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/index.html" afterPath="$PROJECT_DIR$/test/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/css/intro.css" afterPath="$PROJECT_DIR$/test/css/intro.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/js/views/intro_view.js" afterPath="$PROJECT_DIR$/test/js/views/intro_view.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/js/data/stories.json" afterPath="$PROJECT_DIR$/test/js/data/stories.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/images/js/libs/jquery-2.1.1.js" afterPath="$PROJECT_DIR$/test/images/js/libs/jquery-2.1.1.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/js/libs/jquery-2.1.1.js" afterPath="$PROJECT_DIR$/test/js/libs/jquery-2.1.1.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/css/layout.css" afterPath="$PROJECT_DIR$/test/css/layout.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/css/media_queries.css" afterPath="$PROJECT_DIR$/test/css/media_queries.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/css/font-awesome-4.2.0/less/mixins.less" afterPath="$PROJECT_DIR$/test/css/font-awesome-4.2.0/less/mixins.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/css/share.css" afterPath="$PROJECT_DIR$/test/css/share.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/css/font-awesome-4.2.0/less/spinning.less" afterPath="$PROJECT_DIR$/test/css/font-awesome-4.2.0/less/spinning.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/css/story_list.css" afterPath="$PROJECT_DIR$/test/css/story_list.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/css/story_list_horizontal.css" afterPath="$PROJECT_DIR$/test/css/story_list_horizontal.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/css/submit.css" afterPath="$PROJECT_DIR$/test/css/submit.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/css/type.css" afterPath="$PROJECT_DIR$/test/css/type.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/js/libs/viewport-units-buggyfill.js" afterPath="$PROJECT_DIR$/test/js/libs/viewport-units-buggyfill.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/css/vote_buttons.css" afterPath="$PROJECT_DIR$/test/css/vote_buttons.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/css/voting_explained.css" afterPath="$PROJECT_DIR$/test/css/voting_explained.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="backbone_tutorial.iws" />
@@ -55,61 +59,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.61452514" vertical-offset="0" max-vertical-offset="3058">
-              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+            <state vertical-scroll-proportion="16.32258" vertical-offset="660" max-vertical-offset="2640">
+              <caret line="7" column="118" selection-start-line="7" selection-start-column="118" selection-end-line="7" selection-end-column="118" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/js/app.js">
+      <file leaf-file-name="media_queries.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/css/media_queries.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="484">
-              <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1232">
+              <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="intro.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/css/intro.css">
+      <file leaf-file-name="header.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/css/header.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="23" max-vertical-offset="770">
-              <caret line="15" column="82" selection-start-line="15" selection-start-column="82" selection-end-line="15" selection-end-column="82" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="792">
+              <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/min/config.php">
+      <file leaf-file-name="story_list.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/css/story_list.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-58.235294" vertical-offset="0" max-vertical-offset="4972">
-              <caret line="135" column="12" selection-start-line="135" selection-start-column="5" selection-end-line="135" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.26506025" vertical-offset="0" max-vertical-offset="1100">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stories.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/js/data/stories.json">
+      <file leaf-file-name="story_list_horizontal.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/css/story_list_horizontal.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="372" max-vertical-offset="1166">
-              <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="intro_view.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/js/views/intro_view.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1320">
-              <caret line="47" column="11" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594">
+              <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -128,7 +122,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test/js/views/storyListView.js" />
         <option value="$PROJECT_DIR$/test/js/collections/storyCollection.js" />
         <option value="$PROJECT_DIR$/test/js/models/feelingsModel.js" />
         <option value="$PROJECT_DIR$/test/js/collections/storiesCollection.js" />
@@ -159,16 +152,10 @@
         <option value="$PROJECT_DIR$/test/js/views/story_list_view.js" />
         <option value="$PROJECT_DIR$/test/css/voting_explained.css" />
         <option value="$PROJECT_DIR$/test/js/views/contribution_form_view.js" />
-        <option value="$PROJECT_DIR$/test/css/defaults.css" />
         <option value="$PROJECT_DIR$/test/css/type.css" />
         <option value="$PROJECT_DIR$/test/js/router.js" />
-        <option value="$PROJECT_DIR$/test/css/layout.css" />
         <option value="$PROJECT_DIR$/test/css/submit.css" />
-        <option value="$PROJECT_DIR$/test/css/follow.css" />
         <option value="$PROJECT_DIR$/test/js/views/header_view.js" />
-        <option value="$PROJECT_DIR$/test/css/story_list.css" />
-        <option value="$PROJECT_DIR$/test/css/story_list_horizontal.css" />
-        <option value="$PROJECT_DIR$/test/css/header.css" />
         <option value="$PROJECT_DIR$/test/css/media_queries.css" />
         <option value="$PROJECT_DIR$/test/js/views/story_list_item_view.js" />
         <option value="$PROJECT_DIR$/test/js/views/voting_explained_view.js" />
@@ -176,9 +163,16 @@
         <option value="$PROJECT_DIR$/test/js/views/follow_view.js" />
         <option value="$PROJECT_DIR$/test/js/data/stories.json" />
         <option value="$PROJECT_DIR$/test/js/app.js" />
+        <option value="$PROJECT_DIR$/test/js/libs/viewport-units-buggyfill.js" />
         <option value="$PROJECT_DIR$/test/js/views/intro_view.js" />
+        <option value="$PROJECT_DIR$/test/css/layout.css" />
         <option value="$PROJECT_DIR$/test/css/intro.css" />
+        <option value="$PROJECT_DIR$/test/css/defaults.css" />
+        <option value="$PROJECT_DIR$/test/css/follow.css" />
+        <option value="$PROJECT_DIR$/test/css/header.css" />
         <option value="$PROJECT_DIR$/test/index.html" />
+        <option value="$PROJECT_DIR$/test/css/story_list_horizontal.css" />
+        <option value="$PROJECT_DIR$/test/css/story_list.css" />
       </list>
     </option>
   </component>
@@ -190,9 +184,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="281" />
-    <option name="y" value="103" />
-    <option name="width" value="1137" />
+    <option name="y" value="52" />
+    <option name="width" value="1440" />
     <option name="height" value="844" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -293,7 +286,51 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="min" />
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpotBrooklyn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spotbrooklyn.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpotBrooklyn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spotbrooklyn.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -400,21 +437,21 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="281" y="103" width="1137" height="844" extended-state="0" />
+    <frame x="0" y="52" width="1440" height="844" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32774192" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24954791" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1996482" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15763889" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32984293" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -466,13 +503,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/js/views/story_list_view.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1584">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/standalone_landing_pages/teaser_desktop/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2326" max-vertical-offset="3124">
@@ -670,20 +700,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/css/defaults.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="292" max-vertical-offset="968">
-          <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/css/layout.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="1276">
-          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/css/submit.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="506">
@@ -705,55 +721,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/css/type.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1518">
-          <caret line="24" column="27" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/css/follow.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1562">
-          <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/css/story_list_horizontal.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594">
-          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/css/header.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="770">
-          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/css/media_queries.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1232">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/css/story_list.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4644971" vertical-offset="0" max-vertical-offset="1122">
-          <caret line="45" column="1" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/js/views/story_list_view.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19526628" vertical-offset="0" max-vertical-offset="676">
-          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/js/views/follow_view2.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="402" max-vertical-offset="1232">
@@ -765,14 +732,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.39053255" vertical-offset="528" max-vertical-offset="2002">
           <caret line="36" column="57" selection-start-line="36" selection-start-column="57" selection-end-line="36" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/js/views/story_list_item_view.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.00887574" vertical-offset="336" max-vertical-offset="1562">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -801,22 +760,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/js/views/intro_view.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1320">
-          <caret line="47" column="11" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/css/intro.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="23" max-vertical-offset="770">
-          <caret line="15" column="82" selection-start-line="15" selection-start-column="82" selection-end-line="15" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/min/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-58.235294" vertical-offset="0" max-vertical-offset="4972">
@@ -825,10 +768,119 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/js/libs/viewport-units-buggyfill.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35341364" vertical-offset="0" max-vertical-offset="9306">
+          <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/css/type.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1518">
+          <caret line="24" column="27" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/js/views/intro_view.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="155" max-vertical-offset="1100">
+          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+          <folding>
+            <marker date="1421100205000" expanded="true" signature="-1:-1" placeholder="{&quot;id&quot;: 'intro'...}" />
+            <marker date="1421100205000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/css/layout.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1298">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/css/intro.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.981818" vertical-offset="56" max-vertical-offset="748">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/css/defaults.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="452" max-vertical-offset="968">
+          <caret line="28" column="2" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/css/follow.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="815" max-vertical-offset="1562">
+          <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/css/header.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="792">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/js/views/story_list_item_view.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.060240965" vertical-offset="815" max-vertical-offset="1562">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/js/views/story_list_view.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17670682" vertical-offset="0" max-vertical-offset="747">
+          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/css/media_queries.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1232">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61452514" vertical-offset="0" max-vertical-offset="3058">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+        <state vertical-scroll-proportion="16.32258" vertical-offset="660" max-vertical-offset="2640">
+          <caret line="7" column="118" selection-start-line="7" selection-start-column="118" selection-end-line="7" selection-end-column="118" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/css/story_list_horizontal.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/css/story_list.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26506025" vertical-offset="0" max-vertical-offset="1100">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding />
         </state>
       </provider>

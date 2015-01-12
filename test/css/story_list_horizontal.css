@@ -3,12 +3,12 @@
     width: 95vw;
     height: auto;
     background-color: #fff;
-    display: -webkit-flex;
-    -webkit-flex-direction: row;
-    -webkit-justify-content: space-around;
-    -webkit-align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
     margin-bottom: 5vh;
-    -webkit-box-shadow: 0 2px 5px 1px #888888;
+    box-shadow: 0 2px 5px 1px #888888;
 }
 .story-list-item.horizontal img {
     width: 60vw;

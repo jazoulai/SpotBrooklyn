@@ -1,7 +1,7 @@
 /*mobile devices*/
 @media (orientation: landscape) {
     body {
-        -webkit-text-size-adjust: 125% !important;
+        text-size-adjust: 125% !important;
     }
     #header img {
         width: 25%;
@@ -18,7 +18,7 @@
 /*iphone 4, 4s landscape*/
 @media (max-height: 480px) and (orientation: landscape) {
     body {
-        -webkit-text-size-adjust: 100% !important;
+        text-size-adjust: 100% !important;
     }
     #intro.landscape img {
         width: 30vw;

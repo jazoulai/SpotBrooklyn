@@ -3,7 +3,7 @@
     padding: 0;
     margin: 0;
     border: 0;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    tap-highlight-color: rgba(0, 0, 0, 0);
 }
 *:focus {
     outline: 0;
@@ -26,13 +26,13 @@ button.enabled {
 button.disabled {
     background-color: #eee;
 }
-::-webkit-input-placeholder {
+::input-placeholder {
     color: #DFDFDF;
     font-size: 1rem;
 }
 .fa-caret-down {
     color: red;
     font-size: 10rem;
-    line-height: 10rem;
+    line-height: 5rem;
     text-shadow: 0 2px 5px #002D40;
 }

@@ -3,13 +3,14 @@
     width: 100vw;
     height: 10vh;
     top: 0;
+    left: 0;
     z-index: 10000;
     background-color: rgba(0, 45, 64, .98);
-    display: -webkit-flex;
-    -webkit-flex-direction: row;
-    -webkit-flex-wrap: nowrap;
-    -webkit-justify-content: space-between;
-    -webkit-align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
     color: #fff;
 }
 #header > img {

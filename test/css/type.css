@@ -5,7 +5,7 @@ html {
     font-size: 75%;
     text-align: center;
     color: #474747;
-    -webkit-text-size-adjust:none;
+    text-size-adjust:none;
 }
 #story-list {
     font-family: "open-sans", sans-serif;
@@ -41,7 +41,7 @@ p {
     line-height: 2.5rem;
     font-weight: 300;
     text-align: left;
-    -webkit-align-self: flex-start;
+    align-self: flex-start;
     padding-top: 1rem;
 }
 p:first-of-type {

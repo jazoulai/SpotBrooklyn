@@ -1,7 +1,7 @@
 #intro {
     color: #fff;
 }
-#intro > img {
+#intro img {
     width: 80vw;
     height: auto;
 }
@@ -16,7 +16,7 @@
     background-image: url('../images/covers/brooklyn_rooftop_view_manhattan.jpg');
     background-size: cover;
     background-position: left center;
-    -webkit-filter: blur(2px);
+    filter: blur(2px);
 }
 .fa-copyright {
     position: absolute;

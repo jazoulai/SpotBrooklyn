@@ -1,5 +1,5 @@
 #submit {
-    -webkit-justify-content: center;
+    justify-content: center;
     height: auto;
     padding-bottom: 10vh;
 }
@@ -10,8 +10,8 @@
     color: #0071A1;
 }
 #submit p {
-    -webkit-align-self: center;
+    align-self: center;
 }
 #submit p:first-child {
-    -webkit-align-self: flex-start;
+    align-self: flex-start;
 }

@@ -232,7 +232,7 @@ public class CssCompressor {
         css = css.replaceAll("^(\\s*@charset [^;]+;\\s*)+", "$1");
 
         // Put the space back in some cases, to support stuff like
-        // @media screen and (-webkit-min-device-pixel-ratio:0){
+        // @media screen and (min-device-pixel-ratio:0){
         css = css.replaceAll("\\band\\(", "and (");
 
         // Remove the spaces after the things that should not have spaces after them.
