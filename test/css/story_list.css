@@ -1,4 +1,8 @@
 #story-list {
+    height: auto !important;
+}
+#story-list ul {
+    width: 95vw;
     justify-content: space-around;
     height: auto !important;
 }

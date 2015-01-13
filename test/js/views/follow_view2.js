@@ -55,9 +55,7 @@ sbk.FollowView2 = Backbone.View.extend({
                 $(this.el).addClass('large-screen');
                 $(this.el).find('p').hide();
                 sbk.Notifications.trigger('hideFollowButton');
-            } else {
-                $(this.el).removeClass('large-screen');
-                sbk.Notifications.trigger('showFollowButton');
+                sbk.Notifications.trigger('noFollowButtonClass');
             }
     }
 });

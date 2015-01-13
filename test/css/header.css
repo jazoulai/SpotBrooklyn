@@ -15,6 +15,9 @@
     align-items: center;
     color: #fff;
 }
+#header.no-follow-button {
+    justify-content: center;
+}
 #header > img {
     height: 8vmin;
     max-height: 70px;

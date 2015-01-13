@@ -13,6 +13,9 @@ sbk.HeaderView = Backbone.View.extend({
         sbk.Notifications.on('hideFollowButton', function(){
             self.hideFollowButton();
         }, this);
+        sbk.Notifications.on('noFollowButtonClass', function(){
+            self.noFollowButtonClass();
+        }, this);
         return this;
     },
     events : {
@@ -40,6 +43,8 @@ sbk.HeaderView = Backbone.View.extend({
     },
     hideFollowButton: function(){
         $(this.el).find('div').hide();
+    },
+    noFollowButtonClass: function(){
+      $(this.el).addClass('no-follow-button');
     }
-
 });
