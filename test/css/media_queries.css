@@ -1,50 +1,13 @@
-/*mobile devices*/
-@media (orientation: landscape) {
-    body {
-        text-size-adjust: 125% !important;
-    }
-    #header img {
-        width: 25%;
-    }
-}
-
-/*iphone 4, 4s */
-@media (max-height: 480px) and (max-width: 320px) {
-    html {
-        font-size: 60% !important;
-    }
-}
-
-/*iphone 4, 4s landscape*/
-@media (max-height: 480px) and (orientation: landscape) {
-    body {
-        text-size-adjust: 100% !important;
-    }
-    #intro.landscape img {
-        width: 30vw;
-    }
-}
-/*iphone 5, 5s */
-@media (max-height: 568px ) {
-    html {
-        font-size: 70% !important;
-    }
-    #intro.landscape img {
-        width: 40vw;
-    }
-}
-
-/*iphone 6 landscape*/
-@media (max-height: 750px) and (orientation: landscape) {
-    #voting-explained, #submit, #submit:before, #share, #share:before, #results-signup {
-        height: 110vh !important;
-    }
-}
-
 /*ipad mini and up*/
-@media (min-device-width : 768px) and (max-device-width : 1024px) {
+@media (min-device-width : 768px) {
     html {
         font-size: 100% !important;
+    }
+}
+
+@media (orientation : landscape) {
+    .follow {
+        height: 70vh;
     }
 }
 

@@ -1,7 +1,7 @@
 .follow {
     position: fixed;
-    height: auto;
-    top: 10vh;
+    height: 50vh;
+    top: 10vmax;
     z-index: 1000;
     background-color: rgba(0, 45, 64, .98);
     padding: 1rem;
@@ -21,6 +21,7 @@
     align-items: center;
 }
 textarea {
+    width: 80vw;
     border: 2px solid #fff;
     border-radius: 5px 0 0 5px;
     font-size: 2rem;
@@ -30,7 +31,7 @@ textarea {
     vertical-align: top;
 }
 .follow img {
-    height: 8vh;
+    height: 8vmax;
     width: auto;
     margin-bottom: 2rem;
 }
@@ -62,5 +63,29 @@ textarea {
 }
 .fa-instagram {
     color: orange;
-    margin: 0 8vw;
+    margin: 0 10px;
+}
+.follow.large-screen {
+    flex-direction: row;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: auto;
+    height: 10vh;
+    max-height: 80px;
+    width: 100vw;
+}
+.follow.large-screen textarea {
+    width: 30vw;
+    margin-left: 10vw;
+}
+.follow.large-screen img {
+    height: 6vh;
+    max-height: 60px;
+    width: auto;
+    margin-bottom: 0;
+}
+.follow.large-screen .fa-instagram {
+    color: orange;
+    margin: 0 10px;
 }

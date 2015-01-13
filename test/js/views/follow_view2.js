@@ -14,6 +14,7 @@ sbk.FollowView2 = Backbone.View.extend({
         $(this.el).html(this.template());
         _.defer(function(view){
             view.preventCarriageReturn();
+            view.largeScreenFollow();
         }, this);
         return this;
     },
@@ -47,5 +48,16 @@ sbk.FollowView2 = Backbone.View.extend({
     },
     fadeToggleSocialMediaView: function(){
         $(this.el).fadeToggle();
+    },
+    /*TODO check for large screen size and add class 'large-screen-follow'*/
+    largeScreenFollow: function() {
+            if (window.innerHeight > 700 || window.innerWidth > 700) {
+                $(this.el).addClass('large-screen');
+                $(this.el).find('p').hide();
+                sbk.Notifications.trigger('hideFollowButton');
+            } else {
+                $(this.el).removeClass('large-screen');
+                sbk.Notifications.trigger('showFollowButton');
+            }
     }
 });

@@ -1,7 +1,9 @@
 #header {
     position: fixed;
     width: 100vw;
-    height: 10vh;
+    height: 10vmax;
+    max-height: 80px;
+    padding: 1vmin 0;
     top: 0;
     left: 0;
     z-index: 10000;
@@ -14,18 +16,19 @@
     color: #fff;
 }
 #header > img {
-    width: 50vw;
-    height: auto;
+    height: 8vmin;
+    max-height: 70px;
+    width: auto;
     margin-left: 3vw;
 }
 #header span {
-    font-size: 6vh;
-    line-height: 6vh;
+    font-size: 6vmax;
+    line-height: 6vmax;
     margin-right: 3vw;
 }
 #header p {
-    font-size: 2vh;
-    line-height: 2vh;
+    font-size: 2vmax;
+    line-height: 2vmax;
     margin: 0 1rem 0 0;
     padding: .25vh 0 0 0;
 }

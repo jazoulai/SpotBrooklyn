@@ -6,11 +6,18 @@ sbk.HeaderView = Backbone.View.extend({
     template: Handlebars.compile($('#header-template').html()),
     render: function () {
         $(this.el).html(this.template());
+        var self = this;
+        sbk.Notifications.on('showFollowButton', function(){
+            self.showFollowButton();
+        }, this);
+        sbk.Notifications.on('hideFollowButton', function(){
+            self.hideFollowButton();
+        }, this);
         return this;
     },
     events : {
         'click img' : 'backToTop',
-        'click span' : 'toggleMenu'
+        'click div' : 'toggleMenu'
     },
     backToTop: function () {
         $('html, body').animate({
@@ -27,6 +34,14 @@ sbk.HeaderView = Backbone.View.extend({
         }
         sbk.Notifications.trigger('toggleSocialMediaMenu');
         sbk.Notifications.trigger('fadeToggleSocialMediaView');
+    },
+    showFollowButton: function(){
+        console.log('showFollowButton');
+        $(this.el).find('div').show();
+    },
+    hideFollowButton: function(){
+        console.log('hideFollowButton');
+        $(this.el).find('div').hide();
     }
 
 });
