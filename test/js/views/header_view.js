@@ -36,11 +36,9 @@ sbk.HeaderView = Backbone.View.extend({
         sbk.Notifications.trigger('fadeToggleSocialMediaView');
     },
     showFollowButton: function(){
-        console.log('showFollowButton');
         $(this.el).find('div').show();
     },
     hideFollowButton: function(){
-        console.log('hideFollowButton');
         $(this.el).find('div').hide();
     }
 

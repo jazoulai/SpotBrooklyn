@@ -17,12 +17,13 @@ sbk.StoryListItemView = Backbone.View.extend({
     },
     vote: function (ev) {
         var self = this;
+        var title = this.model.get('headline');
         $(this.el).css('box-shadow', '0 1px 1px 0px #888888');
         $.when(setTimeout( function() {
             $(self.el).css('box-shadow', '0 2px 5px 1px #888888');
         }, 75)).then(function(){
 
-            var title = this.model.get('headline');
+
 
             if($(self.el).find('.fa-thumbs-up:last-of-type').hasClass('liked')){
 

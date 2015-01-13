@@ -1,13 +1,51 @@
-/*ipad mini and up*/
-@media (min-device-width : 768px) {
-    html {
-        font-size: 100% !important;
-    }
-}
-
 @media (orientation : landscape) {
+    html {
+        text-size-adjust: 80%;
+    }
     .follow {
         height: 70vh;
     }
 }
+
+@media (min-width : 700px) {
+    html {
+        font-size: 100% !important;
+    }
+    #story-list {
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    #story-list-item {
+        width: 45vw !important;
+    }
+    .story-list-item.horizontal {
+        width: 30vw;
+        height: auto;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 5vh;
+        box-shadow: 0 2px 5px 1px #888888;
+    }
+    .story-list-item.horizontal img {
+        width: 100%;
+        height: auto;
+    }
+    .story-list-item.horizontal div {
+        width: 100%;
+        height: auto;
+        margin: auto 0;
+
+    }
+}
+
+@media (max-width: 320px) {
+    html {
+        font-size: 60% !important;
+    }
+}
+
 
