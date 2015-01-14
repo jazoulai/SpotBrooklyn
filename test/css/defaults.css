@@ -36,3 +36,6 @@ button.disabled {
     line-height: 5rem;
     text-shadow: 0 2px 5px #002D40;
 }
+.fa-caret-down.last {
+    margin-top: 5vh;
+}

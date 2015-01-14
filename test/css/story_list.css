@@ -6,7 +6,7 @@
     justify-content: space-around;
     height: auto !important;
 }
-#story-list > h2 {
+#story-list > p {
     margin-bottom: 5vh;
 }
 .story-list-item {

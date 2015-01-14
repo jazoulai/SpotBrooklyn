@@ -39,9 +39,13 @@
         height: auto;
         margin: auto 0;
     }
-    #voting-explained, #submit {
+    #voting-explained, #submit, #story-list > p {
         width: 75vw;
     }
+    #story-list > p {
+        margin-left: 7.5vw;
+    }
+
 }
 @media (min-width: 1000px) {
     .story-list-item.horizontal, .story-list-item {
