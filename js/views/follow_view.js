@@ -37,7 +37,7 @@ sbk.FollowView = Backbone.View.extend({
         ga('send', 'event', 'facebook', 'click', 'menu');
     },
     submitForm: function(){
-        $('form').submit();
+        $('.top-form').submit();
     },
     growHeader: function(){
         $('#header > *').fadeOut(function(){

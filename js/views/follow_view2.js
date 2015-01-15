@@ -3,7 +3,7 @@
 
 sbk.FollowView2 = Backbone.View.extend({
     className: 'follow',
-    template: Handlebars.compile($('#follow-template').html()),
+    template: Handlebars.compile($('#follow-template2').html()),
     initialize: function(){
         var self = this;
         sbk.Notifications.on('fadeToggleSocialMediaView', function(){
@@ -37,7 +37,7 @@ sbk.FollowView2 = Backbone.View.extend({
         ga('send', 'event', 'facebook', 'click', 'bottom');
     },
     submitForm: function(){
-        $('form').submit();
+        $('.bottom-form').submit();
     },
     preventCarriageReturn: function(){
         $('textarea').keypress(function(event) {
