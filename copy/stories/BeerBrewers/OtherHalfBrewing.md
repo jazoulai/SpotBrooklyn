@@ -1,3 +1,0 @@
-# Other Half Brewing
-
-Two brewers who met while working for Kelly Taylor, of Greenpoint Beerworks and Heartland Brewery, have spawned a new brewery in Gowanus. Matt Monahan graduated from The French Culinary Institute and Sam was the head brewer for Greenpoint Beer works. and Sam Richardson want to focus on hoppy beers like IPAs, and work there way to sours. Visit the breweries tasting room for hoppy selections like. You can stop by their taproom for a taste or take a growler full of brew home with you. 

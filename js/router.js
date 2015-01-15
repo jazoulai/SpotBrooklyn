@@ -1,53 +1,40 @@
 /*jshint strict: false*/
-/*globals Backbone: false, L: false, $: false, Handlebars: false, _: false, sbk: false */
+/*globals Backbone: false, L: false, $: false, Handlebars: false, _: false, sbk: false, ga: false */
 
 sbk.AppRouter = Backbone.Router.extend({
     routes: {
         "": "loadList",
-        "!": "loadList",
-        "!:storyId": "loadStory", //does the storyID argument start at the route?
-        "!:storyId/:spotId": "loadSpot"
+        "!": "loadList"
     },
-
-    initialize: function (neighborhoodCollection, storyCollection, spotCollection) {
+    initialize: function (storyCollection) {
         this.storyCollection = storyCollection;
-        this.spotCollection = spotCollection;
-        this.neighborhoodCollection = neighborhoodCollection;
-        this.map = new sbk.MapView({
-            storyCollection: storyCollection,
-            spotCollection: spotCollection,
-            neighborhoodCollection: neighborhoodCollection
-        });
+        sbk.Notifications = {};
+        _.extend(sbk.Notifications, Backbone.Events);
     },
-
     loadList: function () {
+        this.bodyElement = $('body');
+        this.headerView = new sbk.HeaderView();
+        this.followView = new sbk.FollowView();
+        this.followView2 = new sbk.FollowView2();
+        this.introView = new sbk.IntroView();
+        this.votingExplainedView = new sbk.VotingExplainedView();
         this.storyListView = new sbk.StoryListView({collection: this.storyCollection});
-        $('#content_container').html(this.storyListView.render().el);  //how else should we insert views into the dom?
-        this.map.resetMap();
-    },
+        this.contributionFormView = new sbk.ContributionFormView();
 
-    loadStory: function (storyId) {
-        var story = this.storyCollection.get(storyId);
-        var storyView = new sbk.StoryView({model: story});
-        $('#content_container').html(storyView.render().el);
-        this.map.resetMap();
-        this.map.renderStory(story);
+        this.bodyElement.html('');
+        this.bodyElement.append(this.headerView.render().el);
+        this.bodyElement.append(this.introView.render().el);
 
+        $('.bigtext').bigtext();
 
-        var storyNavigationView = new sbk.StoryNavigationView({model: story});
-        $('#nav').html(storyNavigationView.render().el);
-    },
+        this.bodyElement.append(this.votingExplainedView.render().el);
+        this.bodyElement.append(this.storyListView.render().el);
+        this.bodyElement.append(this.contributionFormView.render().el);
+        this.bodyElement.append(this.followView.render().el);
+        this.bodyElement.append(this.followView2.render().el);
 
-    loadSpot: function (storyId, spotId) {
-        var spot = this.spotCollection.get(spotId);
-        var spotView = new sbk.SpotView({model: spot});
-        var story = this.storyCollection.get(storyId);
-        $('#content_container').html(spotView.render().el);
-
-        this.map.renderStory(story);
-        this.map.zoomToSpot(spot);
-
-        var spotNavigationView = new sbk.SpotNavigationView({story: story, spot: spot});
-        $('#nav').html(spotNavigationView.render().el);
+        $('.follow').hide();
+        $('.follow:last-of-type').show();
+        $('.fa-thumbs-up:first-of-type').hide();
     }
 });

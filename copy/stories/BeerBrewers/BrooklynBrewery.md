@@ -1,3 +1,0 @@
-# Brooklyn Brewery
-
-The hadn't been a single brewery in Brooklyn for twenty years, when Mayor Rudoplh Guiliani cut the ribbon on opening Day of Brooklyn Brewery in 1996. People thought co-founders Steve Hindy and Tom Potter were nuts to name their beer after a borough known for crime and drugs, a point driven home when the brewery got a visit from some mobsters looking for protection money. They left Steve unharmed, maybe because he used to be a reporter. It was as a reporter for the AP stationed in the middle east that Steve got the brewing bug to begin with. Countries like Saudi Arabia and TK are dry, so American diplomats home brewed--and the showed steve the way. For Steve and his partner Tom, Brooklyn Brewery was a hobby that got out of control.
