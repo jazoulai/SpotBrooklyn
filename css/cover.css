@@ -1,18 +1,18 @@
-#intro {
+#cover {
     color: #fff;
 }
-#intro img {
+#cover img {
     width: 80vw;
     height: auto;
 }
-#intro.landscape img {
+#cover.landscape img {
     width: 60vw;
 }
-#intro:before {
+#cover:before {
     z-index: -2;
     background-color: #000;
 }
-#intro:after {
+#cover:after {
     background-image: url('../images/covers/brooklyn_rooftop_view_manhattan.jpg');
     background-size: cover;
     background-position: left center;

@@ -2,13 +2,10 @@
 /*globals Backbone: false, L: false, $: false, Handlebars: false, _: false, sbk: false */
 
 sbk.CoverView = Backbone.View.extend({
-    id: 'intro',
-    template: Handlebars.compile($('#intro_template').html()),
+    id: 'cover',
+    template: Handlebars.compile($('#cover_template').html()),
     render: function () {
         $(this.el).html(this.template());
-        _.defer(function(view){
-            view.horizontalLogo();
-        }, this);
         return this;
     },
     events: {
@@ -18,6 +15,6 @@ sbk.CoverView = Backbone.View.extend({
         $('html, body').animate({
             scrollTop: $('#voting-explained').offset().top
         }, 500);
-        ga('send', 'event', 'tap to scroll down', 'click', 'intro', 1);
+        ga('send', 'event', 'tap to scroll down', 'click', 'cover', 1);
     }
 });

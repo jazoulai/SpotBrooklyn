@@ -2,8 +2,8 @@
 /*globals Backbone: false, L: false, $: false, Handlebars: false, _: false, sbk: false */
 
 sbk.CoverView = Backbone.View.extend({
-    id: 'intro',
-    template: Handlebars.compile($('#intro_template').html()),
+    id: 'cover',
+    template: Handlebars.compile($('#cover_template').html()),
     render: function () {
         $(this.el).html(this.template());
         _.defer(function(view){
@@ -19,11 +19,11 @@ sbk.CoverView = Backbone.View.extend({
         $('html, body').animate({
             scrollTop: $('#voting-explained').offset().top
         }, 500);
-        ga('send', 'event', 'tap to scroll down', 'click', 'intro', 1);
+        ga('send', 'event', 'tap to scroll down', 'click', 'cover', 1);
     },
     photoCredit: function (){
         alert('modifed photo by Shawn Hoke');
-        ga('send', 'event', 'photo credit', 'click', 'intro', 1);
+        ga('send', 'event', 'photo credit', 'click', 'cover', 1);
     },
     horizontalLogo: function(){
         var self = this;
