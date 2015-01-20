@@ -16,14 +16,14 @@ sbk.AppRouter = Backbone.Router.extend({
         this.headerView = new sbk.HeaderView();
         this.followView = new sbk.FollowView();
         this.followView2 = new sbk.FollowView2();
-        this.introView = new sbk.IntroView();
+        this.coverView = new sbk.CoverView();
         this.votingExplainedView = new sbk.VotingExplainedView();
         this.storyListView = new sbk.StoryListView({collection: this.storyCollection});
         this.contributionFormView = new sbk.ContributionFormView();
 
         this.bodyElement.html('');
         this.bodyElement.append(this.headerView.render().el);
-        this.bodyElement.append(this.introView.render().el);
+        this.bodyElement.append(this.coverView.render().el);
 
         $('.bigtext').bigtext();
 
