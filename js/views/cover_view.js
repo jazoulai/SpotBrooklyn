@@ -7,14 +7,5 @@ sbk.CoverView = Backbone.View.extend({
     render: function () {
         $(this.el).html(this.template());
         return this;
-    },
-    events: {
-        'click .fa-caret-down' : 'tapTriangleToScrollDown'
-    },
-    tapTriangleToScrollDown: function() {
-        $('html, body').animate({
-            scrollTop: $('#voting-explained').offset().top
-        }, 500);
-        ga('send', 'event', 'tap to scroll down', 'click', 'cover', 1);
     }
 });

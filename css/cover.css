@@ -1,16 +1,23 @@
 #cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 5vw;
     color: #fff;
-}
-#cover img {
-    width: 80vw;
+    width: 100vw;
     height: auto;
 }
-#cover.landscape img {
-    width: 60vw;
+#cover, #cover:before, #cover:after {
+    width: 100vw;
+    height: 80vh;
 }
-#cover:before {
-    z-index: -2;
-    background-color: #000;
+#cover:before, #cover:after {
+    top: 0;
+    left: 0;
+    position: absolute;
+    content: "";
+    background-repeat: no-repeat;
 }
 #cover:after {
     background-image: url('../images/covers/brooklyn_rooftop_view_manhattan.jpg');
@@ -18,12 +25,7 @@
     background-position: left center;
     filter: blur(2px);
 }
-.fa-copyright {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    margin: 10px;
-    font-size: 2rem;
-    line-height: 2rem;
-    color: #0071A1;
+#cover:before {
+    background-color: #000;
+    z-index: -1;
 }

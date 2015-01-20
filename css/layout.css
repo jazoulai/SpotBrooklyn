@@ -10,11 +10,10 @@ body {
     width: 100vw;
     height: auto;
     display: flex;
-    display: flex;
     flex-direction: column;
     align-items: center;
 }
-#cover, #voting-explained, #story-list, #submit, .follow, #share, #results-signup {
+#voting-explained, #story-list, #submit, .follow, #share, #results-signup {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,18 +27,14 @@ body {
 #story-list {
     padding-top: 15vh;
 }
-#cover, #cover:before, #cover:after, #voting-explained, #story-list, #submit, #submit:before, .follow, #share, #share:before {
+#voting-explained, #story-list, #submit, #submit:before, .follow, #share, #share:before {
     width: 100vw;
     height: 100vh;
 }
 #voting-explained, #submit, .follow, #share {
     position: relative;
 }
-#cover:before, #cover:after {
-    top: 0;
-    left: 0;
-}
-#cover:before, #cover:after, #share:before {
+#share:before {
     position: absolute;
     content: "";
     z-index: -1;
