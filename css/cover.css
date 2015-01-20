@@ -1,31 +1,15 @@
+@keyframes play {
+    100% { background-position: -1000% 0;}
+}
+
 #cover {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 0 5vw;
-    color: #fff;
+    margin-top: 10vh;
     width: 100vw;
-    height: auto;
-}
-#cover, #cover:before, #cover:after {
-    width: 100vw;
-    height: 80vh;
-}
-#cover:before, #cover:after {
-    top: 0;
-    left: 0;
-    position: absolute;
-    content: "";
-    background-repeat: no-repeat;
-}
-#cover:after {
-    background-image: url('../images/covers/brooklyn_rooftop_view_manhattan.jpg');
-    background-size: cover;
-    background-position: left center;
-    filter: blur(2px);
-}
-#cover:before {
-    background-color: #000;
-    z-index: -1;
+    height: 0;
+    padding-bottom: 70vh;
+    background-image: url('../images/test/monster_numbered.png');
+    background-size: 1000%;
+    background-position: 0 0;
+    display: block;
+    animation: play 1s steps(10);
 }
