@@ -173,7 +173,7 @@
 
 <!-- HEADER -->
     <div id="header">
-        <img src="images/logo/sbk_logo.svg"/>
+        <img id="logo" src="images/logo/sbk_logo.svg"/>
         <div id="follow-button">
             <span class="fa fa-share-alt"></span>
             <p>Follow</p>
@@ -210,13 +210,68 @@
 
         var sbk = sbk || {};
 
-        sbk.aboveTheFold = {
+        sbk.header = {
+            backToTop: function(){
+                $('#logo').click(function(){
+                    $('html, body').animate({
+                        scrollTop: $('html').offset().top
+                    }, 500);
+                });
+            }
+        };
+        sbk.followPullDownMenu = {
+            toggleFollowPulldownMenu: function(){
+                var followPulldownMenu = $('#follow-pulldown-menu');
+                var followIcon = $('#header span');
+                var followIconText = $('#header p');
 
+                followPulldownMenu.hide();
 
+                $('#follow-button').click(function(){
+                    if(followIcon.hasClass('fa-share-alt')){
+                        followIcon.removeClass('fa-share-alt').addClass('fa-times');
+                        followIconText.text('Close');
+                        //TODO hide bottom follow menu
+                    } else {
+                        followIcon.removeClass('fa-times').addClass('fa-share-alt');
+                        followIconText.text('Follow');
+                        //TODO show bottom follow menu
+                    }
+                    followPulldownMenu.slideToggle();
+                });
+            },
+            twitterFollow: function () {
+                $('.twitter').click(function(){
+                    window.open('https://twitter.com/intent/follow?screen_name=spotbrooklyn', '_self');
+                    ga('send', 'event', 'twitter', 'click', 'menu');
+                });
+            },
+            instagramFollow: function () {
+                $('.instagram').click(function(){
+                    window.open('http://instagram.com/spotbrooklyn?ref=badge', '_self');
+                    ga('send', 'event', 'instagram', 'click', 'menu');
+                });
+            },
+            facebookFollow: function(){
+                $('.facebook').click(function(){
+                    window.open('https://www.facebook.com/spotBK', '_self');
+                    ga('send', 'event', 'facebook', 'click', 'menu');
+                });
+            },
+            submitEmail: function(){
+                $('.fa-paper-plane').click(function(){
+                    $('.top-form').submit();
+                });
+            }
+        };
 
+        sbk.header.backToTop();
 
-        }
-
+        sbk.followPullDownMenu.toggleFollowPulldownMenu();
+        sbk.followPullDownMenu.twitterFollow();
+        sbk.followPullDownMenu.instagramFollow();
+        sbk.followPullDownMenu.facebookFollow();
+        sbk.followPullDownMenu.submitEmail();
     </script>
 
 

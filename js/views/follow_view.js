@@ -24,58 +24,7 @@ sbk.FollowView = Backbone.View.extend({
         'click .fa-times' : 'toggleSocialMediaMenu',
         'click .fa-paper-plane' : 'partnershipsForm'
     },
-    twitterFollow: function () {
-        window.open('https://twitter.com/intent/follow?screen_name=spotbrooklyn', '_self');
-        ga('send', 'event', 'twitter', 'click', 'menu');
-    },
-    instagramFollow: function () {
-        window.open('http://instagram.com/spotbrooklyn?ref=badge', '_self');
-        ga('send', 'event', 'instagram', 'click', 'menu');
-    },
-    facebookFollow: function(){
-        window.open('https://www.facebook.com/spotBK', '_self');
-        ga('send', 'event', 'facebook', 'click', 'menu');
-    },
-    partnershipsForm: function(){
-        $('.top-form').submit();
-    },
-    growHeader: function(){
-        $('#header > *').fadeOut(function(){
-            $('#header').animate({height : '10vh'}, function(){
-                $('#header > span').css({'font-size' : '8vh'});
-                $('#header > h3').css({'font-size' : '5vh'});
-                $('#header > img').animate({height : '8vh'}, function(){
-                    $('#header > *').fadeIn();
-                });
-            });
-        });
-    },
-    shrinkHeader: function(){
-        $('#header').animate({height : '5vh'});
-        $('#header > img').animate({height : '4vh'});
-        $('#header > h3').css({'font-size' : '3vh'});
-        $('#header > span').css({'font-size' : '3vh'});
-    },
-    toggleSocialMediaMenu: function(){
-        var self = this;
-        $('.follow:first-of-type').find('.fade').hide();
-        $(self.el).slideToggle(200, function(){
-            $('.follow:first-of-type').find('.fade').show();
-        });
-    },
-    toggleOnScroll: function(){
-        var self = this;
-        $(document).scroll(function() {
-            var documentHeight = $(document).height();
-            var documentPosition = $(document).scrollTop();
-            var lastPageHeight = $('#partnerships').height();
-            var buffer = 1.3;
-            if (documentPosition + (lastPageHeight * buffer) > documentHeight) {
-                self.toggleSocialMediaMenu();
-                $(document).off('scroll');
-            }
-        });
-    },
+
     preventCarriageReturn: function(){
         $('textarea').keypress(function(event) {
             if (event.keyCode == 13) {
