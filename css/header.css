@@ -8,11 +8,7 @@
     left: 0;
     z-index: 10000;
     background-color: rgba(0, 45, 64, .98);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
+
     color: #fff;
 }
 #header.no-follow-button {
