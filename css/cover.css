@@ -1,8 +1,8 @@
 @keyframes play {
-    100% { background-position: -1000% 0;}
-}
-
+     100% { background-position: -1000% 0;}
+ }
 #cover {
+    display: block;
     margin-top: 10vh;
     width: 100vw;
     height: 0;
@@ -10,6 +10,5 @@
     background-image: url('../images/test/monster_numbered.png');
     background-size: 1000%;
     background-position: 0 0;
-    display: block;
     animation: play 1s steps(10);
 }

@@ -13,25 +13,16 @@ sbk.AppRouter = Backbone.Router.extend({
     },
     loadList: function () {
         this.bodyElement = $('body');
-        this.headerView = new sbk.HeaderView();
-        this.followView = new sbk.FollowView();
-        this.followView2 = new sbk.FollowView2();
+
         this.votingExplainedView = new sbk.VotingExplainedView();
-        this.storyListView = new sbk.StoryListView({collection: this.storyCollection});
-        this.contributionFormView = new sbk.ContributionFormView();
-
-
-
-        $('.bigtext').bigtext();
-        this.bodyElement.append(this.headerView.render().el);
         this.bodyElement.append(this.votingExplainedView.render().el);
-        this.bodyElement.append(this.storyListView.render().el);
-        this.bodyElement.append(this.contributionFormView.render().el);
-        this.bodyElement.append(this.followView.render().el);
-        this.bodyElement.append(this.followView2.render().el);
 
-        $('.follow').hide();
-        $('.follow:last-of-type').show();
+        this.storyListView = new sbk.StoryListView({collection: this.storyCollection});
+        this.bodyElement.append(this.storyListView.render().el);
+
+        this.contributionFormView = new sbk.ContributionFormView();
+        this.bodyElement.append(this.contributionFormView.render().el);
+
         $('.fa-thumbs-up:first-of-type').hide();
     }
 });

@@ -4,6 +4,153 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>Spot Brooklyn</title>
+    <style>
+/* DEFAULTS */
+    html {
+        font-family: "museo-sans", sans-serif;
+        font-style: normal;
+        font-weight: 100;
+        font-size: 75%;
+        text-align: center;
+        color: #474747;
+        -webkit-text-size-adjust: none;
+        text-size-adjust:none;
+    }
+    *, *:before {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+/* HEADER */
+    #header {
+        position: fixed;
+        width: 100%;
+        height: 10%;
+        max-height: 80px;
+        padding: 2% 0;
+        top: 0;
+        left: 0;
+        z-index: 10000;
+        background-color: rgba(0, 45, 64, .98);
+        align-items: center;
+        color: #fff;
+    }
+    #header.no-follow-button {
+        justify-content: center;
+    }
+    #header > img {
+        height: 8vmin;
+        max-height: 70px;
+        width: auto;
+        margin-left: 3vw;
+    }
+    #header span {
+        font-size: 6vmax;
+        line-height: 6vmax;
+        margin-right: 3vw;
+    }
+    #header p {
+        font-size: 2rem;
+        line-height: 2rem;
+        margin: 0 1rem 0 0;
+        padding: .25vh 0 0 0;
+    }
+/* FOLLOW PULLDOWN MENU */
+    #follow-pulldown-menu {
+        position: fixed;
+        height: 50%;
+        top: 10%;
+        z-index: 1000;
+        background-color: rgba(0, 45, 64, .98);
+        padding: 1rem;
+        color: #fff;
+    }
+    #follow-pulldown-menu > div { /*containers for social buttons and email form*/
+        margin-bottom: 2vh;
+    }
+    #follow-pulldown-menu textarea {
+        width: 80vmin;
+        border: 2px solid #fff;
+        border-radius: 5px 0 0 5px;
+        font-size: 2rem;
+        line-height: 3rem;
+        padding: 0 2vw;
+        background: transparent;
+        vertical-align: top;
+    }
+    #follow-pulldown-menu img {
+        height: 8vmax;
+        width: auto;
+        margin: 0 2vw;
+    }
+    #follow-pulldown-menu p {
+        font-size: 1rem;
+        line-height: 1rem;
+        text-align: center;
+        align-self: center;
+        padding-top: 0; /*remove default padding*/
+        padding-bottom: 1rem;
+    }
+    #follow-pulldown-menu .fa-paper-plane {
+        font-size: 2rem;
+        line-height: 3rem;
+        padding: 0 2vw;
+        background-color: red;
+        color: #fff;
+        border: 2px solid #fff;
+        border-radius: 0 5px 5px 0;
+    }
+    #follow-pulldown-menu .fa-instagram {
+        margin: 0 10px;
+    }
+    #follow-pulldown-menu.large-screen {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        top: auto;
+        height: auto;
+        width: 100vw;
+    }
+    #follow-pulldown-menu.large-screen textarea {
+        width: 30vw;
+        margin-left: 0;
+    }
+    #follow-pulldown-menu.large-screen img {
+        height: 6vh;
+        max-height: 60px;
+        width: auto;
+        margin-bottom: 0;
+    }
+    #follow-pulldown-menu.large-screen.fa-instagram {
+        color: orange;
+        margin: 0 4px;
+    }
+    #follow-pulldown-menu.large-screen > div {
+        margin-bottom: 2vh;
+    }
+/* COVER */
+    @keyframes play {
+        100% { background-position: -1000% 0;}
+    }
+    #cover {
+        display: block;
+        margin-top: 10vh;
+        width: 100vw;
+        height: 0;
+        padding-bottom: 70vh;
+        background-image: url('images/test/monster_numbered.png');
+        background-size: 1000%;
+        background-position: 0 0;
+        animation: play 1s steps(10);
+    }
+    </style>
 
     <link rel="stylesheet" href="css/font-awesome-4.2.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="css/layout.css"/>
@@ -21,24 +168,46 @@
     <link rel="stylesheet" href="css/share.css"/>
     <link rel="stylesheet" href="css/media_queries.css"/>
 
+    <script src="js/libs/jquery-2.1.1.js"></script>
+
 </head>
     <body>
 
-    <div id="cover"></div>
-    <script>
-
-    </script>
-
-
-<!--HANDLEBARS TEMPLATES-->
-
-    <script type="text/x-handlebars-template" id="header-template">
+<!-- HEADER -->
+    <div id="header">
         <img src="images/logo/sbk_logo.svg"/>
-        <div>
+        <div id="follow-button">
             <span class="fa fa-share-alt"></span>
             <p>Follow</p>
         </div>
-    </script>
+    </div>
+
+<!-- FOLLOW -->
+    <div id="follow-pulldown-menu">
+        <p>Follow Spot Brooklyn on Social Media</p>
+        <div class="fade">
+            <img class="twitter" src="images/icons/twitter.png"/>
+            <img class="facebook" src="images/icons/facebook.svg"/>
+            <img class="instagram" src="images/icons/instagram.png"/>
+        </div>
+        <p>Get Spot Brooklyn Email Updates</p>
+        <div class="fade">
+            <form class="top-form" action="http://spotbrooklyn.us5.list-manage1.com/subscribe/post" method="POST">
+                <input type="hidden" name="u" value="de611717859b21ec0db1a7f16">
+                <input type="hidden" name="id" value="270695d569">
+                <textarea name="MERGE0" rows="1" placeholder="Enter your email address."></textarea>
+            </form>
+            <span class="fa fa-paper-plane"></span>
+        </div>
+    </div>
+
+<!-- COVER -->
+    <div id="cover"></div>
+
+
+
+
+<!--HANDLEBARS TEMPLATES-->
 
 
     <script type="text/x-handlebars-template" id="voting-explained-template">
@@ -69,63 +238,23 @@
             <p>joey@spotbrooklyn.com</p>
     </script>
 
-    <script type="text/x-handlebars-template" id="follow-template">
-        <p>Follow Spot Brooklyn on Social Media</p>
-        <div class="fade">
-            <img class="twitter" src="images/icons/twitter.png"/>
-            <img class="facebook" src="images/icons/facebook.svg"/>
-            <img class="instagram" src="images/icons/instagram.png"/>
-        </div>
-        <p>Get Spot Brooklyn Email Updates</p>
-        <div class="fade">
-            <form class="top-form" action="http://spotbrooklyn.us5.list-manage1.com/subscribe/post" method="POST">
-                <input type="hidden" name="u" value="de611717859b21ec0db1a7f16">
-                <input type="hidden" name="id" value="270695d569">
-                <textarea name="MERGE0" rows="1" placeholder="Enter your email address."></textarea>
-            </form>
-            <span class="fa fa-paper-plane"></span>
-        </div>
-    </script>
-
-    <script type="text/x-handlebars-template" id="follow-template2">
-        <p>Follow Spot Brooklyn on Social Media</p>
-        <div class="fade">
-            <img class="twitter" src="images/icons/twitter.png"/>
-            <img class="facebook" src="images/icons/facebook.svg"/>
-            <img class="instagram" src="images/icons/instagram.png"/>
-        </div>
-        <p>Get Spot Brooklyn Email Updates</p>
-        <div class="fade">
-            <form class="bottom-form" action="http://spotbrooklyn.us5.list-manage1.com/subscribe/post" method="POST">
-                <input type="hidden" name="u" value="de611717859b21ec0db1a7f16">
-                <input type="hidden" name="id" value="270695d569">
-                <textarea name="MERGE0" rows="1" placeholder="Enter your email address."></textarea>
-            </form>
-            <span class="fa fa-paper-plane"></span>
-        </div>
-    </script>
 
 
 <script src="js/libs/prefixfree.min.js"></script>
-<script src="js/libs/jquery-2.1.1.js"></script>
 <script src="js/libs/viewport-units-buggyfill.js"></script>
 <script src="js/libs/underscore.js"></script>
 <script src="js/libs/backbone.js"></script>
 <script src="js/libs/handlebars-v1.3.0.js"></script>
 <script src="js/libs/backbone.touch.js"></script>
 <script src="js/libs/jquery.animate-colors-min.js"></script>
-<script src="js/libs/bigtext.js"></script>
 <script src="js/app.js"></script>
 <script src="js/router.js"></script>
 <script src="js/models/storyModel.js"></script>
 <script src="js/collections/storiesCollection.js"></script>
-<script src="js/views/header_view.js"></script>
 <script src="js/views/voting_explained_view.js"></script>
 <script src="js/views/story_list_view.js"></script>
 <script src="js/views/story_list_item_view.js"></script>
 <script src="js/views/contribution_form_view.js"></script>
-<script src="js/views/follow_view.js"></script>
-<script src="js/views/follow_view2.js"></script>
 
 <script src="//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
 
