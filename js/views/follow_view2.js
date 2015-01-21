@@ -22,7 +22,7 @@ sbk.FollowView2 = Backbone.View.extend({
         'click .twitter' : 'twitterFollow',
         'click .instagram' : 'instagramFollow',
         'click .facebook' : 'facebookFollow',
-        'click .fa-paper-plane' : 'submitForm'
+        'click .fa-paper-plane' : 'partnershipsForm'
     },
     twitterFollow: function () {
         window.open('https://twitter.com/intent/follow?screen_name=spotbrooklyn', '_self');
@@ -36,7 +36,7 @@ sbk.FollowView2 = Backbone.View.extend({
         window.open('https://www.facebook.com/spotBK', '_self');
         ga('send', 'event', 'facebook', 'click', 'bottom');
     },
-    submitForm: function(){
+    partnershipsForm: function(){
         $('.bottom-form').submit();
     },
     preventCarriageReturn: function(){

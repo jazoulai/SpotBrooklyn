@@ -13,25 +13,25 @@ body {
     flex-direction: column;
     align-items: center;
 }
-#voting-explained, #story-list, #submit, .follow, #share, #results-signup {
+#voting-explained, #story-list, #partnerships, .follow, #share, #results-signup {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 0 5vw;
 }
-#voting-explained, #submit {
+#voting-explained, #partnerships {
     padding-top: 10vh;
     padding-bottom: 10vh;
 }
 #story-list {
     padding-top: 15vh;
 }
-#voting-explained, #story-list, #submit, #submit:before, .follow, #share, #share:before {
+#voting-explained, #story-list, #partnerships, #partnerships:before, .follow, #share, #share:before {
     width: 100vw;
     height: 100vh;
 }
-#voting-explained, #submit, .follow, #share {
+#voting-explained, #partnerships, .follow, #share {
     position: relative;
 }
 #share:before {
@@ -40,7 +40,7 @@ body {
     z-index: -1;
     background-repeat: no-repeat;
 }
-#submit:before, #share:before {
+#partnerships:before, #share:before {
     max-height: 150px;
     bottom: 0;
     background-size: contain;

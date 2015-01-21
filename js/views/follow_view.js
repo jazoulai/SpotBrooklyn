@@ -22,7 +22,7 @@ sbk.FollowView = Backbone.View.extend({
         'click .instagram' : 'instagramFollow',
         'click .facebook' : 'facebookFollow',
         'click .fa-times' : 'toggleSocialMediaMenu',
-        'click .fa-paper-plane' : 'submitForm'
+        'click .fa-paper-plane' : 'partnershipsForm'
     },
     twitterFollow: function () {
         window.open('https://twitter.com/intent/follow?screen_name=spotbrooklyn', '_self');
@@ -36,7 +36,7 @@ sbk.FollowView = Backbone.View.extend({
         window.open('https://www.facebook.com/spotBK', '_self');
         ga('send', 'event', 'facebook', 'click', 'menu');
     },
-    submitForm: function(){
+    partnershipsForm: function(){
         $('.top-form').submit();
     },
     growHeader: function(){
@@ -68,7 +68,7 @@ sbk.FollowView = Backbone.View.extend({
         $(document).scroll(function() {
             var documentHeight = $(document).height();
             var documentPosition = $(document).scrollTop();
-            var lastPageHeight = $('#submit').height();
+            var lastPageHeight = $('#partnerships').height();
             var buffer = 1.3;
             if (documentPosition + (lastPageHeight * buffer) > documentHeight) {
                 self.toggleSocialMediaMenu();

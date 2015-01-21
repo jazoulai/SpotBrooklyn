@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>Spot Brooklyn</title>
     <style>
-/* DEFAULTS */
+/* GLOBAL */
     html {
+        padding: 0;
+        margin: 0;
+        border: 0;
+        box-sizing: border-box;
         font-family: "museo-sans", sans-serif;
         font-style: normal;
         font-weight: 100;
@@ -15,12 +19,6 @@
         color: #474747;
         -webkit-text-size-adjust: none;
         text-size-adjust:none;
-    }
-    *, *:before {
-        box-sizing: border-box;
-        padding: 0;
-        margin: 0;
-        border: 0;
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         tap-highlight-color: rgba(0, 0, 0, 0);
     }
@@ -42,15 +40,15 @@
         justify-content: center;
     }
     #header > img {
-        height: 8vmin;
+        height: 8%;
         max-height: 70px;
         width: auto;
-        margin-left: 3vw;
+        margin-left: 3%;
     }
     #header span {
-        font-size: 6vmax;
-        line-height: 6vmax;
-        margin-right: 3vw;
+        font-size: 6rem;
+        line-height: 6rem;
+        margin-right: 3%;
     }
     #header p {
         font-size: 2rem;
@@ -61,6 +59,7 @@
 /* FOLLOW PULLDOWN MENU */
     #follow-pulldown-menu {
         position: fixed;
+        width: 100%;
         height: 50%;
         top: 10%;
         z-index: 1000;
@@ -72,19 +71,19 @@
         margin-bottom: 2vh;
     }
     #follow-pulldown-menu textarea {
-        width: 80vmin;
+        width: 80%;
         border: 2px solid #fff;
         border-radius: 5px 0 0 5px;
         font-size: 2rem;
         line-height: 3rem;
-        padding: 0 2vw;
+        padding: 0 2%;
         background: transparent;
         vertical-align: top;
     }
     #follow-pulldown-menu img {
-        height: 8vmax;
+        height: 40px;
         width: auto;
-        margin: 0 2vw;
+        margin: 0 2%;
     }
     #follow-pulldown-menu p {
         font-size: 1rem;
@@ -97,7 +96,7 @@
     #follow-pulldown-menu .fa-paper-plane {
         font-size: 2rem;
         line-height: 3rem;
-        padding: 0 2vw;
+        padding: 0 2%;
         background-color: red;
         color: #fff;
         border: 2px solid #fff;
@@ -152,6 +151,7 @@
     }
     </style>
 
+    <script src="js/libs/jquery-2.1.1.js"></script>
     <link rel="stylesheet" href="css/font-awesome-4.2.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="css/layout.css"/>
     <link rel="stylesheet" href="css/type.css"/>
@@ -163,12 +163,10 @@
     <link rel="stylesheet" href="css/story_list.css"/>
     <link rel="stylesheet" href="css/story_list_horizontal.css"/>
     <link rel="stylesheet" href="css/results_signup.css"/>
-    <link rel="stylesheet" href="css/submit.css"/>
+    <link rel="stylesheet" href="css/partnerships.css"/>
     <link rel="stylesheet" href="css/follow.css"/>
     <link rel="stylesheet" href="css/share.css"/>
     <link rel="stylesheet" href="css/media_queries.css"/>
-
-    <script src="js/libs/jquery-2.1.1.js"></script>
 
 </head>
     <body>
@@ -204,17 +202,27 @@
 <!-- COVER -->
     <div id="cover"></div>
 
+    <div id="cover-caption">
+        <p>A digital magazine that makes it fun and easy to know Brooklyn better&mdash;not just the headlines, but the place itself and the people who make it great</p>
+    </div>
+
+    <script>
+
+        var sbk = sbk || {};
+
+        sbk.aboveTheFold = {
+
+
+
+
+        }
+
+    </script>
+
 
 
 
 <!--HANDLEBARS TEMPLATES-->
-
-
-    <script type="text/x-handlebars-template" id="voting-explained-template">
-        <h2><span class="fa fa-info-circle"></span>What is Spot Brooklyn?</h2>
-        <p>A digital magazine that makes it fun and easy to know Brooklyn better&mdash;not just the headlines, but the place itself and the people who make it great.</p>
-        <span class="fa fa-caret-down last"></span>
-    </script>
 
     <script type="text/x-handlebars-template" id="story-list-template">
         <h2><span class="fa fa-hand-o-down"></span>Tap To Vote</h2>
@@ -231,7 +239,7 @@
         <i class="fa fa-thumbs-up"></i>
     </script>
 
-    <script type="text/x-handlebars-template" id="contribution-form-template">
+    <script type="text/x-handlebars-template" id="partnerships-template">
             <h2><span class="fa fa-pie-chart"></span>Partner With Us</h2>
             <p>We're seeking creative writers, photographers, journalists, illustrators and people with good ideas.</p>
             <p>Let's talk.</p>
@@ -239,7 +247,7 @@
     </script>
 
 
-
+<!-- JAVASCRIPT DEPENDENCIES -->
 <script src="js/libs/prefixfree.min.js"></script>
 <script src="js/libs/viewport-units-buggyfill.js"></script>
 <script src="js/libs/underscore.js"></script>
@@ -251,10 +259,9 @@
 <script src="js/router.js"></script>
 <script src="js/models/storyModel.js"></script>
 <script src="js/collections/storiesCollection.js"></script>
-<script src="js/views/voting_explained_view.js"></script>
 <script src="js/views/story_list_view.js"></script>
 <script src="js/views/story_list_item_view.js"></script>
-<script src="js/views/contribution_form_view.js"></script>
+<script src="js/views/partnerships.js"></script>
 
 <script src="//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
 

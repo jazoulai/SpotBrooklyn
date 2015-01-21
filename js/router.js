@@ -14,14 +14,11 @@ sbk.AppRouter = Backbone.Router.extend({
     loadList: function () {
         this.bodyElement = $('body');
 
-        this.votingExplainedView = new sbk.VotingExplainedView();
-        this.bodyElement.append(this.votingExplainedView.render().el);
-
         this.storyListView = new sbk.StoryListView({collection: this.storyCollection});
         this.bodyElement.append(this.storyListView.render().el);
 
-        this.contributionFormView = new sbk.ContributionFormView();
-        this.bodyElement.append(this.contributionFormView.render().el);
+        this.partnershipsView = new sbk.PartnershipsView();
+        this.bodyElement.append(this.partnershipsView.render().el);
 
         $('.fa-thumbs-up:first-of-type').hide();
     }
