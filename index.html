@@ -139,18 +139,17 @@
     }
 /* COVER */
     @keyframes play {
-        100% { background-position: -1000% 0;}
+        100% { background-position: -4000% 0;}
     }
     #cover {
         display: block;
-        margin-top: 10vh;
-        width: 100vw;
-        height: 0;
-        padding-bottom: 70vh;
-        background-image: url('images/test/monster_numbered.png');
-        background-size: 1000%;
+        margin-top: 50px;
+        width: 100%;
+        padding-top: 100%;
+        background-image: url('images/test/red_hook_water_taxi_day_overcast.jpg');
+        background-size: 4000%;
         background-position: 0 0;
-        animation: play 1s steps(10);
+        animation: play 10s steps(40);
     }
     </style>
     <script>
@@ -198,10 +197,6 @@
     </div>
 
     <script>
-
-
-
-
         var sbk = sbk || {};
 
         sbk.header = {
@@ -258,6 +253,35 @@
                 });
             }
         };
+        sbk.cover = {
+            onCoverAnimationEnd: function(){
+                function whichAnimationEvent(){
+                    var t,
+                            el = document.createElement("fakeelement");
+
+                    var animations = {
+                        "animation"      : "animationend",
+                        "OAnimation"     : "oAnimationEnd",
+                        "MozAnimation"   : "animationend",
+                        "WebkitAnimation": "webkitAnimationEnd"
+                    }
+
+                    for (t in animations){
+                        if (el.style[t] !== undefined){
+                            return animations[t];
+                        }
+                    }
+                }
+
+                var animationEvent = whichAnimationEvent();
+
+                    $('#cover').one(animationEvent,
+                            function() {
+
+                            });
+
+            }
+        };
 
         sbk.header.backToTop();
 
@@ -266,6 +290,8 @@
         sbk.followPullDownMenu.instagramFollow();
         sbk.followPullDownMenu.facebookFollow();
         sbk.followPullDownMenu.submitEmail();
+
+        sbk.cover.onCoverAnimationEnd();
     </script>
 
 
