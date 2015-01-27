@@ -1,5 +1,9 @@
 #story-list {
     height: auto !important;
+    font-family: "open-sans", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 70%;
 }
 #story-list ul {
     width: 95vw;
@@ -46,4 +50,14 @@
 }
 .story-list-item img {
     width: 100%;
+}
+.story-list-item-title > p {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    text-align: left;
+    margin: 1.5rem 0;
+}
+.story-list-item span.fa, #story-list span.fa {
+    font-size: 10vh;
+    line-height: 10vh;
 }

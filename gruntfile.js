@@ -4,7 +4,7 @@ module.exports = function (grunt) {
         concat: {
             css: {
                 src: [
-                    'css/**/*.css'
+                    'css/.css'
                 ],
                 dest: 'css/combined.css'
             },
