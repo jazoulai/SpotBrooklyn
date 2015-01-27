@@ -6266,7 +6266,8 @@ $(document).ready(function () {
 sbk.AppRouter = Backbone.Router.extend({
     routes: {
         "": "loadList",
-        "!": "loadList"
+        "!": "loadList",
+        "!:story": "loadStory"
     },
     initialize: function (storyCollection) {
         this.storyCollection = storyCollection;
@@ -6284,8 +6285,12 @@ sbk.AppRouter = Backbone.Router.extend({
     // About View
         this.aboutView = new sbk.AboutView();
         this.bodyElement.append(this.aboutView.render().el);
-
-        $('.fa-thumbs-up:first-of-type').hide();
+    },
+    loadStory: function(storyId) {
+       var storyModel = this.storyCollection.get(storyId);
+    // Story Map View
+        this.storyMapView = new sbk.StoryMapView({model: storyModel});
+        this.bodyElement.append(this.storyMapView.render().el);
     }
 });
 /*jshint strict: false*/
@@ -6342,39 +6347,7 @@ sbk.StoryListItemView = Backbone.View.extend({
         return this;
     },
     events: {
-        'click' : 'vote'
-    },
-    vote: function (ev) {
-        var self = this;
-        var title = this.model.get('headline');
-        $(this.el).css('box-shadow', '0 1px 1px 0px #888888');
-        $.when(setTimeout( function() {
-            $(self.el).css('box-shadow', '0 2px 5px 1px #888888');
-        }, 75)).then(function(){
-
-
-
-            if($(self.el).find('.fa-thumbs-up:last-of-type').hasClass('liked')){
-
-                $(self.el).find('.liked').animate({
-                    color: "#D3D3D3"
-                });
-                $(self.el).find('.fa-thumbs-up:last-of-type').removeClass('liked');
-                ga('send', 'event', 'like', 'click', title, 1);
-
-            } else {
-
-                $(self.el).find('.fa-thumbs-up:first-of-type').fadeIn(500, function(){
-                    setTimeout(function(){
-                        $(self.el).find('.fa-thumbs-up:last-of-type').animate({
-                            color: "red"
-                        }).addClass('liked');
-                        $(self.el).find('.fa-thumbs-up:first-of-type').fadeOut(500);
-                    }, 200);
-                });
-                ga('send', 'event', 'unlike', 'click', title, 1);
-            }
-        });
+        'click' : 'navigateToStory'
     },
     horizontalStoryPreviews: function(){
         var self = this;
@@ -6392,6 +6365,10 @@ sbk.StoryListItemView = Backbone.View.extend({
                 $(self.el).removeClass('horizontal');
             }
         });
+    },
+    navigateToStory: function(){
+       var storyId = this.model.get('id');
+       sbk.app.navigate(! + storyId, {trigger: true});
     }
 });
 /*jshint strict: false*/
@@ -6420,5 +6397,18 @@ sbk.AboutView = Backbone.View.extend({
     render: function () {
         $(this.el).html(this.template());
         return this;
+    }
+});
+/*jshint strict: false*/
+/*globals Backbone: false, L: false, $: false, Handlebars: false, _: false, sbk: false, ga: false */
+
+sbk.StoryMapView = Backbone.View.extend({
+    id: 'story-map',
+    initialize: function(){
+        this.collection.on('reset', this.render, this);
+    },
+    template: Handlebars.compile($('#story-map-template').html()),
+    render: function(){
+        $(this.el).html(this.template());
     }
 });

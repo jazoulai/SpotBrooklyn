@@ -1,46 +1,46 @@
 [
     {
-        "id" : "1",
+        "id" : "meet-people-in-our-neigborhood",
         "headline" : "Who Are the People in Our Neighborhood?",
         "image" : "community_professionals.jpg"
     },
     {
-        "id" : "2",
+        "id" : "vote-for-good-bad-brooklynite",
         "headline" : "Choose This Month's Good and Bad Brooklynite",
         "image" : "good_bad_brooklynite.jpg"
     },
     {
-        "id" : "3",
+        "id" : "how-your-government-works",
         "headline" : "How Does Our Local Government Work?",
         "image" : "bill_de_blasio.jpg"
     },
     {
-        "id" : "4",
+        "id" : "brooklyn-war-history",
         "headline" : "Brooklyn's War History Is All Around Us.",
         "image" : "canon.jpg"
     },
     {
-        "id" : "5",
+        "id" : "donuts-mapped",
         "headline" : "Brooklyn's Best Donut Shops, Mapped!",
         "image" : "dough_donuts.jpg"
     },
     {
-        "id" : "6",
+        "id" : "get-off-the-couch-this-winter",
         "headline" : "Things to Do This Winter That Don't Involve Food or Booze.",
         "image" : "archery.jpg"
     },
     {
-        "id" : "7",
+        "id" : "crazy-gorgeous-mansions",
         "headline" : "Beautiful Brooklyn Dream Homes",
         "image" : "ditmas_park_victorian.jpg"
     },
     {
-        "id" : "8",
+        "id" : "scared-of-a-mouse",
         "headline" : "Funny and Tragic Household Pest Battles",
         "image" : "elephant_afraid_of_mouse.jpg"
     },
     {
-        "id" : "9",
+        "id" : "are-you-a-prepper",
         "headline" : "Urban Survival Guide for Disasters Big and Small",
         "image" : "boyscout_salute.jpg"
 

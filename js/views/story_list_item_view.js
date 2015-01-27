@@ -13,39 +13,7 @@ sbk.StoryListItemView = Backbone.View.extend({
         return this;
     },
     events: {
-        'click' : 'vote'
-    },
-    vote: function (ev) {
-        var self = this;
-        var title = this.model.get('headline');
-        $(this.el).css('box-shadow', '0 1px 1px 0px #888888');
-        $.when(setTimeout( function() {
-            $(self.el).css('box-shadow', '0 2px 5px 1px #888888');
-        }, 75)).then(function(){
-
-
-
-            if($(self.el).find('.fa-thumbs-up:last-of-type').hasClass('liked')){
-
-                $(self.el).find('.liked').animate({
-                    color: "#D3D3D3"
-                });
-                $(self.el).find('.fa-thumbs-up:last-of-type').removeClass('liked');
-                ga('send', 'event', 'like', 'click', title, 1);
-
-            } else {
-
-                $(self.el).find('.fa-thumbs-up:first-of-type').fadeIn(500, function(){
-                    setTimeout(function(){
-                        $(self.el).find('.fa-thumbs-up:last-of-type').animate({
-                            color: "red"
-                        }).addClass('liked');
-                        $(self.el).find('.fa-thumbs-up:first-of-type').fadeOut(500);
-                    }, 200);
-                });
-                ga('send', 'event', 'unlike', 'click', title, 1);
-            }
-        });
+        'click' : 'navigateToStory'
     },
     horizontalStoryPreviews: function(){
         var self = this;
@@ -63,5 +31,9 @@ sbk.StoryListItemView = Backbone.View.extend({
                 $(self.el).removeClass('horizontal');
             }
         });
+    },
+    navigateToStory: function(){
+       var storyId = this.model.get('id');
+       sbk.app.navigate(! + storyId, {trigger: true});
     }
 });
