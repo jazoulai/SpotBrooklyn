@@ -138,18 +138,18 @@
         margin-bottom: 2vh;
     }
 /* COVER */
-    @keyframes play {
-        100% { background-position: -4000% 0;}
-    }
-    #cover {
+    #cover:before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
         display: block;
         margin-top: 50px;
         width: 100%;
         padding-top: 100%;
-        background-image: url('images/test/red_hook_water_taxi_day_overcast.jpg');
-        background-size: 4000%;
-        background-position: 0 0;
-        animation: play 10s steps(40);
+        background-image: url('images/test/red_hook_water_taxi_day_overcast_still.jpg');
+        background-size: 100%;
     }
     </style>
     <script>
@@ -264,7 +264,7 @@
                         "OAnimation"     : "oAnimationEnd",
                         "MozAnimation"   : "animationend",
                         "WebkitAnimation": "webkitAnimationEnd"
-                    }
+                    };
 
                     for (t in animations){
                         if (el.style[t] !== undefined){
@@ -277,7 +277,7 @@
 
                     $('#cover').one(animationEvent,
                             function() {
-
+                                $('#cover').addClass('animation-end');
                             });
 
             }
@@ -327,7 +327,7 @@
     </script>
 
     <script type="text/x-handlebars-template" id="story-map-template">
-
+        {{id}}
     </script>
 
 

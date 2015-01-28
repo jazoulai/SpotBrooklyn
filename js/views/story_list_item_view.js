@@ -34,6 +34,6 @@ sbk.StoryListItemView = Backbone.View.extend({
     },
     navigateToStory: function(){
        var storyId = this.model.get('id');
-       sbk.app.navigate(! + storyId, {trigger: true});
+       sbk.app.navigate(storyId, {trigger: true});
     }
 });

@@ -3,9 +3,6 @@
 
 sbk.StoryMapView = Backbone.View.extend({
     id: 'story-map',
-    initialize: function(){
-        this.collection.on('reset', this.render, this);
-    },
     template: Handlebars.compile($('#story-map-template').html()),
     render: function(){
         $(this.el).html(this.template());

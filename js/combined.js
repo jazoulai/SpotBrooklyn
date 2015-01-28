@@ -6267,12 +6267,16 @@ sbk.AppRouter = Backbone.Router.extend({
     routes: {
         "": "loadList",
         "!": "loadList",
-        "!:story": "loadStory"
+        ":story": "loadStory"
     },
     initialize: function (storyCollection) {
         this.storyCollection = storyCollection;
+
         sbk.Notifications = {};
         _.extend(sbk.Notifications, Backbone.Events);
+
+        $('#cover').addClass('animation-start');
+
     },
     loadList: function () {
         this.bodyElement = $('body');
@@ -6290,7 +6294,6 @@ sbk.AppRouter = Backbone.Router.extend({
        var storyModel = this.storyCollection.get(storyId);
     // Story Map View
         this.storyMapView = new sbk.StoryMapView({model: storyModel});
-        this.bodyElement.append(this.storyMapView.render().el);
     }
 });
 /*jshint strict: false*/
@@ -6368,7 +6371,7 @@ sbk.StoryListItemView = Backbone.View.extend({
     },
     navigateToStory: function(){
        var storyId = this.model.get('id');
-       sbk.app.navigate(! + storyId, {trigger: true});
+       sbk.app.navigate(storyId, {trigger: true});
     }
 });
 /*jshint strict: false*/
@@ -6404,9 +6407,6 @@ sbk.AboutView = Backbone.View.extend({
 
 sbk.StoryMapView = Backbone.View.extend({
     id: 'story-map',
-    initialize: function(){
-        this.collection.on('reset', this.render, this);
-    },
     template: Handlebars.compile($('#story-map-template').html()),
     render: function(){
         $(this.el).html(this.template());
