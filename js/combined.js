@@ -6274,9 +6274,6 @@ sbk.AppRouter = Backbone.Router.extend({
 
         sbk.Notifications = {};
         _.extend(sbk.Notifications, Backbone.Events);
-
-        $('#cover').addClass('animation-start');
-
     },
     loadList: function () {
         this.bodyElement = $('body');

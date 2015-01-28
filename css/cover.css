@@ -1,4 +1,14 @@
-#cover.animation-start {
+#cover:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+    margin-top: 50px;
     background-image: url('../images/test/red_hook_water_taxi_day_overcast.jpg');
     background-size: 4000%;
     background-position: 0 0;

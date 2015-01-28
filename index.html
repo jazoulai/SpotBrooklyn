@@ -27,7 +27,6 @@
         position: fixed;
         width: 100%;
         height: 50px;
-        max-height: 80px;
         padding: 2% 0;
         top: 0;
         left: 0;
@@ -138,18 +137,13 @@
         margin-bottom: 2vh;
     }
 /* COVER */
-    #cover:before {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        display: block;
-        margin-top: 50px;
+    #cover {
         width: 100%;
+        height: 0;
         padding-top: 100%;
-        background-image: url('images/test/red_hook_water_taxi_day_overcast_still.jpg');
-        background-size: 100%;
+        margin-top: 50px;
+        background-image: url(images/test/red_hook_water_taxi_day_overcast_still.jpg);
+        background-size: contain;
     }
     </style>
     <script>
@@ -165,7 +159,6 @@
     <div id="header">
         <img id="logo" src="images/logo/sbk_logo.svg"/>
         <div id="follow-button">
-            <span class="fa fa-share-alt"></span>
             <p>Follow</p>
         </div>
     </div>
@@ -277,7 +270,7 @@
 
                     $('#cover').one(animationEvent,
                             function() {
-                                $('#cover').addClass('animation-end');
+                                alert('animation-end');
                             });
 
             }
