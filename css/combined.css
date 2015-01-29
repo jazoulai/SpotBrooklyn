@@ -71,9 +71,9 @@ h4 {
     margin: 1rem;
 }
 p {
-    font-size: 2rem;
-    line-height: 2.5rem;
-    font-weight: 300;
+    font-size: 1rem;
+    line-height: 2rem;
+    font-weight: 200;
     text-align: left;
     align-self: flex-start;
     padding-top: 1rem;
