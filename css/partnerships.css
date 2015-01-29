@@ -1,7 +1,14 @@
 #partnerships {
+    position: relative;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10vh 0 10vw;
+    padding-bottom: 10vh;
     justify-content: center;
     height: auto;
-    padding-bottom: 15vh;
 }
 #partnerships p:last-child {
     font-size: 1.5rem;

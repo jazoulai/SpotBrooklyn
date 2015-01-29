@@ -1,52 +1,3 @@
-html {
-    width: 100vw;
-    height: 100vh;
-    overflow-y: scroll;
-    overflow-scrolling: touch;
-    touch-callout: none;
-    user-select: none;
-}
-body {
-    width: 100vw;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-#voting-explained, #story-list, #partnerships, .follow, #share, #results-signup {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 5vw;
-}
-#voting-explained, #partnerships {
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-}
-#story-list {
-    padding-top: 15vh;
-}
-#voting-explained, #story-list, #partnerships, #partnerships:before, .follow, #share, #share:before {
-    width: 100vw;
-    height: 100vh;
-}
-#voting-explained, #partnerships, .follow, #share {
-    position: relative;
-}
-#share:before {
-    position: absolute;
-    content: "";
-    z-index: -1;
-    background-repeat: no-repeat;
-}
-#partnerships:before, #share:before {
-    max-height: 150px;
-    bottom: 0;
-    background-size: contain;
-    background-position: right bottom;
-}
-
 h2 {
     font-size: 2rem;
     line-height: 4rem;
@@ -126,11 +77,17 @@ button.disabled {
 }
 
 #story-list {
-    height: auto !important;
+    height: auto;
     font-family: "open-sans", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 70%;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15vh 0 5vw;
 }
 #story-list ul {
     width: 95vw;

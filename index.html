@@ -7,20 +7,46 @@
     <style>
 /* GLOBAL */
     html {
+        height: 100%;
+        width: 100%;
         padding: 0;
         margin: 0;
         border: 0;
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
         font-family: "museo-sans", sans-serif;
         font-style: normal;
         font-weight: 100;
         font-size: 100%;
         text-align: center;
         color: #474747;
+
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+        overflow-scrolling: touch;
+
+        -webkit-touch-callout: none;
+        touch-callout: none;
+
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+/* body */
+    body {
+        width: 100%;
+        height: auto;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        -webkit-align-items: center;
+        align-items: center;
     }
 /* HEADER */
     #header {
@@ -33,16 +59,10 @@
         z-index: 10000;
         background-color: rgba(0, 45, 64, .98);
         color: #fff;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-items: center;
     }
     #logo {
         width: 50%;
         height: auto;
-        margin-left: 3%;
     }
     #header span {
         font-size: 1rem;
