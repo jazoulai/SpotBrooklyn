@@ -63,6 +63,7 @@
     #logo {
         width: 50%;
         height: auto;
+        float: left;
     }
     #header span {
         font-size: 1rem;
@@ -73,6 +74,7 @@
         font-size: .5rem;
         line-height: .5rem;
         margin: 0 3% 0 0;
+        float: right;  
     }
 /* FOLLOW PULLDOWN MENU */
     #follow-pulldown-menu {
@@ -85,9 +87,10 @@
         background-color: rgba(0, 45, 64, .98);
         padding: 1rem;
         color: #fff;
+        display: none;
     }
     #follow-pulldown-menu > div { /*containers for social buttons and email form*/
-        margin-bottom: 2vh;
+        margin-bottom: 5%;
     }
     #follow-pulldown-menu textarea {
         width: 80%;
@@ -120,38 +123,6 @@
         color: #fff;
         border: 2px solid #fff;
         border-radius: 0 5px 5px 0;
-    }
-    #follow-pulldown-menu .fa-instagram {
-        margin: 0 10px;
-    }
-    #follow-pulldown-menu.large-screen {
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        top: auto;
-        height: auto;
-        width: 100vw;
-    }
-    #follow-pulldown-menu.large-screen textarea {
-        width: 30vw;
-        margin-left: 0;
-    }
-    #follow-pulldown-menu.large-screen img {
-        height: 6vh;
-        max-height: 60px;
-        width: auto;
-        margin-bottom: 0;
-    }
-    #follow-pulldown-menu.large-screen.fa-instagram {
-        color: orange;
-        margin: 0 4px;
-    }
-    #follow-pulldown-menu.large-screen > div {
-        margin-bottom: 2vh;
     }
 /* COVER */
 #cover {
@@ -203,12 +174,13 @@
 <!-- COVER -->
     <div id="cover"></div>
 
-    <div id="cover-caption">
-        <p>A digital magazine that makes it fun and easy to know Brooklyn better&mdash;not just the headlines, but the place itself and the people who make it great</p>
-    </div>
-
     <script>
+
         var sbk = sbk || {};
+
+        $(document).ready(function(){
+
+
 
         sbk.header = {
             backToTop: function(){
@@ -227,18 +199,18 @@
 
                 followPulldownMenu.hide();
 
-                $('#follow-button').click(function(){
+               /* $('#follow-button').click(function(){
                     if(followIcon.hasClass('fa-share-alt')){
                         followIcon.removeClass('fa-share-alt').addClass('fa-times');
                         followIconText.text('Close');
                         //TODO hide bottom follow menu
-                    } else {
+                    } else  {
                         followIcon.removeClass('fa-times').addClass('fa-share-alt');
                         followIconText.text('Follow');
                         //TODO show bottom follow menu
                     }
                     followPulldownMenu.slideToggle();
-                });
+                });*/
             },
             twitterFollow: function () {
                 $('.twitter').click(function(){
@@ -302,7 +274,7 @@
         sbk.followPullDownMenu.facebookFollow();
         sbk.followPullDownMenu.submitEmail();
 
-        //sbk.cover.onCoverAnimationEnd();
+        });
     </script>
 
 
