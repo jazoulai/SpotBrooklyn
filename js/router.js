@@ -12,7 +12,9 @@ sbk.AppRouter = Backbone.Router.extend({
 
         sbk.Notifications = {};
         _.extend(sbk.Notifications, Backbone.Events);
-    },
+    }
+
+    ,
     loadList: function () {
         this.bodyElement = $('body');
     // Story List View

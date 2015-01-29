@@ -10,6 +10,8 @@
         padding: 0;
         margin: 0;
         border: 0;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
         box-sizing: border-box;
         font-family: "museo-sans", sans-serif;
         font-style: normal;
@@ -137,14 +139,15 @@
         margin-bottom: 2vh;
     }
 /* COVER */
-    #cover {
-        width: 100%;
-        height: 0;
-        padding-top: 100%;
-        margin-top: 50px;
-        background-image: url(images/test/red_hook_water_taxi_day_overcast_still.jpg);
-        background-size: contain;
-    }
+#cover {
+    display: block;
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+    margin-top: 50px;
+    background-image: url(images/test/red_hook_water_taxi_day_overcast_still.jpg);
+    background-size: contain;
+}
     </style>
     <script>
         /*! jQuery v2.1.1 | (c) 2005, 2014 jQuery Foundation, Inc. | jquery.org/license */
@@ -270,7 +273,7 @@
 
                     $('#cover').one(animationEvent,
                             function() {
-                                alert('animation-end');
+                                console.log('animation-end');
                             });
 
             }
@@ -284,7 +287,7 @@
         sbk.followPullDownMenu.facebookFollow();
         sbk.followPullDownMenu.submitEmail();
 
-        sbk.cover.onCoverAnimationEnd();
+        //sbk.cover.onCoverAnimationEnd();
     </script>
 
 

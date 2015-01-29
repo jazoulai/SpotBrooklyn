@@ -3,6 +3,22 @@
 
 $(document).ready(function () {
 
+    //Firefox
+
+    conditionizr.add('notFirefox', function () {
+        return typeof InstallTrigger == 'undefined';
+    });
+
+    conditionizr.config({
+        assets: '../'
+    });
+
+    conditionizr.on('notFirefox', function(){
+       console.log('not fire');
+    });
+
+    conditionizr.load('css/cover.css', ['notFirefox']);
+
     window.viewportUnitsBuggyfill.init();
 
     var storyCollection = new sbk.StoriesCollection();
