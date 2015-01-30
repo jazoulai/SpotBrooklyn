@@ -2,15 +2,6 @@
 /*globals Backbone: false, L: false, $: false, Handlebars: false, _: false */
 
 
-sbk.conditionalLoading = function(){
-    conditionizr.add('notFirefox', function () {
-        return typeof InstallTrigger == 'undefined';
-    });
-    conditionizr.config({
-        assets: '../'
-    });
-    conditionizr.load('css/cover.css', ['notFirefox']);
-};
 sbk.loadBackboneApp = function() {
     var storyCollection = new sbk.StoriesCollection();
     $.when(storyCollection.fetch())
@@ -35,7 +26,6 @@ $(document).ready(function () {
                 id: 'urz0jfm'
             },
             active: function() {
-               //sbk.conditionalLoading();
                 window.viewportUnitsBuggyfill.init();
                 sbk.loadBackboneApp();
                 sbk.loadGoogleAnalytics();
