@@ -35,7 +35,7 @@ $(document).ready(function () {
                 id: 'urz0jfm'
             },
             active: function() {
-                sbk.conditionalLoading();
+               //sbk.conditionalLoading();
                 window.viewportUnitsBuggyfill.init();
                 sbk.loadBackboneApp();
                 sbk.loadGoogleAnalytics();

@@ -6254,7 +6254,7 @@ a.run=function(a){d.each(c,function(d,c){b[c]=h(e[c],g,a)})}}};var l={aqua:[0,25
 
 sbk.conditionalLoading = function(){
     conditionizr.add('notFirefox', function () {
-        return typeof InstallTrigger == 'undefined';
+        return false;
     });
     conditionizr.config({
         assets: '../'
