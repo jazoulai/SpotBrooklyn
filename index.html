@@ -91,16 +91,12 @@ svg {
     width: 100%;
     height: auto;
 }
-#header span {
+#follow {
     font-size: 1rem;
     line-height: 1rem;
-    margin-right: 1rem;
-}
-#header p {
-    font-size: .5rem;
-    line-height: .5rem;
     margin: 0 3% 0 0;
     float: right;
+    vertical-align: bottom;
 }
 /* FOLLOW PULLDOWN MENU */
 #follow-pulldown-menu {
@@ -211,8 +207,7 @@ svg {
 </g>
 </svg>
         </div>
-        <div id="follow-button">
-        </div>
+        <span id="follow">Follow Us!</span>
     </div>
 <!-- follow pulldown menu -->
     <div id="follow-pulldown-menu">
@@ -244,44 +239,36 @@ svg {
 
         var sbk = sbk || {};
 
-
-    
-
-
         $(document).ready(function(){
 
-
-
-        sbk.header = {
-            backToTop: function(){
-                $('#logo').click(function(){
+            sbk.scrollToWindowTop = function() {
+                $('#logo').click(function () {
                     $('html, body').animate({
                         scrollTop: $('html').offset().top
                     }, 500);
                 });
-            }
-        };
-        sbk.followPullDownMenu = {
-            toggleFollowPulldownMenu: function(){
-                var followPulldownMenu = $('#follow-pulldown-menu');
-                var followIcon = $('#header span');
-                var followIconText = $('#header p');
+            };
 
+            sbk.openFollowMenu = function() {
+                var followPulldownMenu = $('#follow-pulldown-menu');
+                var followIconTextElement = $('#follow');
                 followPulldownMenu.hide();
 
-               /* $('#follow-button').click(function(){
-                    if(followIcon.hasClass('fa-share-alt')){
-                        followIcon.removeClass('fa-share-alt').addClass('fa-times');
-                        followIconText.text('Close');
-                        //TODO hide bottom follow menu
-                    } else  {
-                        followIcon.removeClass('fa-times').addClass('fa-share-alt');
-                        followIconText.text('Follow');
-                        //TODO show bottom follow menu
-                    }
-                    followPulldownMenu.slideToggle();
-                });*/
-            },
+                followIconTextElement.click(function () {
+                        $(this).toggleClass('close');
+
+                        if($(this).hasClass('close')){
+                            $(this).text('Close');
+                        } else {
+                            $(this).text('Follow Us!');
+                        }
+                });
+            };
+
+
+
+        sbk.followPullDownMenu = {
+
             twitterFollow: function () {
                 $('.twitter').click(function(){
                     window.open('https://twitter.com/intent/follow?screen_name=spotbrooklyn', '_self');
@@ -335,10 +322,7 @@ svg {
 
             }
         };
-
-        sbk.header.backToTop();
-
-        sbk.followPullDownMenu.toggleFollowPulldownMenu();
+        sbk.openFollowMenu();
         sbk.followPullDownMenu.twitterFollow();
         sbk.followPullDownMenu.instagramFollow();
         sbk.followPullDownMenu.facebookFollow();

@@ -29,10 +29,6 @@ p {
     align-self: flex-start;
     padding-top: 1rem;
 }
-p:first-of-type {
-    padding-top: 2rem
-}
-
 #story-list {
     height: auto;
     font-family: "open-sans", sans-serif;
