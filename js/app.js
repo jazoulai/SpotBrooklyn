@@ -1,30 +1,45 @@
 /*jshint strict: false*/
 /*globals Backbone: false, L: false, $: false, Handlebars: false, _: false */
 
-$(document).ready(function () {
 
-    //Firefox
-
+sbk.conditionalLoading = function(){
     conditionizr.add('notFirefox', function () {
         return typeof InstallTrigger == 'undefined';
     });
-
     conditionizr.config({
         assets: '../'
     });
-
-    conditionizr.on('notFirefox', function(){
-       console.log('not fire');
-    });
-
     conditionizr.load('css/cover.css', ['notFirefox']);
-
-    window.viewportUnitsBuggyfill.init();
-
+};
+sbk.loadBackboneApp = function() {
     var storyCollection = new sbk.StoriesCollection();
     $.when(storyCollection.fetch())
         .then(function () {
             sbk.app = new sbk.AppRouter(storyCollection);
             Backbone.history.start();
         });
+};
+sbk.loadGoogleAnalytics = function(){
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-46046711-1', 'auto');
+    ga('send', 'pageview');
+};
+
+$(document).ready(function () {
+    $(function() {
+        WebFont.load({
+            typekit: {
+                id: 'urz0jfm'
+            },
+            active: function() {
+                sbk.conditionalLoading();
+                window.viewportUnitsBuggyfill.init();
+                sbk.loadBackboneApp();
+                sbk.loadGoogleAnalytics();
+            }
+        });
+    });
 });
