@@ -10,14 +10,11 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     tap-highlight-color: rgba(0, 0, 0, 0);
-
     padding: 0;
     margin: 0;
     border: 0;
-
 }
 *:focus {
     outline: 0;
@@ -26,7 +23,7 @@ ul {
     list-style-type: none;
 }
 ::input-placeholder {
-    color: #DFDFDF;
+    color: green;
     font-size: 1rem;
 }
 html {
@@ -41,22 +38,17 @@ html {
     font-size: 100%;
     text-align: center;
     color: #474747;
-
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
     overflow-scrolling: touch;
-
     -webkit-touch-callout: none;
     touch-callout: none;
-
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
-
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -91,6 +83,7 @@ svg {
     width: 100%;
     height: auto;
 }
+/* FOLLOW PULLDOWN MENU */
 #follow {
     font-size: 1rem;
     line-height: 1rem;
@@ -98,11 +91,10 @@ svg {
     float: right;
     vertical-align: bottom;
 }
-/* FOLLOW PULLDOWN MENU */
 #follow-pulldown-menu {
     position: fixed;
     width: 100%;
-    height: 50%;
+    height: auto;
     top: 50px;
     left: 0;
     z-index: 10000;
@@ -112,22 +104,27 @@ svg {
     display: none;
 }
 #follow-pulldown-menu > div { /*containers for social buttons and email form*/
-    margin-bottom: 5%;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10%;
 }
 #follow-pulldown-menu textarea {
-    width: 80%;
+    width: 60%;
+    height: 3rem;
+    margin-left: 10%;
     border: 2px solid #fff;
     border-radius: 5px 0 0 5px;
-    font-size: 2rem;
-    line-height: 3rem;
+    font-size: 1rem;
+    line-height: 2rem;
     padding: 0 2%;
     background: transparent;
     vertical-align: top;
+    float: left;
 }
 #follow-pulldown-menu img {
-    height: 40px;
-    width: auto;
-    margin: 0 2%;
+    width: 20%;
+    height: auto;
+    margin: 0 5%;
 }
 #follow-pulldown-menu p {
     font-size: 1rem;
@@ -137,14 +134,16 @@ svg {
     padding-top: 0; /*remove default padding*/
     padding-bottom: 1rem;
 }
-#follow-pulldown-menu .fa-paper-plane {
-    font-size: 2rem;
+button.email-submit {
+    width: 20%;
+    height: 3rem;
+    font-size: 1rem;
     line-height: 3rem;
-    padding: 0 2%;
     background-color: red;
     color: #fff;
     border: 2px solid #fff;
     border-radius: 0 5px 5px 0;
+    float: left;
 }
 /* COVER */
 #cover {
@@ -212,19 +211,19 @@ svg {
 <!-- follow pulldown menu -->
     <div id="follow-pulldown-menu">
         <p>Follow Spot Brooklyn on Social Media</p>
-        <div class="fade">
+        <div>
             <img class="twitter" src="images/icons/twitter.png"/>
             <img class="facebook" src="images/icons/facebook.svg"/>
             <img class="instagram" src="images/icons/instagram.png"/>
         </div>
         <p>Get Spot Brooklyn Email Updates</p>
-        <div class="fade">
+        <div>
             <form class="top-form" action="http://spotbrooklyn.us5.list-manage1.com/subscribe/post" method="POST">
                 <input type="hidden" name="u" value="de611717859b21ec0db1a7f16">
                 <input type="hidden" name="id" value="270695d569">
                 <textarea name="MERGE0" rows="1" placeholder="Enter your email address."></textarea>
             </form>
-            <span class="fa fa-paper-plane"></span>
+            <button class="email-submit">Submit</button>
         </div>
     </div>
 <!-- cover -->
@@ -250,17 +249,19 @@ svg {
             };
 
             sbk.openFollowMenu = function() {
-                var followPulldownMenu = $('#follow-pulldown-menu');
-                var followIconTextElement = $('#follow');
-                followPulldownMenu.hide();
+                var followMenu = $('#follow-pulldown-menu');
+                var followTextElement = $('#follow');
+                followMenu.hide();
 
-                followIconTextElement.click(function () {
+                followTextElement.click(function () {
                         $(this).toggleClass('close');
 
                         if($(this).hasClass('close')){
-                            $(this).text('Close');
+                            $(this).text('X Close');
+                            followMenu.show();
                         } else {
                             $(this).text('Follow Us!');
+                            followMenu.hide()
                         }
                 });
             };
