@@ -4,8 +4,7 @@
 sbk.AppRouter = Backbone.Router.extend({
     routes: {
         "": "loadList",
-        "!": "loadList",
-        ":story": "loadStory"
+        "!": "loadList"
     },
     initialize: function (storyCollection) {
         this.storyCollection = storyCollection;
@@ -17,16 +16,14 @@ sbk.AppRouter = Backbone.Router.extend({
     ,
     loadList: function () {
         this.bodyElement = $('body');
+    // News View
+        this.newsView = new sbk.NewsView();
+        this.bodyElement.append(this.newsView.render().el);
     // Partnership View
         this.partnershipsView = new sbk.PartnershipsView();
         this.bodyElement.append(this.partnershipsView.render().el);
     // About View
         this.aboutView = new sbk.AboutView();
         this.bodyElement.append(this.aboutView.render().el);
-    },
-    loadStory: function(storyId) {
-       var storyModel = this.storyCollection.get(storyId);
-    // Story Map View
-        this.storyMapView = new sbk.StoryMapView({model: storyModel});
     }
 });

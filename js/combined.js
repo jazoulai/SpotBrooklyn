@@ -6289,8 +6289,7 @@ $(document).ready(function () {
 sbk.AppRouter = Backbone.Router.extend({
     routes: {
         "": "loadList",
-        "!": "loadList",
-        ":story": "loadStory"
+        "!": "loadList"
     },
     initialize: function (storyCollection) {
         this.storyCollection = storyCollection;
@@ -6302,17 +6301,15 @@ sbk.AppRouter = Backbone.Router.extend({
     ,
     loadList: function () {
         this.bodyElement = $('body');
+    // News View
+        this.newsView = new sbk.NewsView();
+        this.bodyElement.append(this.newsView.render().el);
     // Partnership View
         this.partnershipsView = new sbk.PartnershipsView();
         this.bodyElement.append(this.partnershipsView.render().el);
     // About View
         this.aboutView = new sbk.AboutView();
         this.bodyElement.append(this.aboutView.render().el);
-    },
-    loadStory: function(storyId) {
-       var storyModel = this.storyCollection.get(storyId);
-    // Story Map View
-        this.storyMapView = new sbk.StoryMapView({model: storyModel});
     }
 });
 /*jshint strict: false*/
@@ -6332,65 +6329,12 @@ sbk.StoriesCollection = Backbone.Collection.extend({
 /*jshint strict: false*/
 /*globals Backbone: false, L: false, $: false, Handlebars: false, _: false, sbk: false */
 
-sbk.StoryListView = Backbone.View.extend({
-    tagName: 'div',
-    id: 'story-list',
-    initialize: function () {
-        this.collection.on('reset', this.render, this);
-    },
-    template: Handlebars.compile($('#story-list-template').html()),
-    sampleCollection: function() {
-        this.storyList = $(this.el).find('#stories-list-ul');
-        this.shuffledCollection = _.shuffle(this.collection.models);
-
-        //append each story-list-item to the a child element of this view.
-        _.each(this.shuffledCollection, function (idea) {
-            this.storyList.append(new sbk.StoryListItemView({model: idea}).render().el);
-        }, this);
-    },
+sbk.NewsView = Backbone.View.extend({
+    id: 'news',
+    template: Handlebars.compile($('#news-template').html()),
     render: function () {
         $(this.el).html(this.template());
-        this.sampleCollection();
         return this;
-    }
-});
-/*jshint strict: false*/
-/*globals Backbone: false, L: false, $: false, Handlebars: false, _: false, sbk: false */
-
-sbk.StoryListItemView = Backbone.View.extend({
-    tagName: 'li',
-    className: 'story-list-item',
-    template: Handlebars.compile($('#story-list-item-template').html()),
-    render: function () {
-        $(this.el).html(this.template(this.model.toJSON()));
-        _.defer(function(view){
-            view.horizontalStoryPreviews();
-        }, this);
-        return this;
-    },
-    events: {
-        'click' : 'navigateToStory'
-    },
-    horizontalStoryPreviews: function(){
-        var self = this;
-
-        if (window.innerHeight < window.innerWidth) {
-            $(this.el).addClass('horizontal');
-        } else {
-            $(this.el).removeClass('horizontal');
-        }
-
-        $(window).resize(function(){
-            if (window.innerHeight < window.innerWidth) {
-                $(self.el).addClass('horizontal');
-            } else {
-                $(self.el).removeClass('horizontal');
-            }
-        });
-    },
-    navigateToStory: function(){
-       var storyId = this.model.get('id');
-       sbk.app.navigate(storyId, {trigger: true});
     }
 });
 /*jshint strict: false*/
@@ -6419,15 +6363,5 @@ sbk.AboutView = Backbone.View.extend({
     render: function () {
         $(this.el).html(this.template());
         return this;
-    }
-});
-/*jshint strict: false*/
-/*globals Backbone: false, L: false, $: false, Handlebars: false, _: false, sbk: false, ga: false */
-
-sbk.StoryMapView = Backbone.View.extend({
-    id: 'story-map',
-    template: Handlebars.compile($('#story-map-template').html()),
-    render: function(){
-        $(this.el).html(this.template());
     }
 });
