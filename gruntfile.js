@@ -10,7 +10,7 @@ module.exports = function (grunt) {
             },
             js: {
                 src: [
-                    'js/libs/prefixfree.min.js', 'js/libs/conditionizr.min.js', 'js/libs/viewport-units-buggyfill.js', 'js/libs/underscore.js', 'js/libs/backbone.js', 'js/libs/handlebars-v1.3.0.js', 'js/libs/backbone.touch.js', 'js/libs/jquery.animate-colors-min.js', 'js/app.js', 'js/router.js', 'js/models/storyModel.js', 'js/collections/storiesCollection.js', 'js/views/news_view.js', 'js/views/partnerships.js', 'js/views/about_view.js'
+                    'js/libs/prefixfree.min.js', 'js/libs/conditionizr.min.js', 'js/libs/viewport-units-buggyfill.js', 'js/libs/underscore.js', 'js/libs/backbone.js', 'js/libs/handlebars-v1.3.0.js', 'js/libs/backbone.touch.js', 'js/libs/jquery.animate-colors-min.js', 'js/app.js', 'js/router.js', 'js/models/storyModel.js', 'js/collections/storiesCollection.js', 'js/views/news_view.js', 'js/views/news_item_view.js', 'js/views/partnerships.js', 'js/views/about_view.js'
                 ],
                 dest: 'js/combined.js'
             }

@@ -17,7 +17,7 @@ sbk.AppRouter = Backbone.Router.extend({
     loadList: function () {
         this.bodyElement = $('body');
     // News View
-        this.newsView = new sbk.NewsView();
+        this.newsView = new sbk.NewsView({collection: this.storyCollection});
         this.bodyElement.append(this.newsView.render().el);
     // Partnership View
         this.partnershipsView = new sbk.PartnershipsView();
