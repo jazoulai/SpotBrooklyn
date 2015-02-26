@@ -9,6 +9,7 @@ sbk.NewsView = Backbone.View.extend({
     },
     render: function () {
         $(this.el).html(this.template());
+        console.log(this.collection.models);
         _.each(this.collection.models, function (newsItem) {
             $(this.el).append(new sbk.NewsItemView({model: newsItem}).render().el);
         }, this);

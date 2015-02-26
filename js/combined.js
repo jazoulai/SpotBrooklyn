@@ -6303,6 +6303,7 @@ sbk.AppRouter = Backbone.Router.extend({
         this.bodyElement = $('body');
     // News View
         this.newsView = new sbk.NewsView({collection: this.storyCollection});
+        console.log(this.storyCollection);
         this.bodyElement.append(this.newsView.render().el);
     // Partnership View
         this.partnershipsView = new sbk.PartnershipsView();
@@ -6337,6 +6338,7 @@ sbk.NewsView = Backbone.View.extend({
     },
     render: function () {
         $(this.el).html(this.template());
+        console.log(this.collection.models);
         _.each(this.collection.models, function (newsItem) {
             $(this.el).append(new sbk.NewsItemView({model: newsItem}).render().el);
         }, this);
@@ -6350,7 +6352,7 @@ sbk.NewsItemView = Backbone.View.extend({
     id: 'news-item',
     template: Handlebars.compile($('#news-item-template').html()),
     render: function () {
-        $(this.el).html(this.template());
+        $(this.el).html(this.template(this.model.toJSON()));
         return this;
     }
 });
