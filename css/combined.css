@@ -29,6 +29,9 @@ p {
     align-self: flex-start;
     padding-top: 1rem;
 }
+#news-item p {
+    color: red;
+}
 @media (orientation : landscape) {
     html {
         text-size-adjust: 80%;
